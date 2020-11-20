@@ -32,34 +32,25 @@
              
             var builder = new HostBuilder()
                 .ConfigureServices((hostContext, services) =>
-<<<<<<< Updated upstream
+ 
                 { 
-                    services.AddSingleton<Form1>();
-=======
-                {
+                    services.AddSingleton<MainForm>(); 
                    /* services.AddDbContext<WorkstationContext>(options =>
                     {
                         options.UseSqlServer("Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;");
                     });*/
                     services.AddLogging(configure => configure.AddConsole());
-                    services.AddSingleton<LoginForm>();
->>>>>>> Stashed changes
+                    services.AddSingleton<LoginForm>(); 
                 });
 
             var host = builder.Build();
 
-            using (var setviceScope = host.Services.CreateScope())
+            using (var serviceScope = host.Services.CreateScope())
             {
-                var services = setviceScope.ServiceProvider;
-
-<<<<<<< Updated upstream
-                var form1 = services.GetRequiredService<Form1>();
-                var workstationContext = services.GetRequiredService<WorkstationContext>();
-                Application.Run(form1);
-=======
-                var form1 = services.GetRequiredService<LoginForm>();
-                Application.Run(new LoginForm());
->>>>>>> Stashed changes
+                var services = serviceScope.ServiceProvider;
+                   
+                var loginForm = services.GetRequiredService<LoginForm>();
+                Application.Run(loginForm);
             };
         }
     }
