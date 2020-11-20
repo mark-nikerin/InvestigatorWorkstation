@@ -1,7 +1,8 @@
 ﻿namespace Storage.Models
 {
     using Storage.Interfaces;
-    using System; 
+    using System;
+    using System.Collections.Generic;
 
     public class Employee : IEntity
     { 
@@ -16,5 +17,13 @@
         public string ReasonOfEndWork { get; set; }
         public int RankId { get; set; }
         public int PositionId { get; set; }
+
+        public virtual EmployeeRank Rank { get; set; }
+        public virtual EmployeePosition Position { get; set; }
+        public virtual ICollection<InspectionMaterialMovement> InspectionMaterialMovements { get; set; } = new HashSet<InspectionMaterialMovement>();
+        public virtual ICollection<CriminalCaseMovement> CriminalCaseMovements { get; set; } = new HashSet<CriminalCaseMovement>();
+        public virtual ICollection<PreventiveMeasureDecision> PreventiveMeasureDecisions { get; set; } = new HashSet<PreventiveMeasureDecision>();
+        public virtual ICollection<CrimeReport> CrimeReports { get; set; } = new HashSet<CrimeReport>();
+
     }
 }

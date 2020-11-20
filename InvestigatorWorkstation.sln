@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestigatorWorkstation", "InvestigatorWorkstation\InvestigatorWorkstation.csproj", "{2618CA84-2069-4E91-9B0F-4F8867A27D3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestigatorWorkstation", "InvestigatorWorkstation\InvestigatorWorkstation.csproj", "{2618CA84-2069-4E91-9B0F-4F8867A27D3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{79271723-77CB-4375-BF97-01EA60AAD533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{79271723-77CB-4375-BF97-01EA60AAD533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{09FE89E2-A244-4549-8751-07467F432449}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{09FE89E2-A244-4549-8751-07467F432449}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage", "Storage\Storage.csproj", "{89BB1535-9FFA-4351-A011-C6E6EFE54856}"
 EndProject
