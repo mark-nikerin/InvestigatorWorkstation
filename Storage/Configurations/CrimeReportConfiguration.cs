@@ -11,7 +11,12 @@
             builder.HasOne(x => x.Qualification)
                 .WithMany(x => x.CrimeReports)
                 .HasForeignKey(x => x.QualificationId)
-                .IsRequired(); 
+                .IsRequired(false);
+
+            builder.HasOne(x => x.Employee)
+                .WithMany(x => x.CrimeReports)
+                .HasForeignKey(x => x.EmployeeId)
+                .IsRequired(true);
         }
     }
 }

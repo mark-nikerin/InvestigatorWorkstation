@@ -3,7 +3,13 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Logging;
     using Storage.Models;
+    using Storage.Configurations;
     using System.Diagnostics;
+    using Storage.Configurations.Criminal;
+    using Storage.Configurations.CriminalCase;
+    using Storage.Configurations.Employee;
+    using Storage.Configurations.InspectionMaterial;
+    using Storage.Configurations.PreventiveMeasure;
 
     public class WorkstationContext : DbContext
     {  
@@ -19,7 +25,14 @@
         public virtual DbSet<Criminal> Criminals { get; set; } = null!;
         public virtual DbSet<CriminalStatus> CriminalStatuses { get; set; } = null!;
         public virtual DbSet<CriminalStatusHistory> CriminalStatusHistories { get; set; } = null!;
-        public virtual DbSet<Complicity> Complicities { get; set; } = null!;
+        public virtual DbSet<ComplicityType> ComplicityTypes { get; set; } = null!;
+        #endregion
+        #region CriminalCase
+        public virtual DbSet<CriminalCase> CriminalCases { get; set; } = null!;
+        public virtual DbSet<CriminalCaseAuthority> CriminalCaseAuthorities { get; set; } = null!;
+        public virtual DbSet<CriminalCaseDecision> CriminalCaseDecisions { get; set; } = null!;
+        public virtual DbSet<CriminalCaseMovement> CriminalCaseMovements { get; set; } = null!;
+        public virtual DbSet<InvestigationPeriodExtension> InvestigationPeriodExtensions { get; set; } = null!;
         #endregion
         #region Employee
         public virtual DbSet<Employee> Employees { get; set; } = null!;
@@ -36,13 +49,6 @@
         public virtual DbSet<PreventiveMeasure> PreventiveMeasures { get; set; } = null!;
         public virtual DbSet<PreventiveMeasureDecision> PreventiveMeasureDecisions { get; set; } = null!;
         #endregion
-        #region CriminalCase
-        public virtual DbSet<CriminalCase> CriminalCases { get; set; } = null!;
-        public virtual DbSet<CriminalCaseAuthority> CriminalCaseAuthorities { get; set; } = null!;
-        public virtual DbSet<CriminalCaseDecision> CriminalCaseDecisions { get; set; } = null!;
-        public virtual DbSet<CriminalCaseMovement> CriminalCaseMovements { get; set; } = null!;
-        public virtual DbSet<InvestigationPeriodExtension> InvestigationPeriodExtensions { get; set; } = null!;
-        #endregion
         public virtual DbSet<CrimeReport> CrimeReports { get; set; } = null!;
         public virtual DbSet<Qualification> Qualifications { get; set; } = null!;
          
@@ -54,6 +60,36 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region CriminalConfigurations
+            modelBuilder.ApplyConfiguration(new CriminalConfiguration());
+            modelBuilder.ApplyConfiguration(new CriminalStatusConfiguration());
+            modelBuilder.ApplyConfiguration(new CriminalStatusHistoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ComplicityTypeConfiguration());
+            #endregion
+            #region CriminalConfigurations
+            modelBuilder.ApplyConfiguration(new CriminalCaseConfiguration());
+            modelBuilder.ApplyConfiguration(new CriminalCaseAuthorityConfiguration());
+            modelBuilder.ApplyConfiguration(new CriminalCaseDecisionConfiguration());
+            modelBuilder.ApplyConfiguration(new CriminalCaseMovementConfiguration());
+            modelBuilder.ApplyConfiguration(new InvestigationPeriodExtensionConfiguration());
+            #endregion
+            #region EmployeeConfigurations
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeePositionConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeeRankConfiguration());
+            #endregion
+            #region InspectionMaterialConfigurations
+            modelBuilder.ApplyConfiguration(new InspectionMaterialConfiguration());
+            modelBuilder.ApplyConfiguration(new InspectionMaterialDecisionConfiguration());
+            modelBuilder.ApplyConfiguration(new InspectionMaterialMovementConfiguration());
+            modelBuilder.ApplyConfiguration(new InspectionPeriodExtensionConfiguration());
+            #endregion PreventiveMeasureExtensions 
+            #region PreventiveMeasureConfiguration
+            modelBuilder.ApplyConfiguration(new PreventiveMeasureConfiguration());
+            modelBuilder.ApplyConfiguration(new PreventiveMeasureDecisionConfiguration());
+            #endregion
+            modelBuilder.ApplyConfiguration(new CrimeReportConfiguration());
+            modelBuilder.ApplyConfiguration(new QualificationConfiguration()); 
         }
     }
 }

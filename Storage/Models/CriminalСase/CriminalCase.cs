@@ -11,8 +11,8 @@
         public int QualificationId { get; set; }
         public int CriminalCaseAuthorityId { get; set; }
 
-        public Qualification Qualification { get; set; }
-        public CriminalCaseAuthority CriminalCaseAuthority { get; set; }
+        public virtual Qualification Qualification { get; set; }
+        public virtual CriminalCaseAuthority CriminalCaseAuthority { get; set; }
 
         public virtual ICollection<CriminalCaseMovement> CriminalCaseMovements { get; set; } = new HashSet<CriminalCaseMovement>();
         public virtual ICollection<InvestigationPeriodExtension> InvestigationPeriodExtensions { get; set; } = new HashSet<InvestigationPeriodExtension>();

@@ -2,7 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+    <TasksTargetsImported>true</TasksTargetsImported>
+  </PropertyGroup> 
+
+  <Import Project="Tasks.targets" Condition=" '$(TasksTargetsImported)' == '' "/>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />

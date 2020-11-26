@@ -3,12 +3,11 @@
     using Storage.Interfaces;
     using System.Collections.Generic;
 
-    public class CriminalStatus : IEntity
+    public class ComplicityType : IEntity
     {
-        public int Id { get; set; }
-        public string Status { get; set; } 
+        public int Id { get; set; } 
+        public string Type { get; set; }
 
-        public virtual ICollection<Criminal> Criminals { get; set; } = new HashSet<Criminal>();
         public virtual ICollection<CriminalStatusHistory> CriminalStatusHistories { get; set; } = new HashSet<CriminalStatusHistory>();
     }
 }

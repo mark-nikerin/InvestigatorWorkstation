@@ -1,4 +1,4 @@
-﻿namespace Storage.Configurations
+﻿namespace Storage.Configurations.Employee
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -11,32 +11,32 @@
             builder.HasOne(x => x.Position)
                 .WithMany(x => x.Employees)
                 .HasForeignKey(x => x.PositionId)
-                .IsRequired();
+                .IsRequired(false);
 
             builder.HasOne(x => x.Rank)
                 .WithMany(x => x.Employees)
                 .HasForeignKey(x => x.RankId)
-                .IsRequired();
+                .IsRequired(false);
 
             builder.HasMany(x => x.InspectionMaterialMovements)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired();
+                .IsRequired(true);
 
             builder.HasMany(x => x.CriminalCaseMovements)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired();
+                .IsRequired(true);
 
             builder.HasMany(x => x.CrimeReports)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired();
+                .IsRequired(true);
 
             builder.HasMany(x => x.PreventiveMeasureDecisions)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired();
+                .IsRequired(true);
         }
     }
 }
