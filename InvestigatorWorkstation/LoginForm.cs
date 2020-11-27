@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace InvestigatorWorkstation
+﻿namespace InvestigatorWorkstation
 {
+    using Services.Interfaces;
+    using System;
+    using System.Windows.Forms;
+
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        private readonly IAuthService _authService;
+        private static string CurrentUserName;
+        public LoginForm(IAuthService authService)
         {
+            _authService = authService;
             InitializeComponent();
         }
 
@@ -24,11 +21,12 @@ namespace InvestigatorWorkstation
             registerForm.Show();
         }
 
-        private void LogInButton_Click(object sender, EventArgs e)
+        private async void LogInButton_Click(object sender, EventArgs e)
         {
+            CurrentUserName = await _authService.AuthorizeUser(textBox_login.Text, textBox_password.Text); 
             this.Hide();
-            MainForm mainForm = new MainForm();
+            MainForm mainForm = new MainForm(CurrentUserName);
             mainForm.Show();
-        }
+        } 
     }
 }

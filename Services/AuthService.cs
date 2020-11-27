@@ -23,9 +23,7 @@
             var user = await _context.Employees.Where(x => x.Login == login).SingleOrDefaultAsync();
 
             if (user == null)
-                throw new Exception("Wrong login or password");
-
-            var s = _passwordService.GetPasswordHash(password);
+                throw new Exception("Wrong login or password"); 
 
             if (!_passwordService.VerifyPassword(user.Password, password))
             {

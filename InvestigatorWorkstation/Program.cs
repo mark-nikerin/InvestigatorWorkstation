@@ -5,6 +5,8 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
+    using Services;
+    using Services.Interfaces;
     using Storage;
     using System;
     using System.Diagnostics;
@@ -33,14 +35,20 @@
             var builder = new HostBuilder()
                 .ConfigureServices((hostContext, services) =>
  
-                { 
-                    services.AddSingleton<MainForm>(); 
-                   /* services.AddDbContext<WorkstationContext>(options =>
+                {
+                    /* services.AddDbContext<WorkstationContext>(options =>
                     {
                         options.UseSqlServer("Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;");
                     });*/
+                    services.AddDbContext<WorkstationContext>();
+                    services.AddSingleton<MainForm>();
+                    services.AddSingleton<LoginForm>();
+                    services.AddSingleton<RegisterForm>();
+                    services.AddTransient<IPasswordService, PasswordService>();
+                    services.AddTransient<IAuthService, AuthService>();
+
                     services.AddLogging(configure => configure.AddConsole());
-                    services.AddSingleton<LoginForm>(); 
+
                 });
 
             var host = builder.Build();

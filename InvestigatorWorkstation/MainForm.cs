@@ -4,9 +4,10 @@ namespace InvestigatorWorkstation
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(string username)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            this.label1.Text = $"Здравствуйте, {username}!";
         }
     }
 }

@@ -19,8 +19,7 @@
 
             var hashBytes = new byte[SALT_SIZE + HASH_SIZE];
             Array.Copy(salt, 0, hashBytes, 0, SALT_SIZE);
-            Array.Copy(hash, 0, hashBytes, SALT_SIZE, HASH_SIZE);
-            var s = Convert.ToBase64String(hashBytes);
+            Array.Copy(hash, 0, hashBytes, SALT_SIZE, HASH_SIZE); 
             return hashBytes;
         }
 
