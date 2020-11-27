@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
     <TasksTargetsImported>true</TasksTargetsImported>
+    <LangVersion>8</LangVersion>
   </PropertyGroup> 
 
-  <Import Project="Tasks.targets" Condition=" '$(TasksTargetsImported)' == '' "/>
+  <Import Project="Tasks.targets" Condition=" '$(TasksTargetsImported)' == '' " />
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
@@ -19,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
