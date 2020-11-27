@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestigatorWorkstation", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{79271723-77CB-4375-BF97-01EA60AAD533}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{09FE89E2-A244-4549-8751-07467F432449}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage", "Storage\Storage.csproj", "{89BB1535-9FFA-4351-A011-C6E6EFE54856}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{79271723-77CB-4375-BF97-01EA60AAD533}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79271723-77CB-4375-BF97-01EA60AAD533}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79271723-77CB-4375-BF97-01EA60AAD533}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09FE89E2-A244-4549-8751-07467F432449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09FE89E2-A244-4549-8751-07467F432449}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09FE89E2-A244-4549-8751-07467F432449}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09FE89E2-A244-4549-8751-07467F432449}.Release|Any CPU.Build.0 = Release|Any CPU
 		{89BB1535-9FFA-4351-A011-C6E6EFE54856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{89BB1535-9FFA-4351-A011-C6E6EFE54856}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89BB1535-9FFA-4351-A011-C6E6EFE54856}.Release|Any CPU.ActiveCfg = Release|Any CPU
