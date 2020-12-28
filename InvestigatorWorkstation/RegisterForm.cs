@@ -1,27 +1,24 @@
-﻿using System;
+﻿using Services.Interfaces;
+using System;
 using System.Windows.Forms;
 
 namespace InvestigatorWorkstation
 {
     public partial class RegisterForm : Form
     {
-        public RegisterForm()
+        public RegisterForm(IAuthService authService)
         {
             InitializeComponent();
+        } 
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+
         }
 
-        private void registrationButton_Click(object sender, EventArgs e)
+        private void BackToLoginButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //LoginForm loginForm = new LoginForm();
-            //loginForm.Show();
-        }
-
-        private void LogInButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            //LoginForm loginForm = new LoginForm();
-           // loginForm.Show();
         }
     }
 }

@@ -17,7 +17,7 @@
         private void registrationButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegisterForm registerForm = new RegisterForm();
+            RegisterForm registerForm = new RegisterForm(_authService);
             registerForm.Show();
         }
 
@@ -25,7 +25,7 @@
         {
             CurrentUserName = await _authService.AuthorizeUser(textBox_login.Text, textBox_password.Text); 
             this.Hide();
-            MainForm mainForm = new MainForm(CurrentUserName);
+            MainForm mainForm = new MainForm();
             mainForm.Show();
         } 
     }

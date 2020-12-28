@@ -57,4 +57,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAgRJREFUWEfFl71SAjEQgKl9A3gAayl9Aii0tYEHUAuY0VZnaLSV1kobaRSY0UaH
+        ws6BVqCwgkYbrHwC97sxTMC93OV+dGe+ItlcstndbHIFT9kUdoUD4Vy4tKB9LOwIjMtUNgQWvhDsRaPA
+        qG0htWwJ6zv2JbEx7H5P0CZNCvPFFgw4FbSJ0sK8zB8peRlgiDQk6xCEERoakkf7IC9I+l+S9hT4wnor
+        YflrLxgobEvx9kK1Wr3tdrvjyWTyMRgM3srl8o02LgIKYCCUWG1AKI1G42k+n3/WarUH2pVK5Y42/etj
+        YxCUeFyiKUOZTqfvxWLx2u4rlUpXi8Xiy+6LSRASLh1NqVKv1+97vd5Y0/X7/Ve8oukccBn65QOLuIzA
+        SE3ngPVVhRPcjvvtPtqEye7zQO100mw2H0lE43oSNEVigtrphOM4HA5neIQjigF4IeExBb+coD7Yx9Mg
+        BnRs73gQ5MSh1eGEnf7suKPpyQsMWc+XCI6E+HWi1Wo9g6YzcDra7faLpgshqBOxKybxj9ol+tFoNNN0
+        ISwfxbEesXHj7ZEXQT4Y8S7dGbHyAOZe9zolGbDiBSO8dLTBeRH6G/Dvb0yEsJwI2odZwWs7UvI0JPZ/
+        h5GsQ8N8XgYYIXnSnhq+V5/3vpLEGAog9SfR7l1CiWViLp0zwV6U9r6AflmKo6VQ+AYSoGeHMX8BHgAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="RegistrationNumber.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="RegistrationDate.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="RegistrationAuthority.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="RegistrationBookNumber.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="Qualification.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="Fabule.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
 </root>

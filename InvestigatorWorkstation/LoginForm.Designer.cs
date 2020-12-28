@@ -46,6 +46,7 @@ namespace InvestigatorWorkstation
             // panel_white
             // 
             this.panel_white.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel_white.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_white.Controls.Add(this.LogInButton);
             this.panel_white.Controls.Add(this.registrationButton);
             this.panel_white.Controls.Add(this.password);
@@ -73,13 +74,16 @@ namespace InvestigatorWorkstation
             // 
             // registrationButton
             // 
+            this.registrationButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.registrationButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrationButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.registrationButton.Location = new System.Drawing.Point(73, 249);
             this.registrationButton.Name = "registrationButton";
             this.registrationButton.Size = new System.Drawing.Size(126, 26);
             this.registrationButton.TabIndex = 6;
             this.registrationButton.Text = "Регистрация";
-            this.registrationButton.UseVisualStyleBackColor = true;
+            this.registrationButton.UseVisualStyleBackColor = false;
             this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // password
