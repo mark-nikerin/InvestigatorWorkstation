@@ -35,11 +35,7 @@
             var builder = new HostBuilder()
                 .ConfigureServices((_, services) =>
  
-                {
-                    /* services.AddDbContext<WorkstationContext>(options =>
-                    {
-                        options.UseSqlServer("Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;");
-                    });*/
+                { 
                     services.AddDbContext<WorkstationContext>()
                         .AddSingleton<MainForm>()
                         .AddTransient<LoginForm>()

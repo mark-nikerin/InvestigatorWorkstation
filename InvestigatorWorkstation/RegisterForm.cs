@@ -5,7 +5,7 @@ using System.Windows.Forms;
 namespace InvestigatorWorkstation
 {
     public partial class RegisterForm : Form
-    {
+    { 
         public RegisterForm(IAuthService authService)
         {
             InitializeComponent();
@@ -18,7 +18,7 @@ namespace InvestigatorWorkstation
 
         private void BackToLoginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           Hide();
         }
     }
 }

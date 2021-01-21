@@ -7,27 +7,31 @@
     public partial class LoginForm : Form
     {
         private readonly IAuthService _authService;
+        private readonly RegisterForm _registerForm;
+        private readonly MainForm _mainForm;
+
         private static string CurrentUserName;
 
-        public LoginForm(IAuthService authService)
+        public LoginForm(IAuthService authService, RegisterForm registerForm, MainForm mainForm)
         {
             _authService = authService;
+            _registerForm = registerForm;
+            _mainForm = mainForm;
             InitializeComponent();
         }
 
         private void RegistrationButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            RegisterForm registerForm = new RegisterForm(_authService);
-            registerForm.Show();
+            Enabled = false;
+            _registerForm.ShowDialog();
+            Enabled = true;
         }
 
         private async void LogInButton_Click(object sender, EventArgs e)
         {
-            CurrentUserName = await _authService.AuthorizeUser(LoginTextBox.Text, PasswordTextBox.Text); 
+            CurrentUserName = await _authService.AuthorizeUser(LoginTextBox.Text, PasswordTextBox.Text);
+            _mainForm.Show();
             Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
         }
     }
 }

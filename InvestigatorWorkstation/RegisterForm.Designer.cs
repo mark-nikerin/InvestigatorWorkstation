@@ -570,8 +570,10 @@ namespace InvestigatorWorkstation
             this.Controls.Add(this.panel_white);
             this.MaximizeBox = false;
             this.Name = "RegisterForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegisterForm";
+            this.Text = "Регистрация сотрудника";
             this.panel_white.ResumeLayout(false);
             this.panel_white.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
