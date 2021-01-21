@@ -47,6 +47,7 @@ namespace InvestigatorWorkstation
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel_white = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -77,7 +78,6 @@ namespace InvestigatorWorkstation
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel_white.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -294,6 +294,13 @@ namespace InvestigatorWorkstation
             this.panel_white.Name = "panel_white";
             this.panel_white.Size = new System.Drawing.Size(825, 568);
             this.panel_white.TabIndex = 1;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(576, 396);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(102, 23);
+            this.numericUpDown1.TabIndex = 63;
             // 
             // comboBox3
             // 
@@ -555,20 +562,15 @@ namespace InvestigatorWorkstation
             this.label12.TabIndex = 28;
             this.label12.Text = "Дата приказа";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(576, 396);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(102, 23);
-            this.numericUpDown1.TabIndex = 63;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 648);
             this.Controls.Add(this.panel_white);
+            this.MaximizeBox = false;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.panel_white.ResumeLayout(false);
             this.panel_white.PerformLayout();

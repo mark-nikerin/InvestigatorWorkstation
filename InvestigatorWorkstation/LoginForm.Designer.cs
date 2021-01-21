@@ -29,39 +29,39 @@ namespace InvestigatorWorkstation
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_white = new System.Windows.Forms.Panel();
+            this.WhitePanel = new System.Windows.Forms.Panel();
             this.LogInButton = new System.Windows.Forms.Button();
-            this.registrationButton = new System.Windows.Forms.Button();
-            this.password = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Label();
-            this.textBox_password = new System.Windows.Forms.TextBox();
-            this.textBox_login = new System.Windows.Forms.TextBox();
-            this.panel_grey = new System.Windows.Forms.Panel();
-            this.title2 = new System.Windows.Forms.Label();
-            this.title = new System.Windows.Forms.Label();
-            this.panel_white.SuspendLayout();
-            this.panel_grey.SuspendLayout();
+            this.RegistrationButton = new System.Windows.Forms.Button();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.LoginLabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.LoginTextGreyPanel = new System.Windows.Forms.Panel();
+            this.LoginTextLabel = new System.Windows.Forms.Label();
+            this.ProgramNameLabel = new System.Windows.Forms.Label();
+            this.WhitePanel.SuspendLayout();
+            this.LoginTextGreyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel_white
+            // WhitePanel
             // 
-            this.panel_white.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel_white.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_white.Controls.Add(this.LogInButton);
-            this.panel_white.Controls.Add(this.registrationButton);
-            this.panel_white.Controls.Add(this.password);
-            this.panel_white.Controls.Add(this.login);
-            this.panel_white.Controls.Add(this.textBox_password);
-            this.panel_white.Controls.Add(this.textBox_login);
-            this.panel_white.Controls.Add(this.panel_grey);
-            this.panel_white.Location = new System.Drawing.Point(241, 113);
-            this.panel_white.Name = "panel_white";
-            this.panel_white.Size = new System.Drawing.Size(272, 291);
-            this.panel_white.TabIndex = 0;
+            this.WhitePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.WhitePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WhitePanel.Controls.Add(this.LogInButton);
+            this.WhitePanel.Controls.Add(this.RegistrationButton);
+            this.WhitePanel.Controls.Add(this.PasswordLabel);
+            this.WhitePanel.Controls.Add(this.LoginLabel);
+            this.WhitePanel.Controls.Add(this.PasswordTextBox);
+            this.WhitePanel.Controls.Add(this.LoginTextBox);
+            this.WhitePanel.Location = new System.Drawing.Point(241, 113);
+            this.WhitePanel.Name = "WhitePanel";
+            this.WhitePanel.Size = new System.Drawing.Size(272, 291);
+            this.WhitePanel.TabIndex = 0;
             // 
             // LogInButton
             // 
             this.LogInButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogInButton.ForeColor = System.Drawing.Color.Transparent;
             this.LogInButton.Location = new System.Drawing.Point(159, 183);
@@ -72,96 +72,104 @@ namespace InvestigatorWorkstation
             this.LogInButton.UseVisualStyleBackColor = false;
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
-            // registrationButton
+            // RegistrationButton
             // 
-            this.registrationButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.registrationButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registrationButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.registrationButton.Location = new System.Drawing.Point(73, 249);
-            this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(126, 26);
-            this.registrationButton.TabIndex = 6;
-            this.registrationButton.Text = "Регистрация";
-            this.registrationButton.UseVisualStyleBackColor = false;
-            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
+            this.RegistrationButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.RegistrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrationButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.RegistrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistrationButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RegistrationButton.Location = new System.Drawing.Point(73, 249);
+            this.RegistrationButton.Name = "RegistrationButton";
+            this.RegistrationButton.Size = new System.Drawing.Size(126, 26);
+            this.RegistrationButton.TabIndex = 6;
+            this.RegistrationButton.Text = "Регистрация";
+            this.RegistrationButton.UseVisualStyleBackColor = false;
+            this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
             // 
-            // password
+            // PasswordLabel
             // 
-            this.password.AutoSize = true;
-            this.password.Location = new System.Drawing.Point(37, 133);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(49, 15);
-            this.password.TabIndex = 5;
-            this.password.Text = "Пароль";
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Location = new System.Drawing.Point(37, 133);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(49, 15);
+            this.PasswordLabel.TabIndex = 5;
+            this.PasswordLabel.Text = "Пароль";
             // 
-            // login
+            // LoginLabel
             // 
-            this.login.AutoSize = true;
-            this.login.Location = new System.Drawing.Point(37, 79);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(41, 15);
-            this.login.TabIndex = 4;
-            this.login.Text = "Логин";
+            this.LoginLabel.AutoSize = true;
+            this.LoginLabel.Location = new System.Drawing.Point(37, 79);
+            this.LoginLabel.Name = "LoginLabel";
+            this.LoginLabel.Size = new System.Drawing.Size(41, 15);
+            this.LoginLabel.TabIndex = 4;
+            this.LoginLabel.Text = "Логин";
             // 
-            // textBox_password
+            // PasswordTextBox
             // 
-            this.textBox_password.Location = new System.Drawing.Point(39, 151);
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(191, 23);
-            this.textBox_password.TabIndex = 3;
-            this.textBox_password.UseSystemPasswordChar = true;
+            this.PasswordTextBox.Location = new System.Drawing.Point(39, 151);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PlaceholderText = "Введите пароль";
+            this.PasswordTextBox.Size = new System.Drawing.Size(191, 23);
+            this.PasswordTextBox.TabIndex = 3;
+            this.PasswordTextBox.TabStop = false;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // textBox_login
+            // LoginTextBox
             // 
-            this.textBox_login.Location = new System.Drawing.Point(39, 97);
-            this.textBox_login.Name = "textBox_login";
-            this.textBox_login.Size = new System.Drawing.Size(191, 23);
-            this.textBox_login.TabIndex = 2;
+            this.LoginTextBox.Location = new System.Drawing.Point(39, 97);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.PlaceholderText = "Введите логин";
+            this.LoginTextBox.Size = new System.Drawing.Size(191, 23);
+            this.LoginTextBox.TabIndex = 2;
+            this.LoginTextBox.TabStop = false;
             // 
-            // panel_grey
+            // LoginTextGreyPanel
             // 
-            this.panel_grey.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel_grey.Controls.Add(this.title2);
-            this.panel_grey.Location = new System.Drawing.Point(0, 20);
-            this.panel_grey.Name = "panel_grey";
-            this.panel_grey.Size = new System.Drawing.Size(272, 37);
-            this.panel_grey.TabIndex = 1;
+            this.LoginTextGreyPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.LoginTextGreyPanel.Controls.Add(this.LoginTextLabel);
+            this.LoginTextGreyPanel.Location = new System.Drawing.Point(242, 132);
+            this.LoginTextGreyPanel.Name = "LoginTextGreyPanel";
+            this.LoginTextGreyPanel.Size = new System.Drawing.Size(270, 37);
+            this.LoginTextGreyPanel.TabIndex = 1;
             // 
-            // title2
+            // LoginTextLabel
             // 
-            this.title2.AutoSize = true;
-            this.title2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.title2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.title2.Location = new System.Drawing.Point(88, 11);
-            this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(92, 15);
-            this.title2.TabIndex = 0;
-            this.title2.Text = "Вход в систему";
+            this.LoginTextLabel.AutoSize = true;
+            this.LoginTextLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.LoginTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoginTextLabel.Location = new System.Drawing.Point(88, 11);
+            this.LoginTextLabel.Name = "LoginTextLabel";
+            this.LoginTextLabel.Size = new System.Drawing.Size(92, 15);
+            this.LoginTextLabel.TabIndex = 0;
+            this.LoginTextLabel.Text = "Вход в систему";
             // 
-            // title
+            // ProgramNameLabel
             // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.title.Location = new System.Drawing.Point(181, 56);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(393, 21);
-            this.title.TabIndex = 1;
-            this.title.Text = "Автоматизированное рабочее место следователя";
+            this.ProgramNameLabel.AutoSize = true;
+            this.ProgramNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ProgramNameLabel.Location = new System.Drawing.Point(181, 56);
+            this.ProgramNameLabel.Name = "ProgramNameLabel";
+            this.ProgramNameLabel.Size = new System.Drawing.Size(393, 21);
+            this.ProgramNameLabel.TabIndex = 1;
+            this.ProgramNameLabel.Text = "Автоматизированное рабочее место следователя";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.title);
-            this.Controls.Add(this.panel_white);
+            this.Controls.Add(this.LoginTextGreyPanel);
+            this.Controls.Add(this.ProgramNameLabel);
+            this.Controls.Add(this.WhitePanel);
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.panel_white.ResumeLayout(false);
-            this.panel_white.PerformLayout();
-            this.panel_grey.ResumeLayout(false);
-            this.panel_grey.PerformLayout();
+            this.WhitePanel.ResumeLayout(false);
+            this.WhitePanel.PerformLayout();
+            this.LoginTextGreyPanel.ResumeLayout(false);
+            this.LoginTextGreyPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,15 +177,15 @@ namespace InvestigatorWorkstation
 
         #endregion
 
-        private System.Windows.Forms.Panel panel_white;
-        private System.Windows.Forms.Panel panel_grey;
-        private System.Windows.Forms.Label title2;
-        private System.Windows.Forms.Label title;
-        private System.Windows.Forms.TextBox textBox_password;
-        private System.Windows.Forms.TextBox textBox_login;
+        private System.Windows.Forms.Panel WhitePanel;
+        private System.Windows.Forms.Panel LoginTextGreyPanel;
+        private System.Windows.Forms.Label LoginTextLabel;
+        private System.Windows.Forms.Label ProgramNameLabel;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.Button LogInButton;
-        private System.Windows.Forms.Button registrationButton;
-        private System.Windows.Forms.Label password;
-        private System.Windows.Forms.Label login;
+        private System.Windows.Forms.Button RegistrationButton;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label LoginLabel;
     }
 }

@@ -8,25 +8,26 @@
     {
         private readonly IAuthService _authService;
         private static string CurrentUserName;
+
         public LoginForm(IAuthService authService)
         {
             _authService = authService;
             InitializeComponent();
         }
 
-        private void registrationButton_Click(object sender, EventArgs e)
+        private void RegistrationButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             RegisterForm registerForm = new RegisterForm(_authService);
             registerForm.Show();
         }
 
         private async void LogInButton_Click(object sender, EventArgs e)
         {
-            CurrentUserName = await _authService.AuthorizeUser(textBox_login.Text, textBox_password.Text); 
-            this.Hide();
+            CurrentUserName = await _authService.AuthorizeUser(LoginTextBox.Text, PasswordTextBox.Text); 
+            Hide();
             MainForm mainForm = new MainForm();
             mainForm.Show();
-        } 
+        }
     }
 }

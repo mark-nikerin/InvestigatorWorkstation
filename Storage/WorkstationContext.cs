@@ -9,7 +9,8 @@
     using Storage.Configurations.CriminalCase;
     using Storage.Configurations.Employee;
     using Storage.Configurations.InspectionMaterial;
-    using Storage.Configurations.PreventiveMeasure;
+    using Storage.Configurations.PreventiveMeasure; 
+    using System.Configuration;
 
     public class WorkstationContext : DbContext
     {  
@@ -54,7 +55,8 @@
          
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=WorkstationDB;Trusted_Connection=True;", x => x.MigrationsHistoryTable("__WorkstationMigrationHistory"));
+            builder.UseSqlServer(ConfigurationManager.ConnectionStrings["Database"].ConnectionString,
+                x => x.MigrationsHistoryTable("__WorkstationMigrationHistory"));
             builder.LogTo(message => Debug.WriteLine(message), LogLevel.Information);
         }
 

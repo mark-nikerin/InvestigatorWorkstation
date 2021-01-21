@@ -94,7 +94,6 @@ namespace InvestigatorWorkstation
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
@@ -215,7 +214,7 @@ namespace InvestigatorWorkstation
             this.TabContainer.Margin = new System.Windows.Forms.Padding(0);
             this.TabContainer.Name = "TabContainer";
             this.TabContainer.SelectedIndex = 0;
-            this.TabContainer.Size = new System.Drawing.Size(951, 809);
+            this.TabContainer.Size = new System.Drawing.Size(957, 809);
             this.TabContainer.TabIndex = 1;
             // 
             // tabPage1
@@ -224,14 +223,13 @@ namespace InvestigatorWorkstation
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(943, 781);
+            this.tabPage1.Size = new System.Drawing.Size(949, 781);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.IsSplitterFixed = true;
             this.splitContainer2.Location = new System.Drawing.Point(3, 3);
             this.splitContainer2.Name = "splitContainer2";
@@ -244,8 +242,8 @@ namespace InvestigatorWorkstation
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.splitContainer2.Size = new System.Drawing.Size(937, 775);
-            this.splitContainer2.SplitterDistance = 676;
+            this.splitContainer2.Size = new System.Drawing.Size(940, 775);
+            this.splitContainer2.SplitterDistance = 678;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -277,7 +275,7 @@ namespace InvestigatorWorkstation
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(659, 650);
+            this.dataGridView1.Size = new System.Drawing.Size(661, 650);
             this.dataGridView1.TabIndex = 1;
             // 
             // RegistrationNumber
@@ -329,7 +327,7 @@ namespace InvestigatorWorkstation
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(943, 773);
+            this.tabPage6.Size = new System.Drawing.Size(949, 781);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -349,8 +347,8 @@ namespace InvestigatorWorkstation
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.splitContainer3.Size = new System.Drawing.Size(937, 767);
-            this.splitContainer3.SplitterDistance = 676;
+            this.splitContainer3.Size = new System.Drawing.Size(943, 775);
+            this.splitContainer3.SplitterDistance = 680;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -430,7 +428,7 @@ namespace InvestigatorWorkstation
             // 
             this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(943, 773);
+            this.tabPage7.Size = new System.Drawing.Size(949, 781);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -439,7 +437,7 @@ namespace InvestigatorWorkstation
             // 
             this.tabPage8.Location = new System.Drawing.Point(4, 24);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(943, 773);
+            this.tabPage8.Size = new System.Drawing.Size(949, 781);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -460,7 +458,9 @@ namespace InvestigatorWorkstation
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

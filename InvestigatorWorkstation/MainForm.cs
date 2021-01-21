@@ -47,5 +47,9 @@ namespace InvestigatorWorkstation
             button.BackColor = Color.FromArgb(249, 249, 249);
             button.Font = new Font("Segoe UI", 13.0F, FontStyle.Regular);
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

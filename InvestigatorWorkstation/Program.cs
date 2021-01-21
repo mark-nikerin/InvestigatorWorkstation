@@ -33,22 +33,20 @@
             Application.SetCompatibleTextRenderingDefault(false);
              
             var builder = new HostBuilder()
-                .ConfigureServices((hostContext, services) =>
+                .ConfigureServices((_, services) =>
  
                 {
                     /* services.AddDbContext<WorkstationContext>(options =>
                     {
                         options.UseSqlServer("Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;");
                     });*/
-                    services.AddDbContext<WorkstationContext>();
-                    services.AddSingleton<MainForm>();
-                    services.AddSingleton<LoginForm>();
-                    services.AddSingleton<RegisterForm>();
-                    services.AddTransient<IPasswordService, PasswordService>();
-                    services.AddTransient<IAuthService, AuthService>();
-
-                    services.AddLogging(configure => configure.AddConsole());
-
+                    services.AddDbContext<WorkstationContext>()
+                        .AddSingleton<MainForm>()
+                        .AddTransient<LoginForm>()
+                        .AddTransient<RegisterForm>()
+                        .AddSingleton<IPasswordService, PasswordService>()
+                        .AddTransient<IAuthService, AuthService>()
+                        .AddLogging(configure => configure.AddConsole());
                 });
 
             var host = builder.Build();

@@ -9,18 +9,18 @@
 
     public class AuthService : IAuthService
     {
-        private readonly WorkstationContext _context; 
+        private readonly WorkstationContext _db; 
         private readonly IPasswordService _passwordService;
 
-        public AuthService(WorkstationContext context, IPasswordService passwordService)
+        public AuthService(WorkstationContext db, IPasswordService passwordService)
         {
-            _context = context;
+            _db = db;
             _passwordService = passwordService;
         }
 
         public async Task<string> AuthorizeUser(string login, string password)
         {
-            var user = await _context.Employees.Where(x => x.Login == login).SingleOrDefaultAsync();
+            var user = await _db.Employees.Where(x => x.Login == login).SingleOrDefaultAsync();
 
             if (user == null)
                 throw new Exception("Wrong login or password"); 
