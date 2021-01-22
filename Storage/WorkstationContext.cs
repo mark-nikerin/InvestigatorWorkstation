@@ -1,16 +1,13 @@
 ﻿namespace Storage
 {
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Logging;
+    using Microsoft.EntityFrameworkCore; 
     using Storage.Models;
-    using Storage.Configurations;
-    using System.Diagnostics;
+    using Storage.Configurations; 
     using Storage.Configurations.Criminal;
     using Storage.Configurations.CriminalCase;
     using Storage.Configurations.Employee;
     using Storage.Configurations.InspectionMaterial;
-    using Storage.Configurations.PreventiveMeasure; 
-    using System.Configuration;
+    using Storage.Configurations.PreventiveMeasure;  
 
     public class WorkstationContext : DbContext
     {  
@@ -37,8 +34,8 @@
         #endregion
         #region Employee
         public virtual DbSet<Employee> Employees { get; set; } = null!;
-        public virtual DbSet<EmployeePosition> EmployeePositions { get; set; } = null!;
-        public virtual DbSet<EmployeeRank> EmployeeRanks { get; set; } = null!;
+        public virtual DbSet<Position> Positions { get; set; } = null!;
+        public virtual DbSet<Rank> Ranks { get; set; } = null!;
         #endregion
         #region InspectionMaterial
         public virtual DbSet<InspectionMaterial> InspectionMaterials { get; set; } = null!;
@@ -55,9 +52,8 @@
          
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer(ConfigurationManager.ConnectionStrings["Database"].ConnectionString,
-                x => x.MigrationsHistoryTable("__WorkstationMigrationHistory"));
-            builder.LogTo(message => Debug.WriteLine(message), LogLevel.Information);
+            builder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=WorkstationDB;Trusted_Connection=True;",
+                x => x.MigrationsHistoryTable("__WorkstationMigrationHistory")); 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -77,8 +73,8 @@
             #endregion
             #region EmployeeConfigurations
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
-            modelBuilder.ApplyConfiguration(new EmployeePositionConfiguration());
-            modelBuilder.ApplyConfiguration(new EmployeeRankConfiguration());
+            modelBuilder.ApplyConfiguration(new PositionConfiguration());
+            modelBuilder.ApplyConfiguration(new RankConfiguration());
             #endregion
             #region InspectionMaterialConfigurations
             modelBuilder.ApplyConfiguration(new InspectionMaterialConfiguration());

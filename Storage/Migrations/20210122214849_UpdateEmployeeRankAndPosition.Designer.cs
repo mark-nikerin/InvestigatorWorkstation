@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Storage;
 
 namespace Storage.Migrations
 {
     [DbContext(typeof(WorkstationContext))]
-    partial class WorkstationContextModelSnapshot : ModelSnapshot
+    [Migration("20210122214849_UpdateEmployeeRankAndPosition")]
+    partial class UpdateEmployeeRankAndPosition
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -290,17 +292,8 @@ namespace Storage.Migrations
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("CertificationTerm")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ContractDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("JoinServiceDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -311,22 +304,22 @@ namespace Storage.Migrations
                     b.Property<string>("MiddleName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Number")
-                        .HasColumnType("int");
-
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PositionId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("QualificationUpdateDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("RankId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ReasonOfEndWork")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("StartWorkDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartWorkSODate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -473,7 +466,7 @@ namespace Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Positions");
+                    b.ToTable("EmployeePositions");
                 });
 
             modelBuilder.Entity("Storage.Models.PreventiveMeasure", b =>
@@ -543,9 +536,6 @@ namespace Storage.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("AppointmentDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -560,7 +550,7 @@ namespace Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ranks");
+                    b.ToTable("EmployeeRanks");
                 });
 
             modelBuilder.Entity("CriminalCriminalCase", b =>
