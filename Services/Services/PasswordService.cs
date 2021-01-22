@@ -1,7 +1,8 @@
-﻿namespace Services
+﻿using Services.Interfaces;
+
+namespace Services
 {
-    using System;
-    using Services.Interfaces;
+    using System; 
     using System.Security.Cryptography;
 
     public sealed class PasswordService : IPasswordService
@@ -10,7 +11,7 @@
         private const int HASH_SIZE = 20;
         private const int HASH_ITER = 50000;
 
-        public byte[] GetPasswordHash(string password)
+        public string GetHashedPassword(string password)
         {
             var salt = new byte[SALT_SIZE];
 
@@ -19,8 +20,11 @@
 
             var hashBytes = new byte[SALT_SIZE + HASH_SIZE];
             Array.Copy(salt, 0, hashBytes, 0, SALT_SIZE);
-            Array.Copy(hash, 0, hashBytes, SALT_SIZE, HASH_SIZE); 
-            return hashBytes;
+            Array.Copy(hash, 0, hashBytes, SALT_SIZE, HASH_SIZE);
+
+            var hashedPassword = Convert.ToBase64String(hashBytes);
+
+            return hashedPassword;
         }
 
         public bool VerifyPassword(string dbPassword, string password)

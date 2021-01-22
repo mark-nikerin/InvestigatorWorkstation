@@ -29,65 +29,66 @@ namespace InvestigatorWorkstation
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_login = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.Label();
             this.BackToLoginButton = new System.Windows.Forms.Button();
             this.RegisterButton = new System.Windows.Forms.Button();
             this.title2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PersonalNumberTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel_white = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.RankTermNumeric = new System.Windows.Forms.NumericUpDown();
+            this.PositionComboBox = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.RankComboBox = new System.Windows.Forms.ComboBox();
+            this.CertificationTermDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.QualificationUpdateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.JoinServiceDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.RankOrderDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.RankAppointmentDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.PositionAppointmentDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.PositionOrderDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ContractDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.BirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.password = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox_password = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.RankOrderNumberTextBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.PositionOrderNumberTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel_white.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox_login
+            // LastNameTextBox
             // 
-            this.textBox_login.Location = new System.Drawing.Point(36, 151);
-            this.textBox_login.Name = "textBox_login";
-            this.textBox_login.Size = new System.Drawing.Size(102, 23);
-            this.textBox_login.TabIndex = 2;
+            this.LastNameTextBox.Location = new System.Drawing.Point(36, 151);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.PlaceholderText = "Иванов";
+            this.LastNameTextBox.Size = new System.Drawing.Size(102, 23);
+            this.LastNameTextBox.TabIndex = 2;
             // 
             // login
             // 
@@ -137,12 +138,13 @@ namespace InvestigatorWorkstation
             this.title2.TabIndex = 0;
             this.title2.Text = "Регистрация сотрудника";
             // 
-            // textBox1
+            // FirstNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 23);
-            this.textBox1.TabIndex = 8;
+            this.FirstNameTextBox.Location = new System.Drawing.Point(148, 151);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.PlaceholderText = "Иван";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(102, 23);
+            this.FirstNameTextBox.TabIndex = 8;
             // 
             // label1
             // 
@@ -153,12 +155,13 @@ namespace InvestigatorWorkstation
             this.label1.TabIndex = 9;
             this.label1.Text = "Имя";
             // 
-            // textBox2
+            // MiddleNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(260, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(102, 23);
-            this.textBox2.TabIndex = 10;
+            this.MiddleNameTextBox.Location = new System.Drawing.Point(260, 151);
+            this.MiddleNameTextBox.Name = "MiddleNameTextBox";
+            this.MiddleNameTextBox.PlaceholderText = "Иванович";
+            this.MiddleNameTextBox.Size = new System.Drawing.Size(102, 23);
+            this.MiddleNameTextBox.TabIndex = 10;
             // 
             // label2
             // 
@@ -196,12 +199,13 @@ namespace InvestigatorWorkstation
             this.label5.TabIndex = 17;
             this.label5.Text = "Дата контракта";
             // 
-            // textBox4
+            // PersonalNumberTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(260, 205);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(102, 23);
-            this.textBox4.TabIndex = 18;
+            this.PersonalNumberTextBox.Location = new System.Drawing.Point(260, 205);
+            this.PersonalNumberTextBox.Name = "PersonalNumberTextBox";
+            this.PersonalNumberTextBox.PlaceholderText = "Введите номер";
+            this.PersonalNumberTextBox.Size = new System.Drawing.Size(102, 23);
+            this.PersonalNumberTextBox.TabIndex = 18;
             // 
             // label4
             // 
@@ -242,73 +246,73 @@ namespace InvestigatorWorkstation
             // panel_white
             // 
             this.panel_white.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel_white.Controls.Add(this.numericUpDown1);
-            this.panel_white.Controls.Add(this.comboBox3);
+            this.panel_white.Controls.Add(this.RankTermNumeric);
+            this.panel_white.Controls.Add(this.PositionComboBox);
             this.panel_white.Controls.Add(this.comboBox2);
-            this.panel_white.Controls.Add(this.comboBox1);
-            this.panel_white.Controls.Add(this.dateTimePicker9);
-            this.panel_white.Controls.Add(this.dateTimePicker8);
-            this.panel_white.Controls.Add(this.dateTimePicker7);
-            this.panel_white.Controls.Add(this.dateTimePicker6);
-            this.panel_white.Controls.Add(this.dateTimePicker5);
-            this.panel_white.Controls.Add(this.dateTimePicker4);
-            this.panel_white.Controls.Add(this.dateTimePicker3);
-            this.panel_white.Controls.Add(this.dateTimePicker2);
-            this.panel_white.Controls.Add(this.dateTimePicker1);
+            this.panel_white.Controls.Add(this.RankComboBox);
+            this.panel_white.Controls.Add(this.CertificationTermDateTimePicker);
+            this.panel_white.Controls.Add(this.QualificationUpdateDateTimePicker);
+            this.panel_white.Controls.Add(this.JoinServiceDateTimePicker);
+            this.panel_white.Controls.Add(this.RankOrderDateTimePicker);
+            this.panel_white.Controls.Add(this.RankAppointmentDateTimePicker);
+            this.panel_white.Controls.Add(this.PositionAppointmentDateTimePicker);
+            this.panel_white.Controls.Add(this.PositionOrderDateTimePicker);
+            this.panel_white.Controls.Add(this.ContractDateTimePicker);
+            this.panel_white.Controls.Add(this.BirthDateTimePicker);
             this.panel_white.Controls.Add(this.password);
             this.panel_white.Controls.Add(this.label22);
-            this.panel_white.Controls.Add(this.textBox_password);
-            this.panel_white.Controls.Add(this.textBox18);
+            this.panel_white.Controls.Add(this.PasswordTextBox);
+            this.panel_white.Controls.Add(this.LoginTextBox);
             this.panel_white.Controls.Add(this.label21);
             this.panel_white.Controls.Add(this.label18);
             this.panel_white.Controls.Add(this.label19);
             this.panel_white.Controls.Add(this.label20);
-            this.panel_white.Controls.Add(this.textBox15);
+            this.panel_white.Controls.Add(this.RankOrderNumberTextBox);
             this.panel_white.Controls.Add(this.label16);
             this.panel_white.Controls.Add(this.label17);
             this.panel_white.Controls.Add(this.label15);
             this.panel_white.Controls.Add(this.label14);
             this.panel_white.Controls.Add(this.label13);
             this.panel_white.Controls.Add(this.label10);
-            this.panel_white.Controls.Add(this.textBox10);
+            this.panel_white.Controls.Add(this.PositionOrderNumberTextBox);
             this.panel_white.Controls.Add(this.label11);
             this.panel_white.Controls.Add(this.label12);
             this.panel_white.Controls.Add(this.label9);
             this.panel_white.Controls.Add(this.label7);
             this.panel_white.Controls.Add(this.label8);
             this.panel_white.Controls.Add(this.label4);
-            this.panel_white.Controls.Add(this.textBox4);
+            this.panel_white.Controls.Add(this.PersonalNumberTextBox);
             this.panel_white.Controls.Add(this.label5);
             this.panel_white.Controls.Add(this.label6);
             this.panel_white.Controls.Add(this.label3);
             this.panel_white.Controls.Add(this.label2);
-            this.panel_white.Controls.Add(this.textBox2);
+            this.panel_white.Controls.Add(this.MiddleNameTextBox);
             this.panel_white.Controls.Add(this.label1);
-            this.panel_white.Controls.Add(this.textBox1);
+            this.panel_white.Controls.Add(this.FirstNameTextBox);
             this.panel_white.Controls.Add(this.title2);
             this.panel_white.Controls.Add(this.RegisterButton);
             this.panel_white.Controls.Add(this.BackToLoginButton);
             this.panel_white.Controls.Add(this.login);
-            this.panel_white.Controls.Add(this.textBox_login);
+            this.panel_white.Controls.Add(this.LastNameTextBox);
             this.panel_white.Location = new System.Drawing.Point(70, 32);
             this.panel_white.Name = "panel_white";
             this.panel_white.Size = new System.Drawing.Size(825, 568);
             this.panel_white.TabIndex = 1;
             // 
-            // numericUpDown1
+            // RankTermNumeric
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(576, 396);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(102, 23);
-            this.numericUpDown1.TabIndex = 63;
+            this.RankTermNumeric.Location = new System.Drawing.Point(576, 396);
+            this.RankTermNumeric.Name = "RankTermNumeric";
+            this.RankTermNumeric.Size = new System.Drawing.Size(102, 23);
+            this.RankTermNumeric.TabIndex = 63;
             // 
-            // comboBox3
+            // PositionComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(464, 151);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(326, 23);
-            this.comboBox3.TabIndex = 62;
+            this.PositionComboBox.FormattingEnabled = true;
+            this.PositionComboBox.Location = new System.Drawing.Point(464, 151);
+            this.PositionComboBox.Name = "PositionComboBox";
+            this.PositionComboBox.Size = new System.Drawing.Size(326, 23);
+            this.PositionComboBox.TabIndex = 62;
             // 
             // comboBox2
             // 
@@ -318,86 +322,86 @@ namespace InvestigatorWorkstation
             this.comboBox2.Size = new System.Drawing.Size(102, 23);
             this.comboBox2.TabIndex = 61;
             // 
-            // comboBox1
+            // RankComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(464, 318);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 23);
-            this.comboBox1.TabIndex = 60;
+            this.RankComboBox.FormattingEnabled = true;
+            this.RankComboBox.Location = new System.Drawing.Point(464, 318);
+            this.RankComboBox.Name = "RankComboBox";
+            this.RankComboBox.Size = new System.Drawing.Size(200, 23);
+            this.RankComboBox.TabIndex = 60;
             // 
-            // dateTimePicker9
+            // CertificationTermDateTimePicker
             // 
-            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker9.Location = new System.Drawing.Point(244, 263);
-            this.dateTimePicker9.Name = "dateTimePicker9";
-            this.dateTimePicker9.Size = new System.Drawing.Size(118, 23);
-            this.dateTimePicker9.TabIndex = 59;
+            this.CertificationTermDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.CertificationTermDateTimePicker.Location = new System.Drawing.Point(244, 263);
+            this.CertificationTermDateTimePicker.Name = "CertificationTermDateTimePicker";
+            this.CertificationTermDateTimePicker.Size = new System.Drawing.Size(118, 23);
+            this.CertificationTermDateTimePicker.TabIndex = 59;
             // 
-            // dateTimePicker8
+            // QualificationUpdateDateTimePicker
             // 
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker8.Location = new System.Drawing.Point(36, 263);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker8.TabIndex = 58;
+            this.QualificationUpdateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.QualificationUpdateDateTimePicker.Location = new System.Drawing.Point(36, 263);
+            this.QualificationUpdateDateTimePicker.Name = "QualificationUpdateDateTimePicker";
+            this.QualificationUpdateDateTimePicker.Size = new System.Drawing.Size(200, 23);
+            this.QualificationUpdateDateTimePicker.TabIndex = 58;
             // 
-            // dateTimePicker7
+            // JoinServiceDateTimePicker
             // 
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker7.Location = new System.Drawing.Point(36, 318);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(155, 23);
-            this.dateTimePicker7.TabIndex = 57;
+            this.JoinServiceDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.JoinServiceDateTimePicker.Location = new System.Drawing.Point(36, 318);
+            this.JoinServiceDateTimePicker.Name = "JoinServiceDateTimePicker";
+            this.JoinServiceDateTimePicker.Size = new System.Drawing.Size(155, 23);
+            this.JoinServiceDateTimePicker.TabIndex = 57;
             // 
-            // dateTimePicker6
+            // RankOrderDateTimePicker
             // 
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker6.Location = new System.Drawing.Point(464, 367);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(102, 23);
-            this.dateTimePicker6.TabIndex = 56;
+            this.RankOrderDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RankOrderDateTimePicker.Location = new System.Drawing.Point(464, 367);
+            this.RankOrderDateTimePicker.Name = "RankOrderDateTimePicker";
+            this.RankOrderDateTimePicker.Size = new System.Drawing.Size(102, 23);
+            this.RankOrderDateTimePicker.TabIndex = 56;
             // 
-            // dateTimePicker5
+            // RankAppointmentDateTimePicker
             // 
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker5.Location = new System.Drawing.Point(672, 318);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(118, 23);
-            this.dateTimePicker5.TabIndex = 55;
+            this.RankAppointmentDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RankAppointmentDateTimePicker.Location = new System.Drawing.Point(672, 318);
+            this.RankAppointmentDateTimePicker.Name = "RankAppointmentDateTimePicker";
+            this.RankAppointmentDateTimePicker.Size = new System.Drawing.Size(118, 23);
+            this.RankAppointmentDateTimePicker.TabIndex = 55;
             // 
-            // dateTimePicker4
+            // PositionAppointmentDateTimePicker
             // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(576, 205);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(102, 23);
-            this.dateTimePicker4.TabIndex = 54;
+            this.PositionAppointmentDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PositionAppointmentDateTimePicker.Location = new System.Drawing.Point(576, 205);
+            this.PositionAppointmentDateTimePicker.Name = "PositionAppointmentDateTimePicker";
+            this.PositionAppointmentDateTimePicker.Size = new System.Drawing.Size(102, 23);
+            this.PositionAppointmentDateTimePicker.TabIndex = 54;
             // 
-            // dateTimePicker3
+            // PositionOrderDateTimePicker
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(464, 205);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(102, 23);
-            this.dateTimePicker3.TabIndex = 53;
+            this.PositionOrderDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PositionOrderDateTimePicker.Location = new System.Drawing.Point(464, 205);
+            this.PositionOrderDateTimePicker.Name = "PositionOrderDateTimePicker";
+            this.PositionOrderDateTimePicker.Size = new System.Drawing.Size(102, 23);
+            this.PositionOrderDateTimePicker.TabIndex = 53;
             // 
-            // dateTimePicker2
+            // ContractDateTimePicker
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(148, 205);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(102, 23);
-            this.dateTimePicker2.TabIndex = 52;
+            this.ContractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ContractDateTimePicker.Location = new System.Drawing.Point(148, 205);
+            this.ContractDateTimePicker.Name = "ContractDateTimePicker";
+            this.ContractDateTimePicker.Size = new System.Drawing.Size(102, 23);
+            this.ContractDateTimePicker.TabIndex = 52;
             // 
-            // dateTimePicker1
+            // BirthDateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(36, 205);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 23);
-            this.dateTimePicker1.TabIndex = 51;
+            this.BirthDateTimePicker.CustomFormat = "dd.MM.yyyy";
+            this.BirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.BirthDateTimePicker.Location = new System.Drawing.Point(36, 205);
+            this.BirthDateTimePicker.Name = "BirthDateTimePicker";
+            this.BirthDateTimePicker.Size = new System.Drawing.Size(102, 23);
+            this.BirthDateTimePicker.TabIndex = 51;
             // 
             // password
             // 
@@ -417,20 +421,22 @@ namespace InvestigatorWorkstation
             this.label22.TabIndex = 49;
             this.label22.Text = "Логин";
             // 
-            // textBox_password
+            // PasswordTextBox
             // 
-            this.textBox_password.Location = new System.Drawing.Point(208, 434);
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(154, 23);
-            this.textBox_password.TabIndex = 48;
-            this.textBox_password.UseSystemPasswordChar = true;
+            this.PasswordTextBox.Location = new System.Drawing.Point(208, 434);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PlaceholderText = "Введите пароль";
+            this.PasswordTextBox.Size = new System.Drawing.Size(154, 23);
+            this.PasswordTextBox.TabIndex = 48;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // textBox18
+            // LoginTextBox
             // 
-            this.textBox18.Location = new System.Drawing.Point(36, 434);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(164, 23);
-            this.textBox18.TabIndex = 47;
+            this.LoginTextBox.Location = new System.Drawing.Point(36, 434);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.PlaceholderText = "Введите логин";
+            this.LoginTextBox.Size = new System.Drawing.Size(164, 23);
+            this.LoginTextBox.TabIndex = 47;
             // 
             // label21
             // 
@@ -470,12 +476,13 @@ namespace InvestigatorWorkstation
             this.label20.TabIndex = 43;
             this.label20.Text = "Дата приказа";
             // 
-            // textBox15
+            // RankOrderNumberTextBox
             // 
-            this.textBox15.Location = new System.Drawing.Point(688, 367);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(102, 23);
-            this.textBox15.TabIndex = 42;
+            this.RankOrderNumberTextBox.Location = new System.Drawing.Point(688, 367);
+            this.RankOrderNumberTextBox.Name = "RankOrderNumberTextBox";
+            this.RankOrderNumberTextBox.PlaceholderText = "Введите номер";
+            this.RankOrderNumberTextBox.Size = new System.Drawing.Size(102, 23);
+            this.RankOrderNumberTextBox.TabIndex = 42;
             // 
             // label16
             // 
@@ -537,12 +544,13 @@ namespace InvestigatorWorkstation
             this.label10.TabIndex = 32;
             this.label10.Text = "Номер приказа";
             // 
-            // textBox10
+            // PositionOrderNumberTextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(688, 205);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(102, 23);
-            this.textBox10.TabIndex = 31;
+            this.PositionOrderNumberTextBox.Location = new System.Drawing.Point(688, 205);
+            this.PositionOrderNumberTextBox.Name = "PositionOrderNumberTextBox";
+            this.PositionOrderNumberTextBox.PlaceholderText = "Введите номер";
+            this.PositionOrderNumberTextBox.Size = new System.Drawing.Size(102, 23);
+            this.PositionOrderNumberTextBox.TabIndex = 31;
             // 
             // label11
             // 
@@ -576,26 +584,26 @@ namespace InvestigatorWorkstation
             this.Text = "Регистрация сотрудника";
             this.panel_white.ResumeLayout(false);
             this.panel_white.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_login;
+        private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.Label login;
         private System.Windows.Forms.Button BackToLoginButton;
         private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Label title2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox MiddleNameTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PersonalNumberTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -610,27 +618,27 @@ namespace InvestigatorWorkstation
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox RankOrderNumberTextBox;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox_password;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.DateTimePicker dateTimePicker9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox LoginTextBox;
+        private System.Windows.Forms.DateTimePicker CertificationTermDateTimePicker;
+        private System.Windows.Forms.DateTimePicker QualificationUpdateDateTimePicker;
+        private System.Windows.Forms.DateTimePicker JoinServiceDateTimePicker;
+        private System.Windows.Forms.DateTimePicker RankOrderDateTimePicker;
+        private System.Windows.Forms.DateTimePicker RankAppointmentDateTimePicker;
+        private System.Windows.Forms.DateTimePicker PositionAppointmentDateTimePicker;
+        private System.Windows.Forms.DateTimePicker PositionOrderDateTimePicker;
+        private System.Windows.Forms.DateTimePicker ContractDateTimePicker;
+        private System.Windows.Forms.DateTimePicker BirthDateTimePicker;
+        private System.Windows.Forms.TextBox PositionOrderNumberTextBox;
+        private System.Windows.Forms.ComboBox PositionComboBox;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox RankComboBox;
+        private System.Windows.Forms.NumericUpDown RankTermNumeric;
     }
 }

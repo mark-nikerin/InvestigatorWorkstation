@@ -1,7 +1,8 @@
-﻿namespace Services
+﻿using Services.Interfaces;
+
+namespace Services
 {
     using Microsoft.EntityFrameworkCore;
-    using Services.Interfaces;
     using Storage;
     using System;
     using System.Linq;
@@ -33,9 +34,17 @@
             return $"{user.LastName} {user.FirstName} {user.MiddleName}";
         }
 
-        public async Task RegisterUser()
+        public async Task RegisterUser(string login, string password)
         {
-            throw new System.NotImplementedException();
+            var user = await _db.Employees.Where(x => x.Login == login).SingleOrDefaultAsync();
+
+            if (user == null)
+                throw new Exception("Employee not found");
+
+            user.Password = _passwordService.GetHashedPassword(password);
+
+            _db.Employees.Update(user);
+            await _db.SaveChangesAsync();
         }
 
         public void UnauthorizeUser()
