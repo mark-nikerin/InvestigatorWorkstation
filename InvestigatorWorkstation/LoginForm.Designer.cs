@@ -148,7 +148,7 @@ namespace InvestigatorWorkstation
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginForm";
+            this.Text = "АРМ Следователя - Вход";
             this.WhitePanel.ResumeLayout(false);
             this.WhitePanel.PerformLayout();
             this.LoginTextGreyPanel.ResumeLayout(false);

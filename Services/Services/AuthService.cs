@@ -20,21 +20,19 @@ namespace Services
             _passwordService = passwordService;
         }
 
-        public async Task<string> AuthorizeUser(string login, string password)
+        public async Task AuthorizeUser(string login, string password)
         {
             var user = await _db.Employees.Where(x => x.Login == login).SingleOrDefaultAsync();
 
             if (user == null)
-                throw new Exception("Wrong login or password"); 
+                throw new ArgumentException("Wrong login or password");
 
             if (!_passwordService.VerifyPassword(user.Password, password))
             {
-                throw new Exception("Wrong login or password");
+                throw new ArgumentException("Wrong login or password");
             }
 
             CurrentUserService.SetCurrentUser(user);
-
-            return $"{user.LastName} {user.FirstName} {user.MiddleName}";
         }
 
         public async Task RegisterUser(string login, string password)

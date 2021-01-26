@@ -18,13 +18,22 @@ namespace InvestigatorWorkstation
         private void MainForm_Load(object sender, System.EventArgs e)
         {
             Hide();
-            while (CurrentUserService.GetCurrentUser() == null)
+
+            if (CurrentUserService.GetCurrentUser() == null)
             {
                 _loginForm.ShowDialog();
             }
+
             var currentUser = CurrentUserService.GetCurrentUser();
-            UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}.";
-            Show();
+            if (currentUser == null)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}.";
+                Show();
+            }
         }
 
         private void SidebarButton_Click(object sender, System.EventArgs e)
@@ -59,12 +68,12 @@ namespace InvestigatorWorkstation
                 if (control is Button sidebarButton)
                 {
                     sidebarButton.BackColor = Color.FromArgb(249, 249, 249);
-                    sidebarButton.Font = new Font("Segoe UI", 13.0F, FontStyle.Regular);
+                    sidebarButton.Font = new Font("Segoe UI", 12.0F, FontStyle.Regular);
                 }
             }
 
             button.BackColor = Color.FromArgb(230, 239, 255);
-            button.Font = new Font("Segoe UI", 13.0F, FontStyle.Bold);
+            button.Font = new Font("Segoe UI", 12.0F, FontStyle.Bold);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

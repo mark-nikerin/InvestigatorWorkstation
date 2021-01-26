@@ -23,8 +23,15 @@
 
         private async void LogInButton_Click(object sender, EventArgs e)
         {
-            await _authService.AuthorizeUser(LoginTextBox.Text, PasswordTextBox.Text); 
-            Hide();
+            try
+            {
+                await _authService.AuthorizeUser(LoginTextBox.Text, PasswordTextBox.Text); 
+                Hide();
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Введён неправильный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
