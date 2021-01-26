@@ -1,4 +1,5 @@
 ﻿using Services.Interfaces;
+using Services.Services;
 
 namespace Services
 {
@@ -31,6 +32,8 @@ namespace Services
                 throw new Exception("Wrong login or password");
             }
 
+            CurrentUserService.SetCurrentUser(user);
+
             return $"{user.LastName} {user.FirstName} {user.MiddleName}";
         }
 
@@ -45,11 +48,13 @@ namespace Services
 
             _db.Employees.Update(user);
             await _db.SaveChangesAsync();
+
+            CurrentUserService.SetCurrentUser(user);
         }
 
         public void UnauthorizeUser()
         {
-            throw new System.NotImplementedException();
+            CurrentUserService.SetCurrentUser(null);
         }
     }
 }
