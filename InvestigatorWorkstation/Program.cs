@@ -43,8 +43,8 @@
             {
                 var services = serviceScope.ServiceProvider;
 
-                var loginForm = services.GetRequiredService<LoginForm>();
-                Application.Run(loginForm);
+                var mainForm = services.GetRequiredService<MainForm>();
+                Application.Run(mainForm);
             };
         }
     }

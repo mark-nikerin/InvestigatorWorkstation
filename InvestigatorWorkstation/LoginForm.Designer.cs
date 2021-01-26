@@ -31,7 +31,6 @@ namespace InvestigatorWorkstation
         {
             this.WhitePanel = new System.Windows.Forms.Panel();
             this.LogInButton = new System.Windows.Forms.Button();
-            this.RegistrationButton = new System.Windows.Forms.Button();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
@@ -48,14 +47,13 @@ namespace InvestigatorWorkstation
             this.WhitePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.WhitePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.WhitePanel.Controls.Add(this.LogInButton);
-            this.WhitePanel.Controls.Add(this.RegistrationButton);
             this.WhitePanel.Controls.Add(this.PasswordLabel);
             this.WhitePanel.Controls.Add(this.LoginLabel);
             this.WhitePanel.Controls.Add(this.PasswordTextBox);
             this.WhitePanel.Controls.Add(this.LoginTextBox);
             this.WhitePanel.Location = new System.Drawing.Point(241, 113);
             this.WhitePanel.Name = "WhitePanel";
-            this.WhitePanel.Size = new System.Drawing.Size(272, 291);
+            this.WhitePanel.Size = new System.Drawing.Size(272, 257);
             this.WhitePanel.TabIndex = 0;
             // 
             // LogInButton
@@ -64,28 +62,13 @@ namespace InvestigatorWorkstation
             this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogInButton.ForeColor = System.Drawing.Color.Transparent;
-            this.LogInButton.Location = new System.Drawing.Point(159, 183);
+            this.LogInButton.Location = new System.Drawing.Point(74, 204);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(71, 26);
+            this.LogInButton.Size = new System.Drawing.Size(126, 26);
             this.LogInButton.TabIndex = 7;
             this.LogInButton.Text = "Войти";
             this.LogInButton.UseVisualStyleBackColor = false;
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
-            // 
-            // RegistrationButton
-            // 
-            this.RegistrationButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.RegistrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrationButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.RegistrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistrationButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RegistrationButton.Location = new System.Drawing.Point(73, 249);
-            this.RegistrationButton.Name = "RegistrationButton";
-            this.RegistrationButton.Size = new System.Drawing.Size(126, 26);
-            this.RegistrationButton.TabIndex = 6;
-            this.RegistrationButton.Text = "Регистрация";
-            this.RegistrationButton.UseVisualStyleBackColor = false;
-            this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
             // 
             // PasswordLabel
             // 
@@ -184,7 +167,6 @@ namespace InvestigatorWorkstation
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.Button LogInButton;
-        private System.Windows.Forms.Button RegistrationButton;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Label LoginLabel;
     }

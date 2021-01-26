@@ -30,15 +30,17 @@ namespace InvestigatorWorkstation
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.divider1 = new System.Windows.Forms.Label();
+            this.QualificationsButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.EmployeesButton = new System.Windows.Forms.Button();
             this.CriminalCasesButton = new System.Windows.Forms.Button();
             this.CrimeReportsButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.UserNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabContainer = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -101,11 +103,13 @@ namespace InvestigatorWorkstation
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.splitContainer1.Panel1.Controls.Add(this.divider1);
+            this.splitContainer1.Panel1.Controls.Add(this.QualificationsButton);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.EmployeesButton);
             this.splitContainer1.Panel1.Controls.Add(this.CriminalCasesButton);
             this.splitContainer1.Panel1.Controls.Add(this.CrimeReportsButton);
             this.splitContainer1.Panel1.Controls.Add(this.CalendarButton);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.UserNameLabel);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
@@ -118,78 +122,116 @@ namespace InvestigatorWorkstation
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
             // 
-            // divider1
+            // QualificationsButton
             // 
-            this.divider1.BackColor = System.Drawing.Color.Red;
-            this.divider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.divider1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.divider1.Location = new System.Drawing.Point(0, 181);
-            this.divider1.Margin = new System.Windows.Forms.Padding(0);
-            this.divider1.Name = "divider1";
-            this.divider1.Size = new System.Drawing.Size(188, 1);
-            this.divider1.TabIndex = 5;
+            this.QualificationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.QualificationsButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.QualificationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QualificationsButton.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.QualificationsButton.Location = new System.Drawing.Point(-7, 530);
+            this.QualificationsButton.Margin = new System.Windows.Forms.Padding(0);
+            this.QualificationsButton.Name = "QualificationsButton";
+            this.QualificationsButton.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
+            this.QualificationsButton.Size = new System.Drawing.Size(192, 62);
+            this.QualificationsButton.TabIndex = 7;
+            this.QualificationsButton.Text = "Квалификации";
+            this.QualificationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.QualificationsButton.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(-4, 470);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(192, 62);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "УФСБ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // EmployeesButton
+            // 
+            this.EmployeesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmployeesButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.EmployeesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmployeesButton.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeesButton.Location = new System.Drawing.Point(-4, 409);
+            this.EmployeesButton.Margin = new System.Windows.Forms.Padding(0);
+            this.EmployeesButton.Name = "EmployeesButton";
+            this.EmployeesButton.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
+            this.EmployeesButton.Size = new System.Drawing.Size(192, 62);
+            this.EmployeesButton.TabIndex = 5;
+            this.EmployeesButton.Text = "Следователи";
+            this.EmployeesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmployeesButton.UseVisualStyleBackColor = true;
             // 
             // CriminalCasesButton
             // 
             this.CriminalCasesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CriminalCasesButton.FlatAppearance.BorderSize = 0;
+            this.CriminalCasesButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.CriminalCasesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CriminalCasesButton.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CriminalCasesButton.Location = new System.Drawing.Point(0, 299);
-            this.CriminalCasesButton.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.CriminalCasesButton.Location = new System.Drawing.Point(-1, 295);
+            this.CriminalCasesButton.Margin = new System.Windows.Forms.Padding(0);
             this.CriminalCasesButton.Name = "CriminalCasesButton";
             this.CriminalCasesButton.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.CriminalCasesButton.Size = new System.Drawing.Size(184, 62);
+            this.CriminalCasesButton.Size = new System.Drawing.Size(192, 62);
             this.CriminalCasesButton.TabIndex = 4;
             this.CriminalCasesButton.Text = "Уголовные дела";
             this.CriminalCasesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CriminalCasesButton.UseVisualStyleBackColor = true;
-            this.CriminalCasesButton.Click += new System.EventHandler(this.CriminalCasesButton_Click);
+            this.CriminalCasesButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
             // CrimeReportsButton
             // 
+            this.CrimeReportsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CrimeReportsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CrimeReportsButton.FlatAppearance.BorderSize = 0;
+            this.CrimeReportsButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.CrimeReportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CrimeReportsButton.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CrimeReportsButton.Location = new System.Drawing.Point(0, 225);
-            this.CrimeReportsButton.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.CrimeReportsButton.Location = new System.Drawing.Point(-1, 228);
+            this.CrimeReportsButton.Margin = new System.Windows.Forms.Padding(0);
             this.CrimeReportsButton.Name = "CrimeReportsButton";
             this.CrimeReportsButton.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.CrimeReportsButton.Size = new System.Drawing.Size(184, 68);
+            this.CrimeReportsButton.Size = new System.Drawing.Size(192, 68);
             this.CrimeReportsButton.TabIndex = 3;
             this.CrimeReportsButton.Text = "Сообщения \r\nо преступлении";
             this.CrimeReportsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CrimeReportsButton.UseVisualStyleBackColor = true;
-            this.CrimeReportsButton.Click += new System.EventHandler(this.CrimeReportsButton_Click);
+            this.CrimeReportsButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
             // CalendarButton
             // 
             this.CalendarButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CalendarButton.FlatAppearance.BorderSize = 0;
+            this.CalendarButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalendarButton.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CalendarButton.Location = new System.Drawing.Point(0, 121);
-            this.CalendarButton.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.CalendarButton.Location = new System.Drawing.Point(-1, 121);
+            this.CalendarButton.Margin = new System.Windows.Forms.Padding(0);
             this.CalendarButton.Name = "CalendarButton";
             this.CalendarButton.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.CalendarButton.Size = new System.Drawing.Size(184, 52);
+            this.CalendarButton.Size = new System.Drawing.Size(192, 52);
             this.CalendarButton.TabIndex = 2;
             this.CalendarButton.Text = "Календарь";
             this.CalendarButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CalendarButton.UseVisualStyleBackColor = true;
-            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
+            this.CalendarButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
-            // label2
+            // UserNameLabel
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(76, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(12, 36, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Андреев А.А.";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UserNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UserNameLabel.Location = new System.Drawing.Point(76, 52);
+            this.UserNameLabel.Margin = new System.Windows.Forms.Padding(12, 36, 3, 0);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(112, 34);
+            this.UserNameLabel.TabIndex = 1;
+            this.UserNameLabel.Text = "Андреев А.А.";
+            this.UserNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
@@ -210,20 +252,21 @@ namespace InvestigatorWorkstation
             this.TabContainer.Controls.Add(this.tabPage6);
             this.TabContainer.Controls.Add(this.tabPage7);
             this.TabContainer.Controls.Add(this.tabPage8);
-            this.TabContainer.Location = new System.Drawing.Point(3, -29);
+            this.TabContainer.Location = new System.Drawing.Point(-1, -29);
             this.TabContainer.Margin = new System.Windows.Forms.Padding(0);
             this.TabContainer.Name = "TabContainer";
+            this.TabContainer.Padding = new System.Drawing.Point(0, 0);
             this.TabContainer.SelectedIndex = 0;
-            this.TabContainer.Size = new System.Drawing.Size(957, 809);
+            this.TabContainer.Size = new System.Drawing.Size(1015, 809);
             this.TabContainer.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.splitContainer2);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(949, 781);
+            this.tabPage1.Size = new System.Drawing.Size(1007, 781);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -266,14 +309,14 @@ namespace InvestigatorWorkstation
             this.dataGridView1.Location = new System.Drawing.Point(10, 74);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 3);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(661, 650);
             this.dataGridView1.TabIndex = 1;
@@ -327,7 +370,7 @@ namespace InvestigatorWorkstation
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(949, 781);
+            this.tabPage6.Size = new System.Drawing.Size(1007, 781);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -347,8 +390,8 @@ namespace InvestigatorWorkstation
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.splitContainer3.Size = new System.Drawing.Size(943, 775);
-            this.splitContainer3.SplitterDistance = 680;
+            this.splitContainer3.Size = new System.Drawing.Size(1001, 775);
+            this.splitContainer3.SplitterDistance = 719;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -369,14 +412,14 @@ namespace InvestigatorWorkstation
             this.dataGridView2.Location = new System.Drawing.Point(10, 74);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(10, 20, 10, 3);
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(657, 650);
             this.dataGridView2.TabIndex = 1;
@@ -428,7 +471,7 @@ namespace InvestigatorWorkstation
             // 
             this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(949, 781);
+            this.tabPage7.Size = new System.Drawing.Size(1007, 781);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -437,7 +480,7 @@ namespace InvestigatorWorkstation
             // 
             this.tabPage8.Location = new System.Drawing.Point(4, 24);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(949, 781);
+            this.tabPage8.Size = new System.Drawing.Size(1007, 781);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -445,6 +488,7 @@ namespace InvestigatorWorkstation
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(0);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(3, 780);
             this.splitter1.TabIndex = 0;
@@ -461,6 +505,7 @@ namespace InvestigatorWorkstation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -488,12 +533,11 @@ namespace InvestigatorWorkstation
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button CriminalCasesButton;
         private System.Windows.Forms.Button CrimeReportsButton;
         private System.Windows.Forms.Button CalendarButton;
-        private System.Windows.Forms.Label divider1;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TabControl TabContainer;
         private System.Windows.Forms.TabPage tabPage1;
@@ -518,5 +562,8 @@ namespace InvestigatorWorkstation
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Button QualificationsButton;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EmployeesButton;
     }
 }
