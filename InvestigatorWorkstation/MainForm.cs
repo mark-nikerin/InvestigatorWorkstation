@@ -1,3 +1,4 @@
+using Services.Interfaces;
 using Services.Services;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,10 +8,12 @@ namespace InvestigatorWorkstation
     public partial class MainForm : Form
     {
         private readonly LoginForm _loginForm;
+        private readonly IAuthService _authService;
 
-        public MainForm(LoginForm loginForm)
+        public MainForm(LoginForm loginForm, IAuthService authService)
         {
             _loginForm = loginForm;
+            _authService = authService;
             InitializeComponent();
             SetActiveButton(CrimeReportsButton);
         }
@@ -79,6 +82,29 @@ namespace InvestigatorWorkstation
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void label2_Click(object sender, System.EventArgs e)
+        { 
+            _authService.UnauthorizeUser();
+            Hide();
+
+            if (CurrentUserService.GetCurrentUser() == null)
+            {
+                _loginForm.ShowDialog();
+            }
+
+            var currentUser = CurrentUserService.GetCurrentUser();
+            if (currentUser == null)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}.";
+                EmployeesButton.Enabled = CurrentUserService.IsAdmin();
+                Show();
+            }
         }
     }
 }
