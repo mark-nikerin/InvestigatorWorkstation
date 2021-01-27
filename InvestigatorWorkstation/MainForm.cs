@@ -31,7 +31,8 @@ namespace InvestigatorWorkstation
             }
             else
             {
-                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}.";
+                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}."; 
+                EmployeesButton.Enabled = CurrentUserService.IsAdmin();
                 Show();
             }
         }

@@ -11,6 +11,11 @@ namespace Services.Services
             return _currentUser;
         }
 
+        public static bool IsAdmin()
+        {
+            return _currentUser?.IsAdmin ?? false;
+        }
+
         public static void SetCurrentUser(Employee user)
         {
             _currentUser = user == null
@@ -19,6 +24,7 @@ namespace Services.Services
                 {
                     Id = user.Id,
                     FirstName = user.FirstName,
+                    IsAdmin = user.IsAdmin,
                     MiddleName = user.MiddleName,
                     LastName = user.LastName,
                     Login = user.Login,
