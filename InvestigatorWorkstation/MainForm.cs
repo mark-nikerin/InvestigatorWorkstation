@@ -34,7 +34,7 @@ namespace InvestigatorWorkstation
             }
             else
             {
-                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}."; 
+                UserNameLabel.Text = currentUser.FirstName;
                 EmployeesButton.Enabled = CurrentUserService.IsAdmin();
                 Show();
             }
@@ -84,7 +84,7 @@ namespace InvestigatorWorkstation
         {
         }
 
-        private void label2_Click(object sender, System.EventArgs e)
+        private void LogoutLabel_Click(object sender, System.EventArgs e)
         { 
             _authService.UnauthorizeUser();
             Hide();
@@ -101,7 +101,7 @@ namespace InvestigatorWorkstation
             }
             else
             {
-                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}.{currentUser.MiddleName[0]}.";
+                UserNameLabel.Text = currentUser.FirstName;
                 EmployeesButton.Enabled = CurrentUserService.IsAdmin();
                 Show();
             }

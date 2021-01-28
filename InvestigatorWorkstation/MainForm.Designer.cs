@@ -41,7 +41,7 @@ namespace InvestigatorWorkstation
             this.CriminalCasesButton = new System.Windows.Forms.Button();
             this.CrimeReportsButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
-            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.UserNameLabel = new GrowLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabContainer = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -121,7 +121,7 @@ namespace InvestigatorWorkstation
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label2.Name = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.LogoutLabel_Click);
             // 
             // QualificationsButton
             // 
@@ -414,7 +414,7 @@ namespace InvestigatorWorkstation
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label UserNameLabel;
+        private GrowLabel UserNameLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button CriminalCasesButton;
         private System.Windows.Forms.Button CrimeReportsButton;

@@ -103,16 +103,16 @@
     <value>Segoe UI Semibold, 10pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>80, 86</value>
+    <value>66, 86</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>70, 19</value>
+    <value>50, 19</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>&lt;- Выйти</value>
+    <value>Выйти</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -370,19 +370,19 @@
     <value>Segoe UI Semibold, 10pt, style=Bold</value>
   </data>
   <data name="UserNameLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>76, 52</value>
+    <value>66, 45</value>
   </data>
   <data name="UserNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>12, 36, 3, 0</value>
   </data>
   <data name="UserNameLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>112, 34</value>
+    <value>115, 19</value>
   </data>
   <data name="UserNameLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
   </data>
   <data name="UserNameLabel.Text" xml:space="preserve">
-    <value>Андреев А.А.</value>
+    <value>Администратор</value>
   </data>
   <data name="UserNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
     <value>MiddleLeft</value>
@@ -391,7 +391,7 @@
     <value>UserNameLabel</value>
   </data>
   <data name="&gt;&gt;UserNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>GrowLabel, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;UserNameLabel.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -415,13 +415,13 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>28, 52</value>
+    <value>9, 31</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>19, 52, 3, 3</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>34, 34</value>
+    <value>52, 55</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -622,7 +622,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1019, 781</value>
+    <value>1025, 781</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -778,10 +778,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1013, 775</value>
+    <value>1019, 775</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>727</value>
+    <value>731</value>
   </data>
   <data name="splitContainer3.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -808,7 +808,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1019, 781</value>
+    <value>1025, 781</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
@@ -832,7 +832,7 @@
     <value>4, 24</value>
   </data>
   <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1019, 781</value>
+    <value>1025, 781</value>
   </data>
   <data name="tabPage7.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -856,7 +856,7 @@
     <value>4, 24</value>
   </data>
   <data name="tabPage8.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1019, 781</value>
+    <value>1025, 781</value>
   </data>
   <data name="tabPage8.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>7</value>
@@ -886,7 +886,7 @@
     <value>0, 0</value>
   </data>
   <data name="TabContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1027, 809</value>
+    <value>1033, 809</value>
   </data>
   <data name="TabContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
