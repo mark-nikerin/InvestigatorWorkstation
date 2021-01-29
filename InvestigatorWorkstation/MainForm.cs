@@ -15,59 +15,61 @@ namespace InvestigatorWorkstation
             _loginForm = loginForm;
             _authService = authService;
             InitializeComponent();
-            SetActiveButton(CrimeReportsButton);
+            SetActiveButton(CriminalReportButton);
         }
 
         private void MainForm_Load(object sender, System.EventArgs e)
         {
-            Hide();
+            //Hide();
 
-            if (CurrentUserService.GetCurrentUser() == null)
-            {
-                _loginForm.ShowDialog();
-            }
+            //if (CurrentUserService.GetCurrentUser() == null)
+            //{
+            //    _loginForm.ShowDialog();
+            //}
 
-            var currentUser = CurrentUserService.GetCurrentUser();
-            if (currentUser == null)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                UserNameLabel.Text = currentUser.FirstName;
-                EmployeesButton.Enabled = CurrentUserService.IsAdmin();
-                Show();
-            }
+            //var currentUser = CurrentUserService.GetCurrentUser();
+            //if (currentUser == null)
+            //{
+            //    Application.Exit();
+            //}
+            //else
+            //{
+            //    UserNameLabel.Text = currentUser.FirstName;
+            //    EmployeeButton.Enabled = CurrentUserService.IsAdmin();
+            //    Show();
+            //}
         }
 
         private void SidebarButton_Click(object sender, System.EventArgs e)
         {
             switch (((Button)sender).Name)
             {
-                case "CrimeReportsButton":
-                    SetActiveButton(CrimeReportsButton);
-                    TabContainer.SelectedIndex = 0;
+                case "CriminalReportButton":
+                    SetActiveButton(CriminalReportButton);
+                    MainTabContainer.SelectedIndex = 0;
                     break;
-                case "CriminalCasesButton":
-                    SetActiveButton(CriminalCasesButton);
-                    TabContainer.SelectedIndex = 1;
+                case "CriminalCaseButton":
+                    SetActiveButton(CriminalCaseButton);
+                    MainTabContainer.SelectedIndex = 1;
                     break;
                 case "CalendarButton":
                     SetActiveButton(CalendarButton);
-                    TabContainer.SelectedIndex = 2;
+                    MainTabContainer.SelectedIndex = 2;
                     break;
-                case "EmployeesButton":
-                    SetActiveButton(EmployeesButton);
+                case "EmployeeButton":
+                    SetActiveButton(EmployeeButton);
+                    MainTabContainer.SelectedIndex = 3;
                     break;
-                case "QualificationsButton":
-                    SetActiveButton(QualificationsButton);
+                case "QualificationButton":
+                    SetActiveButton(QualificationButton);
+                    MainTabContainer.SelectedIndex = 4;
                     break;
             }
         }
 
         private void SetActiveButton(Button button)
         {
-            foreach (var control in splitContainer1.Panel1.Controls)
+            foreach (var control in MainSplitContainer.Panel1.Controls)
             {
                 if (control is Button sidebarButton)
                 {
@@ -102,7 +104,7 @@ namespace InvestigatorWorkstation
             else
             {
                 UserNameLabel.Text = currentUser.FirstName;
-                EmployeesButton.Enabled = CurrentUserService.IsAdmin();
+                EmployeeButton.Enabled = CurrentUserService.IsAdmin();
                 Show();
             }
         }
