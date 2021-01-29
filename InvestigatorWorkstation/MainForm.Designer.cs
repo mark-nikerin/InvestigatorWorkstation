@@ -46,7 +46,7 @@ namespace InvestigatorWorkstation
             this.MainTabContainer = new System.Windows.Forms.TabControl();
             this.CriminalReportTabPage = new System.Windows.Forms.TabPage();
             this.CriminalReportSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CriminalReportLabel = new System.Windows.Forms.Label();
             this.CriminalReportGridView = new System.Windows.Forms.DataGridView();
             this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -196,12 +196,12 @@ namespace InvestigatorWorkstation
             // 
             // MainTabContainer
             // 
+            resources.ApplyResources(this.MainTabContainer, "MainTabContainer");
             this.MainTabContainer.Controls.Add(this.CriminalReportTabPage);
             this.MainTabContainer.Controls.Add(this.CriminalCaseTabPage);
             this.MainTabContainer.Controls.Add(this.CalendarTabPage);
             this.MainTabContainer.Controls.Add(this.EmployeeTabPage);
             this.MainTabContainer.Controls.Add(this.QualificationTabPage);
-            resources.ApplyResources(this.MainTabContainer, "MainTabContainer");
             this.MainTabContainer.Multiline = true;
             this.MainTabContainer.Name = "MainTabContainer";
             this.MainTabContainer.SelectedIndex = 0;
@@ -221,17 +221,17 @@ namespace InvestigatorWorkstation
             // 
             // CriminalReportSplitContainer.Panel1
             // 
-            this.CriminalReportSplitContainer.Panel1.Controls.Add(this.label1);
+            this.CriminalReportSplitContainer.Panel1.Controls.Add(this.CriminalReportLabel);
             this.CriminalReportSplitContainer.Panel1.Controls.Add(this.CriminalReportGridView);
             // 
             // CriminalReportSplitContainer.Panel2
             // 
             this.CriminalReportSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             // 
-            // label1
+            // CriminalReportLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.CriminalReportLabel, "CriminalReportLabel");
+            this.CriminalReportLabel.Name = "CriminalReportLabel";
             // 
             // CriminalReportGridView
             // 
@@ -550,7 +550,7 @@ namespace InvestigatorWorkstation
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.Label EmployeeLabel;
         private System.Windows.Forms.Button CriminalReportButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CriminalReportLabel;
         private System.Windows.Forms.DataGridView CriminalReportGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationDate;

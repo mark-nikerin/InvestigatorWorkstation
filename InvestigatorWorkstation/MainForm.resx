@@ -452,6 +452,9 @@
   <data name="&gt;&gt;MainSplitContainer.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="MainTabContainer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="CriminalReportSplitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -464,40 +467,43 @@
   <data name="CriminalReportSplitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, System.Private.CoreLib">
+  <data name="CriminalReportLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing.Common">
+  <data name="CriminalReportLabel.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="CriminalReportLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>26, 18</value>
+  <data name="CriminalReportLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 31</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+  <data name="CriminalReportLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>30, 33, 3, 0</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>181, 21</value>
+  <data name="CriminalReportLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>290, 21</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="CriminalReportLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Список уголовных дел</value>
+  <data name="CriminalReportLabel.Text" xml:space="preserve">
+    <value>Список сообщений о преступлениях</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="CriminalReportLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;CriminalReportLabel.Name" xml:space="preserve">
+    <value>CriminalReportLabel</value>
+  </data>
+  <data name="&gt;&gt;CriminalReportLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CriminalReportLabel.Parent" xml:space="preserve">
     <value>CriminalReportSplitContainer.Panel1</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CriminalReportLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="CriminalReportGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -549,13 +555,13 @@
     <value>Фабула</value>
   </data>
   <data name="CriminalReportGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 74</value>
+    <value>20, 74</value>
   </data>
   <data name="CriminalReportGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>10, 20, 10, 3</value>
+    <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalReportGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>649, 650</value>
+    <value>662, 678</value>
   </data>
   <data name="CriminalReportGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>4</value>
@@ -597,10 +603,10 @@
     <value>1</value>
   </data>
   <data name="CriminalReportSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>669</value>
+    <value>702</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -627,7 +633,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="CriminalReportTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="CriminalReportTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
@@ -708,13 +714,13 @@
     <value>Фабула</value>
   </data>
   <data name="CriminalCaseGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 74</value>
+    <value>20, 74</value>
   </data>
   <data name="CriminalCaseGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>10, 20, 10, 3</value>
+    <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalCaseGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>649, 650</value>
+    <value>662, 678</value>
   </data>
   <data name="CriminalCaseGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -792,10 +798,10 @@
     <value>1</value>
   </data>
   <data name="CriminalCaseSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>669</value>
+    <value>702</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -819,7 +825,7 @@
     <value>4, 24</value>
   </data>
   <data name="CriminalCaseTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="CriminalCaseTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -843,7 +849,7 @@
     <value>4, 24</value>
   </data>
   <data name="CalendarTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="CalendarTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -912,13 +918,13 @@
     <value>Фабула</value>
   </data>
   <data name="EmployeeGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>23, 74</value>
+    <value>20, 74</value>
   </data>
   <data name="EmployeeGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>20, 20, 20, 20</value>
   </data>
   <data name="EmployeeGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>876, 653</value>
+    <value>879, 653</value>
   </data>
   <data name="EmployeeGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -945,7 +951,7 @@
     <value>NoControl</value>
   </data>
   <data name="EmployeeLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>69, 33</value>
+    <value>27, 31</value>
   </data>
   <data name="EmployeeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>30, 33, 3, 0</value>
@@ -978,7 +984,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="EmployeeTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="EmployeeTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>7</value>
@@ -1005,7 +1011,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="QualificationTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>924, 752</value>
+    <value>933, 780</value>
   </data>
   <data name="QualificationTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>8</value>
@@ -1025,14 +1031,11 @@
   <data name="&gt;&gt;QualificationTabPage.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="MainTabContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="MainTabContainer.ItemSize" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>126, 0</value>
   </data>
   <data name="MainTabContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 0</value>
+    <value>-3, -28</value>
   </data>
   <data name="MainTabContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
@@ -1041,7 +1044,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainTabContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>932, 780</value>
+    <value>941, 808</value>
   </data>
   <data name="MainTabContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -1126,6 +1129,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>1136, 780</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>1024, 720</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
