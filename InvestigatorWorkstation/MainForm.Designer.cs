@@ -219,12 +219,12 @@ namespace InvestigatorWorkstation
             this.CriminalReportSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.CriminalReportSplitContainer.Name = "CriminalReportSplitContainer";
             // 
-            // CriminalReportSplitContainer.Panel1
+            // CriminalReportSplitContainer.Table
             // 
             this.CriminalReportSplitContainer.Panel1.Controls.Add(this.CriminalReportLabel);
             this.CriminalReportSplitContainer.Panel1.Controls.Add(this.CriminalReportGridView);
             // 
-            // CriminalReportSplitContainer.Panel2
+            // CriminalReportSplitContainer.History
             // 
             this.CriminalReportSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             // 
