@@ -1,6 +1,9 @@
+using InvestigatorWorkstation.ViewModels;
 using Services.Interfaces;
 using Services.Services;
 using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InvestigatorWorkstation
@@ -9,15 +12,19 @@ namespace InvestigatorWorkstation
     {
         private readonly LoginForm _loginForm;
         private readonly IAuthService _authService;
+        private readonly IEmployeeService _employeeService;
 
-        public MainForm(LoginForm loginForm, IAuthService authService)
+        public MainForm(LoginForm loginForm, IAuthService authService, IEmployeeService employeeService)
         {
             _loginForm = loginForm;
             _authService = authService;
+            _employeeService = employeeService;
+
             InitializeComponent();
             SetActiveButton(CriminalReportButton);
         }
 
+        #region Authorization
         private void MainForm_Load(object sender, System.EventArgs e)
         {
             //Hide();
@@ -40,6 +47,31 @@ namespace InvestigatorWorkstation
             //}
         }
 
+        private void LogoutLabel_Click(object sender, System.EventArgs e)
+        {
+            _authService.UnauthorizeUser();
+            Hide();
+
+            if (CurrentUserService.GetCurrentUser() == null)
+            {
+                _loginForm.ShowDialog();
+            }
+
+            var currentUser = CurrentUserService.GetCurrentUser();
+            if (currentUser == null)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                UserNameLabel.Text = currentUser.FirstName;
+                EmployeeButton.Enabled = CurrentUserService.IsAdmin();
+                Show();
+            }
+        }
+        #endregion
+
+        #region Switching tabs
         private void SidebarButton_Click(object sender, System.EventArgs e)
         {
             switch (((Button)sender).Name)
@@ -82,31 +114,38 @@ namespace InvestigatorWorkstation
             button.Font = new Font("Segoe UI", 12.0F, FontStyle.Bold);
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private async void MainTabContainer_SelectedTabChanged(object sender, System.EventArgs e)
         {
+            switch (MainTabContainer.SelectedTab.Name)
+            {
+                case "EmployeeTabPage":
+                    {
+                        var employees = await _employeeService.GetEmployees();
+                        EmployeeGridView.DataSource = employees
+                            .Select(x => (EmployeeViewModel)x)
+                            .ToList();
+                        EmployeeGridView.Update();
+                        break;
+                    };
+                case "CriminalCaseTabPage":
+                    {
+                        break;
+                    };
+                case "CriminalReportTabPage":
+                    {
+                        break;
+                    };
+                case "QualificationTabPage":
+                    {
+                        break;
+                    };
+                case "CalendarTabPage":
+                    {
+                        break;
+                    };
+            }
         }
+        #endregion 
 
-        private void LogoutLabel_Click(object sender, System.EventArgs e)
-        { 
-            _authService.UnauthorizeUser();
-            Hide();
-
-            if (CurrentUserService.GetCurrentUser() == null)
-            {
-                _loginForm.ShowDialog();
-            }
-
-            var currentUser = CurrentUserService.GetCurrentUser();
-            if (currentUser == null)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                UserNameLabel.Text = currentUser.FirstName;
-                EmployeeButton.Enabled = CurrentUserService.IsAdmin();
-                Show();
-            }
-        }
     }
 }

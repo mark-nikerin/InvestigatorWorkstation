@@ -205,6 +205,7 @@ namespace InvestigatorWorkstation
             this.MainTabContainer.Multiline = true;
             this.MainTabContainer.Name = "MainTabContainer";
             this.MainTabContainer.SelectedIndex = 0;
+            this.MainTabContainer.SelectedIndexChanged += new System.EventHandler(this.MainTabContainer_SelectedTabChanged);
             // 
             // CriminalReportTabPage
             // 
@@ -219,12 +220,12 @@ namespace InvestigatorWorkstation
             this.CriminalReportSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.CriminalReportSplitContainer.Name = "CriminalReportSplitContainer";
             // 
-            // CriminalReportSplitContainer.Table
+            // CriminalReportSplitContainer.Panel1
             // 
             this.CriminalReportSplitContainer.Panel1.Controls.Add(this.CriminalReportLabel);
             this.CriminalReportSplitContainer.Panel1.Controls.Add(this.CriminalReportGridView);
             // 
-            // CriminalReportSplitContainer.History
+            // CriminalReportSplitContainer.Panel2
             // 
             this.CriminalReportSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             // 
@@ -406,13 +407,6 @@ namespace InvestigatorWorkstation
             this.EmployeeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeGridView.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmployeeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
             this.EmployeeGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeeGridView.MultiSelect = false;
             this.EmployeeGridView.Name = "EmployeeGridView";
@@ -486,7 +480,6 @@ namespace InvestigatorWorkstation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MainSplitContainer);
             this.Name = "MainForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MainSplitContainer.Panel1.ResumeLayout(false);
             this.MainSplitContainer.Panel1.PerformLayout();

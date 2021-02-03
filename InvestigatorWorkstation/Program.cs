@@ -37,6 +37,7 @@
                         .AddScoped<IPasswordService, PasswordService>()
                         .AddScoped<IEmployeeService, EmployeeService>()
                         .AddScoped<IAuthService, AuthService>();
+
                 }).Build();
 
             using (var serviceScope = host.Services.CreateScope())
