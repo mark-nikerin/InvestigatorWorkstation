@@ -144,7 +144,13 @@ namespace InvestigatorWorkstation
                     };
             }
         }
-        #endregion 
+        #endregion
 
+        #region DataGridViews
+        private void DataGridView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            e.PaintParts &= ~DataGridViewPaintParts.Focus;
+        }
+        #endregion
     }
 }

@@ -70,6 +70,8 @@ namespace InvestigatorWorkstation
             this.EmployeeGridView = new System.Windows.Forms.DataGridView();
             this.EmployeeLabel = new System.Windows.Forms.Label();
             this.QualificationTabPage = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.QualificationLabel = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +79,6 @@ namespace InvestigatorWorkstation
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.QualificationLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitContainer)).BeginInit();
             this.MainSplitContainer.Panel1.SuspendLayout();
             this.MainSplitContainer.Panel2.SuspendLayout();
@@ -264,7 +264,9 @@ namespace InvestigatorWorkstation
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.CriminalReportGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.CriminalReportGridView.RowHeadersVisible = false;
-            this.CriminalReportGridView.RowTemplate.Height = 25;
+            this.CriminalReportGridView.RowTemplate.Height = 25; 
+            this.CriminalReportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CriminalReportGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
             // RegistrationNumber
             // 
@@ -350,6 +352,8 @@ namespace InvestigatorWorkstation
             this.CriminalCaseGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.CriminalCaseGridView.RowHeadersVisible = false;
             this.CriminalCaseGridView.RowTemplate.Height = 25;
+            this.CriminalCaseGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CriminalCaseGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -425,6 +429,8 @@ namespace InvestigatorWorkstation
             this.EmployeeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.EmployeeGridView.RowHeadersVisible = false;
             this.EmployeeGridView.RowTemplate.Height = 25;
+            this.EmployeeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmployeeGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
             // EmployeeLabel
             // 
@@ -438,6 +444,33 @@ namespace InvestigatorWorkstation
             resources.ApplyResources(this.QualificationTabPage, "QualificationTabPage");
             this.QualificationTabPage.Name = "QualificationTabPage";
             this.QualificationTabPage.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
+            // 
+            // QualificationLabel
+            // 
+            resources.ApplyResources(this.QualificationLabel, "QualificationLabel");
+            this.QualificationLabel.Name = "QualificationLabel";
             // 
             // splitter1
             // 
@@ -480,31 +513,6 @@ namespace InvestigatorWorkstation
             this.dataGridViewTextBoxColumn12.FillWeight = 104.3779F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridView1
-            // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            // 
-            // QualificationLabel
-            // 
-            resources.ApplyResources(this.QualificationLabel, "QualificationLabel");
-            this.QualificationLabel.Name = "QualificationLabel";
             // 
             // MainForm
             // 
