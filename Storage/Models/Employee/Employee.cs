@@ -15,7 +15,6 @@
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime ContractDate { get; set; }
-        public DateTime StartWorkDate { get; set; }
         public DateTime QualificationUpdateDate { get; set; }
         public DateTime CertificationTerm { get; set; }
         public DateTime JoinServiceDate { get; set; }

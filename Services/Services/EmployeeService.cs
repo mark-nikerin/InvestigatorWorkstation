@@ -49,7 +49,6 @@ namespace Services.Services
                 JoinServiceDate = employeeDTO.JoinServiceDate,
                 Number = employeeDTO.Number,
                 QualificationUpdateDate = employeeDTO.QualificationUpdateDate,
-                StartWorkDate = employeeDTO.StartWorkDate,
                 Rank = rank,
                 Position = position
             };
@@ -130,7 +129,6 @@ namespace Services.Services
             employee.JoinServiceDate = employeeDTO.JoinServiceDate;
             employee.Number = employeeDTO.Number;
             employee.QualificationUpdateDate = employeeDTO.QualificationUpdateDate;
-            employee.StartWorkDate = employeeDTO.StartWorkDate;
 
 
             if (employee.Rank.Id != employeeDTO.Rank.Id)
