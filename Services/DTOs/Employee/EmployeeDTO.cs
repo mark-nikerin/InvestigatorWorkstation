@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Services.DTOs.Employee
 {
@@ -24,6 +25,9 @@ namespace Services.DTOs.Employee
 
         public static explicit operator EmployeeDTO(Storage.Models.Employee entity)
         {
+            var positionHistory = entity.PositionHistories.Where(x => x.PositionId == entity.PositionId).FirstOrDefault();
+            var rankHistory = entity.RankHistories.Where(x => x.RankId == entity.RankId).FirstOrDefault();
+
             return new EmployeeDTO
             {
                 Id = entity.Id,
@@ -43,18 +47,18 @@ namespace Services.DTOs.Employee
                 {
                     Id = entity.PositionId,
                     Name = entity.Position.Name,
-                    AppointmentDate = entity.Position.AppointmentDate,
-                    OrderDate = entity.Position.OrderDate,
-                    OrderNumber = entity.Position.OrderNumber
+                    AppointmentDate = positionHistory.AppointmentDate,
+                    OrderDate = positionHistory.OrderDate,
+                    OrderNumber = positionHistory.OrderNumber
                 },
                 Rank = new RankDTO
                 {
                     Id = entity.RankId,
                     Name = entity.Rank.Name,
-                    AppointmentDate = entity.Rank.AppointmentDate,
-                    OrderDate = entity.Rank.OrderDate,
-                    OrderNumber = entity.Rank.OrderNumber,
-                    Term = entity.Rank.RankTerm
+                    AppointmentDate = rankHistory.AppointmentDate,
+                    OrderDate = rankHistory.OrderDate,
+                    OrderNumber = rankHistory.OrderNumber,
+                    Term = rankHistory.RankTerm
                 }
             };
         }

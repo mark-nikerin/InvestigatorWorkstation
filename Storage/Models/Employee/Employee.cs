@@ -23,8 +23,10 @@
         public int RankId { get; set; }
         public int PositionId { get; set; }
 
-        public virtual Rank Rank { get; set; }
-        public virtual Position Position { get; set; }
+        public virtual Rank Rank { get; set; } 
+        public virtual Position Position { get; set; }  
+        public virtual ICollection<EmployeePositionHistory> PositionHistories { get; set; } = new HashSet<EmployeePositionHistory>();
+        public virtual ICollection<EmployeeRankHistory> RankHistories { get; set; } = new HashSet<EmployeeRankHistory>();
         public virtual ICollection<InspectionMaterialMovement> InspectionMaterialMovements { get; set; } = new HashSet<InspectionMaterialMovement>();
         public virtual ICollection<CriminalCaseMovement> CriminalCaseMovements { get; set; } = new HashSet<CriminalCaseMovement>();
         public virtual ICollection<PreventiveMeasureDecision> PreventiveMeasureDecisions { get; set; } = new HashSet<PreventiveMeasureDecision>();

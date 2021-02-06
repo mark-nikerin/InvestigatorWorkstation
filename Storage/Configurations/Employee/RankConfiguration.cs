@@ -11,7 +11,11 @@
             builder.HasMany(x => x.Employees)
                 .WithOne(x => x.Rank)
                 .HasForeignKey(x => x.RankId)
-                .IsRequired(true);  
+                .IsRequired(true);
+
+            builder.HasMany(x => x.EmployeeRankHistories)
+                .WithOne(x => x.Rank)
+                .HasForeignKey(x => x.RankId);
         }
     }
 }

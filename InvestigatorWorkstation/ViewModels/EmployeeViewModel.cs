@@ -12,9 +12,6 @@
         [DisplayName("Логин")]
         public string Login { get; set; }
 
-        [DisplayName("Пароль")]
-        public string Password { get; set; }
-
         [DisplayName("Администратор")]
         public bool IsAdmin { get; set; }
 
@@ -51,7 +48,6 @@
             {
                 Id = dto.Id,
                 Login = dto.Login,
-                Password = dto.Password,
                 IsAdmin = dto.IsAdmin,
                 FullName = $"{dto.LastName} {dto.FirstName?[0]}.{dto.MiddleName?[0]}",
                 BirthDate = dto.BirthDate,

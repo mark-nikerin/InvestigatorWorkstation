@@ -483,13 +483,13 @@
     <value>30, 33, 3, 0</value>
   </data>
   <data name="CriminalReportLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>290, 21</value>
+    <value>232, 21</value>
   </data>
   <data name="CriminalReportLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
   </data>
   <data name="CriminalReportLabel.Text" xml:space="preserve">
-    <value>Список сообщений о преступлениях</value>
+    <value>Сообщения о преступлениях</value>
   </data>
   <data name="CriminalReportLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
     <value>MiddleLeft</value>
@@ -561,7 +561,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalReportGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>698, 678</value>
+    <value>680, 678</value>
   </data>
   <data name="CriminalReportGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>4</value>
@@ -603,10 +603,10 @@
     <value>1</value>
   </data>
   <data name="CriminalReportSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>738</value>
+    <value>720</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -633,7 +633,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="CriminalReportTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="CriminalReportTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
@@ -720,7 +720,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalCaseGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>698, 678</value>
+    <value>680, 678</value>
   </data>
   <data name="CriminalCaseGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -753,13 +753,13 @@
     <value>30, 33, 3, 0</value>
   </data>
   <data name="CriminalCaseLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>181, 21</value>
+    <value>131, 21</value>
   </data>
   <data name="CriminalCaseLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
   <data name="CriminalCaseLabel.Text" xml:space="preserve">
-    <value>Список уголовных дел</value>
+    <value>Уголовные дела</value>
   </data>
   <data name="&gt;&gt;CriminalCaseLabel.Name" xml:space="preserve">
     <value>CriminalCaseLabel</value>
@@ -798,10 +798,10 @@
     <value>1</value>
   </data>
   <data name="CriminalCaseSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>738</value>
+    <value>720</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -825,7 +825,7 @@
     <value>4, 24</value>
   </data>
   <data name="CriminalCaseTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="CriminalCaseTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -849,7 +849,7 @@
     <value>4, 24</value>
   </data>
   <data name="CalendarTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="CalendarTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -875,48 +875,6 @@
   <data name="EmployeeGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
     <value>50</value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Рег. Номер</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn7.MinimumWidth" type="System.Int32, System.Private.CoreLib">
-    <value>95</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Дата Регистрации</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn8.MinimumWidth" type="System.Int32, System.Private.CoreLib">
-    <value>105</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Орган Регистрации</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Номер регистрационной книги</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Квалификация</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>Фабула</value>
-  </data>
   <data name="EmployeeGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>20, 74</value>
   </data>
@@ -924,7 +882,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="EmployeeGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>879, 653</value>
+    <value>855, 653</value>
   </data>
   <data name="EmployeeGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -957,13 +915,13 @@
     <value>30, 33, 3, 0</value>
   </data>
   <data name="EmployeeLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>175, 21</value>
+    <value>109, 21</value>
   </data>
   <data name="EmployeeLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
   </data>
   <data name="EmployeeLabel.Text" xml:space="preserve">
-    <value>Список следователей</value>
+    <value>Следователи</value>
   </data>
   <data name="&gt;&gt;EmployeeLabel.Name" xml:space="preserve">
     <value>EmployeeLabel</value>
@@ -984,7 +942,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="EmployeeTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="EmployeeTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>7</value>
@@ -1004,6 +962,72 @@
   <data name="&gt;&gt;EmployeeTabPage.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="dataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dataGridView1.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>50</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>20, 74</value>
+  </data>
+  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>855, 653</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="QualificationLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="QualificationLabel.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="QualificationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="QualificationLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 31</value>
+  </data>
+  <data name="QualificationLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>30, 33, 3, 0</value>
+  </data>
+  <data name="QualificationLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>124, 21</value>
+  </data>
+  <data name="QualificationLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="QualificationLabel.Text" xml:space="preserve">
+    <value>Квалификации</value>
+  </data>
+  <data name="&gt;&gt;QualificationLabel.Name" xml:space="preserve">
+    <value>QualificationLabel</value>
+  </data>
+  <data name="&gt;&gt;QualificationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;QualificationLabel.Parent" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;QualificationLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="QualificationTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
@@ -1011,13 +1035,13 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="QualificationTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>930, 780</value>
   </data>
   <data name="QualificationTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>8</value>
   </data>
   <data name="QualificationTabPage.Text" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>QualificationTabPage</value>
   </data>
   <data name="&gt;&gt;QualificationTabPage.Name" xml:space="preserve">
     <value>QualificationTabPage</value>
@@ -1044,7 +1068,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainTabContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>959, 808</value>
+    <value>938, 808</value>
   </data>
   <data name="MainTabContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -1120,6 +1144,51 @@
   </data>
   <data name="&gt;&gt;MainSplitContainer.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>Рег. Номер</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.MinimumWidth" type="System.Int32, System.Private.CoreLib">
+    <value>95</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Дата Регистрации</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.MinimumWidth" type="System.Int32, System.Private.CoreLib">
+    <value>105</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, System.Private.CoreLib">
+    <value>105</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Орган Регистрации</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Номер регистрационной книги</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>Квалификация</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>Фабула</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>

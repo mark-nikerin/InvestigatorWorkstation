@@ -36,6 +36,8 @@
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Position> Positions { get; set; } = null!;
         public virtual DbSet<Rank> Ranks { get; set; } = null!;
+        public virtual DbSet<EmployeePositionHistory> EmployeePositionHistories { get; set; } = null!;
+        public virtual DbSet<EmployeeRankHistory> EmployeeRankHistories { get; set; } = null!; 
         #endregion
         #region InspectionMaterial
         public virtual DbSet<InspectionMaterial> InspectionMaterials { get; set; } = null!;

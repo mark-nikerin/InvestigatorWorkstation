@@ -25,7 +25,7 @@ namespace Services
             var hashedPassword = Convert.ToBase64String(hashBytes);
 
             return hashedPassword;
-        }
+        } 
 
         public bool VerifyPassword(string dbPassword, string password)
         {

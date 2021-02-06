@@ -2,7 +2,7 @@
 using Services.Interfaces;
 
 namespace Services.Services
-{ 
+{
     using System.Threading.Tasks;
     using System.Linq;
     using System.Collections.Generic;
@@ -14,8 +14,8 @@ namespace Services.Services
     public class EmployeeService : IEmployeeService
     {
 
-        private readonly WorkstationContext _db; 
-        private readonly IAuthService _authService; 
+        private readonly WorkstationContext _db;
+        private readonly IAuthService _authService;
 
         public EmployeeService(WorkstationContext db, IAuthService authService)
         {
@@ -25,6 +25,18 @@ namespace Services.Services
 
         public async Task AddEmployee(EmployeeDTO employeeDTO)
         {
+            var rank = new Rank
+            {
+                Id = employeeDTO.Rank.Id,
+                Name = employeeDTO.Rank.Name,
+            };
+
+            var position = new Position
+            {
+                Id = employeeDTO.Position.Id,
+                Name = employeeDTO.Position.Name
+            };
+
             var employee = new Employee
             {
                 FirstName = employeeDTO.FirstName,
@@ -38,24 +50,31 @@ namespace Services.Services
                 Number = employeeDTO.Number,
                 QualificationUpdateDate = employeeDTO.QualificationUpdateDate,
                 StartWorkDate = employeeDTO.StartWorkDate,
-                Rank = new Rank
-                {
-                    Id = employeeDTO.Rank.Id,
-                    Name = employeeDTO.Rank.Name,
-                    OrderDate = employeeDTO.Rank.OrderDate,
-                    AppointmentDate = employeeDTO.Rank.AppointmentDate,
-                    OrderNumber = employeeDTO.Number,
-                    RankTerm = employeeDTO.Rank.Term
-                },
-                Position = new Position
-                {
-                    Id = employeeDTO.Position.Id,
-                    Name = employeeDTO.Position.Name,
-                    OrderDate = employeeDTO.Position.OrderDate,
-                    OrderNumber = employeeDTO.Position.OrderNumber,
-                    AppointmentDate = employeeDTO.Position.AppointmentDate
-                },
+                Rank = rank,
+                Position = position
             };
+
+            var employeeRankHistory = new EmployeeRankHistory
+            {
+                OrderDate = employeeDTO.Rank.OrderDate,
+                AppointmentDate = employeeDTO.Rank.AppointmentDate,
+                OrderNumber = employeeDTO.Number,
+                RankTerm = employeeDTO.Rank.Term,
+                Employee = employee,
+                Rank = rank
+            };
+
+            var employeePositionHistory = new EmployeePositionHistory
+            {
+                OrderDate = employeeDTO.Position.OrderDate,
+                OrderNumber = employeeDTO.Position.OrderNumber,
+                AppointmentDate = employeeDTO.Position.AppointmentDate,
+                Employee = employee,
+                Position = position
+            };
+
+            employee.PositionHistories.Add(employeePositionHistory);
+            employee.RankHistories.Add(employeeRankHistory);
 
             await _db.Employees.AddAsync(employee);
             await _db.SaveChangesAsync();
@@ -68,6 +87,8 @@ namespace Services.Services
             var employees = await _db.Employees
                 .Include(x => x.Rank)
                 .Include(x => x.Position)
+                .Include(x => x.PositionHistories)
+                .Include(x => x.RankHistories)
                 .AsNoTracking()
                 .Select(x => (EmployeeDTO)x)
                 .ToListAsync();
@@ -99,40 +120,61 @@ namespace Services.Services
                 throw new ArgumentException();
             }
 
-            var updatedEmployee = new Employee
+            employee.FirstName = employeeDTO.FirstName;
+            employee.MiddleName = employeeDTO.MiddleName;
+            employee.LastName = employeeDTO.LastName;
+            employee.Login = employeeDTO.Login;
+            employee.BirthDate = employeeDTO.BirthDate;
+            employee.CertificationTerm = employeeDTO.CertificationTerm;
+            employee.ContractDate = employeeDTO.ContractDate;
+            employee.JoinServiceDate = employeeDTO.JoinServiceDate;
+            employee.Number = employeeDTO.Number;
+            employee.QualificationUpdateDate = employeeDTO.QualificationUpdateDate;
+            employee.StartWorkDate = employeeDTO.StartWorkDate;
+
+
+            if (employee.Rank.Id != employeeDTO.Rank.Id)
             {
-                Id = id,
-                FirstName = employeeDTO.FirstName,
-                MiddleName = employeeDTO.MiddleName,
-                LastName = employeeDTO.LastName,
-                Login = employeeDTO.Login,
-                BirthDate = employeeDTO.BirthDate,
-                CertificationTerm = employeeDTO.CertificationTerm,
-                ContractDate = employeeDTO.ContractDate,
-                JoinServiceDate = employeeDTO.JoinServiceDate,
-                Number = employeeDTO.Number,
-                QualificationUpdateDate = employeeDTO.QualificationUpdateDate,
-                StartWorkDate = employeeDTO.StartWorkDate,
-                Rank = new Rank
+                var rank = await _db.Ranks.FirstOrDefaultAsync(x => x.Id == employeeDTO.Rank.Id);
+
+                if (rank == null)
                 {
-                    Id = employeeDTO.Rank.Id,
-                    Name = employeeDTO.Rank.Name,
+                    throw new ArgumentException();
+                }
+
+                var newRankHistory = new EmployeeRankHistory
+                {
                     OrderDate = employeeDTO.Rank.OrderDate,
                     AppointmentDate = employeeDTO.Rank.AppointmentDate,
                     OrderNumber = employeeDTO.Number,
-                    RankTerm = employeeDTO.Rank.Term
-                },
-                Position = new Position
+                    RankTerm = employeeDTO.Rank.Term,
+                    Rank = rank
+                };
+
+                employee.RankHistories.Add(newRankHistory);
+            }
+
+            if (employee.Position.Id != employeeDTO.Rank.Id)
+            {
+                var position = await _db.Positions.FirstOrDefaultAsync(x => x.Id == employeeDTO.Position.Id);
+
+                if (position == null)
                 {
-                    Id = employeeDTO.Position.Id,
-                    Name = employeeDTO.Position.Name,
+                    throw new ArgumentException();
+                }
+
+                var newPositionHistory = new EmployeePositionHistory
+                {
                     OrderDate = employeeDTO.Position.OrderDate,
                     OrderNumber = employeeDTO.Position.OrderNumber,
-                    AppointmentDate = employeeDTO.Position.AppointmentDate
-                },
-            };
+                    AppointmentDate = employeeDTO.Position.AppointmentDate,
+                    Position = position
+                };
 
-            _db.Attach(updatedEmployee);
+                employee.PositionHistories.Add(newPositionHistory);
+            }
+
+            _db.Employees.Update(employee);
             await _db.SaveChangesAsync();
         }
     }

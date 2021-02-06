@@ -18,6 +18,16 @@
                 .HasForeignKey(x => x.RankId)
                 .IsRequired(false);
 
+            builder.HasMany(x => x.PositionHistories)
+                .WithOne(x => x.Employee)
+                .HasForeignKey(x => x.EmployeeId)
+                .IsRequired(false);
+
+            builder.HasMany(x => x.RankHistories)
+                 .WithOne(x => x.Employee)
+                 .HasForeignKey(x => x.EmployeeId)
+                 .IsRequired(false);
+
             builder.HasMany(x => x.InspectionMaterialMovements)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
