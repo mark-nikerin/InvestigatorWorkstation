@@ -32,7 +32,7 @@
                     services
                         .AddDbContext<WorkstationContext>(options => options.UseSqlServer(configuration.GetConnectionString("WorkstationDBConnection")))
                         .AddScoped<MainForm>()
-                        .AddScoped<RegisterForm>()
+                        .AddScoped<AddEmployeeForm>()
                         .AddScoped<LoginForm>()
                         .AddScoped<IPasswordService, PasswordService>()
                         .AddScoped<IEmployeeService, EmployeeService>()
@@ -44,7 +44,7 @@
             {
                 var services = serviceScope.ServiceProvider;
 
-                var mainForm = services.GetRequiredService<MainForm>();
+                var mainForm = services.GetRequiredService<AddEmployeeForm>();
                 Application.Run(mainForm);
             };
         }

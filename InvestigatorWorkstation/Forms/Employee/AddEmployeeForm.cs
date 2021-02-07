@@ -1,25 +1,21 @@
 ﻿using System;
-using Services.Interfaces;
 using Services.DTOs.Employee;
 using System.Windows.Forms;
 
 namespace InvestigatorWorkstation
 {
-    public partial class RegisterForm : Form
+    public partial class AddEmployeeForm : Form
     {
-        public EmployeeDTO CurrentEmployee { get; private set; }
+        private EmployeeDTO _currentEmployee { get; set; }
 
-        private readonly IEmployeeService _employeeService;
-
-        public RegisterForm(IEmployeeService employeeService)
+        public AddEmployeeForm()
         {
             InitializeComponent();
-            _employeeService = employeeService;
-        } 
+        }
 
-        private void RegisterButton_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
-            CurrentEmployee = new EmployeeDTO
+            _currentEmployee = new EmployeeDTO
             {
                 Id = 0,
                 FirstName = FirstNameTextBox.Text,
@@ -49,13 +45,18 @@ namespace InvestigatorWorkstation
                 Password = PasswordTextBox.Text
             };
 
-            _employeeService.AddEmployee(CurrentEmployee);
+            DialogResult = DialogResult.OK;
         }
 
-        private void BackToLoginButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-           CurrentEmployee = null;
-           Hide();
+            _currentEmployee = null;
+            DialogResult = DialogResult.Cancel;
+        }
+
+        public EmployeeDTO GetResult()
+        {
+            return _currentEmployee;
         }
     }
 }
