@@ -1,5 +1,5 @@
 ﻿
-namespace InvestigatorWorkstation
+namespace InvestigatorWorkstation.Forms
 {
     partial class MainForm
     {
@@ -67,6 +67,9 @@ namespace InvestigatorWorkstation
             this.CriminalCaseLabel = new System.Windows.Forms.Label();
             this.CalendarTabPage = new System.Windows.Forms.TabPage();
             this.EmployeeTabPage = new System.Windows.Forms.TabPage();
+            this.EditEmployeeButton = new System.Windows.Forms.Button();
+            this.DeleteEmployeeButton = new System.Windows.Forms.Button();
+            this.AddEmployeeButton = new System.Windows.Forms.Button();
             this.EmployeeGridView = new System.Windows.Forms.DataGridView();
             this.EmployeeLabel = new System.Windows.Forms.Label();
             this.QualificationTabPage = new System.Windows.Forms.TabPage();
@@ -264,7 +267,7 @@ namespace InvestigatorWorkstation
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.CriminalReportGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.CriminalReportGridView.RowHeadersVisible = false;
-            this.CriminalReportGridView.RowTemplate.Height = 25; 
+            this.CriminalReportGridView.RowTemplate.Height = 25;
             this.CriminalReportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CriminalReportGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
@@ -404,11 +407,43 @@ namespace InvestigatorWorkstation
             // 
             // EmployeeTabPage
             // 
+            this.EmployeeTabPage.Controls.Add(this.EditEmployeeButton);
+            this.EmployeeTabPage.Controls.Add(this.DeleteEmployeeButton);
+            this.EmployeeTabPage.Controls.Add(this.AddEmployeeButton);
             this.EmployeeTabPage.Controls.Add(this.EmployeeGridView);
             this.EmployeeTabPage.Controls.Add(this.EmployeeLabel);
             resources.ApplyResources(this.EmployeeTabPage, "EmployeeTabPage");
             this.EmployeeTabPage.Name = "EmployeeTabPage";
             this.EmployeeTabPage.UseVisualStyleBackColor = true;
+            // 
+            // EditEmployeeButton
+            // 
+            resources.ApplyResources(this.EditEmployeeButton, "EditEmployeeButton");
+            this.EditEmployeeButton.BackColor = System.Drawing.Color.DarkGray;
+            this.EditEmployeeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.EditEmployeeButton.Name = "EditEmployeeButton";
+            this.EditEmployeeButton.UseVisualStyleBackColor = false;
+            this.EditEmployeeButton.Click += new System.EventHandler(this.EditEmployeeButton_Click);
+            // 
+            // DeleteEmployeeButton
+            // 
+            resources.ApplyResources(this.DeleteEmployeeButton, "DeleteEmployeeButton");
+            this.DeleteEmployeeButton.BackColor = System.Drawing.Color.Firebrick;
+            this.DeleteEmployeeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.DeleteEmployeeButton.Name = "DeleteEmployeeButton";
+            this.DeleteEmployeeButton.UseVisualStyleBackColor = false;
+            // 
+            // AddEmployeeButton
+            // 
+            this.AddEmployeeButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.AddEmployeeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.AddEmployeeButton, "AddEmployeeButton");
+            this.AddEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.AddEmployeeButton.Name = "AddEmployeeButton";
+            this.AddEmployeeButton.UseVisualStyleBackColor = false;
+            this.AddEmployeeButton.Click += new System.EventHandler(this.AddEmployeeButton_Click);
             // 
             // EmployeeGridView
             // 
@@ -419,6 +454,7 @@ namespace InvestigatorWorkstation
             this.EmployeeGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeeGridView.MultiSelect = false;
             this.EmployeeGridView.Name = "EmployeeGridView";
+            this.EmployeeGridView.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -596,5 +632,8 @@ namespace InvestigatorWorkstation
         private System.Windows.Forms.DataGridViewTextBoxColumn Fabule;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label QualificationLabel;
+        private System.Windows.Forms.Button EditEmployeeButton;
+        private System.Windows.Forms.Button DeleteEmployeeButton;
+        private System.Windows.Forms.Button AddEmployeeButton;
     }
 }

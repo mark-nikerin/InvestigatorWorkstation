@@ -1,4 +1,4 @@
-﻿namespace InvestigatorWorkstation
+﻿namespace InvestigatorWorkstation.Forms
 {
     using Services.Interfaces;
     using System;

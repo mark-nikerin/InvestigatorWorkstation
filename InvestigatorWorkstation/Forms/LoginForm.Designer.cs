@@ -1,5 +1,5 @@
 ﻿
-namespace InvestigatorWorkstation
+namespace InvestigatorWorkstation.Forms
 {
     partial class LoginForm
     {

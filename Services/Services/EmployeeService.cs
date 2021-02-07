@@ -81,6 +81,21 @@ namespace Services.Services
             await _authService.RegisterUser(employeeDTO.Login, employeeDTO.Password);
         }
 
+        public async Task<EmployeeDTO> GetEmployee(int id)
+        {
+            var employee = await _db.Employees
+                .AsNoTracking()
+                .Include(x => x.Rank)
+                .Include(x => x.Position)
+                .Include(x => x.PositionHistories)
+                .Include(x => x.RankHistories)
+                .Where(x => x.Id == id)
+                .Select(x => (EmployeeDTO)x)
+                .FirstOrDefaultAsync();
+
+            return employee;
+        }
+
         public async Task<ICollection<EmployeeDTO>> GetEmployees()
         {
             var employees = await _db.Employees

@@ -1,5 +1,5 @@
 ﻿
-namespace InvestigatorWorkstation
+namespace InvestigatorWorkstation.Forms.Employee
 {
     partial class AddEmployeeForm
     {
@@ -469,6 +469,7 @@ namespace InvestigatorWorkstation
             this.AddEmployeeButton.TabIndex = 68;
             this.AddEmployeeButton.Text = "Добавить";
             this.AddEmployeeButton.UseVisualStyleBackColor = false;
+            this.AddEmployeeButton.Click += new System.EventHandler(this.AddEmployeeButton_Click);
             // 
             // CancelAddEmployeeButton
             // 
@@ -483,6 +484,7 @@ namespace InvestigatorWorkstation
             this.CancelAddEmployeeButton.TabIndex = 67;
             this.CancelAddEmployeeButton.Text = "Отмена";
             this.CancelAddEmployeeButton.UseVisualStyleBackColor = false;
+            this.CancelAddEmployeeButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // login
             // 

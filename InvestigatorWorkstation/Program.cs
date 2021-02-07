@@ -1,5 +1,7 @@
 ﻿namespace InvestigatorWorkstation
 {
+    using InvestigatorWorkstation.Forms;
+    using InvestigatorWorkstation.Forms.Employee;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -44,7 +46,7 @@
             {
                 var services = serviceScope.ServiceProvider;
 
-                var mainForm = services.GetRequiredService<AddEmployeeForm>();
+                var mainForm = services.GetRequiredService<MainForm>();
                 Application.Run(mainForm);
             };
         }

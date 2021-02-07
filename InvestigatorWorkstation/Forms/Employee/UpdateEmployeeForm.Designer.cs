@@ -1,7 +1,7 @@
 ﻿
-namespace InvestigatorWorkstation
+namespace InvestigatorWorkstation.Forms.Employee
 {
-    partial class EditEmployeeForm
+    partial class UpdateEmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -71,9 +71,9 @@ namespace InvestigatorWorkstation
             this.MiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.EditEmployeeLabel = new System.Windows.Forms.Label();
-            this.EditEmployeeButton = new System.Windows.Forms.Button();
-            this.CancelEditEmployeeButton = new System.Windows.Forms.Button();
+            this.UpdateEmployeeLabel = new System.Windows.Forms.Label();
+            this.UpdateEmployeeButton = new System.Windows.Forms.Button();
+            this.CancelUpdateEmployeeButton = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).BeginInit();
@@ -446,44 +446,45 @@ namespace InvestigatorWorkstation
             this.FirstNameTextBox.Size = new System.Drawing.Size(102, 23);
             this.FirstNameTextBox.TabIndex = 116;
             // 
-            // EditEmployeeLabel
+            // UpdateEmployeeLabel
             // 
-            this.EditEmployeeLabel.AutoSize = true;
-            this.EditEmployeeLabel.BackColor = System.Drawing.Color.White;
-            this.EditEmployeeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.EditEmployeeLabel.Location = new System.Drawing.Point(289, 23);
-            this.EditEmployeeLabel.Name = "EditEmployeeLabel";
-            this.EditEmployeeLabel.Size = new System.Drawing.Size(233, 20);
-            this.EditEmployeeLabel.TabIndex = 111;
-            this.EditEmployeeLabel.Text = "Изменение данных сотрудника";
-            this.EditEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UpdateEmployeeLabel.AutoSize = true;
+            this.UpdateEmployeeLabel.BackColor = System.Drawing.Color.White;
+            this.UpdateEmployeeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UpdateEmployeeLabel.Location = new System.Drawing.Point(283, 25);
+            this.UpdateEmployeeLabel.Name = "UpdateEmployeeLabel";
+            this.UpdateEmployeeLabel.Size = new System.Drawing.Size(239, 20);
+            this.UpdateEmployeeLabel.TabIndex = 111;
+            this.UpdateEmployeeLabel.Text = "Изменение данных следователя";
+            this.UpdateEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EditEmployeeButton
+            // UpdateEmployeeButton
             // 
-            this.EditEmployeeButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.EditEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.EditEmployeeButton.Location = new System.Drawing.Point(433, 520);
-            this.EditEmployeeButton.Name = "EditEmployeeButton";
-            this.EditEmployeeButton.Size = new System.Drawing.Size(89, 26);
-            this.EditEmployeeButton.TabIndex = 115;
-            this.EditEmployeeButton.Text = "OK";
-            this.EditEmployeeButton.UseVisualStyleBackColor = false;
-            this.EditEmployeeButton.Click += new System.EventHandler(this.EditButtonClick);
+            this.UpdateEmployeeButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.UpdateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.UpdateEmployeeButton.Location = new System.Drawing.Point(433, 520);
+            this.UpdateEmployeeButton.Name = "UpdateEmployeeButton";
+            this.UpdateEmployeeButton.Size = new System.Drawing.Size(89, 26);
+            this.UpdateEmployeeButton.TabIndex = 115;
+            this.UpdateEmployeeButton.Text = "Сохранить";
+            this.UpdateEmployeeButton.UseVisualStyleBackColor = false;
+            this.UpdateEmployeeButton.Click += new System.EventHandler(this.UpdateEmployeeButton_Click);
             // 
-            // CancelEditEmployeeButton
+            // CancelUpdateEmployeeButton
             // 
-            this.CancelEditEmployeeButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CancelEditEmployeeButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.CancelEditEmployeeButton.FlatAppearance.BorderSize = 0;
-            this.CancelEditEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelEditEmployeeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CancelEditEmployeeButton.Location = new System.Drawing.Point(275, 520);
-            this.CancelEditEmployeeButton.Name = "CancelEditEmployeeButton";
-            this.CancelEditEmployeeButton.Size = new System.Drawing.Size(89, 26);
-            this.CancelEditEmployeeButton.TabIndex = 114;
-            this.CancelEditEmployeeButton.Text = "Отмена";
-            this.CancelEditEmployeeButton.UseVisualStyleBackColor = false;
+            this.CancelUpdateEmployeeButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.CancelUpdateEmployeeButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.CancelUpdateEmployeeButton.FlatAppearance.BorderSize = 0;
+            this.CancelUpdateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelUpdateEmployeeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CancelUpdateEmployeeButton.Location = new System.Drawing.Point(275, 520);
+            this.CancelUpdateEmployeeButton.Name = "CancelUpdateEmployeeButton";
+            this.CancelUpdateEmployeeButton.Size = new System.Drawing.Size(89, 26);
+            this.CancelUpdateEmployeeButton.TabIndex = 114;
+            this.CancelUpdateEmployeeButton.Text = "Отмена";
+            this.CancelUpdateEmployeeButton.UseVisualStyleBackColor = false;
+            this.CancelUpdateEmployeeButton.Click += new System.EventHandler(this.CancelUpdateEmployeeButton_Click);
             // 
             // login
             // 
@@ -502,7 +503,7 @@ namespace InvestigatorWorkstation
             this.LastNameTextBox.Size = new System.Drawing.Size(102, 23);
             this.LastNameTextBox.TabIndex = 112;
             // 
-            // EditEmployeeForm
+            // UpdateEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -550,15 +551,15 @@ namespace InvestigatorWorkstation
             this.Controls.Add(this.MiddleNameTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FirstNameTextBox);
-            this.Controls.Add(this.EditEmployeeLabel);
-            this.Controls.Add(this.EditEmployeeButton);
-            this.Controls.Add(this.CancelEditEmployeeButton);
+            this.Controls.Add(this.UpdateEmployeeLabel);
+            this.Controls.Add(this.UpdateEmployeeButton);
+            this.Controls.Add(this.CancelUpdateEmployeeButton);
             this.Controls.Add(this.login);
             this.Controls.Add(this.LastNameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "EditEmployeeForm";
+            this.Name = "UpdateEmployeeForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -612,9 +613,9 @@ namespace InvestigatorWorkstation
         private System.Windows.Forms.TextBox MiddleNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox FirstNameTextBox;
-        private System.Windows.Forms.Label EditEmployeeLabel;
-        private System.Windows.Forms.Button EditEmployeeButton;
-        private System.Windows.Forms.Button CancelEditEmployeeButton;
+        private System.Windows.Forms.Label UpdateEmployeeLabel;
+        private System.Windows.Forms.Button UpdateEmployeeButton;
+        private System.Windows.Forms.Button CancelUpdateEmployeeButton;
         private System.Windows.Forms.Label login;
         private System.Windows.Forms.TextBox LastNameTextBox;
     }

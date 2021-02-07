@@ -1,11 +1,13 @@
+using InvestigatorWorkstation.Forms.Employee;
 using InvestigatorWorkstation.ViewModels;
 using Services.Interfaces;
 using Services.Services;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace InvestigatorWorkstation
+namespace InvestigatorWorkstation.Forms
 {
     public partial class MainForm : Form
     {
@@ -145,12 +147,59 @@ namespace InvestigatorWorkstation
             }
         }
         #endregion
-
-        #region DataGridViews
+       
         private void DataGridView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             e.PaintParts &= ~DataGridViewPaintParts.Focus;
         }
+
+        #region EmployeeTab
+
+        private async void AddEmployeeButton_Click(object sender, System.EventArgs e)
+        {
+            DialogResult dialogResult;
+
+            using var addEmployeeForm = new AddEmployeeForm();
+
+            dialogResult = addEmployeeForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                await _employeeService.AddEmployee(addEmployeeForm.GetResult());
+
+                var employees = await _employeeService.GetEmployees();
+
+                EmployeeGridView.DataSource = employees
+                    .Select(x => (EmployeeViewModel)x)
+                    .ToList();
+
+                EmployeeGridView.Refresh();
+            }
+        }
+
+        private async void EditEmployeeButton_Click(object sender, System.EventArgs e)
+        {
+            var selectedEmployeeViewModel = (EmployeeViewModel) EmployeeGridView.SelectedRows[0].DataBoundItem;
+
+            var selectedEmployeeDTO = await _employeeService.GetEmployee(selectedEmployeeViewModel.Id);
+
+            DialogResult dialogResult;
+
+            using var updateEmployeeForm = new UpdateEmployeeForm(selectedEmployeeDTO);
+
+            dialogResult = updateEmployeeForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            { 
+                var employees = await _employeeService.GetEmployees();
+
+                EmployeeGridView.DataSource = employees
+                    .Select(x => (EmployeeViewModel)x)
+                    .ToList();
+                 
+                EmployeeGridView.Refresh();
+            }
+        }
+
         #endregion
+
     }
 }

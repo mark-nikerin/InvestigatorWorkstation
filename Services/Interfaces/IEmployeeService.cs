@@ -6,6 +6,7 @@ namespace Services.Interfaces
 {
     public interface IEmployeeService
     {
+        Task<EmployeeDTO> GetEmployee(int id);
         Task<ICollection<EmployeeDTO>> GetEmployees();
         Task AddEmployee(EmployeeDTO employee);
         Task UpdateEmployee(int id, EmployeeDTO employee);

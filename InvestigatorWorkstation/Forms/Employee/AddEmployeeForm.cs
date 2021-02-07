@@ -2,7 +2,7 @@
 using Services.DTOs.Employee;
 using System.Windows.Forms;
 
-namespace InvestigatorWorkstation
+namespace InvestigatorWorkstation.Forms.Employee
 {
     public partial class AddEmployeeForm : Form
     {
@@ -13,7 +13,7 @@ namespace InvestigatorWorkstation
             InitializeComponent();
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private void AddEmployeeButton_Click(object sender, EventArgs e)
         {
             _currentEmployee = new EmployeeDTO
             {
@@ -48,15 +48,15 @@ namespace InvestigatorWorkstation
             DialogResult = DialogResult.OK;
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            _currentEmployee = null;
-            DialogResult = DialogResult.Cancel;
-        }
-
         public EmployeeDTO GetResult()
         {
             return _currentEmployee;
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            _currentEmployee = null;
+            DialogResult = DialogResult.Cancel;
+        } 
     }
 }
