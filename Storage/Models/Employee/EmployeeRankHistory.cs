@@ -1,8 +1,8 @@
-﻿namespace Storage.Models
-{
-    using Storage.Interfaces;
-    using System;
+﻿using Storage.Interfaces;
+using System;
 
+namespace Storage.Models.Employee
+{
     public class EmployeeRankHistory : IEntity
     {
         public int Id { get; set; }

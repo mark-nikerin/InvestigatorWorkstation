@@ -1,8 +1,8 @@
-﻿namespace Storage.Models
-{
-    using Storage.Interfaces;
-    using System.Collections.Generic;
+﻿using Storage.Interfaces;
+using System.Collections.Generic;
 
+namespace Storage.Models.Employee
+{
     public class Rank : IEntity
     {
         public int Id { get; set; }

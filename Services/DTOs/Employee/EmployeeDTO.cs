@@ -19,10 +19,10 @@ namespace Services.DTOs.Employee
         public DateTime JoinServiceDate { get; set; }
         public int Number { get; set; }
 
-        public PositionDTO Position { get; set; }
-        public RankDTO Rank { get; set; }
+        public PositionWithInfoDTO Position { get; set; }
+        public RankWithInfoDTO Rank { get; set; }
 
-        public static explicit operator EmployeeDTO(Storage.Models.Employee entity)
+        public static explicit operator EmployeeDTO(Storage.Models.Employee.Employee entity)
         {
             var positionHistory = entity.PositionHistories.Where(x => x.PositionId == entity.PositionId).FirstOrDefault();
             var rankHistory = entity.RankHistories.Where(x => x.RankId == entity.RankId).FirstOrDefault();
@@ -42,7 +42,7 @@ namespace Services.DTOs.Employee
                 CertificationTerm = entity.CertificationTerm,
                 JoinServiceDate = entity.JoinServiceDate,
                 Number = entity.Number,
-                Position = new PositionDTO
+                Position = new PositionWithInfoDTO
                 {
                     Id = entity.PositionId.GetValueOrDefault(),
                     Name = entity.Position.Name,
@@ -50,7 +50,7 @@ namespace Services.DTOs.Employee
                     OrderDate = positionHistory.OrderDate,
                     OrderNumber = positionHistory.OrderNumber
                 },
-                Rank = new RankDTO
+                Rank = new RankWithInfoDTO
                 {
                     Id = entity.RankId.GetValueOrDefault(),
                     Name = entity.Rank.Name,

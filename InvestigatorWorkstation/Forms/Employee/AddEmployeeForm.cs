@@ -1,16 +1,21 @@
 ﻿using System;
 using Services.DTOs.Employee;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace InvestigatorWorkstation.Forms.Employee
 {
     public partial class AddEmployeeForm : Form
     {
         private EmployeeDTO _currentEmployee { get; set; }
+        private IEnumerable<PositionDTO> _positions;
+        private IEnumerable<RankDTO> _ranks;
 
-        public AddEmployeeForm()
+        public AddEmployeeForm(IEnumerable<PositionDTO> positions, IEnumerable<RankDTO> ranks)
         {
             InitializeComponent();
+            _positions = positions;
+            _ranks = ranks;
         }
 
         private void AddEmployeeButton_Click(object sender, EventArgs e)
@@ -26,7 +31,7 @@ namespace InvestigatorWorkstation.Forms.Employee
                 CertificationTerm = CertificationTermDateTimePicker.Value,
                 JoinServiceDate = JoinServiceDateTimePicker.Value,
                 QualificationUpdateDate = QualificationUpdateDateTimePicker.Value,
-                Rank = new RankDTO
+                Rank = new RankWithInfoDTO
                 {
                     Name = "",
                     OrderDate = RankOrderDateTimePicker.Value,
@@ -34,7 +39,7 @@ namespace InvestigatorWorkstation.Forms.Employee
                     OrderNumber = int.Parse(RankOrderNumberTextBox.Text),
                     Term = (int)RankTermNumeric.Value
                 },
-                Position = new PositionDTO
+                Position = new PositionWithInfoDTO
                 {
                     Name = "",
                     OrderDate = PositionOrderDateTimePicker.Value,

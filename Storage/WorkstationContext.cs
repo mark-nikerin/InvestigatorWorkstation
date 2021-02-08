@@ -1,14 +1,16 @@
-﻿namespace Storage
-{
-    using Microsoft.EntityFrameworkCore; 
-    using Storage.Models;
-    using Storage.Configurations; 
-    using Storage.Configurations.Criminal;
-    using Storage.Configurations.CriminalCase;
-    using Storage.Configurations.Employee;
-    using Storage.Configurations.InspectionMaterial;
-    using Storage.Configurations.PreventiveMeasure;  
+﻿using Microsoft.EntityFrameworkCore;
+using Storage.Models;
+using Storage.Configurations;
+using Storage.Configurations.Criminal;
+using Storage.Configurations.CriminalCase;
+using Storage.Configurations.Employee;
+using Storage.Configurations.InspectionMaterial;
+using Storage.Configurations.PreventiveMeasure;
+using Storage.Models.Employee;
+using Storage.Models.PreventiveMeasure;
 
+namespace Storage
+{
     public class WorkstationContext : DbContext
     {  
         public WorkstationContext()

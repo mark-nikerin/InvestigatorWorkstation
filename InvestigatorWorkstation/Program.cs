@@ -1,19 +1,20 @@
-﻿namespace InvestigatorWorkstation
-{
-    using InvestigatorWorkstation.Forms;
-    using InvestigatorWorkstation.Forms.Employee;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting; 
-    using Services;
-    using Services.Interfaces;
-    using Services.Services;
-    using Storage;
-    using System;
-    using System.IO;
-    using System.Windows.Forms;
+﻿using InvestigatorWorkstation.Forms;
+using InvestigatorWorkstation.Forms.Employee;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Services;
+using Services.Interfaces;
+using Services.Interfaces.Employee;
+using Services.Services.Employee;
+using Storage;
+using System;
+using System.IO;
+using System.Windows.Forms;
 
+namespace InvestigatorWorkstation
+{
     static class Program
     {  
         [STAThread]
@@ -33,12 +34,14 @@
 
                     services
                         .AddDbContext<WorkstationContext>(options => options.UseSqlServer(configuration.GetConnectionString("WorkstationDBConnection")))
-                        .AddScoped<MainForm>()
-                        .AddScoped<AddEmployeeForm>()
-                        .AddScoped<LoginForm>()
                         .AddScoped<IPasswordService, PasswordService>()
                         .AddScoped<IEmployeeService, EmployeeService>()
-                        .AddScoped<IAuthService, AuthService>();
+                        .AddScoped<IAuthService, AuthService>()
+                        .AddScoped<IEmployeePositionService, EmployeePositionService>()
+                        .AddScoped<IEmployeeRankService, EmployeeRankService>()
+                        .AddScoped<MainForm>()
+                        .AddScoped<AddEmployeeForm>()
+                        .AddScoped<LoginForm>();
 
                 }).Build();
 

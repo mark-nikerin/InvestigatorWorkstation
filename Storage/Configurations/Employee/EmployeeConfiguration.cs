@@ -1,12 +1,11 @@
-﻿namespace Storage.Configurations.Employee
-{
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Storage.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-    public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
+namespace Storage.Configurations.Employee
+{
+    public class EmployeeConfiguration : IEntityTypeConfiguration<Models.Employee.Employee>
     {
-        public void Configure(EntityTypeBuilder<Employee> builder)
+        public void Configure(EntityTypeBuilder<Models.Employee.Employee> builder)
         {
             builder.HasOne(x => x.Position)
                 .WithMany(x => x.Employees)

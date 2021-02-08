@@ -1,12 +1,10 @@
-﻿using Storage.Models;
-
-namespace Services.Services
-{
+﻿ namespace Services.Services
+{ 
     public static class CurrentUserService
     {
-        private static Employee _currentUser;
+        private static Storage.Models.Employee.Employee _currentUser;
 
-        public static Employee GetCurrentUser()
+        public static Storage.Models.Employee.Employee GetCurrentUser()
         {
             return _currentUser;
         }
@@ -16,11 +14,11 @@ namespace Services.Services
             return _currentUser?.IsAdmin ?? false;
         }
 
-        public static void SetCurrentUser(Employee user)
+        public static void SetCurrentUser(Storage.Models.Employee.Employee user)
         {
             _currentUser = user == null
                 ? null
-                : new Employee
+                : new Storage.Models.Employee.Employee
                 {
                     Id = user.Id,
                     FirstName = user.FirstName,

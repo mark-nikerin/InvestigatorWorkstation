@@ -1,6 +1,7 @@
 using InvestigatorWorkstation.Forms.Employee;
 using InvestigatorWorkstation.ViewModels;
 using Services.Interfaces;
+using Services.Interfaces.Employee;
 using Services.Services;
 using System;
 using System.Drawing;
@@ -14,12 +15,21 @@ namespace InvestigatorWorkstation.Forms
         private readonly LoginForm _loginForm;
         private readonly IAuthService _authService;
         private readonly IEmployeeService _employeeService;
+        private readonly IEmployeePositionService _employeePositionService;
+        private readonly IEmployeeRankService _employeeRankService;
 
-        public MainForm(LoginForm loginForm, IAuthService authService, IEmployeeService employeeService)
+        public MainForm(
+            LoginForm loginForm, 
+            IAuthService authService, 
+            IEmployeeService employeeService,
+            IEmployeePositionService employeePositionService,
+            IEmployeeRankService employeeRankService)
         {
             _loginForm = loginForm;
             _authService = authService;
             _employeeService = employeeService;
+            _employeePositionService = employeePositionService;
+            _employeeRankService = employeeRankService;
 
             InitializeComponent();
             SetActiveButton(CriminalReportButton);
@@ -48,7 +58,7 @@ namespace InvestigatorWorkstation.Forms
             //}
         }
 
-        private void LogoutLabel_Click(object sender, System.EventArgs e)
+        private void LogoutLabel_Click(object sender, EventArgs e)
         {
             _authService.UnauthorizeUser();
             Hide();
@@ -156,11 +166,12 @@ namespace InvestigatorWorkstation.Forms
 
         private async void AddEmployeeButton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult;
+            var positions = await _employeePositionService.GetPositions();
+            var ranks = await _employeeRankService.GetRanks();
 
-            using var addEmployeeForm = new AddEmployeeForm();
+            using var addEmployeeForm = new AddEmployeeForm(positions, ranks);
 
-            dialogResult = addEmployeeForm.ShowDialog();
+            var dialogResult = addEmployeeForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
                 await _employeeService.AddEmployee(addEmployeeForm.GetResult());
@@ -181,11 +192,12 @@ namespace InvestigatorWorkstation.Forms
 
             var selectedEmployeeDTO = await _employeeService.GetEmployee(selectedEmployeeViewModel.Id);
 
-            DialogResult dialogResult;
+            var positions = await _employeePositionService.GetPositions();
+            var ranks = await _employeeRankService.GetRanks();
 
-            using var updateEmployeeForm = new UpdateEmployeeForm(selectedEmployeeDTO);
+            using var updateEmployeeForm = new UpdateEmployeeForm(selectedEmployeeDTO, positions, ranks);
 
-            dialogResult = updateEmployeeForm.ShowDialog();
+            var dialogResult = updateEmployeeForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
                 var employees = await _employeeService.GetEmployees();
@@ -193,8 +205,8 @@ namespace InvestigatorWorkstation.Forms
                 EmployeeGridView.DataSource = employees
                     .Select(x => (EmployeeViewModel)x)
                     .ToList();
-                 
-                EmployeeGridView.Refresh();
+
+                EmployeeGridView.Update();
             }
         }
 
@@ -202,6 +214,14 @@ namespace InvestigatorWorkstation.Forms
         {
             var selectedEmployeeViewModel = (EmployeeViewModel)EmployeeGridView.SelectedRows[0].DataBoundItem;
             await _employeeService.RemoveEmployee(selectedEmployeeViewModel.Id);
+
+            var employees = await _employeeService.GetEmployees();
+
+            EmployeeGridView.DataSource = employees
+                .Select(x => (EmployeeViewModel)x)
+                .ToList();
+
+            EmployeeGridView.Update();
         }
         #endregion
 

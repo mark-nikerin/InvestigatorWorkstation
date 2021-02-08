@@ -1,16 +1,16 @@
 ﻿using Services.DTOs.Employee;
 using Services.Interfaces;
+using Services.Interfaces.Employee;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Storage;
+using System;
+using Storage.Models.Employee;
 
-namespace Services.Services
+namespace Services.Services.Employee
 {
-    using System.Threading.Tasks;
-    using System.Linq;
-    using System.Collections.Generic;
-    using Microsoft.EntityFrameworkCore;
-    using Storage;
-    using Storage.Models;
-    using System;
-
     public class EmployeeService : IEmployeeService
     {
 
@@ -37,7 +37,7 @@ namespace Services.Services
                 Name = employeeDTO.Position.Name
             };
 
-            var employee = new Employee
+            var employee = new Storage.Models.Employee.Employee
             {
                 FirstName = employeeDTO.FirstName,
                 MiddleName = employeeDTO.MiddleName,

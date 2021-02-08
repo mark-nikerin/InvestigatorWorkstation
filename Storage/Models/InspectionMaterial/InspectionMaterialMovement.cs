@@ -1,8 +1,8 @@
-﻿namespace Storage.Models
-{
-    using Storage.Interfaces;
-    using System;
+﻿using Storage.Interfaces; 
+using System;
 
+namespace Storage.Models
+{
     public class InspectionMaterialMovement : IMovement
     { 
         public int Id { get; set; }
@@ -12,7 +12,7 @@
         public int InspectionMaterialId { get; set; }
         public int? InspectionMaterialDecisionId { get; set; }
 
-        public virtual Employee Employee { get; set; }
+        public virtual Employee.Employee Employee { get; set; }
         public virtual InspectionMaterial InspectionMaterial { get; set; }
         public virtual InspectionMaterialDecision InspectionMaterialDecision { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using Services.DTOs.Employee;
 
 namespace InvestigatorWorkstation.Forms.Employee
@@ -6,8 +7,10 @@ namespace InvestigatorWorkstation.Forms.Employee
     public partial class UpdateEmployeeForm : Form
     {
         private EmployeeDTO _currentEmployee { get; set; }
+        private IEnumerable<PositionDTO> _positions;
+        private IEnumerable<RankDTO> _ranks;
 
-        public UpdateEmployeeForm(EmployeeDTO employeeDTO)
+        public UpdateEmployeeForm(EmployeeDTO employeeDTO, IEnumerable<PositionDTO> positions, IEnumerable<RankDTO> ranks)
         {
             _currentEmployee = employeeDTO;
             InitializeComponent();
@@ -30,6 +33,8 @@ namespace InvestigatorWorkstation.Forms.Employee
             RankAppointmentDateTimePicker.Value = employeeDTO.Rank.AppointmentDate;
             RankOrderNumberTextBox.Text = employeeDTO.Rank.OrderNumber.ToString();
             RankTermNumeric.Value = employeeDTO.Rank.Term;
+            _positions = positions;
+            _ranks = ranks;
         }
 
         private void UpdateEmployeeButton_Click(object sender, System.EventArgs e)

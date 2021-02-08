@@ -1,8 +1,8 @@
-﻿namespace Storage.Models
-{
-    using Storage.Interfaces;
-    using System;
+﻿using Storage.Interfaces;
+using System;
 
+namespace Storage.Models
+{  
     public class CrimeReport : IEntity
     { 
         public int Id { get; set; }
@@ -12,7 +12,7 @@
         public int? EmployeeId { get; set; }
         public int? QualificationId { get; set; }
 
-        public virtual Employee Employee { get; set; }
+        public virtual Employee.Employee Employee { get; set; }
         public virtual Qualification Qualification { get; set; }
     }
 }
