@@ -7,15 +7,16 @@
     public class PositionConfiguration : IEntityTypeConfiguration<Position>
     {
         public void Configure(EntityTypeBuilder<Position> builder)
-        {  
+        {
             builder.HasMany(x => x.Employees)
                 .WithOne(x => x.Position)
                 .HasForeignKey(x => x.PositionId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.EmployeePositionHistories)
                 .WithOne(x => x.Position)
-                .HasForeignKey(x => x.PositionId); 
+                .HasForeignKey(x => x.PositionId)
+                .OnDelete(DeleteBehavior.Cascade); 
         }
     }
 }

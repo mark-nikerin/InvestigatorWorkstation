@@ -11,7 +11,7 @@
             builder.HasMany(x => x.PreventiveMeasureDecisions)
                 .WithOne(x => x.PreventiveMeasure)
                 .HasForeignKey(x => x.PreventiveMeasureId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

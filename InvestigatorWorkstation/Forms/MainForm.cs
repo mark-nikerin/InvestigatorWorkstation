@@ -73,7 +73,7 @@ namespace InvestigatorWorkstation.Forms
         #endregion
 
         #region Switching tabs
-        private void SidebarButton_Click(object sender, System.EventArgs e)
+        private void SidebarButton_Click(object sender, EventArgs e)
         {
             switch (((Button)sender).Name)
             {
@@ -115,7 +115,7 @@ namespace InvestigatorWorkstation.Forms
             button.Font = new Font("Segoe UI", 12.0F, FontStyle.Bold);
         }
 
-        private async void MainTabContainer_SelectedTabChanged(object sender, System.EventArgs e)
+        private async void MainTabContainer_SelectedTabChanged(object sender, EventArgs e)
         {
             switch (MainTabContainer.SelectedTab.Name)
             {
@@ -124,8 +124,7 @@ namespace InvestigatorWorkstation.Forms
                         var employees = await _employeeService.GetEmployees();
                         EmployeeGridView.DataSource = employees
                             .Select(x => (EmployeeViewModel)x)
-                            .ToList();
-                        EmployeeGridView.Update();
+                            .ToList(); 
                         break;
                     };
                 case "CriminalCaseTabPage":
@@ -155,7 +154,7 @@ namespace InvestigatorWorkstation.Forms
 
         #region EmployeeTab
 
-        private async void AddEmployeeButton_Click(object sender, System.EventArgs e)
+        private async void AddEmployeeButton_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult;
 
@@ -176,7 +175,7 @@ namespace InvestigatorWorkstation.Forms
             }
         }
 
-        private async void EditEmployeeButton_Click(object sender, System.EventArgs e)
+        private async void EditEmployeeButton_Click(object sender, EventArgs e)
         {
             var selectedEmployeeViewModel = (EmployeeViewModel) EmployeeGridView.SelectedRows[0].DataBoundItem;
 
@@ -188,7 +187,7 @@ namespace InvestigatorWorkstation.Forms
 
             dialogResult = updateEmployeeForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
-            { 
+            {
                 var employees = await _employeeService.GetEmployees();
 
                 EmployeeGridView.DataSource = employees
@@ -199,6 +198,11 @@ namespace InvestigatorWorkstation.Forms
             }
         }
 
+        private async void DeleteEmployeeButton_Click(object sender, EventArgs e)
+        {
+            var selectedEmployeeViewModel = (EmployeeViewModel)EmployeeGridView.SelectedRows[0].DataBoundItem;
+            await _employeeService.RemoveEmployee(selectedEmployeeViewModel.Id);
+        }
         #endregion
 
     }

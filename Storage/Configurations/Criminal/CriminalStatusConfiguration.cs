@@ -11,12 +11,12 @@
             builder.HasMany(x => x.Criminals)
                 .WithOne(x => x.CriminalStatus)
                 .HasForeignKey(x => x.CriminalStatusId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.CriminalStatusHistories)
                 .WithOne(x => x.CriminalStatus)
                 .HasForeignKey(x => x.CriminalStatusId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

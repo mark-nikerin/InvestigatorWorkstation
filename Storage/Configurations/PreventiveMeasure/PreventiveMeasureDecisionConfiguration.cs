@@ -11,17 +11,17 @@
             builder.HasOne(x => x.PreventiveMeasure)
                 .WithMany(x => x.PreventiveMeasureDecisions)
                 .HasForeignKey(x => x.PreventiveMeasureId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.Employee)
                .WithMany(x => x.PreventiveMeasureDecisions)
                .HasForeignKey(x => x.EmployeeId)
-               .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.Criminal)
                .WithMany(x => x.PreventiveMeasureDecisions)
                .HasForeignKey(x => x.CriminalId)
-               .IsRequired(true);
+               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

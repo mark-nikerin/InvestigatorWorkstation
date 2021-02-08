@@ -11,12 +11,12 @@
             builder.HasOne(x => x.Qualification)
                 .WithMany(x => x.CrimeReports)
                 .HasForeignKey(x => x.QualificationId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.Employee)
                 .WithMany(x => x.CrimeReports)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

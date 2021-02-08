@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Storage;
 
 namespace Storage.Migrations
 {
     [DbContext(typeof(WorkstationContext))]
-    partial class WorkstationContextModelSnapshot : ModelSnapshot
+    [Migration("20210208204358_SetupOnDeleteBehavior")]
+    partial class SetupOnDeleteBehavior
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

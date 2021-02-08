@@ -11,7 +11,7 @@
             builder.HasOne(x => x.CriminalCase)
                 .WithMany(x => x.InvestigationPeriodExtensions)
                 .HasForeignKey(x => x.CriminalCaseId)
-                .IsRequired(true);  
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

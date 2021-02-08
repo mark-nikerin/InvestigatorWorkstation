@@ -11,7 +11,7 @@
             builder.HasMany(x => x.CriminalStatusHistories)
                 .WithOne(x => x.ComplicityType)
                 .HasForeignKey(x => x.ComplicityTypeId)
-                .IsRequired(false); 
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

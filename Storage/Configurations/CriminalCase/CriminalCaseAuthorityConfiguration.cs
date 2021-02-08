@@ -7,11 +7,10 @@
     public class CriminalCaseAuthorityConfiguration : IEntityTypeConfiguration<CriminalCaseAuthority>
     {
         public void Configure(EntityTypeBuilder<CriminalCaseAuthority> builder)
-        {  
+        {
             builder.HasMany(x => x.CriminalCases)
                .WithOne(x => x.CriminalCaseAuthority)
-               .HasForeignKey(x => x.CriminalCaseAuthorityId)
-               .IsRequired(true);
+               .HasForeignKey(x => x.CriminalCaseAuthorityId);
         }
     }
 }

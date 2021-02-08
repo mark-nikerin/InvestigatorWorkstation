@@ -8,8 +8,8 @@
     { 
         public int Id { get; set; }
         public DateTime InitiationDate { get; set; }
-        public int QualificationId { get; set; }
-        public int CriminalCaseAuthorityId { get; set; }
+        public int? QualificationId { get; set; }
+        public int? CriminalCaseAuthorityId { get; set; }
 
         public virtual Qualification Qualification { get; set; }
         public virtual CriminalCaseAuthority CriminalCaseAuthority { get; set; }

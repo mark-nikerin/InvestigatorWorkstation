@@ -11,22 +11,22 @@
             builder.HasOne(x => x.Qualification)
                 .WithMany(x => x.CriminalCases)
                 .HasForeignKey(x => x.QualificationId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.CriminalCaseAuthority)
                 .WithMany(x => x.CriminalCases)
                 .HasForeignKey(x => x.CriminalCaseAuthorityId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.InvestigationPeriodExtensions)
                 .WithOne(x => x.CriminalCase)
                 .HasForeignKey(x => x.CriminalCaseId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.CriminalCaseMovements)
                 .WithOne(x => x.CriminalCase)
                 .HasForeignKey(x => x.CriminalCaseId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.Criminals)
                .WithMany(x => x.CriminalCases);

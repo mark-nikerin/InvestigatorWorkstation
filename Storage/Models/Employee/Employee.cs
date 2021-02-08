@@ -19,8 +19,8 @@
         public DateTime CertificationTerm { get; set; }
         public DateTime JoinServiceDate { get; set; }
         public int Number { get; set; }
-        public int RankId { get; set; }
-        public int PositionId { get; set; }
+        public int? RankId { get; set; }
+        public int? PositionId { get; set; }
 
         public virtual Rank Rank { get; set; } 
         public virtual Position Position { get; set; }  

@@ -455,195 +455,6 @@
   <data name="MainTabContainer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;CriminalReportTabPage.Name" xml:space="preserve">
-    <value>CriminalReportTabPage</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.Name" xml:space="preserve">
-    <value>CriminalCaseTabPage</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CalendarTabPage.Name" xml:space="preserve">
-    <value>CalendarTabPage</value>
-  </data>
-  <data name="&gt;&gt;CalendarTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CalendarTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;CalendarTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.Name" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;QualificationTabPage.Name" xml:space="preserve">
-    <value>QualificationTabPage</value>
-  </data>
-  <data name="&gt;&gt;QualificationTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;QualificationTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;QualificationTabPage.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="MainTabContainer.ItemSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>126, 0</value>
-  </data>
-  <data name="MainTabContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>-3, 0</value>
-  </data>
-  <data name="MainTabContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="MainTabContainer.Padding" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="MainTabContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>959, 808</value>
-  </data>
-  <data name="MainTabContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;MainTabContainer.Name" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;MainTabContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainTabContainer.Parent" xml:space="preserve">
-    <value>MainSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;MainTabContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="splitter1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>3, 780</value>
-  </data>
-  <data name="splitter1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitter1.Name" xml:space="preserve">
-    <value>splitter1</value>
-  </data>
-  <data name="&gt;&gt;splitter1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitter1.Parent" xml:space="preserve">
-    <value>MainSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Panel2.Name" xml:space="preserve">
-    <value>MainSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Panel2.Parent" xml:space="preserve">
-    <value>MainSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MainSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>1136, 780</value>
-  </data>
-  <data name="MainSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>200</value>
-  </data>
-  <data name="MainSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="MainSplitContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Name" xml:space="preserve">
-    <value>MainSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainSplitContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportSplitContainer.Name" xml:space="preserve">
-    <value>CriminalReportSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportSplitContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportSplitContainer.Parent" xml:space="preserve">
-    <value>CriminalReportTabPage</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportSplitContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CriminalReportTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
-  </data>
-  <data name="CriminalReportTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="CriminalReportTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
-  </data>
-  <data name="CriminalReportTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
-  </data>
-  <data name="CriminalReportTabPage.Text" xml:space="preserve">
-    <value>CriminalReportTabPage</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.Name" xml:space="preserve">
-    <value>CriminalReportTabPage</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;CriminalReportTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="CriminalReportSplitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -750,7 +561,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalReportGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>722, 678</value>
+    <value>728, 678</value>
   </data>
   <data name="CriminalReportGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>4</value>
@@ -792,10 +603,10 @@
     <value>1</value>
   </data>
   <data name="CriminalReportSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>954, 780</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>762</value>
+    <value>768</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -815,41 +626,32 @@
   <data name="&gt;&gt;CriminalReportSplitContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;CriminalCaseSplitContainer.Name" xml:space="preserve">
-    <value>CriminalCaseSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseSplitContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseSplitContainer.Parent" xml:space="preserve">
-    <value>CriminalCaseTabPage</value>
-  </data>
-  <data name="&gt;&gt;CriminalCaseSplitContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CriminalCaseTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="CriminalReportTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
-  <data name="CriminalCaseTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+  <data name="CriminalReportTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="CriminalCaseTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>6</value>
+  <data name="CriminalReportTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>954, 780</value>
   </data>
-  <data name="CriminalCaseTabPage.Text" xml:space="preserve">
-    <value>CriminalCaseTabPage</value>
+  <data name="CriminalReportTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.Name" xml:space="preserve">
-    <value>CriminalCaseTabPage</value>
+  <data name="CriminalReportTabPage.Text" xml:space="preserve">
+    <value>CriminalReportTabPage</value>
   </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.Type" xml:space="preserve">
+  <data name="&gt;&gt;CriminalReportTabPage.Name" xml:space="preserve">
+    <value>CriminalReportTabPage</value>
+  </data>
+  <data name="&gt;&gt;CriminalReportTabPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CriminalReportTabPage.Parent" xml:space="preserve">
     <value>MainTabContainer</value>
   </data>
-  <data name="&gt;&gt;CriminalCaseTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;CriminalReportTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="CriminalCaseSplitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -918,7 +720,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalCaseGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>722, 678</value>
+    <value>728, 678</value>
   </data>
   <data name="CriminalCaseGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -996,10 +798,10 @@
     <value>1</value>
   </data>
   <data name="CriminalCaseSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>954, 780</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>762</value>
+    <value>768</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -1019,11 +821,35 @@
   <data name="&gt;&gt;CriminalCaseSplitContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="CriminalCaseTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>4, 24</value>
+  </data>
+  <data name="CriminalCaseTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>954, 780</value>
+  </data>
+  <data name="CriminalCaseTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>6</value>
+  </data>
+  <data name="CriminalCaseTabPage.Text" xml:space="preserve">
+    <value>CriminalCaseTabPage</value>
+  </data>
+  <data name="&gt;&gt;CriminalCaseTabPage.Name" xml:space="preserve">
+    <value>CriminalCaseTabPage</value>
+  </data>
+  <data name="&gt;&gt;CriminalCaseTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CriminalCaseTabPage.Parent" xml:space="preserve">
+    <value>MainTabContainer</value>
+  </data>
+  <data name="&gt;&gt;CriminalCaseTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="CalendarTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
   <data name="CalendarTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+    <value>954, 780</value>
   </data>
   <data name="CalendarTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -1042,93 +868,6 @@
   </data>
   <data name="&gt;&gt;CalendarTabPage.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;EditEmployeeButton.Name" xml:space="preserve">
-    <value>EditEmployeeButton</value>
-  </data>
-  <data name="&gt;&gt;EditEmployeeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditEmployeeButton.Parent" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;EditEmployeeButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DeleteEmployeeButton.Name" xml:space="preserve">
-    <value>DeleteEmployeeButton</value>
-  </data>
-  <data name="&gt;&gt;DeleteEmployeeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteEmployeeButton.Parent" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;DeleteEmployeeButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;AddEmployeeButton.Name" xml:space="preserve">
-    <value>AddEmployeeButton</value>
-  </data>
-  <data name="&gt;&gt;AddEmployeeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddEmployeeButton.Parent" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;AddEmployeeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;EmployeeGridView.Name" xml:space="preserve">
-    <value>EmployeeGridView</value>
-  </data>
-  <data name="&gt;&gt;EmployeeGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmployeeGridView.Parent" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;EmployeeGridView.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;EmployeeLabel.Name" xml:space="preserve">
-    <value>EmployeeLabel</value>
-  </data>
-  <data name="&gt;&gt;EmployeeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmployeeLabel.Parent" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;EmployeeLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="EmployeeTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
-  </data>
-  <data name="EmployeeTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="EmployeeTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
-  </data>
-  <data name="EmployeeTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>7</value>
-  </data>
-  <data name="EmployeeTabPage.Text" xml:space="preserve">
-    <value>EmployeesTabPage</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.Name" xml:space="preserve">
-    <value>EmployeeTabPage</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.Parent" xml:space="preserve">
-    <value>MainTabContainer</value>
-  </data>
-  <data name="&gt;&gt;EmployeeTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="EditEmployeeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1292,56 +1031,32 @@
   <data name="&gt;&gt;EmployeeLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>QualificationTabPage</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;QualificationLabel.Name" xml:space="preserve">
-    <value>QualificationLabel</value>
-  </data>
-  <data name="&gt;&gt;QualificationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;QualificationLabel.Parent" xml:space="preserve">
-    <value>QualificationTabPage</value>
-  </data>
-  <data name="&gt;&gt;QualificationLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="QualificationTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="EmployeeTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
-  <data name="QualificationTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
+  <data name="EmployeeTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="QualificationTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>951, 780</value>
+  <data name="EmployeeTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>954, 780</value>
   </data>
-  <data name="QualificationTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>8</value>
+  <data name="EmployeeTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
   </data>
-  <data name="QualificationTabPage.Text" xml:space="preserve">
-    <value>QualificationTabPage</value>
+  <data name="EmployeeTabPage.Text" xml:space="preserve">
+    <value>EmployeesTabPage</value>
   </data>
-  <data name="&gt;&gt;QualificationTabPage.Name" xml:space="preserve">
-    <value>QualificationTabPage</value>
+  <data name="&gt;&gt;EmployeeTabPage.Name" xml:space="preserve">
+    <value>EmployeeTabPage</value>
   </data>
-  <data name="&gt;&gt;QualificationTabPage.Type" xml:space="preserve">
+  <data name="&gt;&gt;EmployeeTabPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;QualificationTabPage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;EmployeeTabPage.Parent" xml:space="preserve">
     <value>MainTabContainer</value>
   </data>
-  <data name="&gt;&gt;QualificationTabPage.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;EmployeeTabPage.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="dataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1408,6 +1123,123 @@
   </data>
   <data name="&gt;&gt;QualificationLabel.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="QualificationTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>4, 24</value>
+  </data>
+  <data name="QualificationTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="QualificationTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>954, 780</value>
+  </data>
+  <data name="QualificationTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>8</value>
+  </data>
+  <data name="QualificationTabPage.Text" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;QualificationTabPage.Name" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;QualificationTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;QualificationTabPage.Parent" xml:space="preserve">
+    <value>MainTabContainer</value>
+  </data>
+  <data name="&gt;&gt;QualificationTabPage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="MainTabContainer.ItemSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>126, 0</value>
+  </data>
+  <data name="MainTabContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>-3, 0</value>
+  </data>
+  <data name="MainTabContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="MainTabContainer.Padding" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="MainTabContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>962, 808</value>
+  </data>
+  <data name="MainTabContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MainTabContainer.Name" xml:space="preserve">
+    <value>MainTabContainer</value>
+  </data>
+  <data name="&gt;&gt;MainTabContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainTabContainer.Parent" xml:space="preserve">
+    <value>MainSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;MainTabContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="splitter1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>3, 780</value>
+  </data>
+  <data name="splitter1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Name" xml:space="preserve">
+    <value>splitter1</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitter1.Parent" xml:space="preserve">
+    <value>MainSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Panel2.Name" xml:space="preserve">
+    <value>MainSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Panel2.Parent" xml:space="preserve">
+    <value>MainSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MainSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>1136, 780</value>
+  </data>
+  <data name="MainSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
+    <value>200</value>
+  </data>
+  <data name="MainSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="MainSplitContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Name" xml:space="preserve">
+    <value>MainSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainSplitContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>

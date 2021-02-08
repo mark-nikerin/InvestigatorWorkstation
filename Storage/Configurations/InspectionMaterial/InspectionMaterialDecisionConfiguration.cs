@@ -7,11 +7,11 @@
     public class InspectionMaterialDecisionConfiguration : IEntityTypeConfiguration<InspectionMaterialDecision>
     {
         public void Configure(EntityTypeBuilder<InspectionMaterialDecision> builder)
-        { 
+        {
             builder.HasMany(x => x.InspectionMaterialMovements)
                 .WithOne(x => x.InspectionMaterialDecision)
                 .HasForeignKey(x => x.InspectionMaterialDecisionId)
-                .IsRequired(true); 
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

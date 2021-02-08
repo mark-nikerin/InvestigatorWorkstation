@@ -44,7 +44,7 @@ namespace Services.DTOs.Employee
                 Number = entity.Number,
                 Position = new PositionDTO
                 {
-                    Id = entity.PositionId,
+                    Id = entity.PositionId.GetValueOrDefault(),
                     Name = entity.Position.Name,
                     AppointmentDate = positionHistory.AppointmentDate,
                     OrderDate = positionHistory.OrderDate,
@@ -52,7 +52,7 @@ namespace Services.DTOs.Employee
                 },
                 Rank = new RankDTO
                 {
-                    Id = entity.RankId,
+                    Id = entity.RankId.GetValueOrDefault(),
                     Name = entity.Rank.Name,
                     AppointmentDate = rankHistory.AppointmentDate,
                     OrderDate = rankHistory.OrderDate,

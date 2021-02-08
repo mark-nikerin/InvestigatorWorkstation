@@ -11,42 +11,42 @@
             builder.HasOne(x => x.Position)
                 .WithMany(x => x.Employees)
                 .HasForeignKey(x => x.PositionId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.Rank)
                 .WithMany(x => x.Employees)
                 .HasForeignKey(x => x.RankId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.PositionHistories)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(false);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.RankHistories)
-                 .WithOne(x => x.Employee)
-                 .HasForeignKey(x => x.EmployeeId)
-                 .IsRequired(false);
+                .WithOne(x => x.Employee)
+                .HasForeignKey(x => x.EmployeeId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.InspectionMaterialMovements)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.CriminalCaseMovements)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.CrimeReports)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(x => x.PreventiveMeasureDecisions)
                 .WithOne(x => x.Employee)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

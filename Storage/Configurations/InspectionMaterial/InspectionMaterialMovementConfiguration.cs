@@ -11,17 +11,17 @@
             builder.HasOne(x => x.Employee)
                 .WithMany(x => x.InspectionMaterialMovements)
                 .HasForeignKey(x => x.EmployeeId)
-                .IsRequired(true);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.InspectionMaterialDecision)
                .WithMany(x => x.InspectionMaterialMovements)
                .HasForeignKey(x => x.InspectionMaterialDecisionId)
-               .IsRequired(true);
+               .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(x => x.InspectionMaterial)
                .WithMany(x => x.InspectionMaterialMovements)
                .HasForeignKey(x => x.InspectionMaterialId)
-               .IsRequired(true);
+               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -11,7 +11,7 @@
             builder.HasOne(x => x.InspectionMaterial)
                 .WithMany(x => x.InspectionPeriodExtensions)
                 .HasForeignKey(x => x.InspectionMaterialId)
-                .IsRequired(true); 
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

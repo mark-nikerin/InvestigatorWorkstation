@@ -434,6 +434,7 @@ namespace InvestigatorWorkstation.Forms
             this.DeleteEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
             this.DeleteEmployeeButton.Name = "DeleteEmployeeButton";
             this.DeleteEmployeeButton.UseVisualStyleBackColor = false;
+            this.DeleteEmployeeButton.Click += new System.EventHandler(this.DeleteEmployeeButton_Click);
             // 
             // AddEmployeeButton
             // 

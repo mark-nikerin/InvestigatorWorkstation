@@ -22,7 +22,7 @@
         public string MilitaryAccounting { get; set; }
         public bool HasCriminalRecords { get; set; }
         public string CriminalRecordsInfo { get; set; }  
-        public int CriminalStatusId { get; set; }
+        public int? CriminalStatusId { get; set; }
 
         public virtual ICollection<CriminalCase> CriminalCases { get; set; } = new HashSet<CriminalCase>();
         public virtual ICollection<PreventiveMeasureDecision> PreventiveMeasureDecisions { get; set; } = new HashSet<PreventiveMeasureDecision>();

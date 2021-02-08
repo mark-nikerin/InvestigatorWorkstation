@@ -7,11 +7,11 @@
     public class CriminalCaseDecisionConfiguration : IEntityTypeConfiguration<CriminalCaseDecision>
     {
         public void Configure(EntityTypeBuilder<CriminalCaseDecision> builder)
-        { 
+        {
             builder.HasMany(x => x.CriminalCaseMovements)
                .WithOne(x => x.Decision)
                .HasForeignKey(x => x.DecisionId)
-               .IsRequired(true);
+               .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
