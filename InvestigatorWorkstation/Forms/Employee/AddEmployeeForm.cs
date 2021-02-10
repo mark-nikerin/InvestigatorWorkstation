@@ -46,7 +46,8 @@ namespace InvestigatorWorkstation.Forms.Employee
                     OrderNumber = int.Parse(PositionOrderNumberTextBox.Text)
                 },
                 Login = LoginTextBox.Text,
-                Password = PasswordTextBox.Text
+                Password = PasswordTextBox.Text,
+                IsAdmin = IsAdminCheckBox.Checked
             };
 
             DialogResult = DialogResult.OK;

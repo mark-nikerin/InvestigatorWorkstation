@@ -29,6 +29,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             CertificationTermDateTimePicker.Value = employeeDTO.CertificationTerm;
             JoinServiceDateTimePicker.Value = employeeDTO.JoinServiceDate;
             LoginTextBox.Text = employeeDTO.Login;
+            IsAdminCheckBox.Checked = employeeDTO.IsAdmin;
 
             PositionComboBox.DataSource = positions;
             PositionComboBox.SelectedValue = employeeDTO.Position.Id;
@@ -69,6 +70,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             _currentEmployee.Position.OrderNumber = int.Parse(PositionOrderNumberTextBox.Text);
             _currentEmployee.Login = LoginTextBox.Text;
             _currentEmployee.Password = PasswordTextBox.Text;
+            _currentEmployee.IsAdmin = IsAdminCheckBox.Checked;
 
             DialogResult = DialogResult.OK;
         }

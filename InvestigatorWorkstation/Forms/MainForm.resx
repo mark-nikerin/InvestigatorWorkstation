@@ -561,7 +561,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalReportGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>728, 678</value>
+    <value>764, 678</value>
   </data>
   <data name="CriminalReportGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>4</value>
@@ -603,10 +603,10 @@
     <value>1</value>
   </data>
   <data name="CriminalReportSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>768</value>
+    <value>804</value>
   </data>
   <data name="CriminalReportSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -633,7 +633,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="CriminalReportTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="CriminalReportTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
@@ -720,7 +720,7 @@
     <value>20, 20, 20, 20</value>
   </data>
   <data name="CriminalCaseGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>728, 678</value>
+    <value>764, 678</value>
   </data>
   <data name="CriminalCaseGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -798,10 +798,10 @@
     <value>1</value>
   </data>
   <data name="CriminalCaseSplitContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>768</value>
+    <value>804</value>
   </data>
   <data name="CriminalCaseSplitContainer.SplitterWidth" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -825,7 +825,7 @@
     <value>4, 24</value>
   </data>
   <data name="CriminalCaseTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="CriminalCaseTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -849,7 +849,7 @@
     <value>4, 24</value>
   </data>
   <data name="CalendarTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="CalendarTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>6</value>
@@ -972,7 +972,7 @@
     <value>50</value>
   </data>
   <data name="EmployeeGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>27, 112</value>
+    <value>27, 102</value>
   </data>
   <data name="EmployeeGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>20, 10, 20, 20</value>
@@ -1038,7 +1038,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="EmployeeTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="EmployeeTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>7</value>
@@ -1131,7 +1131,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="QualificationTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>954, 780</value>
+    <value>972, 780</value>
   </data>
   <data name="QualificationTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>8</value>
@@ -1164,7 +1164,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainTabContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>962, 808</value>
+    <value>980, 808</value>
   </data>
   <data name="MainTabContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>

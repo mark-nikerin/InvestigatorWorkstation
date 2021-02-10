@@ -1,5 +1,4 @@
-﻿using Services.DTOs.Employee;
-using Services.Interfaces;
+﻿using Services.DTOs.Employee; 
 using Services.Interfaces.Employee;
 using System.Threading.Tasks;
 using System.Linq;
@@ -15,12 +14,10 @@ namespace Services.Services.Employee
     {
 
         private readonly WorkstationContext _db;
-        private readonly IAuthService _authService;
 
-        public EmployeeService(WorkstationContext db, IAuthService authService)
+        public EmployeeService(WorkstationContext db)
         {
             _db = db;
-            _authService = authService;
         }
 
         public async Task AddEmployee(EmployeeDTO employeeDTO)
@@ -40,7 +37,8 @@ namespace Services.Services.Employee
                 FirstName = employeeDTO.FirstName,
                 MiddleName = employeeDTO.MiddleName,
                 LastName = employeeDTO.LastName,
-                Login = employeeDTO.Login,
+                Login = employeeDTO.Login, 
+                IsAdmin = employeeDTO.IsAdmin,
                 Password = PasswordService.GetHashedPassword(employeeDTO.Password),
                 BirthDate = employeeDTO.BirthDate,
                 CertificationTerm = employeeDTO.CertificationTerm,
@@ -133,7 +131,7 @@ namespace Services.Services.Employee
             employee.MiddleName = employeeDTO.MiddleName;
             employee.LastName = employeeDTO.LastName;
             employee.Login = employeeDTO.Login;
-
+            employee.IsAdmin = employeeDTO.IsAdmin;
             if (!string.IsNullOrEmpty(employeeDTO.Password))
             {
                 employee.Password = PasswordService.GetHashedPassword(employeeDTO.Password);

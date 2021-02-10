@@ -76,6 +76,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.CancelUpdateEmployeeButton = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
+            this.IsAdminCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,23 +89,23 @@ namespace InvestigatorWorkstation.Forms.Employee
             // 
             // PositionComboBox
             // 
+            this.PositionComboBox.DisplayMember = "Name";
             this.PositionComboBox.FormattingEnabled = true;
             this.PositionComboBox.Location = new System.Drawing.Point(466, 147);
             this.PositionComboBox.Name = "PositionComboBox";
             this.PositionComboBox.Size = new System.Drawing.Size(326, 23);
-            this.PositionComboBox.TabIndex = 156; 
+            this.PositionComboBox.TabIndex = 156;
             this.PositionComboBox.ValueMember = "Id";
-            this.PositionComboBox.DisplayMember = "Name";
             // 
             // RankComboBox
             // 
+            this.RankComboBox.DisplayMember = "Name";
             this.RankComboBox.FormattingEnabled = true;
             this.RankComboBox.Location = new System.Drawing.Point(466, 314);
             this.RankComboBox.Name = "RankComboBox";
             this.RankComboBox.Size = new System.Drawing.Size(200, 23);
             this.RankComboBox.TabIndex = 155;
             this.RankComboBox.ValueMember = "Id";
-            this.RankComboBox.DisplayMember = "Name";
             // 
             // CertificationTermDateTimePicker
             // 
@@ -507,12 +508,27 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.LastNameTextBox.Size = new System.Drawing.Size(102, 23);
             this.LastNameTextBox.TabIndex = 112;
             // 
+            // IsAdminCheckBox
+            // 
+            this.IsAdminCheckBox.AutoSize = true;
+            this.IsAdminCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IsAdminCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IsAdminCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.IsAdminCheckBox.Location = new System.Drawing.Point(38, 466);
+            this.IsAdminCheckBox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.IsAdminCheckBox.Name = "IsAdminCheckBox";
+            this.IsAdminCheckBox.Size = new System.Drawing.Size(164, 21);
+            this.IsAdminCheckBox.TabIndex = 158;
+            this.IsAdminCheckBox.Text = "Права администратора";
+            this.IsAdminCheckBox.UseVisualStyleBackColor = true;
+            // 
             // UpdateEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(827, 570);
+            this.Controls.Add(this.IsAdminCheckBox);
             this.Controls.Add(this.RankTermNumeric);
             this.Controls.Add(this.PositionComboBox);
             this.Controls.Add(this.RankComboBox);
@@ -622,5 +638,6 @@ namespace InvestigatorWorkstation.Forms.Employee
         private System.Windows.Forms.Button CancelUpdateEmployeeButton;
         private System.Windows.Forms.Label login;
         private System.Windows.Forms.TextBox LastNameTextBox;
+        private System.Windows.Forms.CheckBox IsAdminCheckBox;
     }
 }

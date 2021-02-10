@@ -1,9 +1,11 @@
 using InvestigatorWorkstation.Forms.Employee;
 using InvestigatorWorkstation.ViewModels;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Services.Interfaces;
 using Services.Interfaces.Employee;
 using Services.Services;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -100,6 +102,7 @@ namespace InvestigatorWorkstation.Forms
                     MainTabContainer.SelectedIndex = 2;
                     break;
                 case "EmployeeButton":
+                    MainTabContainer.SelectedTab.Hide();
                     SetActiveButton(EmployeeButton);
                     MainTabContainer.SelectedIndex = 3;
                     break;
@@ -132,27 +135,29 @@ namespace InvestigatorWorkstation.Forms
                 case "EmployeeTabPage":
                     {
                         var employees = await _employeeService.GetEmployees();
-                        EmployeeGridView.DataSource = employees
+                        EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                             .Select(x => (EmployeeViewModel)x)
-                            .ToList(); 
+                            .ToList());
+                        EmployeeGridView.Update();
+                        MainTabContainer.SelectedTab.Show();
                         break;
-                    };
+                    }
                 case "CriminalCaseTabPage":
                     {
                         break;
-                    };
+                    }
                 case "CriminalReportTabPage":
                     {
                         break;
-                    };
+                    }
                 case "QualificationTabPage":
                     {
                         break;
-                    };
+                    }
                 case "CalendarTabPage":
                     {
                         break;
-                    };
+                    }
             }
         }
         #endregion
@@ -178,9 +183,9 @@ namespace InvestigatorWorkstation.Forms
 
                 var employees = await _employeeService.GetEmployees();
 
-                EmployeeGridView.DataSource = employees
+                EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                     .Select(x => (EmployeeViewModel)x)
-                    .ToList();
+                    .ToList());
 
                 EmployeeGridView.Update();
             }
@@ -204,9 +209,9 @@ namespace InvestigatorWorkstation.Forms
 
                 var employees = await _employeeService.GetEmployees();
 
-                EmployeeGridView.DataSource = employees
+                EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                     .Select(x => (EmployeeViewModel)x)
-                    .ToList();
+                    .ToList());
 
                 EmployeeGridView.Update();
             }
@@ -219,13 +224,24 @@ namespace InvestigatorWorkstation.Forms
 
             var employees = await _employeeService.GetEmployees();
 
-            EmployeeGridView.DataSource = employees
+            EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                 .Select(x => (EmployeeViewModel)x)
-                .ToList();
+                .ToList());
 
             EmployeeGridView.Update();
         }
-        #endregion
 
+        private bool sortAscending = false;
+        private void EmployeeGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (sortAscending)
+                EmployeeGridView.Sort(EmployeeGridView.Columns[e.ColumnIndex], System.ComponentModel.ListSortDirection.Ascending);
+            else
+                EmployeeGridView.Sort(EmployeeGridView.Columns[e.ColumnIndex], System.ComponentModel.ListSortDirection.Descending);
+
+            EmployeeGridView.Update();
+            sortAscending = !sortAscending;
+        }
+        #endregion
     }
 }
