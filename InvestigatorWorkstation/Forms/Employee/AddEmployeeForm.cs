@@ -8,21 +8,18 @@ namespace InvestigatorWorkstation.Forms.Employee
     public partial class AddEmployeeForm : Form
     {
         private EmployeeDTO _currentEmployee { get; set; }
-        private IEnumerable<PositionDTO> _positions;
-        private IEnumerable<RankDTO> _ranks;
 
         public AddEmployeeForm(IEnumerable<PositionDTO> positions, IEnumerable<RankDTO> ranks)
         {
             InitializeComponent();
-            _positions = positions;
-            _ranks = ranks;
+            PositionComboBox.DataSource = positions; 
+            RankComboBox.DataSource = ranks;
         }
 
         private void AddEmployeeButton_Click(object sender, EventArgs e)
         {
             _currentEmployee = new EmployeeDTO
             {
-                Id = 0,
                 FirstName = FirstNameTextBox.Text,
                 MiddleName = MiddleNameTextBox.Text,
                 LastName = LastNameTextBox.Text,
@@ -33,7 +30,8 @@ namespace InvestigatorWorkstation.Forms.Employee
                 QualificationUpdateDate = QualificationUpdateDateTimePicker.Value,
                 Rank = new RankWithInfoDTO
                 {
-                    Name = "",
+                    Id = (int)RankComboBox.SelectedValue,
+                    Name = RankComboBox.SelectedText,
                     OrderDate = RankOrderDateTimePicker.Value,
                     AppointmentDate = RankAppointmentDateTimePicker.Value,
                     OrderNumber = int.Parse(RankOrderNumberTextBox.Text),
@@ -41,7 +39,8 @@ namespace InvestigatorWorkstation.Forms.Employee
                 },
                 Position = new PositionWithInfoDTO
                 {
-                    Name = "",
+                    Id = (int)PositionComboBox.SelectedValue,
+                    Name = PositionComboBox.SelectedText,
                     OrderDate = PositionOrderDateTimePicker.Value,
                     AppointmentDate = PositionAppointmentDateTimePicker.Value,
                     OrderNumber = int.Parse(PositionOrderNumberTextBox.Text)
@@ -62,6 +61,6 @@ namespace InvestigatorWorkstation.Forms.Employee
         {
             _currentEmployee = null;
             DialogResult = DialogResult.Cancel;
-        } 
+        }
     }
 }

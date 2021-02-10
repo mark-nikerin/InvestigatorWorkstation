@@ -92,7 +92,9 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PositionComboBox.Location = new System.Drawing.Point(466, 147);
             this.PositionComboBox.Name = "PositionComboBox";
             this.PositionComboBox.Size = new System.Drawing.Size(326, 23);
-            this.PositionComboBox.TabIndex = 156;
+            this.PositionComboBox.TabIndex = 156; 
+            this.PositionComboBox.ValueMember = "Id";
+            this.PositionComboBox.DisplayMember = "Name";
             // 
             // RankComboBox
             // 
@@ -101,6 +103,8 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.RankComboBox.Name = "RankComboBox";
             this.RankComboBox.Size = new System.Drawing.Size(200, 23);
             this.RankComboBox.TabIndex = 155;
+            this.RankComboBox.ValueMember = "Id";
+            this.RankComboBox.DisplayMember = "Name";
             // 
             // CertificationTermDateTimePicker
             // 

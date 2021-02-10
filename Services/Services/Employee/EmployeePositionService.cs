@@ -19,12 +19,10 @@ namespace Services.Services.Employee
 
         public async Task<ICollection<PositionDTO>> GetPositions()
         {
-            var positions = await _context.Ranks
+            return await _context.Positions
                 .AsNoTracking()
                 .Select(x => new PositionDTO { Id = x.Id, Name = x.Name })
                 .ToListAsync();
-
-            return positions;
         }
     }
 }

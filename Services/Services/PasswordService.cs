@@ -1,17 +1,15 @@
-﻿using Services.Interfaces;
-
-namespace Services
+﻿namespace Services
 {
-    using System; 
+    using System;
     using System.Security.Cryptography;
 
-    public sealed class PasswordService : IPasswordService
+    public static class PasswordService
     {
         private const int SALT_SIZE = 16;
         private const int HASH_SIZE = 20;
         private const int HASH_ITER = 50000;
 
-        public string GetHashedPassword(string password)
+        public static string GetHashedPassword(string password)
         {
             var salt = new byte[SALT_SIZE];
 
@@ -22,12 +20,10 @@ namespace Services
             Array.Copy(salt, 0, hashBytes, 0, SALT_SIZE);
             Array.Copy(hash, 0, hashBytes, SALT_SIZE, HASH_SIZE);
 
-            var hashedPassword = Convert.ToBase64String(hashBytes);
+            return Convert.ToBase64String(hashBytes);
+        }
 
-            return hashedPassword;
-        } 
-
-        public bool VerifyPassword(string dbPassword, string password)
+        public static bool VerifyPassword(string dbPassword, string password)
         {
             var dbSalt = new byte[SALT_SIZE];
             var dbHash = new byte[HASH_SIZE];
@@ -39,8 +35,13 @@ namespace Services
             var passwordHash = new Rfc2898DeriveBytes(password, dbSalt, HASH_ITER).GetBytes(HASH_SIZE);
 
             for (var i = 0; i < HASH_SIZE; i++)
+            {
                 if (passwordHash[i] != dbHash[i])
+                {
                     return false;
+                }
+            }
+
             return true;
         }
     }

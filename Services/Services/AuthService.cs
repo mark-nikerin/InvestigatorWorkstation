@@ -11,13 +11,11 @@ namespace Services
 
     public class AuthService : IAuthService
     {
-        private readonly WorkstationContext _db; 
-        private readonly IPasswordService _passwordService;
+        private readonly WorkstationContext _db;
 
-        public AuthService(WorkstationContext db, IPasswordService passwordService)
+        public AuthService(WorkstationContext db)
         {
             _db = db;
-            _passwordService = passwordService;
         }
 
         public async Task AuthorizeUser(string login, string password)
@@ -27,25 +25,10 @@ namespace Services
             if (user == null)
                 throw new ArgumentException("Wrong login or password");
 
-            if (!_passwordService.VerifyPassword(user.Password, password))
+            if (!PasswordService.VerifyPassword(user.Password, password))
             {
                 throw new ArgumentException("Wrong login or password");
             }
-
-            CurrentUserService.SetCurrentUser(user);
-        }
-
-        public async Task RegisterUser(string login, string password)
-        {
-            var user = await _db.Employees.Where(x => x.Login == login).SingleOrDefaultAsync();
-
-            if (user == null)
-                throw new Exception("Employee not found");
-
-            user.Password = _passwordService.GetHashedPassword(password);
-
-            _db.Employees.Update(user);
-            await _db.SaveChangesAsync();
 
             CurrentUserService.SetCurrentUser(user);
         }

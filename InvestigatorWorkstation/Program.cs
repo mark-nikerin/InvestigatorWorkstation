@@ -34,7 +34,6 @@ namespace InvestigatorWorkstation
 
                     services
                         .AddDbContext<WorkstationContext>(options => options.UseSqlServer(configuration.GetConnectionString("WorkstationDBConnection")))
-                        .AddScoped<IPasswordService, PasswordService>()
                         .AddScoped<IEmployeeService, EmployeeService>()
                         .AddScoped<IAuthService, AuthService>()
                         .AddScoped<IEmployeePositionService, EmployeePositionService>()

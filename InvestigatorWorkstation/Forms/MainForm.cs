@@ -182,7 +182,7 @@ namespace InvestigatorWorkstation.Forms
                     .Select(x => (EmployeeViewModel)x)
                     .ToList();
 
-                EmployeeGridView.Refresh();
+                EmployeeGridView.Update();
             }
         }
 
@@ -200,6 +200,8 @@ namespace InvestigatorWorkstation.Forms
             var dialogResult = updateEmployeeForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
+                await _employeeService.UpdateEmployee(selectedEmployeeDTO.Id, updateEmployeeForm.GetResult());
+
                 var employees = await _employeeService.GetEmployees();
 
                 EmployeeGridView.DataSource = employees

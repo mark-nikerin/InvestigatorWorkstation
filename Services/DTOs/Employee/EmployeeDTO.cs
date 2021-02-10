@@ -24,8 +24,8 @@ namespace Services.DTOs.Employee
 
         public static explicit operator EmployeeDTO(Storage.Models.Employee.Employee entity)
         {
-            var positionHistory = entity.PositionHistories.Where(x => x.PositionId == entity.PositionId).FirstOrDefault();
-            var rankHistory = entity.RankHistories.Where(x => x.RankId == entity.RankId).FirstOrDefault();
+            var positionHistory = entity.PositionHistories.FirstOrDefault(x => x.PositionId == entity.PositionId);
+            var rankHistory = entity.RankHistories.FirstOrDefault(x => x.RankId == entity.RankId);
 
             return new EmployeeDTO
             {

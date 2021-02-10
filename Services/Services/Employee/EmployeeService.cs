@@ -25,17 +25,15 @@ namespace Services.Services.Employee
 
         public async Task AddEmployee(EmployeeDTO employeeDTO)
         {
-            var rank = new Rank
-            {
-                Id = employeeDTO.Rank.Id,
-                Name = employeeDTO.Rank.Name,
-            };
+            var rank = await _db.Ranks.FirstOrDefaultAsync(x => x.Id == employeeDTO.Rank.Id);
 
-            var position = new Position
-            {
-                Id = employeeDTO.Position.Id,
-                Name = employeeDTO.Position.Name
-            };
+            if (rank == null)
+                throw new ArgumentException();
+
+            var position = await _db.Positions.FirstOrDefaultAsync(x => x.Id == employeeDTO.Position.Id);
+
+            if (position == null)
+                throw new ArgumentException();
 
             var employee = new Storage.Models.Employee.Employee
             {
@@ -43,6 +41,7 @@ namespace Services.Services.Employee
                 MiddleName = employeeDTO.MiddleName,
                 LastName = employeeDTO.LastName,
                 Login = employeeDTO.Login,
+                Password = PasswordService.GetHashedPassword(employeeDTO.Password),
                 BirthDate = employeeDTO.BirthDate,
                 CertificationTerm = employeeDTO.CertificationTerm,
                 ContractDate = employeeDTO.ContractDate,
@@ -76,14 +75,12 @@ namespace Services.Services.Employee
             employee.RankHistories.Add(employeeRankHistory);
 
             await _db.Employees.AddAsync(employee);
-            await _db.SaveChangesAsync();
-
-            await _authService.RegisterUser(employeeDTO.Login, employeeDTO.Password);
+            await _db.SaveChangesAsync(); 
         }
 
         public async Task<EmployeeDTO> GetEmployee(int id)
         {
-            var employee = await _db.Employees
+            return await _db.Employees
                 .AsNoTracking()
                 .Include(x => x.Rank)
                 .Include(x => x.Position)
@@ -91,23 +88,19 @@ namespace Services.Services.Employee
                 .Include(x => x.RankHistories)
                 .Where(x => x.Id == id)
                 .Select(x => (EmployeeDTO)x)
-                .FirstOrDefaultAsync();
-
-            return employee;
+                .SingleOrDefaultAsync();
         }
 
         public async Task<ICollection<EmployeeDTO>> GetEmployees()
         {
-            var employees = await _db.Employees
+            return await _db.Employees
+                .AsNoTracking()
                 .Include(x => x.Rank)
                 .Include(x => x.Position)
                 .Include(x => x.PositionHistories)
                 .Include(x => x.RankHistories)
-                .AsNoTracking()
                 .Select(x => (EmployeeDTO)x)
                 .ToListAsync();
-
-            return employees;
         }
 
         public async Task RemoveEmployee(int id)
@@ -126,18 +119,25 @@ namespace Services.Services.Employee
         public async Task UpdateEmployee(int id, EmployeeDTO employeeDTO)
         {
             var employee = await _db.Employees
+                .Include(x => x.Rank)
+                .Include(x => x.Position)
+                .Include(x => x.PositionHistories)
+                .Include(x => x.RankHistories)
                 .Where(x => x.Id == id)
                 .SingleOrDefaultAsync();
 
             if (employee == null)
-            {
                 throw new ArgumentException();
-            }
 
             employee.FirstName = employeeDTO.FirstName;
             employee.MiddleName = employeeDTO.MiddleName;
             employee.LastName = employeeDTO.LastName;
             employee.Login = employeeDTO.Login;
+
+            if (!string.IsNullOrEmpty(employeeDTO.Password))
+            {
+                employee.Password = PasswordService.GetHashedPassword(employeeDTO.Password);
+            }
             employee.BirthDate = employeeDTO.BirthDate;
             employee.CertificationTerm = employeeDTO.CertificationTerm;
             employee.ContractDate = employeeDTO.ContractDate;
@@ -145,15 +145,12 @@ namespace Services.Services.Employee
             employee.Number = employeeDTO.Number;
             employee.QualificationUpdateDate = employeeDTO.QualificationUpdateDate;
 
-
             if (employee.Rank.Id != employeeDTO.Rank.Id)
             {
                 var rank = await _db.Ranks.FirstOrDefaultAsync(x => x.Id == employeeDTO.Rank.Id);
 
                 if (rank == null)
-                {
                     throw new ArgumentException();
-                }
 
                 var newRankHistory = new EmployeeRankHistory
                 {
@@ -165,6 +162,7 @@ namespace Services.Services.Employee
                 };
 
                 employee.RankHistories.Add(newRankHistory);
+                employee.Rank = rank;
             }
 
             if (employee.Position.Id != employeeDTO.Rank.Id)
@@ -172,9 +170,7 @@ namespace Services.Services.Employee
                 var position = await _db.Positions.FirstOrDefaultAsync(x => x.Id == employeeDTO.Position.Id);
 
                 if (position == null)
-                {
                     throw new ArgumentException();
-                }
 
                 var newPositionHistory = new EmployeePositionHistory
                 {
@@ -185,6 +181,7 @@ namespace Services.Services.Employee
                 };
 
                 employee.PositionHistories.Add(newPositionHistory);
+                employee.Position = position;
             }
 
             _db.Employees.Update(employee);

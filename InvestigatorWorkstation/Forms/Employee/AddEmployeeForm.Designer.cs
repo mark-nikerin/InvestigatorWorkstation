@@ -87,7 +87,9 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.RankTermNumeric.TabIndex = 110;
             // 
             // PositionComboBox
-            // 
+            //  
+            this.PositionComboBox.ValueMember = "Id";
+            this.PositionComboBox.DisplayMember = "Name";
             this.PositionComboBox.FormattingEnabled = true;
             this.PositionComboBox.Location = new System.Drawing.Point(466, 147);
             this.PositionComboBox.Name = "PositionComboBox";
@@ -96,6 +98,8 @@ namespace InvestigatorWorkstation.Forms.Employee
             // 
             // RankComboBox
             // 
+            this.RankComboBox.ValueMember = "Id";
+            this.RankComboBox.DisplayMember = "Name";
             this.RankComboBox.FormattingEnabled = true;
             this.RankComboBox.Location = new System.Drawing.Point(466, 314);
             this.RankComboBox.Name = "RankComboBox";
