@@ -6,15 +6,11 @@ namespace InvestigatorWorkstation.Forms.Employee
 {
     public partial class UpdateEmployeeForm : Form
     {
-        private EmployeeDTO _currentEmployee { get; set; }
-        private IEnumerable<PositionDTO> _positions;
-        private IEnumerable<RankDTO> _ranks;
+        private EmployeeDTO _currentEmployee { get; set; } 
 
         public UpdateEmployeeForm(EmployeeDTO employeeDTO, IEnumerable<PositionDTO> positions, IEnumerable<RankDTO> ranks)
         {
             _currentEmployee = employeeDTO;
-            _positions = positions;
-            _ranks = ranks;
 
             InitializeComponent();
 
@@ -28,8 +24,6 @@ namespace InvestigatorWorkstation.Forms.Employee
             QualificationUpdateDateTimePicker.Value = employeeDTO.QualificationUpdateDate;
             CertificationTermDateTimePicker.Value = employeeDTO.CertificationTerm;
             JoinServiceDateTimePicker.Value = employeeDTO.JoinServiceDate;
-            LoginTextBox.Text = employeeDTO.Login;
-            IsAdminCheckBox.Checked = employeeDTO.IsAdmin;
 
             PositionComboBox.DataSource = positions;
             PositionComboBox.SelectedValue = employeeDTO.Position.Id;
@@ -43,6 +37,9 @@ namespace InvestigatorWorkstation.Forms.Employee
             RankAppointmentDateTimePicker.Value = employeeDTO.Rank.AppointmentDate;
             RankOrderNumberTextBox.Text = employeeDTO.Rank.OrderNumber.ToString();
             RankTermNumeric.Value = employeeDTO.Rank.Term;
+
+            LoginTextBox.Text = employeeDTO.Login;
+            IsAdminCheckBox.Checked = employeeDTO.IsAdmin;
             #endregion
 
         }
@@ -54,20 +51,26 @@ namespace InvestigatorWorkstation.Forms.Employee
             _currentEmployee.LastName = LastNameTextBox.Text;
             _currentEmployee.BirthDate = BirthDateTimePicker.Value;
             _currentEmployee.ContractDate = ContractDateTimePicker.Value;
+            _currentEmployee.Number = int.Parse(PersonalNumberTextBox.Text);
+            _currentEmployee.QualificationUpdateDate = QualificationUpdateDateTimePicker.Value;
             _currentEmployee.CertificationTerm = CertificationTermDateTimePicker.Value;
             _currentEmployee.JoinServiceDate = JoinServiceDateTimePicker.Value;
-            _currentEmployee.QualificationUpdateDate = QualificationUpdateDateTimePicker.Value;
-            _currentEmployee.Rank.Id = (int)RankComboBox.SelectedValue;
-            _currentEmployee.Rank.Name = RankComboBox.SelectedText;
+
+            var selectedRank = (RankDTO)RankComboBox.SelectedItem;
+            _currentEmployee.Rank.Id = selectedRank.Id;
+            _currentEmployee.Rank.Name = selectedRank.Name;
             _currentEmployee.Rank.OrderDate = RankOrderDateTimePicker.Value;
             _currentEmployee.Rank.AppointmentDate = RankAppointmentDateTimePicker.Value;
             _currentEmployee.Rank.OrderNumber = int.Parse(RankOrderNumberTextBox.Text);
             _currentEmployee.Rank.Term = (int)RankTermNumeric.Value;
-            _currentEmployee.Position.Id = (int)PositionComboBox.SelectedValue;
-            _currentEmployee.Position.Name = PositionComboBox.SelectedText;
+
+            var selectedPosition = (PositionDTO)PositionComboBox.SelectedItem;
+            _currentEmployee.Position.Id = selectedPosition.Id;
+            _currentEmployee.Position.Name = selectedPosition.Name;
             _currentEmployee.Position.OrderDate = PositionOrderDateTimePicker.Value;
             _currentEmployee.Position.AppointmentDate = PositionAppointmentDateTimePicker.Value;
             _currentEmployee.Position.OrderNumber = int.Parse(PositionOrderNumberTextBox.Text);
+
             _currentEmployee.Login = LoginTextBox.Text;
             _currentEmployee.Password = PasswordTextBox.Text;
             _currentEmployee.IsAdmin = IsAdminCheckBox.Checked;

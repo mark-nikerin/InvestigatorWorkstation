@@ -156,14 +156,16 @@ namespace Services.Services.Employee
                     AppointmentDate = employeeDTO.Rank.AppointmentDate,
                     OrderNumber = employeeDTO.Number,
                     RankTerm = employeeDTO.Rank.Term,
-                    Rank = rank
-                };
+                    Rank = rank,
+                    RankId = rank.Id
+            };
 
                 employee.RankHistories.Add(newRankHistory);
                 employee.Rank = rank;
+                employee.RankId = rank.Id;
             }
 
-            if (employee.Position.Id != employeeDTO.Rank.Id)
+            if (employee.Position.Id != employeeDTO.Position.Id)
             {
                 var position = await _db.Positions.FirstOrDefaultAsync(x => x.Id == employeeDTO.Position.Id);
 
@@ -175,11 +177,13 @@ namespace Services.Services.Employee
                     OrderDate = employeeDTO.Position.OrderDate,
                     OrderNumber = employeeDTO.Position.OrderNumber,
                     AppointmentDate = employeeDTO.Position.AppointmentDate,
-                    Position = position
+                    Position = position,
+                    PositionId = position.Id
                 };
 
                 employee.PositionHistories.Add(newPositionHistory);
                 employee.Position = position;
+                employee.PositionId = position.Id;
             }
 
             _db.Employees.Update(employee);

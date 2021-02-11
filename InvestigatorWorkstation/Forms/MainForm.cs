@@ -5,6 +5,7 @@ using Services.Interfaces;
 using Services.Interfaces.Employee;
 using Services.Services;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -87,6 +88,7 @@ namespace InvestigatorWorkstation.Forms
         private void UpdateControlsByUserRole(bool isAdmin)
         {
             MainTabContainer.SelectedTab = CalendarTabPage;
+            SetActiveButton(CalendarButton);
 
             if (isAdmin)
             {
@@ -172,7 +174,9 @@ namespace InvestigatorWorkstation.Forms
                         EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                             .Select(x => (EmployeeViewModel)x)
                             .ToList());
-                        EmployeeGridView.Update();
+
+                        EmployeeGridViewSort();
+
                         MainTabContainer.SelectedTab.Show();
                         break;
                     }
@@ -203,6 +207,8 @@ namespace InvestigatorWorkstation.Forms
 
         #region EmployeeTab
 
+        #region ButtonEvents
+
         private async void AddEmployeeButton_Click(object sender, EventArgs e)
         {
             var positions = await _employeePositionService.GetPositions();
@@ -220,14 +226,15 @@ namespace InvestigatorWorkstation.Forms
                 EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                     .Select(x => (EmployeeViewModel)x)
                     .ToList());
-
-                EmployeeGridView.Update();
+                 
+                EmployeeGridViewSort();
             }
         }
 
         private async void EditEmployeeButton_Click(object sender, EventArgs e)
         {
-            var selectedEmployeeViewModel = (EmployeeViewModel) EmployeeGridView.SelectedRows[0].DataBoundItem;
+            var selectedRowId = EmployeeGridView.SelectedRows[0].Index;
+            var selectedEmployeeViewModel = (EmployeeViewModel)EmployeeGridView.SelectedRows[0].DataBoundItem;
 
             var selectedEmployeeDTO = await _employeeService.GetEmployee(selectedEmployeeViewModel.Id);
 
@@ -246,8 +253,9 @@ namespace InvestigatorWorkstation.Forms
                 EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                     .Select(x => (EmployeeViewModel)x)
                     .ToList());
-
-                EmployeeGridView.Update();
+                EmployeeGridView.Rows[selectedRowId].Selected = true;
+                 
+                EmployeeGridViewSort();
             }
         }
 
@@ -260,22 +268,43 @@ namespace InvestigatorWorkstation.Forms
 
             EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
                 .Select(x => (EmployeeViewModel)x)
-                .ToList());
+                .ToList()); 
 
-            EmployeeGridView.Update();
+            EmployeeGridViewSort();
         }
 
-        private bool sortAscending = false;
+        #endregion
+
         private void EmployeeGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (sortAscending)
-                EmployeeGridView.Sort(EmployeeGridView.Columns[e.ColumnIndex], System.ComponentModel.ListSortDirection.Ascending);
-            else
-                EmployeeGridView.Sort(EmployeeGridView.Columns[e.ColumnIndex], System.ComponentModel.ListSortDirection.Descending);
-
-            EmployeeGridView.Update();
-            sortAscending = !sortAscending;
+            EmployeeGridViewSort();
         }
-        #endregion
+
+        private DataGridViewColumn lastSortedColumn;
+        private ListSortDirection direction;
+
+        private void EmployeeGridViewSort()
+        {
+            if (EmployeeGridView.SortedColumn == null && lastSortedColumn == null) return;
+
+            lastSortedColumn = EmployeeGridView.SortedColumn ?? lastSortedColumn;
+
+            if (EmployeeGridView.SortOrder != SortOrder.None)
+            {
+                direction = EmployeeGridView.SortOrder == SortOrder.Ascending
+                    ? ListSortDirection.Ascending
+                    : ListSortDirection.Descending;
+            }
+
+            var newSortColumn = EmployeeGridView.Columns[lastSortedColumn.Name];
+            EmployeeGridView.Sort(newSortColumn, direction);
+            newSortColumn.HeaderCell.SortGlyphDirection =
+                             direction == ListSortDirection.Ascending ?
+                             SortOrder.Ascending : SortOrder.Descending;
+             
+            EmployeeGridView.Update();
+        }
+
+        #endregion   
     }
 }
