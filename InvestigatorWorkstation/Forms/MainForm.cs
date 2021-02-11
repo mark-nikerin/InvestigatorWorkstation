@@ -5,7 +5,6 @@ using Services.Interfaces;
 using Services.Interfaces.Employee;
 using Services.Services;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -38,26 +37,27 @@ namespace InvestigatorWorkstation.Forms
         }
 
         #region Authorization
-        private void MainForm_Load(object sender, System.EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            //Hide();
+            Hide();
 
-            //if (CurrentUserService.GetCurrentUser() == null)
-            //{
-            //    _loginForm.ShowDialog();
-            //}
+            if (CurrentUserService.GetCurrentUser() == null)
+            {
+                _loginForm.ShowDialog();
+            }
 
-            //var currentUser = CurrentUserService.GetCurrentUser();
-            //if (currentUser == null)
-            //{
-            //    Application.Exit();
-            //}
-            //else
-            //{
-            //    UserNameLabel.Text = currentUser.FirstName;
-            //    EmployeeButton.Enabled = CurrentUserService.IsAdmin();
-            //    Show();
-            //}
+            var currentUser = CurrentUserService.GetCurrentUser();
+            if (currentUser == null)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                UpdateControlsByUserRole(CurrentUserService.IsAdmin());
+
+                UserNameLabel.Text = currentUser.FirstName; 
+                Show();
+            }
         }
 
         private void LogoutLabel_Click(object sender, EventArgs e)
@@ -77,11 +77,45 @@ namespace InvestigatorWorkstation.Forms
             }
             else
             {
-                UserNameLabel.Text = currentUser.FirstName;
-                EmployeeButton.Enabled = CurrentUserService.IsAdmin();
+                UpdateControlsByUserRole(CurrentUserService.IsAdmin());
+
+                UserNameLabel.Text = currentUser.FirstName; 
                 Show();
             }
         }
+
+        private void UpdateControlsByUserRole(bool isAdmin)
+        {
+            MainTabContainer.SelectedTab = CalendarTabPage;
+
+            if (isAdmin)
+            {
+                EmployeeButton.Show();
+
+                QualificationButton.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
+                };
+
+                button2.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
+                };
+            }
+            else
+            {
+                EmployeeButton.Hide();
+                button2.Location = EmployeeButton.Location;
+                QualificationButton.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
+                };
+            }
+        }
+
         #endregion
 
         #region Switching tabs
