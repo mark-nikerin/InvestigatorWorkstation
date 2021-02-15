@@ -59,8 +59,21 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportSearchTextBox = new System.Windows.Forms.TextBox();
             this.CrimeReportLabel = new System.Windows.Forms.Label();
             this.CrimeReportGridView = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AddCrimeReportButton = new System.Windows.Forms.Button();
             this.CriminalCaseTabPage = new System.Windows.Forms.TabPage();
             this.CriminalCaseSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.CriminalCaseGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +82,10 @@ namespace InvestigatorWorkstation.Forms
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CriminalCaseLabel = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.CalendarTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeTabPage = new System.Windows.Forms.TabPage();
@@ -96,6 +113,8 @@ namespace InvestigatorWorkstation.Forms
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitContainer)).BeginInit();
             this.MainSplitContainer.Panel1.SuspendLayout();
             this.MainSplitContainer.Panel2.SuspendLayout();
@@ -105,17 +124,25 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportSplitContainer)).BeginInit();
             this.CrimeReportSplitContainer.Panel1.SuspendLayout();
+            this.CrimeReportSplitContainer.Panel2.SuspendLayout();
             this.CrimeReportSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DeletePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditPictureBox)).BeginInit();
             this.CrimeReportSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportGridView)).BeginInit();
+            this.panel2.SuspendLayout();
             this.CriminalCaseTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CriminalCaseSplitContainer)).BeginInit();
             this.CriminalCaseSplitContainer.Panel1.SuspendLayout();
+            this.CriminalCaseSplitContainer.Panel2.SuspendLayout();
             this.CriminalCaseSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CriminalCaseGridView)).BeginInit();
+            this.panel4.SuspendLayout();
             this.CalendarTabPage.SuspendLayout();
             this.EmployeeTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmployeePictureButton)).BeginInit();
@@ -267,6 +294,8 @@ namespace InvestigatorWorkstation.Forms
             // CrimeReportSplitContainer.Panel2
             // 
             this.CrimeReportSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.CrimeReportSplitContainer.Panel2.Controls.Add(this.panel2);
+            this.CrimeReportSplitContainer.Panel2.Controls.Add(this.AddCrimeReportButton);
             // 
             // label2
             // 
@@ -357,6 +386,34 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CrimeReportGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.tableLayoutPanel2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Name = "panel2";
+            // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // AddCrimeReportButton
+            // 
+            resources.ApplyResources(this.AddCrimeReportButton, "AddCrimeReportButton");
+            this.AddCrimeReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(156)))), ((int)(((byte)(227)))));
+            this.AddCrimeReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddCrimeReportButton.FlatAppearance.BorderSize = 0;
+            this.AddCrimeReportButton.ForeColor = System.Drawing.Color.White;
+            this.AddCrimeReportButton.Name = "AddCrimeReportButton";
+            this.AddCrimeReportButton.UseVisualStyleBackColor = false;
+            // 
             // CriminalCaseTabPage
             // 
             this.CriminalCaseTabPage.Controls.Add(this.CriminalCaseSplitContainer);
@@ -372,12 +429,79 @@ namespace InvestigatorWorkstation.Forms
             // 
             // CriminalCaseSplitContainer.Panel1
             // 
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.label6);
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.label7);
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.dateTimePicker3);
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.dateTimePicker4);
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.pictureBox3);
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.pictureBox4);
+            this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.panel3);
             this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.CriminalCaseGridView);
             this.CriminalCaseSplitContainer.Panel1.Controls.Add(this.CriminalCaseLabel);
             // 
             // CriminalCaseSplitContainer.Panel2
             // 
             this.CriminalCaseSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.CriminalCaseSplitContainer.Panel2.Controls.Add(this.panel4);
+            this.CriminalCaseSplitContainer.Panel2.Controls.Add(this.button1);
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // dateTimePicker3
+            // 
+            resources.ApplyResources(this.dateTimePicker3, "dateTimePicker3");
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            // 
+            // dateTimePicker4
+            // 
+            resources.ApplyResources(this.dateTimePicker4, "dateTimePicker4");
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel3
+            // 
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Name = "panel3";
+            // 
+            // pictureBox5
+            // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Name = "textBox2";
             // 
             // CriminalCaseGridView
             // 
@@ -449,6 +573,34 @@ namespace InvestigatorWorkstation.Forms
             resources.ApplyResources(this.CriminalCaseLabel, "CriminalCaseLabel");
             this.CriminalCaseLabel.Name = "CriminalCaseLabel";
             // 
+            // panel4
+            // 
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.tableLayoutPanel3);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Name = "panel4";
+            // 
+            // tableLayoutPanel3
+            // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(156)))), ((int)(((byte)(227)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // CalendarTabPage
             // 
             this.CalendarTabPage.Controls.Add(this.tableLayoutPanel1);
@@ -487,8 +639,8 @@ namespace InvestigatorWorkstation.Forms
             // 
             // DeleteEmployeePictureButton
             // 
-            this.DeleteEmployeePictureButton.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.DeleteEmployeePictureButton, "DeleteEmployeePictureButton");
+            this.DeleteEmployeePictureButton.BackColor = System.Drawing.Color.Transparent;
             this.DeleteEmployeePictureButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DeleteEmployeePictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteEmployeePictureButton.Name = "DeleteEmployeePictureButton";
@@ -499,8 +651,8 @@ namespace InvestigatorWorkstation.Forms
             // 
             // EditEmployeePictureButton
             // 
-            this.EditEmployeePictureButton.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.EditEmployeePictureButton, "EditEmployeePictureButton");
+            this.EditEmployeePictureButton.BackColor = System.Drawing.Color.Transparent;
             this.EditEmployeePictureButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EditEmployeePictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditEmployeePictureButton.Name = "EditEmployeePictureButton";
@@ -682,6 +834,16 @@ namespace InvestigatorWorkstation.Forms
             resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -699,6 +861,7 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportTabPage.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.PerformLayout();
+            this.CrimeReportSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportSplitContainer)).EndInit();
             this.CrimeReportSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DeletePictureBox)).EndInit();
@@ -707,12 +870,21 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportSearchPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.CriminalCaseTabPage.ResumeLayout(false);
             this.CriminalCaseSplitContainer.Panel1.ResumeLayout(false);
             this.CriminalCaseSplitContainer.Panel1.PerformLayout();
+            this.CriminalCaseSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CriminalCaseSplitContainer)).EndInit();
             this.CriminalCaseSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CriminalCaseGridView)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.CalendarTabPage.ResumeLayout(false);
             this.EmployeeTabPage.ResumeLayout(false);
             this.EmployeeTabPage.PerformLayout();
@@ -792,5 +964,24 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.PictureBox AddEmployeePictureButton;
         private System.Windows.Forms.PictureBox DeleteEmployeePictureButton;
         private System.Windows.Forms.PictureBox EditEmployeePictureButton;
+        private System.Windows.Forms.Button AddCrimeReportButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }

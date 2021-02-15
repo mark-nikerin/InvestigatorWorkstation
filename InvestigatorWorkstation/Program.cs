@@ -36,15 +36,14 @@ namespace InvestigatorWorkstation
 
                     services
                         .AddDbContext<WorkstationContext>(options => options.UseSqlServer(configuration.GetConnectionString("WorkstationDBConnection")))
+                        .AddScoped<MainForm>()
+                        .AddScoped<AddEmployeeForm>()
+                        .AddScoped<LoginForm>()
                         .AddScoped<IEmployeeService, EmployeeService>()
                         .AddScoped<IAuthService, AuthService>()
                         .AddScoped<IEmployeePositionService, EmployeePositionService>()
                         .AddScoped<IEmployeeRankService, EmployeeRankService>()
-                        .AddScoped<ICrimeReportService, CrimeReportService>()
-                        .AddScoped<MainForm>()
-                        .AddScoped<AddEmployeeForm>()
-                        .AddScoped<LoginForm>();
-
+                        .AddScoped<ICrimeReportService, CrimeReportService>();
                 }).Build();
 
             using (var serviceScope = host.Services.CreateScope())
