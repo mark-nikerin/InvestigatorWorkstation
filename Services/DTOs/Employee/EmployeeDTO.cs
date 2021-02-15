@@ -27,6 +27,37 @@ namespace Services.DTOs.Employee
             var positionHistory = entity.PositionHistories.FirstOrDefault(x => x.PositionId == entity.PositionId);
             var rankHistory = entity.RankHistories.FirstOrDefault(x => x.RankId == entity.RankId);
 
+            var employeePosition = positionHistory == null
+                ? new PositionWithInfoDTO
+                {
+                    Id = entity.PositionId.GetValueOrDefault(),
+                    Name = entity.Position?.Name
+                }
+                : new PositionWithInfoDTO
+                {
+                    Id = entity.PositionId.GetValueOrDefault(),
+                    Name = entity.Position?.Name,
+                    AppointmentDate = positionHistory.AppointmentDate,
+                    OrderDate = positionHistory.OrderDate,
+                    OrderNumber = positionHistory.OrderNumber
+                };
+
+            var employeeRank = rankHistory == null
+                ? new RankWithInfoDTO
+                {
+                    Id = entity.RankId.GetValueOrDefault(),
+                    Name = entity.Rank?.Name
+                }
+                : new RankWithInfoDTO
+                {
+                    Id = entity.RankId.GetValueOrDefault(),
+                    Name = entity.Rank?.Name,
+                    AppointmentDate = rankHistory.AppointmentDate,
+                    OrderDate = rankHistory.OrderDate,
+                    OrderNumber = rankHistory.OrderNumber,
+                    Term = rankHistory.RankTerm
+                };
+
             return new EmployeeDTO
             {
                 Id = entity.Id,
@@ -42,23 +73,8 @@ namespace Services.DTOs.Employee
                 CertificationTerm = entity.CertificationTerm,
                 JoinServiceDate = entity.JoinServiceDate,
                 Number = entity.Number,
-                Position = new PositionWithInfoDTO
-                {
-                    Id = entity.PositionId.GetValueOrDefault(),
-                    Name = entity.Position.Name,
-                    AppointmentDate = positionHistory.AppointmentDate,
-                    OrderDate = positionHistory.OrderDate,
-                    OrderNumber = positionHistory.OrderNumber
-                },
-                Rank = new RankWithInfoDTO
-                {
-                    Id = entity.RankId.GetValueOrDefault(),
-                    Name = entity.Rank.Name,
-                    AppointmentDate = rankHistory.AppointmentDate,
-                    OrderDate = rankHistory.OrderDate,
-                    OrderNumber = rankHistory.OrderNumber,
-                    Term = rankHistory.RankTerm
-                }
+                Position = employeePosition,
+                Rank = employeeRank
             };
         }
     }

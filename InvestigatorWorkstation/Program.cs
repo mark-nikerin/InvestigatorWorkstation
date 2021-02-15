@@ -6,7 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Services;
 using Services.Interfaces;
+using Services.Interfaces.CrimeReport;
 using Services.Interfaces.Employee;
+using Services.Services.CrimeReport;
 using Services.Services.Employee;
 using Storage;
 using System;
@@ -38,6 +40,7 @@ namespace InvestigatorWorkstation
                         .AddScoped<IAuthService, AuthService>()
                         .AddScoped<IEmployeePositionService, EmployeePositionService>()
                         .AddScoped<IEmployeeRankService, EmployeeRankService>()
+                        .AddScoped<ICrimeReportService, CrimeReportService>()
                         .AddScoped<MainForm>()
                         .AddScoped<AddEmployeeForm>()
                         .AddScoped<LoginForm>();

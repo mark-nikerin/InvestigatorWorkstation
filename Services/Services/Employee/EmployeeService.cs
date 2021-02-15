@@ -95,8 +95,6 @@ namespace Services.Services.Employee
                 .AsNoTracking()
                 .Include(x => x.Rank)
                 .Include(x => x.Position)
-                .Include(x => x.PositionHistories)
-                .Include(x => x.RankHistories)
                 .Select(x => (EmployeeDTO)x)
                 .ToListAsync();
         }

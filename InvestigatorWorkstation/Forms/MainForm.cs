@@ -2,6 +2,7 @@ using InvestigatorWorkstation.Forms.Employee;
 using InvestigatorWorkstation.ViewModels;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Services.Interfaces;
+using Services.Interfaces.CrimeReport;
 using Services.Interfaces.Employee;
 using Services.Services;
 using System;
@@ -19,28 +20,30 @@ namespace InvestigatorWorkstation.Forms
         private readonly IEmployeeService _employeeService;
         private readonly IEmployeePositionService _employeePositionService;
         private readonly IEmployeeRankService _employeeRankService;
+        private readonly ICrimeReportService _crimeReportService;
 
         public MainForm(
             LoginForm loginForm, 
             IAuthService authService, 
             IEmployeeService employeeService,
             IEmployeePositionService employeePositionService,
-            IEmployeeRankService employeeRankService)
+            IEmployeeRankService employeeRankService,
+            ICrimeReportService crimeReportService)
         {
             _loginForm = loginForm;
             _authService = authService;
             _employeeService = employeeService;
             _employeePositionService = employeePositionService;
             _employeeRankService = employeeRankService;
+            _crimeReportService = crimeReportService;
 
             InitializeComponent();
-            SetActiveButton(CriminalReportButton);
+            SetActiveButton(CrimeReportButton);
         }
 
         #region Authorization
         private void MainForm_Load(object sender, EventArgs e)
-        {
-            Hide();
+        { 
 
             if (CurrentUserService.GetCurrentUser() == null)
             {
@@ -123,10 +126,11 @@ namespace InvestigatorWorkstation.Forms
         #region Switching tabs
         private void SidebarButton_Click(object sender, EventArgs e)
         {
+            MainTabContainer.SelectedTab.Hide();
             switch (((Button)sender).Name)
             {
-                case "CriminalReportButton":
-                    SetActiveButton(CriminalReportButton);
+                case "CrimeReportButton":
+                    SetActiveButton(CrimeReportButton);
                     MainTabContainer.SelectedIndex = 0;
                     break;
                 case "CriminalCaseButton":
@@ -137,8 +141,7 @@ namespace InvestigatorWorkstation.Forms
                     SetActiveButton(CalendarButton);
                     MainTabContainer.SelectedIndex = 2;
                     break;
-                case "EmployeeButton":
-                    MainTabContainer.SelectedTab.Hide();
+                case "EmployeeButton": 
                     SetActiveButton(EmployeeButton);
                     MainTabContainer.SelectedIndex = 3;
                     break;
@@ -176,16 +179,20 @@ namespace InvestigatorWorkstation.Forms
                             .ToList());
 
                         EmployeeGridViewSort();
-
-                        MainTabContainer.SelectedTab.Show();
+                         
                         break;
                     }
                 case "CriminalCaseTabPage":
-                    {
+                    { 
                         break;
                     }
-                case "CriminalReportTabPage":
+                case "CrimeReportTabPage":
                     {
+                        var crimeReports = await _crimeReportService.GetCrimeReports();
+                        CrimeReportGridView.DataSource = crimeReports
+                            .Select(x => (CrimeReportViewModel)x)
+                            .ToList();
+                          
                         break;
                     }
                 case "QualificationTabPage":
@@ -197,14 +204,11 @@ namespace InvestigatorWorkstation.Forms
                         break;
                     }
             }
+
+            MainTabContainer.SelectedTab.Show();
         }
         #endregion
-       
-        private void DataGridView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
-        {
-            e.PaintParts &= ~DataGridViewPaintParts.Focus;
-        }
-
+        
         #region EmployeeTab
 
         #region ButtonEvents
@@ -305,6 +309,16 @@ namespace InvestigatorWorkstation.Forms
             EmployeeGridView.Update();
         }
 
-        #endregion   
+        #endregion
+
+        #region Helpers
+
+        private void DataGridView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e) => e.PaintParts &= ~DataGridViewPaintParts.Focus;
+
+        private void PictureButtonOnHoverIn(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.WhiteSmoke;
+
+        private void PictureButtonOnHoverOut(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.Transparent;
+
+        #endregion
     }
 }

@@ -7,7 +7,9 @@ namespace Storage.Models
     { 
         public int Id { get; set; }
         public DateTime RegistrationDate { get; set; }
-        public string RegistratinAuthority { get; set; }
+        public string RegistrationAuthority { get; set; }
+        public string RegistrationNumber { get; set; }
+        public string RegistrationBookNumber { get; set; }
         public string Fable { get; set; }
         public int? EmployeeId { get; set; }
         public int? QualificationId { get; set; }
