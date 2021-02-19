@@ -124,9 +124,9 @@ namespace InvestigatorWorkstation.Forms
                 case "CrimeReportTabPage":
                     {
                         var crimeReports = await _crimeReportService.GetCrimeReports();
-                        CrimeReportGridView.DataSource = crimeReports
+                        CrimeReportGridView.DataSource = new SortableBindingList<CrimeReportViewModel>(crimeReports
                             .Select(x => (CrimeReportViewModel)x)
-                            .ToList();
+                            .ToList());
 
                         SortGridView(CrimeReportGridView);
 

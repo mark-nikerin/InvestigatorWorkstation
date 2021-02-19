@@ -497,6 +497,7 @@ namespace InvestigatorWorkstation.Forms
             // 
             // CrimeReportGridView
             // 
+            this.CrimeReportGridView.AllowUserToAddRows = false;
             resources.ApplyResources(this.CrimeReportGridView, "CrimeReportGridView");
             this.CrimeReportGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CrimeReportGridView.BackgroundColor = System.Drawing.Color.White;
@@ -504,6 +505,7 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CrimeReportGridView.MultiSelect = false;
             this.CrimeReportGridView.Name = "CrimeReportGridView";
+            this.CrimeReportGridView.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

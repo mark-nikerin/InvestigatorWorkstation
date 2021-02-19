@@ -32,13 +32,13 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                 Fable = FableRichTextBox.Text,
                 // TODO добавить квалификации и органы УФСБ
             };
-            DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.OK;
         }
 
         private void CancelAddCrimeReportButton_Click(object sender, EventArgs e)
         {
             _crimeReport = null;
-            DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.Cancel;
         }
 
         private void YesRadioButton_CheckedChanged(object sender, EventArgs e)
