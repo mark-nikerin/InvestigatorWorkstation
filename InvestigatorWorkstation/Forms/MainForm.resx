@@ -929,7 +929,7 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>221, 0</value>
+    <value>219, 0</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
@@ -971,7 +971,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="CrimeReportSearchTextBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>168, 18</value>
+    <value>166, 18</value>
   </data>
   <data name="CrimeReportSearchTextBox.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1515,13 +1515,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>211, -1</value>
+    <value>209, -1</value>
   </data>
   <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 17</value>
+    <value>25, 15</value>
   </data>
   <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -1557,7 +1557,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>95, 18</value>
+    <value>93, 18</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1731,7 +1731,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 77</value>
+    <value>16, 77</value>
   </data>
   <data name="tableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>10, 10, 10, 10</value>
@@ -1740,7 +1740,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>168, 100</value>
+    <value>172, 100</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -1822,40 +1822,40 @@
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="AddCriminalCaseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="AddCriminalCaseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AddCriminalCaseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="AddCriminalCaseButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>10, 27</value>
   </data>
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+  <data name="AddCriminalCaseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>10, 10, 10, 10</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="AddCriminalCaseButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>200, 25</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="AddCriminalCaseButton.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="AddCriminalCaseButton.Text" xml:space="preserve">
     <value>+  Добавить дело</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;AddCriminalCaseButton.Name" xml:space="preserve">
+    <value>AddCriminalCaseButton</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;AddCriminalCaseButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AddCriminalCaseButton.Parent" xml:space="preserve">
     <value>CriminalCaseSplitContainer.Panel2</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AddCriminalCaseButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;CriminalCaseSplitContainer.Panel2.Name" xml:space="preserve">
@@ -2054,7 +2054,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>229, 0</value>
+    <value>227, 0</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2096,7 +2096,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>190, 18</value>
+    <value>188, 18</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>

@@ -98,7 +98,7 @@ namespace InvestigatorWorkstation.Forms
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddCriminalCaseButton = new System.Windows.Forms.Button();
             this.EmployeeTabPage = new System.Windows.Forms.TabPage();
             this.AddEmployeePictureButton = new System.Windows.Forms.PictureBox();
             this.DeleteEmployeePictureButton = new System.Windows.Forms.PictureBox();
@@ -543,6 +543,7 @@ namespace InvestigatorWorkstation.Forms
             this.AddCrimeReportButton.ForeColor = System.Drawing.Color.White;
             this.AddCrimeReportButton.Name = "AddCrimeReportButton";
             this.AddCrimeReportButton.UseVisualStyleBackColor = false;
+            this.AddCrimeReportButton.Click += new System.EventHandler(this.AddCrimeReportButton_Click);
             // 
             // CriminalCaseTabPage
             // 
@@ -573,7 +574,7 @@ namespace InvestigatorWorkstation.Forms
             // 
             this.CriminalCaseSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.CriminalCaseSplitContainer.Panel2.Controls.Add(this.panel4);
-            this.CriminalCaseSplitContainer.Panel2.Controls.Add(this.button1);
+            this.CriminalCaseSplitContainer.Panel2.Controls.Add(this.AddCriminalCaseButton);
             // 
             // label6
             // 
@@ -721,15 +722,16 @@ namespace InvestigatorWorkstation.Forms
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
             // 
-            // button1
+            // AddCriminalCaseButton
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(156)))), ((int)(((byte)(227)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.AddCriminalCaseButton, "AddCriminalCaseButton");
+            this.AddCriminalCaseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(156)))), ((int)(((byte)(227)))));
+            this.AddCriminalCaseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddCriminalCaseButton.FlatAppearance.BorderSize = 0;
+            this.AddCriminalCaseButton.ForeColor = System.Drawing.Color.White;
+            this.AddCriminalCaseButton.Name = "AddCriminalCaseButton";
+            this.AddCriminalCaseButton.UseVisualStyleBackColor = false;
+            this.AddCriminalCaseButton.Click += new System.EventHandler(this.AddCriminalCaseButton_Click);
             // 
             // EmployeeTabPage
             // 
@@ -1116,7 +1118,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddCriminalCaseButton;
         private System.Windows.Forms.Button CriminalButton;
         private System.Windows.Forms.TabPage AuthorityTabPage;
         private System.Windows.Forms.TabPage CriminalTabPage;

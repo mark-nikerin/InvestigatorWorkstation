@@ -229,7 +229,7 @@ namespace InvestigatorWorkstation.Forms
             MainTabContainer.SelectedTab.Show();
         }
         #endregion
-        
+     
         #region EmployeeTab
 
         #region ButtonEvents
@@ -341,6 +341,15 @@ namespace InvestigatorWorkstation.Forms
         private void PictureButtonOnHoverOut(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.Transparent;
 
         #endregion
-         
+
+        private void AddCriminalCaseButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddCrimeReportButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
