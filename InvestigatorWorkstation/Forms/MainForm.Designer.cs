@@ -455,6 +455,7 @@ namespace InvestigatorWorkstation.Forms
             this.DeletePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeletePictureBox.Name = "DeletePictureBox";
             this.DeletePictureBox.TabStop = false;
+            this.DeletePictureBox.Click += new System.EventHandler(this.DeleteCrimeReportButton_Click);
             this.DeletePictureBox.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.DeletePictureBox.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
@@ -514,6 +515,7 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportGridView.RowHeadersVisible = false;
             this.CrimeReportGridView.RowTemplate.Height = 25;
             this.CrimeReportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CrimeReportGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_ColumnHeaderMouseClick);
             this.CrimeReportGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
             // panel2
@@ -833,7 +835,7 @@ namespace InvestigatorWorkstation.Forms
             this.EmployeeGridView.RowTemplate.Height = 25;
             this.EmployeeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeGridView.TabStop = false;
-            this.EmployeeGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.EmployeeGridView_ColumnHeaderMouseClick);
+            this.EmployeeGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_ColumnHeaderMouseClick);
             this.EmployeeGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
             // 
             // EmployeeLabel

@@ -929,13 +929,13 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>219, 0</value>
+    <value>219, -1</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -971,7 +971,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="CrimeReportSearchTextBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>166, 18</value>
+    <value>148, 18</value>
   </data>
   <data name="CrimeReportSearchTextBox.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1515,13 +1515,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>209, -1</value>
+    <value>219, -1</value>
   </data>
   <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 15</value>
+    <value>25, 17</value>
   </data>
   <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -1557,7 +1557,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>93, 18</value>
+    <value>198, 18</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -2054,7 +2054,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>227, 0</value>
+    <value>209, 0</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2096,7 +2096,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>188, 18</value>
+    <value>170, 18</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>

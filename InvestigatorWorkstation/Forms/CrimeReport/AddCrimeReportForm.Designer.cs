@@ -31,23 +31,23 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         {
             this.AddCrimeReportLabel = new System.Windows.Forms.Label();
             this.AddCrimeReportTextGreyPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.LastNameTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Label();
-            this.RankAppointmentDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.RankComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.AddEmployeeButton = new System.Windows.Forms.Button();
-            this.CancelAddEmployeeButton = new System.Windows.Forms.Button();
+            this.RegistryBookNumberLabel = new System.Windows.Forms.Label();
+            this.RegistryBookNumberTextBox = new System.Windows.Forms.TextBox();
+            this.RegistryNumberTextBox = new System.Windows.Forms.TextBox();
+            this.RegistrationDateLabel = new System.Windows.Forms.Label();
+            this.RegistryNumberLabel = new System.Windows.Forms.Label();
+            this.RegistrationDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.IsRegistrationAuthorityRegistred = new System.Windows.Forms.Label();
+            this.YesRadioButton = new System.Windows.Forms.RadioButton();
+            this.NoRadioButton = new System.Windows.Forms.RadioButton();
+            this.CustomRegistrationAuthorityTextBox = new System.Windows.Forms.TextBox();
+            this.RegisteredAuthorityComboBox = new System.Windows.Forms.ComboBox();
+            this.QualificationLabel = new System.Windows.Forms.Label();
+            this.QualificationComboBox = new System.Windows.Forms.ComboBox();
+            this.FableLabel = new System.Windows.Forms.Label();
+            this.FableRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.AddCrimeReportButton = new System.Windows.Forms.Button();
+            this.CancelAddCrimeReportButton = new System.Windows.Forms.Button();
             this.AddCrimeReportTextGreyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,217 +67,225 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // 
             this.AddCrimeReportTextGreyPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.AddCrimeReportTextGreyPanel.Controls.Add(this.AddCrimeReportLabel);
-            this.AddCrimeReportTextGreyPanel.Location = new System.Drawing.Point(-3, 44);
+            this.AddCrimeReportTextGreyPanel.Location = new System.Drawing.Point(-2, 16);
             this.AddCrimeReportTextGreyPanel.Margin = new System.Windows.Forms.Padding(0, 35, 0, 0);
             this.AddCrimeReportTextGreyPanel.Name = "AddCrimeReportTextGreyPanel";
             this.AddCrimeReportTextGreyPanel.Size = new System.Drawing.Size(676, 49);
             this.AddCrimeReportTextGreyPanel.TabIndex = 66;
             // 
-            // label1
+            // RegistryBookNumberLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 15);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "Номер регистрационной книги";
+            this.RegistryBookNumberLabel.AutoSize = true;
+            this.RegistryBookNumberLabel.Location = new System.Drawing.Point(268, 118);
+            this.RegistryBookNumberLabel.Name = "RegistryBookNumberLabel";
+            this.RegistryBookNumberLabel.Size = new System.Drawing.Size(181, 15);
+            this.RegistryBookNumberLabel.TabIndex = 76;
+            this.RegistryBookNumberLabel.Text = "Номер регистрационной книги";
             // 
-            // FirstNameTextBox
+            // RegistryBookNumberTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(269, 164);
-            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
-            this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.PlaceholderText = "Введите номер рег. книги";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(173, 23);
-            this.FirstNameTextBox.TabIndex = 75;
+            this.RegistryBookNumberTextBox.Location = new System.Drawing.Point(270, 136);
+            this.RegistryBookNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
+            this.RegistryBookNumberTextBox.Name = "RegistryBookNumberTextBox";
+            this.RegistryBookNumberTextBox.PlaceholderText = "Введите номер рег. книги";
+            this.RegistryBookNumberTextBox.Size = new System.Drawing.Size(173, 23);
+            this.RegistryBookNumberTextBox.TabIndex = 75;
             // 
-            // LastNameTextBox
+            // RegistryNumberTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(65, 164);
-            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
-            this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.PlaceholderText = "Введите рег. номер";
-            this.LastNameTextBox.Size = new System.Drawing.Size(173, 23);
-            this.LastNameTextBox.TabIndex = 73;
+            this.RegistryNumberTextBox.Location = new System.Drawing.Point(66, 136);
+            this.RegistryNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
+            this.RegistryNumberTextBox.Name = "RegistryNumberTextBox";
+            this.RegistryNumberTextBox.PlaceholderText = "Введите рег. номер";
+            this.RegistryNumberTextBox.Size = new System.Drawing.Size(173, 23);
+            this.RegistryNumberTextBox.TabIndex = 73;
             // 
-            // label2
+            // RegistrationDateLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(471, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 15);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Дата регистрации";
+            this.RegistrationDateLabel.AutoSize = true;
+            this.RegistrationDateLabel.Location = new System.Drawing.Point(472, 118);
+            this.RegistrationDateLabel.Name = "RegistrationDateLabel";
+            this.RegistrationDateLabel.Size = new System.Drawing.Size(105, 15);
+            this.RegistrationDateLabel.TabIndex = 78;
+            this.RegistrationDateLabel.Text = "Дата регистрации";
             // 
-            // login
+            // RegistryNumberLabel
             // 
-            this.login.AutoSize = true;
-            this.login.Location = new System.Drawing.Point(63, 146);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(146, 15);
-            this.login.TabIndex = 74;
-            this.login.Text = "Регистрационный номер";
+            this.RegistryNumberLabel.AutoSize = true;
+            this.RegistryNumberLabel.Location = new System.Drawing.Point(64, 118);
+            this.RegistryNumberLabel.Name = "RegistryNumberLabel";
+            this.RegistryNumberLabel.Size = new System.Drawing.Size(146, 15);
+            this.RegistryNumberLabel.TabIndex = 74;
+            this.RegistryNumberLabel.Text = "Регистрационный номер";
             // 
-            // RankAppointmentDateTimePicker
+            // RegistrationDatePicker
             // 
-            this.RankAppointmentDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RankAppointmentDateTimePicker.Location = new System.Drawing.Point(473, 164);
-            this.RankAppointmentDateTimePicker.Name = "RankAppointmentDateTimePicker";
-            this.RankAppointmentDateTimePicker.Size = new System.Drawing.Size(127, 23);
-            this.RankAppointmentDateTimePicker.TabIndex = 104;
+            this.RegistrationDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RegistrationDatePicker.Location = new System.Drawing.Point(474, 136);
+            this.RegistrationDatePicker.Name = "RegistrationDatePicker";
+            this.RegistrationDatePicker.Size = new System.Drawing.Size(127, 23);
+            this.RegistrationDatePicker.TabIndex = 104;
             // 
-            // label3
+            // IsRegistrationAuthorityRegistred
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 218);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 15);
-            this.label3.TabIndex = 105;
-            this.label3.Text = "Зарегистрировано в УФСБ?";
+            this.IsRegistrationAuthorityRegistred.AutoSize = true;
+            this.IsRegistrationAuthorityRegistred.Location = new System.Drawing.Point(66, 190);
+            this.IsRegistrationAuthorityRegistred.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.IsRegistrationAuthorityRegistred.Name = "IsRegistrationAuthorityRegistred";
+            this.IsRegistrationAuthorityRegistred.Size = new System.Drawing.Size(158, 15);
+            this.IsRegistrationAuthorityRegistred.TabIndex = 105;
+            this.IsRegistrationAuthorityRegistred.Text = "Зарегистрировано в УФСБ?";
             // 
-            // radioButton1
+            // YesRadioButton
             // 
-            this.radioButton1.Checked = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Location = new System.Drawing.Point(65, 249);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 3, 24, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(45, 23);
-            this.radioButton1.TabIndex = 106;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Да";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.YesRadioButton.Checked = true;
+            this.YesRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.YesRadioButton.Location = new System.Drawing.Point(66, 221);
+            this.YesRadioButton.Margin = new System.Windows.Forms.Padding(3, 3, 24, 3);
+            this.YesRadioButton.Name = "YesRadioButton";
+            this.YesRadioButton.Size = new System.Drawing.Size(45, 23);
+            this.YesRadioButton.TabIndex = 106;
+            this.YesRadioButton.TabStop = true;
+            this.YesRadioButton.Text = "Да";
+            this.YesRadioButton.UseVisualStyleBackColor = true;
+            this.YesRadioButton.CheckedChanged += new System.EventHandler(this.YesRadioButton_CheckedChanged);
             // 
-            // radioButton2
+            // NoRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.radioButton2.Location = new System.Drawing.Point(65, 295);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 20, 24, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 19);
-            this.radioButton2.TabIndex = 107;
-            this.radioButton2.Text = "Нет";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.NoRadioButton.AutoSize = true;
+            this.NoRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NoRadioButton.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.NoRadioButton.Location = new System.Drawing.Point(66, 267);
+            this.NoRadioButton.Margin = new System.Windows.Forms.Padding(3, 20, 24, 3);
+            this.NoRadioButton.Name = "NoRadioButton";
+            this.NoRadioButton.Size = new System.Drawing.Size(45, 19);
+            this.NoRadioButton.TabIndex = 107;
+            this.NoRadioButton.Text = "Нет";
+            this.NoRadioButton.UseVisualStyleBackColor = true;
+            this.NoRadioButton.CheckedChanged += new System.EventHandler(this.NoRadioButton_CheckedChanged);
             // 
-            // textBox1
+            // CustomRegistrationAuthorityTextBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(137, 295);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Введите название органа регистрации";
-            this.textBox1.Size = new System.Drawing.Size(463, 23);
-            this.textBox1.TabIndex = 108;
+            this.CustomRegistrationAuthorityTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CustomRegistrationAuthorityTextBox.Enabled = false;
+            this.CustomRegistrationAuthorityTextBox.Location = new System.Drawing.Point(138, 267);
+            this.CustomRegistrationAuthorityTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
+            this.CustomRegistrationAuthorityTextBox.Name = "CustomRegistrationAuthorityTextBox";
+            this.CustomRegistrationAuthorityTextBox.PlaceholderText = "Введите название органа регистрации";
+            this.CustomRegistrationAuthorityTextBox.Size = new System.Drawing.Size(463, 23);
+            this.CustomRegistrationAuthorityTextBox.TabIndex = 108;
             // 
-            // RankComboBox
+            // RegisteredAuthorityComboBox
             // 
-            this.RankComboBox.DisplayMember = "Name";
-            this.RankComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.RankComboBox.FormattingEnabled = true;
-            this.RankComboBox.Location = new System.Drawing.Point(137, 249);
-            this.RankComboBox.Name = "RankComboBox";
-            this.RankComboBox.Size = new System.Drawing.Size(463, 23);
-            this.RankComboBox.TabIndex = 109;
-            this.RankComboBox.ValueMember = "Id";
+            this.RegisteredAuthorityComboBox.DisplayMember = "Name";
+            this.RegisteredAuthorityComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.RegisteredAuthorityComboBox.FormattingEnabled = true;
+            this.RegisteredAuthorityComboBox.Location = new System.Drawing.Point(138, 221);
+            this.RegisteredAuthorityComboBox.Name = "RegisteredAuthorityComboBox";
+            this.RegisteredAuthorityComboBox.Size = new System.Drawing.Size(463, 23);
+            this.RegisteredAuthorityComboBox.TabIndex = 109;
+            this.RegisteredAuthorityComboBox.ValueMember = "Id";
             // 
-            // label4
+            // QualificationLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 349);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 15);
-            this.label4.TabIndex = 110;
-            this.label4.Text = "Квалификация по статье УК РФ";
+            this.QualificationLabel.AutoSize = true;
+            this.QualificationLabel.Location = new System.Drawing.Point(64, 321);
+            this.QualificationLabel.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.QualificationLabel.Name = "QualificationLabel";
+            this.QualificationLabel.Size = new System.Drawing.Size(178, 15);
+            this.QualificationLabel.TabIndex = 110;
+            this.QualificationLabel.Text = "Квалификация по статье УК РФ";
             // 
-            // comboBox1
+            // QualificationComboBox
             // 
-            this.comboBox1.DisplayMember = "Name";
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(65, 367);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(535, 23);
-            this.comboBox1.TabIndex = 111;
-            this.comboBox1.ValueMember = "Id";
+            this.QualificationComboBox.DisplayMember = "Name";
+            this.QualificationComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.QualificationComboBox.FormattingEnabled = true;
+            this.QualificationComboBox.Location = new System.Drawing.Point(66, 339);
+            this.QualificationComboBox.Name = "QualificationComboBox";
+            this.QualificationComboBox.Size = new System.Drawing.Size(535, 23);
+            this.QualificationComboBox.TabIndex = 111;
+            this.QualificationComboBox.ValueMember = "Id";
             // 
-            // label5
+            // FableLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 421);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 15);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "Краткая фабула";
+            this.FableLabel.AutoSize = true;
+            this.FableLabel.Location = new System.Drawing.Point(64, 393);
+            this.FableLabel.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.FableLabel.Name = "FableLabel";
+            this.FableLabel.Size = new System.Drawing.Size(94, 15);
+            this.FableLabel.TabIndex = 112;
+            this.FableLabel.Text = "Краткая фабула";
             // 
-            // richTextBox1
+            // FableRichTextBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.DetectUrls = false;
-            this.richTextBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.richTextBox1.Location = new System.Drawing.Point(65, 439);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox1.Size = new System.Drawing.Size(535, 105);
-            this.richTextBox1.TabIndex = 113;
-            this.richTextBox1.Text = "Добавьте описание";
+            this.FableRichTextBox.BackColor = System.Drawing.Color.White;
+            this.FableRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FableRichTextBox.DetectUrls = false;
+            this.FableRichTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.FableRichTextBox.Location = new System.Drawing.Point(66, 411);
+            this.FableRichTextBox.Name = "FableRichTextBox";
+            this.FableRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FableRichTextBox.Size = new System.Drawing.Size(535, 105);
+            this.FableRichTextBox.TabIndex = 113;
+            this.FableRichTextBox.Text = "Добавьте описание";
+            this.FableRichTextBox.Click += new System.EventHandler(this.FableRichTextBox_OnClick);
             // 
-            // AddEmployeeButton
+            // AddCrimeReportButton
             // 
-            this.AddEmployeeButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.AddEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEmployeeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.AddEmployeeButton.Location = new System.Drawing.Point(364, 587);
-            this.AddEmployeeButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
-            this.AddEmployeeButton.Name = "AddEmployeeButton";
-            this.AddEmployeeButton.Size = new System.Drawing.Size(89, 26);
-            this.AddEmployeeButton.TabIndex = 115;
-            this.AddEmployeeButton.Text = "Добавить";
-            this.AddEmployeeButton.UseVisualStyleBackColor = false;
+            this.AddCrimeReportButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.AddCrimeReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddCrimeReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCrimeReportButton.ForeColor = System.Drawing.Color.Transparent;
+            this.AddCrimeReportButton.Location = new System.Drawing.Point(365, 559);
+            this.AddCrimeReportButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
+            this.AddCrimeReportButton.Name = "AddCrimeReportButton";
+            this.AddCrimeReportButton.Size = new System.Drawing.Size(89, 26);
+            this.AddCrimeReportButton.TabIndex = 115;
+            this.AddCrimeReportButton.Text = "Добавить";
+            this.AddCrimeReportButton.UseVisualStyleBackColor = false;
+            this.AddCrimeReportButton.Click += new System.EventHandler(this.AddCrimeReportButton_Click);
             // 
-            // CancelAddEmployeeButton
+            // CancelAddCrimeReportButton
             // 
-            this.CancelAddEmployeeButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CancelAddEmployeeButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.CancelAddEmployeeButton.FlatAppearance.BorderSize = 0;
-            this.CancelAddEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelAddEmployeeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CancelAddEmployeeButton.Location = new System.Drawing.Point(206, 587);
-            this.CancelAddEmployeeButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
-            this.CancelAddEmployeeButton.Name = "CancelAddEmployeeButton";
-            this.CancelAddEmployeeButton.Size = new System.Drawing.Size(89, 26);
-            this.CancelAddEmployeeButton.TabIndex = 114;
-            this.CancelAddEmployeeButton.Text = "Отмена";
-            this.CancelAddEmployeeButton.UseVisualStyleBackColor = false;
+            this.CancelAddCrimeReportButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.CancelAddCrimeReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelAddCrimeReportButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.CancelAddCrimeReportButton.FlatAppearance.BorderSize = 0;
+            this.CancelAddCrimeReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelAddCrimeReportButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CancelAddCrimeReportButton.Location = new System.Drawing.Point(207, 559);
+            this.CancelAddCrimeReportButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
+            this.CancelAddCrimeReportButton.Name = "CancelAddCrimeReportButton";
+            this.CancelAddCrimeReportButton.Size = new System.Drawing.Size(89, 26);
+            this.CancelAddCrimeReportButton.TabIndex = 114;
+            this.CancelAddCrimeReportButton.Text = "Отмена";
+            this.CancelAddCrimeReportButton.UseVisualStyleBackColor = false;
+            this.CancelAddCrimeReportButton.Click += new System.EventHandler(this.CancelAddCrimeReportButton_Click);
             // 
             // AddCrimeReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(672, 641);
-            this.Controls.Add(this.AddEmployeeButton);
-            this.Controls.Add(this.CancelAddEmployeeButton);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.RankComboBox);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.RankAppointmentDateTimePicker);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.FirstNameTextBox);
-            this.Controls.Add(this.login);
-            this.Controls.Add(this.LastNameTextBox);
+            this.ClientSize = new System.Drawing.Size(672, 621);
+            this.Controls.Add(this.AddCrimeReportButton);
+            this.Controls.Add(this.CancelAddCrimeReportButton);
+            this.Controls.Add(this.FableRichTextBox);
+            this.Controls.Add(this.FableLabel);
+            this.Controls.Add(this.QualificationComboBox);
+            this.Controls.Add(this.QualificationLabel);
+            this.Controls.Add(this.RegisteredAuthorityComboBox);
+            this.Controls.Add(this.CustomRegistrationAuthorityTextBox);
+            this.Controls.Add(this.NoRadioButton);
+            this.Controls.Add(this.YesRadioButton);
+            this.Controls.Add(this.IsRegistrationAuthorityRegistred);
+            this.Controls.Add(this.RegistrationDatePicker);
+            this.Controls.Add(this.RegistrationDateLabel);
+            this.Controls.Add(this.RegistryBookNumberLabel);
+            this.Controls.Add(this.RegistryBookNumberTextBox);
+            this.Controls.Add(this.RegistryNumberLabel);
+            this.Controls.Add(this.RegistryNumberTextBox);
             this.Controls.Add(this.AddCrimeReportTextGreyPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -296,22 +304,22 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
 
         private System.Windows.Forms.Label AddCrimeReportLabel;
         private System.Windows.Forms.Panel AddCrimeReportTextGreyPanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox FirstNameTextBox;
-        private System.Windows.Forms.TextBox LastNameTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label login;
-        private System.Windows.Forms.DateTimePicker RankAppointmentDateTimePicker;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox RankComboBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button AddEmployeeButton;
-        private System.Windows.Forms.Button CancelAddEmployeeButton;
+        private System.Windows.Forms.Label RegistryBookNumberLabel;
+        private System.Windows.Forms.TextBox RegistryBookNumberTextBox;
+        private System.Windows.Forms.TextBox RegistryNumberTextBox;
+        private System.Windows.Forms.Label RegistrationDateLabel;
+        private System.Windows.Forms.Label RegistryNumberLabel;
+        private System.Windows.Forms.DateTimePicker RegistrationDatePicker;
+        private System.Windows.Forms.Label IsRegistrationAuthorityRegistred;
+        private System.Windows.Forms.RadioButton YesRadioButton;
+        private System.Windows.Forms.RadioButton NoRadioButton;
+        private System.Windows.Forms.TextBox CustomRegistrationAuthorityTextBox;
+        private System.Windows.Forms.ComboBox RegisteredAuthorityComboBox;
+        private System.Windows.Forms.Label QualificationLabel;
+        private System.Windows.Forms.ComboBox QualificationComboBox;
+        private System.Windows.Forms.Label FableLabel;
+        private System.Windows.Forms.RichTextBox FableRichTextBox;
+        private System.Windows.Forms.Button AddCrimeReportButton;
+        private System.Windows.Forms.Button CancelAddCrimeReportButton;
     }
 }

@@ -7,7 +7,7 @@ namespace InvestigatorWorkstation.Forms.Employee
 {
     public partial class AddEmployeeForm : Form
     {
-        private EmployeeDTO _currentEmployee { get; set; }
+        private EmployeeDTO _employee { get; set; }
 
         public AddEmployeeForm(IEnumerable<PositionDTO> positions, IEnumerable<RankDTO> ranks)
         {
@@ -18,7 +18,7 @@ namespace InvestigatorWorkstation.Forms.Employee
 
         private void AddEmployeeButton_Click(object sender, EventArgs e)
         {
-            _currentEmployee = new EmployeeDTO
+            _employee = new EmployeeDTO
             {
                 FirstName = FirstNameTextBox.Text,
                 MiddleName = MiddleNameTextBox.Text,
@@ -55,12 +55,12 @@ namespace InvestigatorWorkstation.Forms.Employee
 
         public EmployeeDTO GetResult()
         {
-            return _currentEmployee;
+            return _employee;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            _currentEmployee = null;
+            _employee = null;
             DialogResult = DialogResult.Cancel;
         }
     }

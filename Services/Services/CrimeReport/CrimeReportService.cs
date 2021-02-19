@@ -18,7 +18,7 @@ namespace Services.Services.CrimeReport
             _db = db;
         }
 
-        public Task AddCrimeReport(CrimeReportDTO employee)
+        public async Task AddCrimeReport(CrimeReportDTO crimeReport)
         {
             throw new NotImplementedException();
         }
@@ -44,12 +44,20 @@ namespace Services.Services.CrimeReport
                 .ToListAsync();
         }
 
-        public Task RemoveCrimeReport(int id)
+        public async Task RemoveCrimeReport(int id)
         {
-            throw new NotImplementedException();
+            var crimeReport = await _db.CrimeReports
+                 .Where(x => x.Id == id)
+                 .SingleOrDefaultAsync();
+
+            if (crimeReport != null)
+            {
+                _db.CrimeReports.Remove(crimeReport);
+                await _db.SaveChangesAsync();
+            }
         }
 
-        public Task UpdateCrimeReport(int id, CrimeReportDTO employee)
+        public async Task UpdateCrimeReport(int id, CrimeReportDTO employee)
         {
             throw new NotImplementedException();
         }
