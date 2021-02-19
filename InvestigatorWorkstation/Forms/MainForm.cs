@@ -39,6 +39,8 @@ namespace InvestigatorWorkstation.Forms
 
             InitializeComponent();
             SetActiveButton(CrimeReportButton);
+            MainTabContainer.ItemSize = new Size(0, 1);
+            MainTabContainer.SizeMode = TabSizeMode.Fixed;
         }
 
         #region Authorization
@@ -97,26 +99,37 @@ namespace InvestigatorWorkstation.Forms
             {
                 EmployeeButton.Show();
 
+                AuthorityButton.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
+                };
+
                 QualificationButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
                 };
 
-                button2.Location = new Point
+                CriminalButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
-                    Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
+                    Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
                 };
             }
             else
             {
                 EmployeeButton.Hide();
-                button2.Location = EmployeeButton.Location;
+                AuthorityButton.Location = EmployeeButton.Location;
                 QualificationButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
+                };
+                CriminalButton.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
                 };
             }
         }
@@ -129,25 +142,33 @@ namespace InvestigatorWorkstation.Forms
             MainTabContainer.SelectedTab.Hide();
             switch (((Button)sender).Name)
             {
+                case "CalendarButton":
+                    SetActiveButton(CalendarButton);
+                    MainTabContainer.SelectedIndex = 0;
+                    break;
                 case "CrimeReportButton":
                     SetActiveButton(CrimeReportButton);
-                    MainTabContainer.SelectedIndex = 0;
+                    MainTabContainer.SelectedIndex = 1;
                     break;
                 case "CriminalCaseButton":
                     SetActiveButton(CriminalCaseButton);
-                    MainTabContainer.SelectedIndex = 1;
-                    break;
-                case "CalendarButton":
-                    SetActiveButton(CalendarButton);
                     MainTabContainer.SelectedIndex = 2;
                     break;
                 case "EmployeeButton": 
                     SetActiveButton(EmployeeButton);
                     MainTabContainer.SelectedIndex = 3;
                     break;
+                case "AuthorityButton":
+                    SetActiveButton(AuthorityButton);
+                    MainTabContainer.SelectedIndex = 4;
+                    break;
                 case "QualificationButton":
                     SetActiveButton(QualificationButton);
-                    MainTabContainer.SelectedIndex = 4;
+                    MainTabContainer.SelectedIndex = 5;
+                    break;
+                case "CriminalButton":
+                    SetActiveButton(CriminalButton);
+                    MainTabContainer.SelectedIndex = 6;
                     break;
             }
         }
@@ -320,5 +341,6 @@ namespace InvestigatorWorkstation.Forms
         private void PictureButtonOnHoverOut(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.Transparent;
 
         #endregion
+         
     }
 }

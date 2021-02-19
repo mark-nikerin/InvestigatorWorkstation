@@ -35,17 +35,30 @@ namespace InvestigatorWorkstation.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.CriminalButton = new System.Windows.Forms.Button();
             this.CrimeReportButton = new System.Windows.Forms.Button();
             this.LogoutLabel = new System.Windows.Forms.Label();
             this.QualificationButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AuthorityButton = new System.Windows.Forms.Button();
             this.EmployeeButton = new System.Windows.Forms.Button();
             this.CriminalCaseButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
             this.UserNameLabel = new GrowLabel();
             this.UserAvatar = new System.Windows.Forms.PictureBox();
             this.MainTabContainer = new System.Windows.Forms.TabControl();
+            this.CalendarTabPage = new System.Windows.Forms.TabPage();
+            this.CalendarSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CalendarTitle = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.CrimeReportTabPage = new System.Windows.Forms.TabPage();
             this.CrimeReportSplitContainer = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,8 +99,6 @@ namespace InvestigatorWorkstation.Forms
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.CalendarTabPage = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeTabPage = new System.Windows.Forms.TabPage();
             this.AddEmployeePictureButton = new System.Windows.Forms.PictureBox();
             this.DeleteEmployeePictureButton = new System.Windows.Forms.PictureBox();
@@ -97,9 +108,11 @@ namespace InvestigatorWorkstation.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.EmployeeGridView = new System.Windows.Forms.DataGridView();
             this.EmployeeLabel = new System.Windows.Forms.Label();
+            this.AuthorityTabPage = new System.Windows.Forms.TabPage();
             this.QualificationTabPage = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.QualificationLabel = new System.Windows.Forms.Label();
+            this.CriminalTabPage = new System.Windows.Forms.TabPage();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +134,12 @@ namespace InvestigatorWorkstation.Forms
             this.MainSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserAvatar)).BeginInit();
             this.MainTabContainer.SuspendLayout();
+            this.CalendarTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CalendarSplitContainer)).BeginInit();
+            this.CalendarSplitContainer.Panel1.SuspendLayout();
+            this.CalendarSplitContainer.Panel2.SuspendLayout();
+            this.CalendarSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.CrimeReportTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportSplitContainer)).BeginInit();
             this.CrimeReportSplitContainer.Panel1.SuspendLayout();
@@ -143,7 +162,6 @@ namespace InvestigatorWorkstation.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CriminalCaseGridView)).BeginInit();
             this.panel4.SuspendLayout();
-            this.CalendarTabPage.SuspendLayout();
             this.EmployeeTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmployeePictureButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteEmployeePictureButton)).BeginInit();
@@ -164,10 +182,11 @@ namespace InvestigatorWorkstation.Forms
             // MainSplitContainer.Panel1
             // 
             this.MainSplitContainer.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.MainSplitContainer.Panel1.Controls.Add(this.CriminalButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.CrimeReportButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.LogoutLabel);
             this.MainSplitContainer.Panel1.Controls.Add(this.QualificationButton);
-            this.MainSplitContainer.Panel1.Controls.Add(this.button2);
+            this.MainSplitContainer.Panel1.Controls.Add(this.AuthorityButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.EmployeeButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.CriminalCaseButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.CalendarButton);
@@ -179,6 +198,15 @@ namespace InvestigatorWorkstation.Forms
             this.MainSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Window;
             this.MainSplitContainer.Panel2.Controls.Add(this.MainTabContainer);
             this.MainSplitContainer.Panel2.Controls.Add(this.splitter1);
+            // 
+            // CriminalButton
+            // 
+            resources.ApplyResources(this.CriminalButton, "CriminalButton");
+            this.CriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CriminalButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.CriminalButton.Name = "CriminalButton";
+            this.CriminalButton.UseVisualStyleBackColor = true;
+            this.CriminalButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
             // CrimeReportButton
             // 
@@ -207,13 +235,14 @@ namespace InvestigatorWorkstation.Forms
             this.QualificationButton.UseVisualStyleBackColor = true;
             this.QualificationButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
-            // button2
+            // AuthorityButton
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.AuthorityButton, "AuthorityButton");
+            this.AuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AuthorityButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.AuthorityButton.Name = "AuthorityButton";
+            this.AuthorityButton.UseVisualStyleBackColor = true;
+            this.AuthorityButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
             // EmployeeButton
             // 
@@ -255,16 +284,117 @@ namespace InvestigatorWorkstation.Forms
             // 
             // MainTabContainer
             // 
-            resources.ApplyResources(this.MainTabContainer, "MainTabContainer");
+            this.MainTabContainer.Controls.Add(this.CalendarTabPage);
             this.MainTabContainer.Controls.Add(this.CrimeReportTabPage);
             this.MainTabContainer.Controls.Add(this.CriminalCaseTabPage);
-            this.MainTabContainer.Controls.Add(this.CalendarTabPage);
             this.MainTabContainer.Controls.Add(this.EmployeeTabPage);
+            this.MainTabContainer.Controls.Add(this.AuthorityTabPage);
             this.MainTabContainer.Controls.Add(this.QualificationTabPage);
-            this.MainTabContainer.Multiline = true;
+            this.MainTabContainer.Controls.Add(this.CriminalTabPage);
+            resources.ApplyResources(this.MainTabContainer, "MainTabContainer");
             this.MainTabContainer.Name = "MainTabContainer";
             this.MainTabContainer.SelectedIndex = 0;
             this.MainTabContainer.SelectedIndexChanged += new System.EventHandler(this.MainTabContainer_SelectedTabChanged);
+            // 
+            // CalendarTabPage
+            // 
+            this.CalendarTabPage.Controls.Add(this.CalendarSplitContainer);
+            resources.ApplyResources(this.CalendarTabPage, "CalendarTabPage");
+            this.CalendarTabPage.Name = "CalendarTabPage";
+            this.CalendarTabPage.UseVisualStyleBackColor = true;
+            // 
+            // CalendarSplitContainer
+            // 
+            resources.ApplyResources(this.CalendarSplitContainer, "CalendarSplitContainer");
+            this.CalendarSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.CalendarSplitContainer.Name = "CalendarSplitContainer";
+            // 
+            // CalendarSplitContainer.Panel1
+            // 
+            this.CalendarSplitContainer.Panel1.BackColor = System.Drawing.Color.White;
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.dataGridView2);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.CalendarTitle);
+            // 
+            // CalendarSplitContainer.Panel2
+            // 
+            this.CalendarSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.CalendarSplitContainer.Panel2.Controls.Add(this.monthCalendar1);
+            // 
+            // dataGridView2
+            // 
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.FillWeight = 79.05688F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.FillWeight = 104.1887F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.FillWeight = 104.1887F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.FillWeight = 104.1887F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.FillWeight = 104.1887F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.FillWeight = 104.1887F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // CalendarTitle
+            // 
+            resources.ApplyResources(this.CalendarTitle, "CalendarTitle");
+            this.CalendarTitle.Name = "CalendarTitle";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            resources.ApplyResources(this.monthCalendar1, "monthCalendar1");
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.ShowToday = false;
             // 
             // CrimeReportTabPage
             // 
@@ -373,14 +503,14 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CrimeReportGridView.MultiSelect = false;
             this.CrimeReportGridView.Name = "CrimeReportGridView";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CrimeReportGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CrimeReportGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.CrimeReportGridView.RowHeadersVisible = false;
             this.CrimeReportGridView.RowTemplate.Height = 25;
             this.CrimeReportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -519,14 +649,14 @@ namespace InvestigatorWorkstation.Forms
             this.CriminalCaseGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CriminalCaseGridView.MultiSelect = false;
             this.CriminalCaseGridView.Name = "CriminalCaseGridView";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CriminalCaseGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CriminalCaseGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.CriminalCaseGridView.RowHeadersVisible = false;
             this.CriminalCaseGridView.RowTemplate.Height = 25;
             this.CriminalCaseGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -600,18 +730,6 @@ namespace InvestigatorWorkstation.Forms
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // CalendarTabPage
-            // 
-            this.CalendarTabPage.Controls.Add(this.tableLayoutPanel1);
-            resources.ApplyResources(this.CalendarTabPage, "CalendarTabPage");
-            this.CalendarTabPage.Name = "CalendarTabPage";
-            this.CalendarTabPage.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // EmployeeTabPage
             // 
@@ -689,26 +807,26 @@ namespace InvestigatorWorkstation.Forms
             this.EmployeeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeGridView.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.EmployeeGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.EmployeeGridView.MultiSelect = false;
             this.EmployeeGridView.Name = "EmployeeGridView";
             this.EmployeeGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.EmployeeGridView.RowHeadersVisible = false;
             this.EmployeeGridView.RowTemplate.Height = 25;
             this.EmployeeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -720,6 +838,12 @@ namespace InvestigatorWorkstation.Forms
             // 
             resources.ApplyResources(this.EmployeeLabel, "EmployeeLabel");
             this.EmployeeLabel.Name = "EmployeeLabel";
+            // 
+            // AuthorityTabPage
+            // 
+            resources.ApplyResources(this.AuthorityTabPage, "AuthorityTabPage");
+            this.AuthorityTabPage.Name = "AuthorityTabPage";
+            this.AuthorityTabPage.UseVisualStyleBackColor = true;
             // 
             // QualificationTabPage
             // 
@@ -738,14 +862,14 @@ namespace InvestigatorWorkstation.Forms
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -755,6 +879,12 @@ namespace InvestigatorWorkstation.Forms
             // 
             resources.ApplyResources(this.QualificationLabel, "QualificationLabel");
             this.QualificationLabel.Name = "QualificationLabel";
+            // 
+            // CriminalTabPage
+            // 
+            resources.ApplyResources(this.CriminalTabPage, "CriminalTabPage");
+            this.CriminalTabPage.Name = "CriminalTabPage";
+            this.CriminalTabPage.UseVisualStyleBackColor = true;
             // 
             // splitter1
             // 
@@ -858,6 +988,13 @@ namespace InvestigatorWorkstation.Forms
             this.MainSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UserAvatar)).EndInit();
             this.MainTabContainer.ResumeLayout(false);
+            this.CalendarTabPage.ResumeLayout(false);
+            this.CalendarSplitContainer.Panel1.ResumeLayout(false);
+            this.CalendarSplitContainer.Panel1.PerformLayout();
+            this.CalendarSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CalendarSplitContainer)).EndInit();
+            this.CalendarSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.CrimeReportTabPage.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.PerformLayout();
@@ -871,7 +1008,6 @@ namespace InvestigatorWorkstation.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportGridView)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.CriminalCaseTabPage.ResumeLayout(false);
             this.CriminalCaseSplitContainer.Panel1.ResumeLayout(false);
             this.CriminalCaseSplitContainer.Panel1.PerformLayout();
@@ -885,7 +1021,6 @@ namespace InvestigatorWorkstation.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CriminalCaseGridView)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.CalendarTabPage.ResumeLayout(false);
             this.EmployeeTabPage.ResumeLayout(false);
             this.EmployeeTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmployeePictureButton)).EndInit();
@@ -910,7 +1045,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.Button CalendarButton;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Button QualificationButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AuthorityButton;
         private System.Windows.Forms.Button EmployeeButton;
         private System.Windows.Forms.Label LogoutLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -948,7 +1083,6 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.TabPage QualificationTabPage;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label QualificationLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel CrimeReportSearchPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox CrimeReportSearchTextBox;
@@ -983,5 +1117,18 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CriminalButton;
+        private System.Windows.Forms.TabPage AuthorityTabPage;
+        private System.Windows.Forms.TabPage CriminalTabPage;
+        private System.Windows.Forms.SplitContainer CalendarSplitContainer;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label CalendarTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
