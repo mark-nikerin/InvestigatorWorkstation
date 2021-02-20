@@ -29,7 +29,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                 RegistrationNumber = RegistryNumberTextBox.Text,
                 RegistrationBookNumber = RegistryBookNumberTextBox.Text,
                 RegistrationDate = RegistrationDatePicker.Value,
-                Fable = FableRichTextBox.Text,
+                Fable = FableRichTextBox.Text, 
                 // TODO добавить квалификации и органы УФСБ
             };
             DialogResult = DialogResult.OK;

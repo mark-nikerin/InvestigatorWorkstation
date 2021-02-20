@@ -18,9 +18,22 @@ namespace Services.Services.CrimeReport
             _db = db;
         }
 
-        public async Task AddCrimeReport(CrimeReportDTO crimeReport)
+        public async Task AddCrimeReport(CrimeReportDTO dto)
         {
-            throw new NotImplementedException();
+            var currentUser = CurrentUserService.GetCurrentUser();
+
+            var crimeReport = new Storage.Models.CrimeReport
+            {
+                Employee = currentUser,
+                Fable = dto.Fable,
+                RegistrationAuthority = dto.RegistrationAuthority,
+                RegistrationBookNumber = dto.RegistrationBookNumber,
+                RegistrationNumber = dto.RegistrationNumber,
+                RegistrationDate = dto.RegistrationDate
+            };
+
+            await _db.CrimeReports.AddAsync(crimeReport);
+            await _db.SaveChangesAsync();
         }
 
         public async Task<CrimeReportDTO> GetCrimeReport(int id)

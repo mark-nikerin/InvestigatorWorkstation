@@ -929,7 +929,7 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>213, -1</value>
+    <value>207, -1</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
@@ -971,7 +971,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="CrimeReportSearchTextBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>142, 18</value>
+    <value>136, 18</value>
   </data>
   <data name="CrimeReportSearchTextBox.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1515,13 +1515,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>213, -1</value>
+    <value>207, -1</value>
   </data>
   <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 11</value>
+    <value>25, 5</value>
   </data>
   <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -1557,7 +1557,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>192, 18</value>
+    <value>186, 18</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -2054,7 +2054,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>203, 0</value>
+    <value>197, 0</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2096,7 +2096,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>164, 18</value>
+    <value>158, 18</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
