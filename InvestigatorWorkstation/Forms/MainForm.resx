@@ -407,29 +407,20 @@
   <data name="&gt;&gt;CalendarButton.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="UserNameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="UserNameLabel.Font" type="System.Drawing.Font, System.Drawing.Common">
-    <value>Segoe UI Semibold, 10pt, style=Bold</value>
+    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
   </data>
   <data name="UserNameLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>66, 45</value>
-  </data>
-  <data name="UserNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>12, 36, 3, 0</value>
+    <value>67, 45</value>
   </data>
   <data name="UserNameLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>131, 19</value>
+    <value>124, 34</value>
   </data>
   <data name="UserNameLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
+    <value>11</value>
   </data>
   <data name="UserNameLabel.Text" xml:space="preserve">
-    <value>Администратор</value>
-  </data>
-  <data name="UserNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
-    <value>MiddleLeft</value>
+    <value>Администратор А.А.</value>
   </data>
   <data name="&gt;&gt;UserNameLabel.Name" xml:space="preserve">
     <value>UserNameLabel</value>
@@ -929,7 +920,7 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>207, -1</value>
+    <value>219, -1</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
@@ -971,7 +962,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="CrimeReportSearchTextBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>136, 18</value>
+    <value>211, 18</value>
   </data>
   <data name="CrimeReportSearchTextBox.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1515,13 +1506,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>207, -1</value>
+    <value>217, -1</value>
   </data>
   <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 5</value>
+    <value>25, 15</value>
   </data>
   <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -1557,7 +1548,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>186, 18</value>
+    <value>174, 18</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1972,7 +1963,7 @@
     <value>NoControl</value>
   </data>
   <data name="DeleteEmployeePictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>873, 71</value>
+    <value>871, 71</value>
   </data>
   <data name="DeleteEmployeePictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>28, 28</value>
@@ -2013,7 +2004,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditEmployeePictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>839, 71</value>
+    <value>837, 71</value>
   </data>
   <data name="EditEmployeePictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>28, 28</value>
@@ -2054,7 +2045,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>197, 0</value>
+    <value>305, -1</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2096,7 +2087,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>158, 18</value>
+    <value>290, 18</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -2114,7 +2105,7 @@
     <value>1</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>560, 27</value>
+    <value>558, 27</value>
   </data>
   <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>3, 3, 20, 40</value>
@@ -2150,7 +2141,7 @@
     <value>20, 10, 20, 20</value>
   </data>
   <data name="EmployeeGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>874, 615</value>
+    <value>872, 615</value>
   </data>
   <data name="EmployeeGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -2230,6 +2221,315 @@
   <data name="&gt;&gt;EmployeeTabPage.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="panel7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureBox8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAHxJREFUKFOVkAsNgDAMBWcAARjAAAZQgwEMIAADGEAACnm30WSfQrJLLtnYa+kW
+        PpjlIS95yl2O0mWRhIe4SxCm0C3iIA8b/JWzAj5uaenSFEyyq4BRmN/D7tGwvuZYI0YusC6MdUsKbc3r
+        FdRPR1c6cq+GOvxLVxg6wiE88g0SHa4YY/wAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>305, -1</value>
+  </data>
+  <data name="pictureBox8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 5, 0</value>
+  </data>
+  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>25, 24</value>
+  </data>
+  <data name="pictureBox8.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox8.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
+    <value>pictureBox8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBox5.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>8, 2</value>
+  </data>
+  <data name="textBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="textBox5.PlaceholderText" xml:space="preserve">
+    <value>Введите текст для поиска</value>
+  </data>
+  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>290, 18</value>
+  </data>
+  <data name="textBox5.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
+    <value>textBox5</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>558, 31</value>
+  </data>
+  <data name="panel7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 20, 40</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>341, 25</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>AuthorityTabPage</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AddAuthorityButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddAuthorityButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddAuthorityButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddAuthorityButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 71</value>
+  </data>
+  <data name="AddAuthorityButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddAuthorityButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddAuthorityButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;AddAuthorityButton.Name" xml:space="preserve">
+    <value>AddAuthorityButton</value>
+  </data>
+  <data name="&gt;&gt;AddAuthorityButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddAuthorityButton.Parent" xml:space="preserve">
+    <value>AuthorityTabPage</value>
+  </data>
+  <data name="&gt;&gt;AddAuthorityButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RemoveAuthorityButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RemoveAuthorityButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="RemoveAuthorityButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEpJREFUOE9jwALagHgmEgbxCQKQQmSAzgcDZFOJxWAAZxAAKOoo1gRjo9MgMKoJ
+        CgaBJnwAQxMXhIkTgORRNPkAMUiAEAaqY2AAAGQhLoznz8MvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="RemoveAuthorityButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RemoveAuthorityButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>871, 71</value>
+  </data>
+  <data name="RemoveAuthorityButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="RemoveAuthorityButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="RemoveAuthorityButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;RemoveAuthorityButton.Name" xml:space="preserve">
+    <value>RemoveAuthorityButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveAuthorityButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveAuthorityButton.Parent" xml:space="preserve">
+    <value>AuthorityTabPage</value>
+  </data>
+  <data name="&gt;&gt;RemoveAuthorityButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EditAuthorityButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="EditAuthorityButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="EditAuthorityButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJBJREFUOE/tkzESgjAQRfcOtNTWtta03EFba1tbaK29Lf8Fd4igZNPzZv7sZicP
+        UiRWSas8lbfyUBolDPKonNLKrFf4SAiXCb3DSYq4TM3786ffJRccn63nG37J8G/+xSEvhGRgE7mk1UxY
+        5j77RmqX9UUZ+Ot9btM9fylhGW4Kj4KKPChhGZCvCiepep5mZhMn6xvxCQE8TQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="EditAuthorityButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EditAuthorityButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>837, 71</value>
+  </data>
+  <data name="EditAuthorityButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="EditAuthorityButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="EditAuthorityButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;EditAuthorityButton.Name" xml:space="preserve">
+    <value>EditAuthorityButton</value>
+  </data>
+  <data name="&gt;&gt;EditAuthorityButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditAuthorityButton.Parent" xml:space="preserve">
+    <value>AuthorityTabPage</value>
+  </data>
+  <data name="&gt;&gt;EditAuthorityButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="AuthorityGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="AuthorityGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>50</value>
+  </data>
+  <metadata name="AuthorityNumber.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="AuthorityNumber.HeaderText" xml:space="preserve">
+    <value>№ органа</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn19.HeaderText" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <metadata name="Адрес.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Адрес.HeaderText" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <metadata name="PhoneNumber.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="PhoneNumber.HeaderText" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="AuthorityGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>21, 121</value>
+  </data>
+  <data name="AuthorityGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="AuthorityGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>878, 609</value>
+  </data>
+  <data name="AuthorityGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;AuthorityGridView.Name" xml:space="preserve">
+    <value>AuthorityGridView</value>
+  </data>
+  <data name="&gt;&gt;AuthorityGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AuthorityGridView.Parent" xml:space="preserve">
+    <value>AuthorityTabPage</value>
+  </data>
+  <data name="&gt;&gt;AuthorityGridView.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="AuthorityTittle.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="AuthorityTittle.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="AuthorityTittle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AuthorityTittle.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 31</value>
+  </data>
+  <data name="AuthorityTittle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>30, 33, 3, 0</value>
+  </data>
+  <data name="AuthorityTittle.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>112, 21</value>
+  </data>
+  <data name="AuthorityTittle.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>85</value>
+  </data>
+  <data name="AuthorityTittle.Text" xml:space="preserve">
+    <value>Органы УФСБ</value>
+  </data>
+  <data name="&gt;&gt;AuthorityTittle.Name" xml:space="preserve">
+    <value>AuthorityTittle</value>
+  </data>
+  <data name="&gt;&gt;AuthorityTittle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AuthorityTittle.Parent" xml:space="preserve">
+    <value>AuthorityTabPage</value>
+  </data>
+  <data name="&gt;&gt;AuthorityTittle.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="AuthorityTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
   </data>
@@ -2257,35 +2557,263 @@
   <data name="&gt;&gt;AuthorityTabPage.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="dataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="panel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="dataGridView1.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
-    <value>50</value>
+  <data name="pictureBox6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>20, 74</value>
+  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAHxJREFUKFOVkAsNgDAMBWcAARjAAAZQgwEMIAADGEAACnm30WSfQrJLLtnYa+kW
+        PpjlIS95yl2O0mWRhIe4SxCm0C3iIA8b/JWzAj5uaenSFEyyq4BRmN/D7tGwvuZYI0YusC6MdUsKbc3r
+        FdRPR1c6cq+GOvxLVxg6wiE88g0SHa4YY/wAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>20, 20, 20, 20</value>
+  <data name="pictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>851, 653</value>
+  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>308, -1</value>
   </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
+  <data name="pictureBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 5, 0</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
+  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>25, 24</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+  <data name="pictureBox6.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
+    <value>pictureBox6</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBox3.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>8, 2</value>
+  </data>
+  <data name="textBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="textBox3.PlaceholderText" xml:space="preserve">
+    <value>Введите текст для поиска</value>
+  </data>
+  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>293, 18</value>
+  </data>
+  <data name="textBox3.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
+    <value>textBox3</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>555, 27</value>
+  </data>
+  <data name="panel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 20, 40</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>344, 25</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>QualificationTabPage</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="AddQualificationButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddQualificationButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddQualificationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddQualificationButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 71</value>
+  </data>
+  <data name="AddQualificationButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddQualificationButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddQualificationButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;AddQualificationButton.Name" xml:space="preserve">
+    <value>AddQualificationButton</value>
+  </data>
+  <data name="&gt;&gt;AddQualificationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddQualificationButton.Parent" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;AddQualificationButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RemoveQualificationButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RemoveQualificationButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="RemoveQualificationButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEpJREFUOE9jwALagHgmEgbxCQKQQmSAzgcDZFOJxWAAZxAAKOoo1gRjo9MgMKoJ
+        CgaBJnwAQxMXhIkTgORRNPkAMUiAEAaqY2AAAGQhLoznz8MvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="RemoveQualificationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RemoveQualificationButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>871, 71</value>
+  </data>
+  <data name="RemoveQualificationButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="RemoveQualificationButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="RemoveQualificationButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;RemoveQualificationButton.Name" xml:space="preserve">
+    <value>RemoveQualificationButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveQualificationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveQualificationButton.Parent" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;RemoveQualificationButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EditQualificationButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="EditQualificationButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="EditQualificationButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJBJREFUOE/tkzESgjAQRfcOtNTWtta03EFba1tbaK29Lf8Fd4igZNPzZv7sZicP
+        UiRWSas8lbfyUBolDPKonNLKrFf4SAiXCb3DSYq4TM3786ffJRccn63nG37J8G/+xSEvhGRgE7mk1UxY
+        5j77RmqX9UUZ+Ot9btM9fylhGW4Kj4KKPChhGZCvCiepep5mZhMn6xvxCQE8TQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="EditQualificationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EditQualificationButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>837, 71</value>
+  </data>
+  <data name="EditQualificationButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="EditQualificationButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="EditQualificationButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;EditQualificationButton.Name" xml:space="preserve">
+    <value>EditQualificationButton</value>
+  </data>
+  <data name="&gt;&gt;EditQualificationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditQualificationButton.Parent" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;EditQualificationButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="QualificationGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="QualificationGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>50</value>
+  </data>
+  <metadata name="Number.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Number.HeaderText" xml:space="preserve">
+    <value>№</value>
+  </data>
+  <data name="AuthorityName.HeaderText" xml:space="preserve">
+    <value>Квалификация</value>
+  </data>
+  <data name="QualificationGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>20, 121</value>
+  </data>
+  <data name="QualificationGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="QualificationGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>879, 609</value>
+  </data>
+  <data name="QualificationGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;QualificationGridView.Name" xml:space="preserve">
+    <value>QualificationGridView</value>
+  </data>
+  <data name="&gt;&gt;QualificationGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;QualificationGridView.Parent" xml:space="preserve">
+    <value>QualificationTabPage</value>
+  </data>
+  <data name="&gt;&gt;QualificationGridView.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="QualificationLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -2321,7 +2849,7 @@
     <value>QualificationTabPage</value>
   </data>
   <data name="&gt;&gt;QualificationLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="QualificationTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>4, 24</value>
@@ -2348,6 +2876,333 @@
     <value>MainTabContainer</value>
   </data>
   <data name="&gt;&gt;QualificationTabPage.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureBox7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAHxJREFUKFOVkAsNgDAMBWcAARjAAAZQgwEMIAADGEAACnm30WSfQrJLLtnYa+kW
+        PpjlIS95yl2O0mWRhIe4SxCm0C3iIA8b/JWzAj5uaenSFEyyq4BRmN/D7tGwvuZYI0YusC6MdUsKbc3r
+        FdRPR1c6cq+GOvxLVxg6wiE88g0SHa4YY/wAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>305, -1</value>
+  </data>
+  <data name="pictureBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 5, 0</value>
+  </data>
+  <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>25, 24</value>
+  </data>
+  <data name="pictureBox7.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox7.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.Name" xml:space="preserve">
+    <value>pictureBox7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBox4.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>8, 2</value>
+  </data>
+  <data name="textBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="textBox4.PlaceholderText" xml:space="preserve">
+    <value>Введите текст для поиска</value>
+  </data>
+  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>290, 18</value>
+  </data>
+  <data name="textBox4.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
+    <value>textBox4</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>558, 27</value>
+  </data>
+  <data name="panel6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 20, 40</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>341, 25</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>CriminalTabPage</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AddCriminalButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddCriminalButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddCriminalButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddCriminalButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 71</value>
+  </data>
+  <data name="AddCriminalButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddCriminalButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddCriminalButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalButton.Name" xml:space="preserve">
+    <value>AddCriminalButton</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalButton.Parent" xml:space="preserve">
+    <value>CriminalTabPage</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RemoveCriminalButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RemoveCriminalButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="RemoveCriminalButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEpJREFUOE9jwALagHgmEgbxCQKQQmSAzgcDZFOJxWAAZxAAKOoo1gRjo9MgMKoJ
+        CgaBJnwAQxMXhIkTgORRNPkAMUiAEAaqY2AAAGQhLoznz8MvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="RemoveCriminalButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RemoveCriminalButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>871, 71</value>
+  </data>
+  <data name="RemoveCriminalButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="RemoveCriminalButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="RemoveCriminalButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;RemoveCriminalButton.Name" xml:space="preserve">
+    <value>RemoveCriminalButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveCriminalButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveCriminalButton.Parent" xml:space="preserve">
+    <value>CriminalTabPage</value>
+  </data>
+  <data name="&gt;&gt;RemoveCriminalButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EditCriminalButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="EditCriminalButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="EditCriminalButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJBJREFUOE/tkzESgjAQRfcOtNTWtta03EFba1tbaK29Lf8Fd4igZNPzZv7sZicP
+        UiRWSas8lbfyUBolDPKonNLKrFf4SAiXCb3DSYq4TM3786ffJRccn63nG37J8G/+xSEvhGRgE7mk1UxY
+        5j77RmqX9UUZ+Ot9btM9fylhGW4Kj4KKPChhGZCvCiepep5mZhMn6xvxCQE8TQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="EditCriminalButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EditCriminalButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>837, 71</value>
+  </data>
+  <data name="EditCriminalButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="EditCriminalButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="EditCriminalButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>81</value>
+  </data>
+  <data name="&gt;&gt;EditCriminalButton.Name" xml:space="preserve">
+    <value>EditCriminalButton</value>
+  </data>
+  <data name="&gt;&gt;EditCriminalButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditCriminalButton.Parent" xml:space="preserve">
+    <value>CriminalTabPage</value>
+  </data>
+  <data name="&gt;&gt;EditCriminalButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CriminalGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CriminalGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>50</value>
+  </data>
+  <metadata name="FullName.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="FullName.HeaderText" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <metadata name="BirthDate.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="BirthDate.HeaderText" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <metadata name="Citizenship.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Citizenship.HeaderText" xml:space="preserve">
+    <value>Гражданство</value>
+  </data>
+  <metadata name="BirthPlace.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="BirthPlace.HeaderText" xml:space="preserve">
+    <value>Место рождения</value>
+  </data>
+  <metadata name="Education.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Education.HeaderText" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <metadata name="Job.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Job.HeaderText" xml:space="preserve">
+    <value>Работа</value>
+  </data>
+  <metadata name="Status.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Status.HeaderText" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="CriminalGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>20, 121</value>
+  </data>
+  <data name="CriminalGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="CriminalGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>879, 609</value>
+  </data>
+  <data name="CriminalGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;CriminalGridView.Name" xml:space="preserve">
+    <value>CriminalGridView</value>
+  </data>
+  <data name="&gt;&gt;CriminalGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CriminalGridView.Parent" xml:space="preserve">
+    <value>CriminalTabPage</value>
+  </data>
+  <data name="&gt;&gt;CriminalGridView.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CriminalTittle.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="CriminalTittle.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="CriminalTittle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CriminalTittle.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>29, 31</value>
+  </data>
+  <data name="CriminalTittle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>30, 33, 3, 0</value>
+  </data>
+  <data name="CriminalTittle.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>110, 21</value>
+  </data>
+  <data name="CriminalTittle.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>79</value>
+  </data>
+  <data name="CriminalTittle.Text" xml:space="preserve">
+    <value>Преступники</value>
+  </data>
+  <data name="&gt;&gt;CriminalTittle.Name" xml:space="preserve">
+    <value>CriminalTittle</value>
+  </data>
+  <data name="&gt;&gt;CriminalTittle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CriminalTittle.Parent" xml:space="preserve">
+    <value>CriminalTabPage</value>
+  </data>
+  <data name="&gt;&gt;CriminalTittle.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="CriminalTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
@@ -2675,6 +3530,84 @@
     <value>dataGridViewTextBoxColumn6</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AuthorityNumber.Name" xml:space="preserve">
+    <value>AuthorityNumber</value>
+  </data>
+  <data name="&gt;&gt;AuthorityNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn19.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn19</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Адрес.Name" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="&gt;&gt;Адрес.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumber.Name" xml:space="preserve">
+    <value>PhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Number.Name" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="&gt;&gt;Number.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AuthorityName.Name" xml:space="preserve">
+    <value>AuthorityName</value>
+  </data>
+  <data name="&gt;&gt;AuthorityName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FullName.Name" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="&gt;&gt;FullName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BirthDate.Name" xml:space="preserve">
+    <value>BirthDate</value>
+  </data>
+  <data name="&gt;&gt;BirthDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Citizenship.Name" xml:space="preserve">
+    <value>Citizenship</value>
+  </data>
+  <data name="&gt;&gt;Citizenship.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BirthPlace.Name" xml:space="preserve">
+    <value>BirthPlace</value>
+  </data>
+  <data name="&gt;&gt;BirthPlace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Education.Name" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="&gt;&gt;Education.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Job.Name" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="&gt;&gt;Job.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Status.Name" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="&gt;&gt;Status.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;RegistrationNumber.Name" xml:space="preserve">

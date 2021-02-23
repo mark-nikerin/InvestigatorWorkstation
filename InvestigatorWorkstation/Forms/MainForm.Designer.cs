@@ -36,6 +36,8 @@ namespace InvestigatorWorkstation.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.CriminalButton = new System.Windows.Forms.Button();
             this.CrimeReportButton = new System.Windows.Forms.Button();
@@ -109,10 +111,45 @@ namespace InvestigatorWorkstation.Forms
             this.EmployeeGridView = new System.Windows.Forms.DataGridView();
             this.EmployeeLabel = new System.Windows.Forms.Label();
             this.AuthorityTabPage = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.AddAuthorityButton = new System.Windows.Forms.PictureBox();
+            this.RemoveAuthorityButton = new System.Windows.Forms.PictureBox();
+            this.EditAuthorityButton = new System.Windows.Forms.PictureBox();
+            this.AuthorityGridView = new System.Windows.Forms.DataGridView();
+            this.AuthorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Адрес = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorityTittle = new System.Windows.Forms.Label();
             this.QualificationTabPage = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.AddQualificationButton = new System.Windows.Forms.PictureBox();
+            this.RemoveQualificationButton = new System.Windows.Forms.PictureBox();
+            this.EditQualificationButton = new System.Windows.Forms.PictureBox();
+            this.QualificationGridView = new System.Windows.Forms.DataGridView();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QualificationLabel = new System.Windows.Forms.Label();
             this.CriminalTabPage = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.AddCriminalButton = new System.Windows.Forms.PictureBox();
+            this.RemoveCriminalButton = new System.Windows.Forms.PictureBox();
+            this.EditCriminalButton = new System.Windows.Forms.PictureBox();
+            this.CriminalGridView = new System.Windows.Forms.DataGridView();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Citizenship = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Job = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CriminalTittle = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -169,8 +206,27 @@ namespace InvestigatorWorkstation.Forms
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGridView)).BeginInit();
+            this.AuthorityTabPage.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddAuthorityButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveAuthorityButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditAuthorityButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AuthorityGridView)).BeginInit();
             this.QualificationTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddQualificationButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveQualificationButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditQualificationButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QualificationGridView)).BeginInit();
+            this.CriminalTabPage.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddCriminalButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveCriminalButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditCriminalButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CriminalGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainSplitContainer
@@ -847,27 +903,77 @@ namespace InvestigatorWorkstation.Forms
             // 
             // AuthorityTabPage
             // 
+            this.AuthorityTabPage.Controls.Add(this.panel7);
+            this.AuthorityTabPage.Controls.Add(this.AddAuthorityButton);
+            this.AuthorityTabPage.Controls.Add(this.RemoveAuthorityButton);
+            this.AuthorityTabPage.Controls.Add(this.EditAuthorityButton);
+            this.AuthorityTabPage.Controls.Add(this.AuthorityGridView);
+            this.AuthorityTabPage.Controls.Add(this.AuthorityTittle);
             resources.ApplyResources(this.AuthorityTabPage, "AuthorityTabPage");
             this.AuthorityTabPage.Name = "AuthorityTabPage";
             this.AuthorityTabPage.UseVisualStyleBackColor = true;
             // 
-            // QualificationTabPage
+            // panel7
             // 
-            this.QualificationTabPage.Controls.Add(this.dataGridView1);
-            this.QualificationTabPage.Controls.Add(this.QualificationLabel);
-            resources.ApplyResources(this.QualificationTabPage, "QualificationTabPage");
-            this.QualificationTabPage.Name = "QualificationTabPage";
-            this.QualificationTabPage.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.pictureBox8);
+            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Name = "panel7";
             // 
-            // dataGridView1
+            // pictureBox8
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
+            // textBox5
+            // 
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Name = "textBox5";
+            // 
+            // AddAuthorityButton
+            // 
+            this.AddAuthorityButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.AddAuthorityButton, "AddAuthorityButton");
+            this.AddAuthorityButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddAuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddAuthorityButton.Name = "AddAuthorityButton";
+            this.AddAuthorityButton.TabStop = false;
+            // 
+            // RemoveAuthorityButton
+            // 
+            resources.ApplyResources(this.RemoveAuthorityButton, "RemoveAuthorityButton");
+            this.RemoveAuthorityButton.BackColor = System.Drawing.Color.Transparent;
+            this.RemoveAuthorityButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RemoveAuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RemoveAuthorityButton.Name = "RemoveAuthorityButton";
+            this.RemoveAuthorityButton.TabStop = false;
+            // 
+            // EditAuthorityButton
+            // 
+            resources.ApplyResources(this.EditAuthorityButton, "EditAuthorityButton");
+            this.EditAuthorityButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditAuthorityButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EditAuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditAuthorityButton.Name = "EditAuthorityButton";
+            this.EditAuthorityButton.TabStop = false;
+            // 
+            // AuthorityGridView
+            // 
+            resources.ApplyResources(this.AuthorityGridView, "AuthorityGridView");
+            this.AuthorityGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AuthorityGridView.BackgroundColor = System.Drawing.Color.White;
+            this.AuthorityGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AuthorityGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AuthorityNumber,
+            this.dataGridViewTextBoxColumn19,
+            this.Адрес,
+            this.PhoneNumber});
+            this.AuthorityGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AuthorityGridView.MultiSelect = false;
+            this.AuthorityGridView.Name = "AuthorityGridView";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -875,11 +981,131 @@ namespace InvestigatorWorkstation.Forms
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
+            this.AuthorityGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.AuthorityGridView.RowHeadersVisible = false;
+            this.AuthorityGridView.RowTemplate.Height = 25;
+            this.AuthorityGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // AuthorityNumber
+            // 
+            resources.ApplyResources(this.AuthorityNumber, "AuthorityNumber");
+            this.AuthorityNumber.Name = "AuthorityNumber";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // Адрес
+            // 
+            resources.ApplyResources(this.Адрес, "Адрес");
+            this.Адрес.Name = "Адрес";
+            // 
+            // PhoneNumber
+            // 
+            resources.ApplyResources(this.PhoneNumber, "PhoneNumber");
+            this.PhoneNumber.Name = "PhoneNumber";
+            // 
+            // AuthorityTittle
+            // 
+            resources.ApplyResources(this.AuthorityTittle, "AuthorityTittle");
+            this.AuthorityTittle.Name = "AuthorityTittle";
+            // 
+            // QualificationTabPage
+            // 
+            this.QualificationTabPage.Controls.Add(this.panel5);
+            this.QualificationTabPage.Controls.Add(this.AddQualificationButton);
+            this.QualificationTabPage.Controls.Add(this.RemoveQualificationButton);
+            this.QualificationTabPage.Controls.Add(this.EditQualificationButton);
+            this.QualificationTabPage.Controls.Add(this.QualificationGridView);
+            this.QualificationTabPage.Controls.Add(this.QualificationLabel);
+            resources.ApplyResources(this.QualificationTabPage, "QualificationTabPage");
+            this.QualificationTabPage.Name = "QualificationTabPage";
+            this.QualificationTabPage.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.pictureBox6);
+            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Name = "panel5";
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Name = "textBox3";
+            // 
+            // AddQualificationButton
+            // 
+            this.AddQualificationButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.AddQualificationButton, "AddQualificationButton");
+            this.AddQualificationButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddQualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddQualificationButton.Name = "AddQualificationButton";
+            this.AddQualificationButton.TabStop = false;
+            // 
+            // RemoveQualificationButton
+            // 
+            resources.ApplyResources(this.RemoveQualificationButton, "RemoveQualificationButton");
+            this.RemoveQualificationButton.BackColor = System.Drawing.Color.Transparent;
+            this.RemoveQualificationButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RemoveQualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RemoveQualificationButton.Name = "RemoveQualificationButton";
+            this.RemoveQualificationButton.TabStop = false;
+            // 
+            // EditQualificationButton
+            // 
+            resources.ApplyResources(this.EditQualificationButton, "EditQualificationButton");
+            this.EditQualificationButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditQualificationButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EditQualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditQualificationButton.Name = "EditQualificationButton";
+            this.EditQualificationButton.TabStop = false;
+            // 
+            // QualificationGridView
+            // 
+            resources.ApplyResources(this.QualificationGridView, "QualificationGridView");
+            this.QualificationGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.QualificationGridView.BackgroundColor = System.Drawing.Color.White;
+            this.QualificationGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.QualificationGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number,
+            this.AuthorityName});
+            this.QualificationGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.QualificationGridView.MultiSelect = false;
+            this.QualificationGridView.Name = "QualificationGridView";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QualificationGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.QualificationGridView.RowHeadersVisible = false;
+            this.QualificationGridView.RowTemplate.Height = 25;
+            this.QualificationGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.QualificationGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
+            // 
+            // Number
+            // 
+            this.Number.FillWeight = 1F;
+            resources.ApplyResources(this.Number, "Number");
+            this.Number.Name = "Number";
+            // 
+            // AuthorityName
+            // 
+            this.AuthorityName.FillWeight = 7F;
+            resources.ApplyResources(this.AuthorityName, "AuthorityName");
+            this.AuthorityName.Name = "AuthorityName";
             // 
             // QualificationLabel
             // 
@@ -888,9 +1114,131 @@ namespace InvestigatorWorkstation.Forms
             // 
             // CriminalTabPage
             // 
+            this.CriminalTabPage.Controls.Add(this.panel6);
+            this.CriminalTabPage.Controls.Add(this.AddCriminalButton);
+            this.CriminalTabPage.Controls.Add(this.RemoveCriminalButton);
+            this.CriminalTabPage.Controls.Add(this.EditCriminalButton);
+            this.CriminalTabPage.Controls.Add(this.CriminalGridView);
+            this.CriminalTabPage.Controls.Add(this.CriminalTittle);
             resources.ApplyResources(this.CriminalTabPage, "CriminalTabPage");
             this.CriminalTabPage.Name = "CriminalTabPage";
             this.CriminalTabPage.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.pictureBox7);
+            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Name = "panel6";
+            // 
+            // pictureBox7
+            // 
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
+            // 
+            // textBox4
+            // 
+            resources.ApplyResources(this.textBox4, "textBox4");
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Name = "textBox4";
+            // 
+            // AddCriminalButton
+            // 
+            this.AddCriminalButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.AddCriminalButton, "AddCriminalButton");
+            this.AddCriminalButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddCriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddCriminalButton.Name = "AddCriminalButton";
+            this.AddCriminalButton.TabStop = false;
+            // 
+            // RemoveCriminalButton
+            // 
+            resources.ApplyResources(this.RemoveCriminalButton, "RemoveCriminalButton");
+            this.RemoveCriminalButton.BackColor = System.Drawing.Color.Transparent;
+            this.RemoveCriminalButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RemoveCriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RemoveCriminalButton.Name = "RemoveCriminalButton";
+            this.RemoveCriminalButton.TabStop = false;
+            // 
+            // EditCriminalButton
+            // 
+            resources.ApplyResources(this.EditCriminalButton, "EditCriminalButton");
+            this.EditCriminalButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditCriminalButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EditCriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditCriminalButton.Name = "EditCriminalButton";
+            this.EditCriminalButton.TabStop = false;
+            // 
+            // CriminalGridView
+            // 
+            resources.ApplyResources(this.CriminalGridView, "CriminalGridView");
+            this.CriminalGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CriminalGridView.BackgroundColor = System.Drawing.Color.White;
+            this.CriminalGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CriminalGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FullName,
+            this.BirthDate,
+            this.Citizenship,
+            this.BirthPlace,
+            this.Education,
+            this.Job,
+            this.Status});
+            this.CriminalGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CriminalGridView.MultiSelect = false;
+            this.CriminalGridView.Name = "CriminalGridView";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CriminalGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.CriminalGridView.RowHeadersVisible = false;
+            this.CriminalGridView.RowTemplate.Height = 25;
+            this.CriminalGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // FullName
+            // 
+            resources.ApplyResources(this.FullName, "FullName");
+            this.FullName.Name = "FullName";
+            // 
+            // BirthDate
+            // 
+            resources.ApplyResources(this.BirthDate, "BirthDate");
+            this.BirthDate.Name = "BirthDate";
+            // 
+            // Citizenship
+            // 
+            resources.ApplyResources(this.Citizenship, "Citizenship");
+            this.Citizenship.Name = "Citizenship";
+            // 
+            // BirthPlace
+            // 
+            resources.ApplyResources(this.BirthPlace, "BirthPlace");
+            this.BirthPlace.Name = "BirthPlace";
+            // 
+            // Education
+            // 
+            resources.ApplyResources(this.Education, "Education");
+            this.Education.Name = "Education";
+            // 
+            // Job
+            // 
+            resources.ApplyResources(this.Job, "Job");
+            this.Job.Name = "Job";
+            // 
+            // Status
+            // 
+            resources.ApplyResources(this.Status, "Status");
+            this.Status.Name = "Status";
+            // 
+            // CriminalTittle
+            // 
+            resources.ApplyResources(this.CriminalTittle, "CriminalTittle");
+            this.CriminalTittle.Name = "CriminalTittle";
             // 
             // splitter1
             // 
@@ -1036,9 +1384,33 @@ namespace InvestigatorWorkstation.Forms
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGridView)).EndInit();
+            this.AuthorityTabPage.ResumeLayout(false);
+            this.AuthorityTabPage.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddAuthorityButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveAuthorityButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditAuthorityButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AuthorityGridView)).EndInit();
             this.QualificationTabPage.ResumeLayout(false);
             this.QualificationTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddQualificationButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveQualificationButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditQualificationButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QualificationGridView)).EndInit();
+            this.CriminalTabPage.ResumeLayout(false);
+            this.CriminalTabPage.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddCriminalButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveCriminalButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditCriminalButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CriminalGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1087,7 +1459,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.DataGridView EmployeeGridView;
         private System.Windows.Forms.Label EmployeeLabel;
         private System.Windows.Forms.TabPage QualificationTabPage;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView QualificationGridView;
         private System.Windows.Forms.Label QualificationLabel;
         private System.Windows.Forms.Panel CrimeReportSearchPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1136,5 +1508,40 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox AddQualificationButton;
+        private System.Windows.Forms.PictureBox RemoveQualificationButton;
+        private System.Windows.Forms.PictureBox EditQualificationButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorityName;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.PictureBox AddCriminalButton;
+        private System.Windows.Forms.PictureBox RemoveCriminalButton;
+        private System.Windows.Forms.PictureBox EditCriminalButton;
+        private System.Windows.Forms.DataGridView CriminalGridView;
+        private System.Windows.Forms.Label CriminalTittle;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.PictureBox AddAuthorityButton;
+        private System.Windows.Forms.PictureBox RemoveAuthorityButton;
+        private System.Windows.Forms.PictureBox EditAuthorityButton;
+        private System.Windows.Forms.DataGridView AuthorityGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorityNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Адрес;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.Label AuthorityTittle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Citizenship;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthPlace;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Education;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Job;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
