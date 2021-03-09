@@ -24,7 +24,7 @@ SELECT @adminRankId = (SELECT TOP(1) Id FROM [dbo].[Ranks] WHERE Name = 'admin')
 
 SELECT @adminPositionId = (SELECT TOP(1) Id FROM [dbo].Positions WHERE Name = 'admin')
 
-INSERT INTO [dbo].[Employees] VALUES (N'Администратор', N'Администратор', N'Администратор', GETDATE(), GETDATE(), GETDATE(), @adminRankId, @adminPositionId, 'admin','Q/yZ4p8OByKzuiip4hALCU4zjPxMBX2KuRvzK61VQST5b5xk', GETDATE(), GETDATE(), GETDATE(), 0, 1);
+INSERT INTO [dbo].[Employees] VALUES (N'Администратор', N'Администратор', N'Администратор', GETDATE(), GETDATE(), GETDATE(), @adminRankId, @adminPositionId, 'admin','admin', GETDATE(), GETDATE(), GETDATE(), 0, 1);
 ");
         }
 

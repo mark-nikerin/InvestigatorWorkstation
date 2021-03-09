@@ -39,7 +39,7 @@ namespace Services.Services.Employee
                 LastName = employeeDTO.LastName,
                 Login = employeeDTO.Login, 
                 IsAdmin = employeeDTO.IsAdmin,
-                Password = PasswordService.GetHashedPassword(employeeDTO.Password),
+                Password = employeeDTO.Password,
                 BirthDate = employeeDTO.BirthDate,
                 CertificationTerm = employeeDTO.CertificationTerm,
                 ContractDate = employeeDTO.ContractDate,
@@ -132,7 +132,7 @@ namespace Services.Services.Employee
             employee.IsAdmin = employeeDTO.IsAdmin;
             if (!string.IsNullOrEmpty(employeeDTO.Password))
             {
-                employee.Password = PasswordService.GetHashedPassword(employeeDTO.Password);
+                employee.Password = employeeDTO.Password;
             }
             employee.BirthDate = employeeDTO.BirthDate;
             employee.CertificationTerm = employeeDTO.CertificationTerm;
