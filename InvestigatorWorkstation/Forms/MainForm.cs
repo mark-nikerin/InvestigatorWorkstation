@@ -84,6 +84,10 @@ namespace InvestigatorWorkstation.Forms
                     SetActiveButton(CriminalButton);
                     MainTabContainer.SelectedIndex = 6;
                     break;
+                case "RanksAndPositionsButton":
+                    SetActiveButton(RanksAndPositionsButton);
+                    MainTabContainer.SelectedIndex = 7;
+                    break;
             }
         }
 
@@ -138,6 +142,24 @@ namespace InvestigatorWorkstation.Forms
                     }
                 case "CalendarTabPage":
                     {
+                        break;
+                    }
+                case "RanksAndPositionsTabPage":
+                    {
+                        var ranks = await _employeeRankService.GetRanks();
+                        RankGridView.DataSource = new SortableBindingList<RankViewModel>(ranks
+                            .Select(x => (RankViewModel)x)
+                            .ToList());
+
+                        SortGridView(RankGridView);
+
+                        var positions = await _employeePositionService.GetPositions();
+                        PositionGridView.DataSource = new SortableBindingList<PositionViewModel>(positions
+                            .Select(x => (PositionViewModel)x)
+                            .ToList());
+
+                        SortGridView(PositionGridView);
+
                         break;
                     }
             }
@@ -244,23 +266,25 @@ namespace InvestigatorWorkstation.Forms
             if (isAdmin)
             {
                 EmployeeButton.Show();
-
                 AuthorityButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
                 };
-
                 QualificationButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
                 };
-
                 CriminalButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
+                };
+                RanksAndPositionsButton.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + (4 * (EmployeeButton.Height - 1))
                 };
             }
             else
@@ -276,6 +300,11 @@ namespace InvestigatorWorkstation.Forms
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
+                };
+                RanksAndPositionsButton.Location = new Point
+                {
+                    X = EmployeeButton.Location.X,
+                    Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
                 };
             }
         }

@@ -73,13 +73,58 @@
   <data name="MainSplitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="RanksAndPositionsButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RanksAndPositionsButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="RanksAndPositionsButton.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="RanksAndPositionsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RanksAndPositionsButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 651</value>
+  </data>
+  <data name="RanksAndPositionsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RanksAndPositionsButton.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>19, 0, 0, 0</value>
+  </data>
+  <data name="RanksAndPositionsButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>202, 62</value>
+  </data>
+  <data name="RanksAndPositionsButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>12</value>
+  </data>
+  <data name="RanksAndPositionsButton.Text" xml:space="preserve">
+    <value>Должности и звания</value>
+  </data>
+  <data name="RanksAndPositionsButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsButton.Name" xml:space="preserve">
+    <value>RanksAndPositionsButton</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsButton.Parent" xml:space="preserve">
+    <value>MainSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="CriminalButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="CriminalButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="CriminalButton.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Segoe UI, 12pt</value>
   </data>
@@ -117,7 +162,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CriminalButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="CrimeReportButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -162,7 +207,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CrimeReportButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LogoutLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -195,7 +240,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;LogoutLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="QualificationButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -237,7 +282,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;QualificationButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="AuthorityButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -279,7 +324,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;AuthorityButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="EmployeeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -321,7 +366,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;EmployeeButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="CriminalCaseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -363,7 +408,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CriminalCaseButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="CalendarButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -405,7 +450,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CalendarButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="UserNameLabel.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
@@ -432,7 +477,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;UserNameLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="UserAvatar.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -474,7 +519,7 @@
     <value>MainSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;UserAvatar.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;MainSplitContainer.Panel1.Name" xml:space="preserve">
     <value>MainSplitContainer.Panel1</value>
@@ -719,6 +764,43 @@
   <data name="CrimeReportSplitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="AddCrimeReportButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddCrimeReportButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddCrimeReportButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddCrimeReportButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>22, 75</value>
+  </data>
+  <data name="AddCrimeReportButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddCrimeReportButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddCrimeReportButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;AddCrimeReportButton.Name" xml:space="preserve">
+    <value>AddCrimeReportButton</value>
+  </data>
+  <data name="&gt;&gt;AddCrimeReportButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddCrimeReportButton.Parent" xml:space="preserve">
+    <value>CrimeReportSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;AddCrimeReportButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -750,7 +832,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -783,7 +865,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="dateTimePicker2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -807,7 +889,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;dateTimePicker2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="dateTimePicker1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -831,7 +913,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="DeletePictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -847,7 +929,7 @@
     <value>NoControl</value>
   </data>
   <data name="DeletePictureBox.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>57, 75</value>
+    <value>90, 75</value>
   </data>
   <data name="DeletePictureBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>28, 28</value>
@@ -868,7 +950,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;DeletePictureBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="EditPictureBox.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -882,7 +964,7 @@
 </value>
   </data>
   <data name="EditPictureBox.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>23, 75</value>
+    <value>56, 75</value>
   </data>
   <data name="EditPictureBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>28, 28</value>
@@ -903,7 +985,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;EditPictureBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="CrimeReportSearchPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -920,7 +1002,7 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>219, -1</value>
+    <value>195, -1</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
@@ -962,7 +1044,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="CrimeReportSearchTextBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>211, 18</value>
+    <value>187, 18</value>
   </data>
   <data name="CrimeReportSearchTextBox.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1001,7 +1083,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CrimeReportSearchPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="CrimeReportLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1040,7 +1122,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CrimeReportLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="CrimeReportGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1070,7 +1152,7 @@
     <value>CrimeReportSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CrimeReportGridView.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;CrimeReportSplitContainer.Panel1.Name" xml:space="preserve">
     <value>CrimeReportSplitContainer.Panel1</value>
@@ -1162,13 +1244,13 @@
     <value>1</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 116</value>
+    <value>10, 27</value>
   </data>
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>10, 10, 10, 10</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>200, 514</value>
+    <value>200, 710</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -1184,42 +1266,6 @@
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="AddCrimeReportButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="AddCrimeReportButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="AddCrimeReportButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="AddCrimeReportButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 27</value>
-  </data>
-  <data name="AddCrimeReportButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="AddCrimeReportButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>200, 25</value>
-  </data>
-  <data name="AddCrimeReportButton.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="AddCrimeReportButton.Text" xml:space="preserve">
-    <value>+  Добавить сообщение</value>
-  </data>
-  <data name="&gt;&gt;AddCrimeReportButton.Name" xml:space="preserve">
-    <value>AddCrimeReportButton</value>
-  </data>
-  <data name="&gt;&gt;AddCrimeReportButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddCrimeReportButton.Parent" xml:space="preserve">
-    <value>CrimeReportSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;AddCrimeReportButton.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;CrimeReportSplitContainer.Panel2.Name" xml:space="preserve">
     <value>CrimeReportSplitContainer.Panel2</value>
@@ -1299,6 +1345,43 @@
   <data name="CriminalCaseSplitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="AddCriminalCasePictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddCriminalCasePictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddCriminalCasePictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddCriminalCasePictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>23, 75</value>
+  </data>
+  <data name="AddCriminalCasePictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddCriminalCasePictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddCriminalCasePictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalCasePictureButton.Name" xml:space="preserve">
+    <value>AddCriminalCasePictureButton</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalCasePictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalCasePictureButton.Parent" xml:space="preserve">
+    <value>CriminalCaseSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;AddCriminalCasePictureButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1330,7 +1413,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1363,7 +1446,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="dateTimePicker3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1387,7 +1470,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;dateTimePicker3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="dateTimePicker4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1411,7 +1494,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;dateTimePicker4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pictureBox3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -1427,7 +1510,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>57, 75</value>
+    <value>91, 75</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>28, 28</value>
@@ -1448,7 +1531,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pictureBox4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -1465,7 +1548,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>23, 75</value>
+    <value>57, 75</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>28, 28</value>
@@ -1486,13 +1569,13 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="pictureBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
+    <value>Top, Right</value>
   </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1506,13 +1589,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>217, -1</value>
+    <value>195, -1</value>
   </data>
   <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>0, 0, 5, 0</value>
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 15</value>
+    <value>25, 25</value>
   </data>
   <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -1548,7 +1631,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>174, 18</value>
+    <value>150, 18</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -1587,7 +1670,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="CriminalCaseGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1659,7 +1742,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CriminalCaseGridView.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="CriminalCaseLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1695,7 +1778,7 @@
     <value>CriminalCaseSplitContainer.Panel1</value>
   </data>
   <data name="&gt;&gt;CriminalCaseLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;CriminalCaseSplitContainer.Panel1.Name" xml:space="preserve">
     <value>CriminalCaseSplitContainer.Panel1</value>
@@ -1790,13 +1873,13 @@
     <value>1</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 116</value>
+    <value>10, 27</value>
   </data>
   <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>10, 10, 10, 10</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>200, 514</value>
+    <value>200, 710</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -1812,42 +1895,6 @@
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="AddCriminalCaseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="AddCriminalCaseButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="AddCriminalCaseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="AddCriminalCaseButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 27</value>
-  </data>
-  <data name="AddCriminalCaseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="AddCriminalCaseButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>200, 25</value>
-  </data>
-  <data name="AddCriminalCaseButton.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="AddCriminalCaseButton.Text" xml:space="preserve">
-    <value>+  Добавить дело</value>
-  </data>
-  <data name="&gt;&gt;AddCriminalCaseButton.Name" xml:space="preserve">
-    <value>AddCriminalCaseButton</value>
-  </data>
-  <data name="&gt;&gt;AddCriminalCaseButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddCriminalCaseButton.Parent" xml:space="preserve">
-    <value>CriminalCaseSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;AddCriminalCaseButton.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;CriminalCaseSplitContainer.Panel2.Name" xml:space="preserve">
     <value>CriminalCaseSplitContainer.Panel2</value>
@@ -2045,7 +2092,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>305, -1</value>
+    <value>281, -1</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2087,7 +2134,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>290, 18</value>
+    <value>266, 18</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -2239,7 +2286,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>305, -1</value>
+    <value>281, -1</value>
   </data>
   <data name="pictureBox8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2281,7 +2328,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>290, 18</value>
+    <value>266, 18</value>
   </data>
   <data name="textBox5.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -2575,7 +2622,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>308, -1</value>
+    <value>284, -1</value>
   </data>
   <data name="pictureBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2617,7 +2664,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>293, 18</value>
+    <value>269, 18</value>
   </data>
   <data name="textBox3.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -2896,7 +2943,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>305, -1</value>
+    <value>281, -1</value>
   </data>
   <data name="pictureBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>0, 0, 5, 0</value>
@@ -2938,7 +2985,7 @@
     <value>Введите текст для поиска</value>
   </data>
   <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>290, 18</value>
+    <value>266, 18</value>
   </data>
   <data name="textBox4.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
@@ -3228,6 +3275,407 @@
   </data>
   <data name="&gt;&gt;CriminalTabPage.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="AddRankPictureButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="AddRankPictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddRankPictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddRankPictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddRankPictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>487, 70</value>
+  </data>
+  <data name="AddRankPictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddRankPictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddRankPictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;AddRankPictureButton.Name" xml:space="preserve">
+    <value>AddRankPictureButton</value>
+  </data>
+  <data name="&gt;&gt;AddRankPictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddRankPictureButton.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;AddRankPictureButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DeleteRankPictureButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="DeleteRankPictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="DeleteRankPictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEpJREFUOE9jwALagHgmEgbxCQKQQmSAzgcDZFOJxWAAZxAAKOoo1gRjo9MgMKoJ
+        CgaBJnwAQxMXhIkTgORRNPkAMUiAEAaqY2AAAGQhLoznz8MvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="DeleteRankPictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="DeleteRankPictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>871, 70</value>
+  </data>
+  <data name="DeleteRankPictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="DeleteRankPictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="DeleteRankPictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;DeleteRankPictureButton.Name" xml:space="preserve">
+    <value>DeleteRankPictureButton</value>
+  </data>
+  <data name="&gt;&gt;DeleteRankPictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteRankPictureButton.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;DeleteRankPictureButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EditRankPictureButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="EditRankPictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="EditRankPictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJBJREFUOE/tkzESgjAQRfcOtNTWtta03EFba1tbaK29Lf8Fd4igZNPzZv7sZicP
+        UiRWSas8lbfyUBolDPKonNLKrFf4SAiXCb3DSYq4TM3786ffJRccn63nG37J8G/+xSEvhGRgE7mk1UxY
+        5j77RmqX9UUZ+Ot9btM9fylhGW4Kj4KKPChhGZCvCiepep5mZhMn6xvxCQE8TQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="EditRankPictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EditRankPictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>837, 70</value>
+  </data>
+  <data name="EditRankPictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="EditRankPictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="EditRankPictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;EditRankPictureButton.Name" xml:space="preserve">
+    <value>EditRankPictureButton</value>
+  </data>
+  <data name="&gt;&gt;EditRankPictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditRankPictureButton.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;EditRankPictureButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RankGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="RankGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>50</value>
+  </data>
+  <data name="RankGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>480, 121</value>
+  </data>
+  <data name="RankGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="RankGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>419, 609</value>
+  </data>
+  <data name="RankGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;RankGridView.Name" xml:space="preserve">
+    <value>RankGridView</value>
+  </data>
+  <data name="&gt;&gt;RankGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RankGridView.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;RankGridView.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RankLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RankLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="RankLabel.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="RankLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RankLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>487, 31</value>
+  </data>
+  <data name="RankLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>30, 33, 3, 0</value>
+  </data>
+  <data name="RankLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>64, 21</value>
+  </data>
+  <data name="RankLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>84</value>
+  </data>
+  <data name="RankLabel.Text" xml:space="preserve">
+    <value>Звания</value>
+  </data>
+  <data name="&gt;&gt;RankLabel.Name" xml:space="preserve">
+    <value>RankLabel</value>
+  </data>
+  <data name="&gt;&gt;RankLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RankLabel.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;RankLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="AddPositionPictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="AddPositionPictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="AddPositionPictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddPositionPictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 71</value>
+  </data>
+  <data name="AddPositionPictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="AddPositionPictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="AddPositionPictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;AddPositionPictureButton.Name" xml:space="preserve">
+    <value>AddPositionPictureButton</value>
+  </data>
+  <data name="&gt;&gt;AddPositionPictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddPositionPictureButton.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;AddPositionPictureButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DeletePositionPictureButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="DeletePositionPictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="DeletePositionPictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEpJREFUOE9jwALagHgmEgbxCQKQQmSAzgcDZFOJxWAAZxAAKOoo1gRjo9MgMKoJ
+        CgaBJnwAQxMXhIkTgORRNPkAMUiAEAaqY2AAAGQhLoznz8MvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="DeletePositionPictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="DeletePositionPictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>412, 71</value>
+  </data>
+  <data name="DeletePositionPictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="DeletePositionPictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="DeletePositionPictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;DeletePositionPictureButton.Name" xml:space="preserve">
+    <value>DeletePositionPictureButton</value>
+  </data>
+  <data name="&gt;&gt;DeletePositionPictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeletePositionPictureButton.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;DeletePositionPictureButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="EditPositionPictureButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="EditPositionPictureButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="EditPositionPictureButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJBJREFUOE/tkzESgjAQRfcOtNTWtta03EFba1tbaK29Lf8Fd4igZNPzZv7sZicP
+        UiRWSas8lbfyUBolDPKonNLKrFf4SAiXCb3DSYq4TM3786ffJRccn63nG37J8G/+xSEvhGRgE7mk1UxY
+        5j77RmqX9UUZ+Ot9btM9fylhGW4Kj4KKPChhGZCvCiepep5mZhMn6xvxCQE8TQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="EditPositionPictureButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EditPositionPictureButton.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>378, 71</value>
+  </data>
+  <data name="EditPositionPictureButton.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>28, 28</value>
+  </data>
+  <data name="EditPositionPictureButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="EditPositionPictureButton.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>81</value>
+  </data>
+  <data name="&gt;&gt;EditPositionPictureButton.Name" xml:space="preserve">
+    <value>EditPositionPictureButton</value>
+  </data>
+  <data name="&gt;&gt;EditPositionPictureButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditPositionPictureButton.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;EditPositionPictureButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="PositionGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="PositionGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>50</value>
+  </data>
+  <data name="PositionGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>20, 121</value>
+  </data>
+  <data name="PositionGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>20, 20, 20, 20</value>
+  </data>
+  <data name="PositionGridView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>420, 609</value>
+  </data>
+  <data name="PositionGridView.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;PositionGridView.Name" xml:space="preserve">
+    <value>PositionGridView</value>
+  </data>
+  <data name="&gt;&gt;PositionGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PositionGridView.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;PositionGridView.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="PositionLabel.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="PositionLabel.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="PositionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PositionLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 31</value>
+  </data>
+  <data name="PositionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>30, 33, 3, 0</value>
+  </data>
+  <data name="PositionLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>98, 21</value>
+  </data>
+  <data name="PositionLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>79</value>
+  </data>
+  <data name="PositionLabel.Text" xml:space="preserve">
+    <value>Должности</value>
+  </data>
+  <data name="&gt;&gt;PositionLabel.Name" xml:space="preserve">
+    <value>PositionLabel</value>
+  </data>
+  <data name="&gt;&gt;PositionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PositionLabel.Parent" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;PositionLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RanksAndPositionsTabPage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>4, 24</value>
+  </data>
+  <data name="RanksAndPositionsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="RanksAndPositionsTabPage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>924, 752</value>
+  </data>
+  <data name="RanksAndPositionsTabPage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>11</value>
+  </data>
+  <data name="RanksAndPositionsTabPage.Text" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsTabPage.Name" xml:space="preserve">
+    <value>RanksAndPositionsTabPage</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsTabPage.Parent" xml:space="preserve">
+    <value>MainTabContainer</value>
+  </data>
+  <data name="&gt;&gt;RanksAndPositionsTabPage.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="MainTabContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
