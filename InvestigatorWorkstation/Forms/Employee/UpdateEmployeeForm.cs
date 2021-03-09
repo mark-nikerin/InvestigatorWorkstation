@@ -39,6 +39,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             RankTermNumeric.Value = employeeDTO.Rank.Term;
 
             LoginTextBox.Text = employeeDTO.Login;
+            PasswordTextBox.Text = employeeDTO.Password;
             IsAdminCheckBox.Checked = employeeDTO.IsAdmin;
             #endregion
 

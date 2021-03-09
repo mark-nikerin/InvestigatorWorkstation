@@ -56,8 +56,10 @@ namespace Storage
          
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=WorkstationDB;Trusted_Connection=True;",
-                x => x.MigrationsHistoryTable("__WorkstationMigrationHistory")); 
+            builder.UseSqlServer("Server=.\\SQLExpress;Database=WorkstationDB;Trusted_Connection=True;",
+                x => x.MigrationsHistoryTable("__WorkstationMigrationHistory"));
+
+       
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

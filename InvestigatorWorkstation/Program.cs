@@ -49,6 +49,9 @@ namespace InvestigatorWorkstation
             {
                 var services = serviceScope.ServiceProvider;
 
+                var context = services.GetRequiredService<WorkstationContext>();
+                context.Database.Migrate();
+
                 var mainForm = services.GetRequiredService<MainForm>();
                 Application.Run(mainForm);
             };
