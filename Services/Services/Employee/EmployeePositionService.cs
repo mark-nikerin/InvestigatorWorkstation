@@ -22,6 +22,7 @@ namespace Services.Services.Employee
             return await _context.Positions
                 .AsNoTracking()
                 .Select(x => new PositionDTO { Id = x.Id, Name = x.Name })
+                .Where(x => !x.Name.Equals("admin"))
                 .ToListAsync();
         }
     }

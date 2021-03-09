@@ -22,6 +22,7 @@ namespace Services.Services.Employee
             var ranks = await _context.Ranks
                 .AsNoTracking()
                 .Select(x => new RankDTO { Id = x.Id, Name = x.Name })
+                .Where(x => !x.Name.Equals("admin"))
                 .ToListAsync();
 
             return ranks;
