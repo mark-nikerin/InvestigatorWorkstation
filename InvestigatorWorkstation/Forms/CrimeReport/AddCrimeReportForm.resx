@@ -57,4 +57,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="DeleteQualificationPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEpJREFUOE9jwALagHgmEgbxCQKQQmSAzgcDZFOJxWAAZxAAKOoo1gRjo9MgMKoJ
+        CgaBJnwAQxMXhIkTgORRNPkAMUiAEAaqY2AAAGQhLoznz8MvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="AddQualificationPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAEBJREFUOE9jIACEgXgmhEk+GDUEE9DXEJBCXFgNiEGGYJNDxmBFlOA2IMYLQLaA
+        FFIERg3BBIPLkFYIExdgYAAAsbUV83jYqDIAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

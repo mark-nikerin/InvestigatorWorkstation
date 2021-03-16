@@ -20,7 +20,10 @@ namespace Services
 
         public async Task AuthorizeUser(string login, string password)
         {
-            var user = await _db.Employees.Where(x => x.Login == login && x.Password == password).SingleOrDefaultAsync();
+            var user = await _db.Employees
+                .AsNoTracking()
+                .Where(x => x.Login == login && x.Password == password)
+                .SingleOrDefaultAsync();
 
             if (user == null)
                 throw new ArgumentException("Wrong login or password");

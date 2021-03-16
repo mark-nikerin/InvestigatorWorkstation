@@ -363,7 +363,7 @@ namespace InvestigatorWorkstation.Forms
 
         private async void AddCrimeReportButton_Click(object sender, EventArgs e)
         {
-            using var addCrimeReportForm = new AddCrimeReportForm(null);
+            using var addCrimeReportForm = new AddCrimeReportForm();
 
             var dialogResult = addCrimeReportForm.ShowDialog();
             if (dialogResult == DialogResult.OK)

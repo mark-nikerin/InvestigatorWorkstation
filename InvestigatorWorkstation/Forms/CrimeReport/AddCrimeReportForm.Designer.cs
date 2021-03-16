@@ -29,6 +29,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCrimeReportForm));
             this.AddCrimeReportLabel = new System.Windows.Forms.Label();
             this.AddCrimeReportTextGreyPanel = new System.Windows.Forms.Panel();
             this.RegistryBookNumberLabel = new System.Windows.Forms.Label();
@@ -37,18 +38,32 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.RegistrationDateLabel = new System.Windows.Forms.Label();
             this.RegistryNumberLabel = new System.Windows.Forms.Label();
             this.RegistrationDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.IsRegistrationAuthorityRegistred = new System.Windows.Forms.Label();
-            this.YesRadioButton = new System.Windows.Forms.RadioButton();
-            this.NoRadioButton = new System.Windows.Forms.RadioButton();
-            this.CustomRegistrationAuthorityTextBox = new System.Windows.Forms.TextBox();
+            this.RegistrationAuthorityLabel = new System.Windows.Forms.Label();
             this.RegisteredAuthorityComboBox = new System.Windows.Forms.ComboBox();
             this.QualificationLabel = new System.Windows.Forms.Label();
-            this.QualificationComboBox = new System.Windows.Forms.ComboBox();
             this.FableLabel = new System.Windows.Forms.Label();
             this.FableRichTextBox = new System.Windows.Forms.RichTextBox();
             this.AddCrimeReportButton = new System.Windows.Forms.Button();
             this.CancelAddCrimeReportButton = new System.Windows.Forms.Button();
+            this.ArticleTextBox1 = new System.Windows.Forms.TextBox();
+            this.PartTextBox1 = new System.Windows.Forms.TextBox();
+            this.PointTextBox1 = new System.Windows.Forms.TextBox();
+            this.ArticleLabel1 = new System.Windows.Forms.Label();
+            this.PartLabel1 = new System.Windows.Forms.Label();
+            this.PointLabel1 = new System.Windows.Forms.Label();
+            this.QualificatonPanel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.QualificationButtonsPanel = new System.Windows.Forms.Panel();
+            this.DeleteQualificationPictureBox = new System.Windows.Forms.PictureBox();
+            this.AddQualificationPictureBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.AddCrimeReportTextGreyPanel.SuspendLayout();
+            this.QualificatonPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.QualificationButtonsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteQualificationPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddQualificationPictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddCrimeReportLabel
@@ -126,92 +141,42 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.RegistrationDatePicker.Size = new System.Drawing.Size(127, 23);
             this.RegistrationDatePicker.TabIndex = 104;
             // 
-            // IsRegistrationAuthorityRegistred
+            // RegistrationAuthorityLabel
             // 
-            this.IsRegistrationAuthorityRegistred.AutoSize = true;
-            this.IsRegistrationAuthorityRegistred.Location = new System.Drawing.Point(66, 190);
-            this.IsRegistrationAuthorityRegistred.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
-            this.IsRegistrationAuthorityRegistred.Name = "IsRegistrationAuthorityRegistred";
-            this.IsRegistrationAuthorityRegistred.Size = new System.Drawing.Size(158, 15);
-            this.IsRegistrationAuthorityRegistred.TabIndex = 105;
-            this.IsRegistrationAuthorityRegistred.Text = "Зарегистрировано в УФСБ?";
-            // 
-            // YesRadioButton
-            // 
-            this.YesRadioButton.Checked = true;
-            this.YesRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.YesRadioButton.Location = new System.Drawing.Point(66, 221);
-            this.YesRadioButton.Margin = new System.Windows.Forms.Padding(3, 3, 24, 3);
-            this.YesRadioButton.Name = "YesRadioButton";
-            this.YesRadioButton.Size = new System.Drawing.Size(45, 23);
-            this.YesRadioButton.TabIndex = 106;
-            this.YesRadioButton.TabStop = true;
-            this.YesRadioButton.Text = "Да";
-            this.YesRadioButton.UseVisualStyleBackColor = true;
-            this.YesRadioButton.CheckedChanged += new System.EventHandler(this.YesRadioButton_CheckedChanged);
-            // 
-            // NoRadioButton
-            // 
-            this.NoRadioButton.AutoSize = true;
-            this.NoRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NoRadioButton.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.NoRadioButton.Location = new System.Drawing.Point(66, 267);
-            this.NoRadioButton.Margin = new System.Windows.Forms.Padding(3, 20, 24, 3);
-            this.NoRadioButton.Name = "NoRadioButton";
-            this.NoRadioButton.Size = new System.Drawing.Size(45, 19);
-            this.NoRadioButton.TabIndex = 107;
-            this.NoRadioButton.Text = "Нет";
-            this.NoRadioButton.UseVisualStyleBackColor = true;
-            this.NoRadioButton.CheckedChanged += new System.EventHandler(this.NoRadioButton_CheckedChanged);
-            // 
-            // CustomRegistrationAuthorityTextBox
-            // 
-            this.CustomRegistrationAuthorityTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomRegistrationAuthorityTextBox.Enabled = false;
-            this.CustomRegistrationAuthorityTextBox.Location = new System.Drawing.Point(138, 267);
-            this.CustomRegistrationAuthorityTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
-            this.CustomRegistrationAuthorityTextBox.Name = "CustomRegistrationAuthorityTextBox";
-            this.CustomRegistrationAuthorityTextBox.PlaceholderText = "Введите название органа регистрации";
-            this.CustomRegistrationAuthorityTextBox.Size = new System.Drawing.Size(463, 23);
-            this.CustomRegistrationAuthorityTextBox.TabIndex = 108;
+            this.RegistrationAuthorityLabel.AutoSize = true;
+            this.RegistrationAuthorityLabel.Location = new System.Drawing.Point(66, 190);
+            this.RegistrationAuthorityLabel.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.RegistrationAuthorityLabel.Name = "RegistrationAuthorityLabel";
+            this.RegistrationAuthorityLabel.Size = new System.Drawing.Size(114, 15);
+            this.RegistrationAuthorityLabel.TabIndex = 105;
+            this.RegistrationAuthorityLabel.Text = "Орган регистрации";
             // 
             // RegisteredAuthorityComboBox
             // 
             this.RegisteredAuthorityComboBox.DisplayMember = "Name";
             this.RegisteredAuthorityComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.RegisteredAuthorityComboBox.FormattingEnabled = true;
-            this.RegisteredAuthorityComboBox.Location = new System.Drawing.Point(138, 221);
+            this.RegisteredAuthorityComboBox.Location = new System.Drawing.Point(66, 208);
             this.RegisteredAuthorityComboBox.Name = "RegisteredAuthorityComboBox";
-            this.RegisteredAuthorityComboBox.Size = new System.Drawing.Size(463, 23);
+            this.RegisteredAuthorityComboBox.Size = new System.Drawing.Size(535, 23);
             this.RegisteredAuthorityComboBox.TabIndex = 109;
             this.RegisteredAuthorityComboBox.ValueMember = "Id";
             // 
             // QualificationLabel
             // 
             this.QualificationLabel.AutoSize = true;
-            this.QualificationLabel.Location = new System.Drawing.Point(64, 321);
+            this.QualificationLabel.Location = new System.Drawing.Point(66, 262);
             this.QualificationLabel.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
             this.QualificationLabel.Name = "QualificationLabel";
             this.QualificationLabel.Size = new System.Drawing.Size(178, 15);
             this.QualificationLabel.TabIndex = 110;
             this.QualificationLabel.Text = "Квалификация по статье УК РФ";
             // 
-            // QualificationComboBox
-            // 
-            this.QualificationComboBox.DisplayMember = "Name";
-            this.QualificationComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.QualificationComboBox.FormattingEnabled = true;
-            this.QualificationComboBox.Location = new System.Drawing.Point(66, 339);
-            this.QualificationComboBox.Name = "QualificationComboBox";
-            this.QualificationComboBox.Size = new System.Drawing.Size(535, 23);
-            this.QualificationComboBox.TabIndex = 111;
-            this.QualificationComboBox.ValueMember = "Id";
-            // 
             // FableLabel
             // 
             this.FableLabel.AutoSize = true;
-            this.FableLabel.Location = new System.Drawing.Point(64, 393);
-            this.FableLabel.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.FableLabel.Location = new System.Drawing.Point(64, 410);
+            this.FableLabel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.FableLabel.Name = "FableLabel";
             this.FableLabel.Size = new System.Drawing.Size(94, 15);
             this.FableLabel.TabIndex = 112;
@@ -223,10 +188,10 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.FableRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FableRichTextBox.DetectUrls = false;
             this.FableRichTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.FableRichTextBox.Location = new System.Drawing.Point(66, 411);
+            this.FableRichTextBox.Location = new System.Drawing.Point(66, 431);
             this.FableRichTextBox.Name = "FableRichTextBox";
             this.FableRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.FableRichTextBox.Size = new System.Drawing.Size(535, 105);
+            this.FableRichTextBox.Size = new System.Drawing.Size(538, 105);
             this.FableRichTextBox.TabIndex = 113;
             this.FableRichTextBox.Text = "Добавьте описание";
             this.FableRichTextBox.Click += new System.EventHandler(this.FableRichTextBox_OnClick);
@@ -237,7 +202,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.AddCrimeReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddCrimeReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCrimeReportButton.ForeColor = System.Drawing.Color.Transparent;
-            this.AddCrimeReportButton.Location = new System.Drawing.Point(365, 559);
+            this.AddCrimeReportButton.Location = new System.Drawing.Point(304, 21);
             this.AddCrimeReportButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
             this.AddCrimeReportButton.Name = "AddCrimeReportButton";
             this.AddCrimeReportButton.Size = new System.Drawing.Size(89, 26);
@@ -254,7 +219,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.CancelAddCrimeReportButton.FlatAppearance.BorderSize = 0;
             this.CancelAddCrimeReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelAddCrimeReportButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CancelAddCrimeReportButton.Location = new System.Drawing.Point(207, 559);
+            this.CancelAddCrimeReportButton.Location = new System.Drawing.Point(146, 21);
             this.CancelAddCrimeReportButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
             this.CancelAddCrimeReportButton.Name = "CancelAddCrimeReportButton";
             this.CancelAddCrimeReportButton.Size = new System.Drawing.Size(89, 26);
@@ -263,23 +228,151 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.CancelAddCrimeReportButton.UseVisualStyleBackColor = false;
             this.CancelAddCrimeReportButton.Click += new System.EventHandler(this.CancelAddCrimeReportButton_Click);
             // 
+            // ArticleTextBox1
+            // 
+            this.ArticleTextBox1.Location = new System.Drawing.Point(49, 4);
+            this.ArticleTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
+            this.ArticleTextBox1.Name = "ArticleTextBox1";
+            this.ArticleTextBox1.Size = new System.Drawing.Size(95, 23);
+            this.ArticleTextBox1.TabIndex = 116;
+            // 
+            // PartTextBox1
+            // 
+            this.PartTextBox1.Location = new System.Drawing.Point(219, 4);
+            this.PartTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
+            this.PartTextBox1.Name = "PartTextBox1";
+            this.PartTextBox1.Size = new System.Drawing.Size(108, 23);
+            this.PartTextBox1.TabIndex = 117;
+            // 
+            // PointTextBox1
+            // 
+            this.PointTextBox1.Location = new System.Drawing.Point(404, 4);
+            this.PointTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
+            this.PointTextBox1.Name = "PointTextBox1";
+            this.PointTextBox1.Size = new System.Drawing.Size(129, 23);
+            this.PointTextBox1.TabIndex = 118;
+            // 
+            // ArticleLabel1
+            // 
+            this.ArticleLabel1.AutoSize = true;
+            this.ArticleLabel1.Location = new System.Drawing.Point(0, 7);
+            this.ArticleLabel1.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.ArticleLabel1.Name = "ArticleLabel1";
+            this.ArticleLabel1.Size = new System.Drawing.Size(43, 15);
+            this.ArticleLabel1.TabIndex = 119;
+            this.ArticleLabel1.Text = "Статья";
+            // 
+            // PartLabel1
+            // 
+            this.PartLabel1.AutoSize = true;
+            this.PartLabel1.Location = new System.Drawing.Point(175, 7);
+            this.PartLabel1.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.PartLabel1.Name = "PartLabel1";
+            this.PartLabel1.Size = new System.Drawing.Size(38, 15);
+            this.PartLabel1.TabIndex = 120;
+            this.PartLabel1.Text = "Часть";
+            // 
+            // PointLabel1
+            // 
+            this.PointLabel1.AutoSize = true;
+            this.PointLabel1.Location = new System.Drawing.Point(358, 7);
+            this.PointLabel1.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
+            this.PointLabel1.Name = "PointLabel1";
+            this.PointLabel1.Size = new System.Drawing.Size(40, 15);
+            this.PointLabel1.TabIndex = 121;
+            this.PointLabel1.Text = "Пункт";
+            // 
+            // QualificatonPanel1
+            // 
+            this.QualificatonPanel1.Controls.Add(this.ArticleLabel1);
+            this.QualificatonPanel1.Controls.Add(this.PointLabel1);
+            this.QualificatonPanel1.Controls.Add(this.ArticleTextBox1);
+            this.QualificatonPanel1.Controls.Add(this.PartLabel1);
+            this.QualificatonPanel1.Controls.Add(this.PartTextBox1);
+            this.QualificatonPanel1.Controls.Add(this.PointTextBox1);
+            this.QualificatonPanel1.Location = new System.Drawing.Point(3, 3);
+            this.QualificatonPanel1.Name = "QualificatonPanel1";
+            this.QualificatonPanel1.Size = new System.Drawing.Size(538, 32);
+            this.QualificatonPanel1.TabIndex = 122;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.QualificatonPanel1);
+            this.flowLayoutPanel1.Controls.Add(this.QualificationButtonsPanel);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(66, 277);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(561, 128);
+            this.flowLayoutPanel1.TabIndex = 123;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // QualificationButtonsPanel
+            // 
+            this.QualificationButtonsPanel.Controls.Add(this.DeleteQualificationPictureBox);
+            this.QualificationButtonsPanel.Controls.Add(this.AddQualificationPictureBox);
+            this.QualificationButtonsPanel.Location = new System.Drawing.Point(0, 43);
+            this.QualificationButtonsPanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.QualificationButtonsPanel.Name = "QualificationButtonsPanel";
+            this.QualificationButtonsPanel.Size = new System.Drawing.Size(541, 40);
+            this.QualificationButtonsPanel.TabIndex = 126;
+            // 
+            // DeleteQualificationPictureBox
+            // 
+            this.DeleteQualificationPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteQualificationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DeleteQualificationPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DeleteQualificationPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteQualificationPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("DeleteQualificationPictureBox.Image")));
+            this.DeleteQualificationPictureBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DeleteQualificationPictureBox.Location = new System.Drawing.Point(37, 6);
+            this.DeleteQualificationPictureBox.Name = "DeleteQualificationPictureBox";
+            this.DeleteQualificationPictureBox.Size = new System.Drawing.Size(28, 28);
+            this.DeleteQualificationPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.DeleteQualificationPictureBox.TabIndex = 124;
+            this.DeleteQualificationPictureBox.TabStop = false;
+            this.DeleteQualificationPictureBox.Click += new System.EventHandler(this.DeleteQualificationPictureBox_Click);
+            // 
+            // AddQualificationPictureBox
+            // 
+            this.AddQualificationPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.AddQualificationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddQualificationPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddQualificationPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddQualificationPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("AddQualificationPictureBox.Image")));
+            this.AddQualificationPictureBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.AddQualificationPictureBox.Location = new System.Drawing.Point(3, 6);
+            this.AddQualificationPictureBox.Name = "AddQualificationPictureBox";
+            this.AddQualificationPictureBox.Size = new System.Drawing.Size(28, 28);
+            this.AddQualificationPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.AddQualificationPictureBox.TabIndex = 125;
+            this.AddQualificationPictureBox.TabStop = false;
+            this.AddQualificationPictureBox.Click += new System.EventHandler(this.AddQualificationPictureBox_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel1.Controls.Add(this.AddCrimeReportButton);
+            this.panel1.Controls.Add(this.CancelAddCrimeReportButton);
+            this.panel1.Location = new System.Drawing.Point(66, 542);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(538, 58);
+            this.panel1.TabIndex = 124;
+            // 
             // AddCrimeReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(672, 621);
-            this.Controls.Add(this.AddCrimeReportButton);
-            this.Controls.Add(this.CancelAddCrimeReportButton);
-            this.Controls.Add(this.FableRichTextBox);
-            this.Controls.Add(this.FableLabel);
-            this.Controls.Add(this.QualificationComboBox);
+            this.ClientSize = new System.Drawing.Size(672, 613);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.QualificationLabel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.FableLabel);
+            this.Controls.Add(this.FableRichTextBox);
             this.Controls.Add(this.RegisteredAuthorityComboBox);
-            this.Controls.Add(this.CustomRegistrationAuthorityTextBox);
-            this.Controls.Add(this.NoRadioButton);
-            this.Controls.Add(this.YesRadioButton);
-            this.Controls.Add(this.IsRegistrationAuthorityRegistred);
+            this.Controls.Add(this.RegistrationAuthorityLabel);
             this.Controls.Add(this.RegistrationDatePicker);
             this.Controls.Add(this.RegistrationDateLabel);
             this.Controls.Add(this.RegistryBookNumberLabel);
@@ -295,6 +388,13 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.AddCrimeReportTextGreyPanel.ResumeLayout(false);
+            this.QualificatonPanel1.ResumeLayout(false);
+            this.QualificatonPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.QualificationButtonsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteQualificationPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddQualificationPictureBox)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,16 +410,24 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         private System.Windows.Forms.Label RegistrationDateLabel;
         private System.Windows.Forms.Label RegistryNumberLabel;
         private System.Windows.Forms.DateTimePicker RegistrationDatePicker;
-        private System.Windows.Forms.Label IsRegistrationAuthorityRegistred;
-        private System.Windows.Forms.RadioButton YesRadioButton;
-        private System.Windows.Forms.RadioButton NoRadioButton;
-        private System.Windows.Forms.TextBox CustomRegistrationAuthorityTextBox;
+        private System.Windows.Forms.Label RegistrationAuthorityLabel;
         private System.Windows.Forms.ComboBox RegisteredAuthorityComboBox;
         private System.Windows.Forms.Label QualificationLabel;
-        private System.Windows.Forms.ComboBox QualificationComboBox;
         private System.Windows.Forms.Label FableLabel;
         private System.Windows.Forms.RichTextBox FableRichTextBox;
         private System.Windows.Forms.Button AddCrimeReportButton;
         private System.Windows.Forms.Button CancelAddCrimeReportButton;
+        private System.Windows.Forms.TextBox ArticleTextBox1;
+        private System.Windows.Forms.TextBox PartTextBox1;
+        private System.Windows.Forms.TextBox PointTextBox1;
+        private System.Windows.Forms.Label ArticleLabel1;
+        private System.Windows.Forms.Label PartLabel1;
+        private System.Windows.Forms.Label PointLabel1;
+        private System.Windows.Forms.Panel QualificatonPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel QualificationButtonsPanel;
+        private System.Windows.Forms.PictureBox DeleteQualificationPictureBox;
+        private System.Windows.Forms.PictureBox AddQualificationPictureBox;
     }
 }

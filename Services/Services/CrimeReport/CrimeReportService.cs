@@ -24,12 +24,13 @@ namespace Services.Services.CrimeReport
 
             var crimeReport = new Storage.Models.CrimeReport
             {
-                Employee = currentUser,
+                EmployeeId = currentUser.Id,
                 Fable = dto.Fable,
                 RegistrationAuthority = dto.RegistrationAuthority,
                 RegistrationBookNumber = dto.RegistrationBookNumber,
                 RegistrationNumber = dto.RegistrationNumber,
-                RegistrationDate = dto.RegistrationDate
+                RegistrationDate = dto.RegistrationDate,
+                Qualification = dto.Qualification
             };
 
             await _db.CrimeReports.AddAsync(crimeReport);
