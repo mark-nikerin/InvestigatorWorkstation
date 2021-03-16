@@ -7,12 +7,7 @@
     public class InspectionMaterialConfiguration : IEntityTypeConfiguration<InspectionMaterial>
     {
         public void Configure(EntityTypeBuilder<InspectionMaterial> builder)
-        {
-            builder.HasOne(x => x.Qualification)
-                .WithMany(x => x.InspectionMaterials)
-                .HasForeignKey(x => x.QualificationId)
-                .OnDelete(DeleteBehavior.SetNull);
-
+        {  
             builder.HasMany(x => x.InspectionMaterialMovements)
                 .WithOne(x => x.InspectionMaterial)
                 .HasForeignKey(x => x.InspectionMaterialId)

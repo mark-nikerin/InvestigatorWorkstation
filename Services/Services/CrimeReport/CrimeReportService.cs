@@ -40,7 +40,6 @@ namespace Services.Services.CrimeReport
         {
             return await _db.CrimeReports
                .AsNoTracking()
-               .Include(x => x.Qualification)
                .Include(x => x.Employee)
                .Where(x => x.Id == id)
                .Select(x => (CrimeReportDTO)x)
@@ -51,7 +50,6 @@ namespace Services.Services.CrimeReport
         {
             return await _db.CrimeReports
                 .AsNoTracking()
-                .Include(x => x.Qualification)
                 .Include(x => x.Employee)
                 .Select(x => (CrimeReportDTO)x)
                 .ToListAsync();

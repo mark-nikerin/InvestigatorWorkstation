@@ -1,6 +1,5 @@
 ﻿using System;
 using Services.DTOs.Employee;
-using Services.DTOs.Qualification;
 
 namespace Services.DTOs.CrimeReport
 {
@@ -12,8 +11,8 @@ namespace Services.DTOs.CrimeReport
         public string RegistrationNumber { get; set; }
         public string RegistrationBookNumber { get; set; }
         public string Fable { get; set; }
+        public string Qualification { get; set; }
         public virtual EmployeeDTO Employee { get; set; }
-        public virtual QualificationDTO Qualification { get; set; }
 
         public static explicit operator CrimeReportDTO(Storage.Models.CrimeReport entity)
         {
@@ -26,7 +25,7 @@ namespace Services.DTOs.CrimeReport
                 RegistrationNumber = entity.RegistrationNumber,
                 Fable = entity.Fable,
                 Employee = (EmployeeDTO)entity.Employee,
-                Qualification = (QualificationDTO)entity.Qualification
+                Qualification = entity.Qualification
             };
         }
     }

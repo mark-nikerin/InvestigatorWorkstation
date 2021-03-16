@@ -76,17 +76,13 @@ namespace InvestigatorWorkstation.Forms
                     SetActiveButton(AuthorityButton);
                     MainTabContainer.SelectedIndex = 4;
                     break;
-                case "QualificationButton":
-                    SetActiveButton(QualificationButton);
-                    MainTabContainer.SelectedIndex = 5;
-                    break;
                 case "CriminalButton":
                     SetActiveButton(CriminalButton);
-                    MainTabContainer.SelectedIndex = 6;
+                    MainTabContainer.SelectedIndex = 5;
                     break;
                 case "RanksAndPositionsButton":
                     SetActiveButton(RanksAndPositionsButton);
-                    MainTabContainer.SelectedIndex = 7;
+                    MainTabContainer.SelectedIndex = 6;
                     break;
             }
         }
@@ -134,10 +130,6 @@ namespace InvestigatorWorkstation.Forms
 
                         SortGridView(CrimeReportGridView);
 
-                        break;
-                    }
-                case "QualificationTabPage":
-                    {
                         break;
                     }
                 case "CalendarTabPage":
@@ -271,40 +263,30 @@ namespace InvestigatorWorkstation.Forms
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
                 };
-                QualificationButton.Location = new Point
+                CriminalButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
                 };
-                CriminalButton.Location = new Point
-                {
-                    X = EmployeeButton.Location.X,
-                    Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
-                };
                 RanksAndPositionsButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
-                    Y = EmployeeButton.Location.Y + (4 * (EmployeeButton.Height - 1))
+                    Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
                 };
             }
             else
             {
                 EmployeeButton.Hide();
                 AuthorityButton.Location = EmployeeButton.Location;
-                QualificationButton.Location = new Point
-                {
-                    X = EmployeeButton.Location.X,
-                    Y = EmployeeButton.Location.Y + EmployeeButton.Height - 1
-                };
                 CriminalButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
-                    Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
+                    Y = EmployeeButton.Location.Y + (1 * (EmployeeButton.Height - 1))
                 };
                 RanksAndPositionsButton.Location = new Point
                 {
                     X = EmployeeButton.Location.X,
-                    Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
+                    Y = EmployeeButton.Location.Y + (2 * (EmployeeButton.Height - 1))
                 };
             }
         }

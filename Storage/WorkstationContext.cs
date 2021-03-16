@@ -52,7 +52,6 @@ namespace Storage
         public virtual DbSet<PreventiveMeasureDecision> PreventiveMeasureDecisions { get; set; } = null!;
         #endregion
         public virtual DbSet<CrimeReport> CrimeReports { get; set; } = null!;
-        public virtual DbSet<Qualification> Qualifications { get; set; } = null!;
          
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
@@ -93,7 +92,6 @@ namespace Storage
             modelBuilder.ApplyConfiguration(new PreventiveMeasureDecisionConfiguration());
             #endregion
             modelBuilder.ApplyConfiguration(new CrimeReportConfiguration());
-            modelBuilder.ApplyConfiguration(new QualificationConfiguration()); 
         }
     }
 }

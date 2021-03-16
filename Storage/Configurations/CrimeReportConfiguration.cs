@@ -8,11 +8,6 @@
     {
         public void Configure(EntityTypeBuilder<CrimeReport> builder)
         {
-            builder.HasOne(x => x.Qualification)
-                .WithMany(x => x.CrimeReports)
-                .HasForeignKey(x => x.QualificationId)
-                .OnDelete(DeleteBehavior.SetNull);
-
             builder.HasOne(x => x.Employee)
                 .WithMany(x => x.CrimeReports)
                 .HasForeignKey(x => x.EmployeeId)

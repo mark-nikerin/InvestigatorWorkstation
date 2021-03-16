@@ -39,13 +39,11 @@ namespace InvestigatorWorkstation.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.RanksAndPositionsButton = new System.Windows.Forms.Button();
             this.CriminalButton = new System.Windows.Forms.Button();
             this.CrimeReportButton = new System.Windows.Forms.Button();
             this.LogoutLabel = new System.Windows.Forms.Label();
-            this.QualificationButton = new System.Windows.Forms.Button();
             this.AuthorityButton = new System.Windows.Forms.Button();
             this.EmployeeButton = new System.Windows.Forms.Button();
             this.CriminalCaseButton = new System.Windows.Forms.Button();
@@ -126,17 +124,6 @@ namespace InvestigatorWorkstation.Forms
             this.Адрес = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AuthorityTittle = new System.Windows.Forms.Label();
-            this.QualificationTabPage = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.AddQualificationButton = new System.Windows.Forms.PictureBox();
-            this.RemoveQualificationButton = new System.Windows.Forms.PictureBox();
-            this.EditQualificationButton = new System.Windows.Forms.PictureBox();
-            this.QualificationGridView = new System.Windows.Forms.DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuthorityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QualificationLabel = new System.Windows.Forms.Label();
             this.CriminalTabPage = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -229,13 +216,6 @@ namespace InvestigatorWorkstation.Forms
             ((System.ComponentModel.ISupportInitialize)(this.RemoveAuthorityButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditAuthorityButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorityGridView)).BeginInit();
-            this.QualificationTabPage.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddQualificationButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RemoveQualificationButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditQualificationButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QualificationGridView)).BeginInit();
             this.CriminalTabPage.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -267,7 +247,6 @@ namespace InvestigatorWorkstation.Forms
             this.MainSplitContainer.Panel1.Controls.Add(this.CriminalButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.CrimeReportButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.LogoutLabel);
-            this.MainSplitContainer.Panel1.Controls.Add(this.QualificationButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.AuthorityButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.EmployeeButton);
             this.MainSplitContainer.Panel1.Controls.Add(this.CriminalCaseButton);
@@ -316,15 +295,6 @@ namespace InvestigatorWorkstation.Forms
             this.LogoutLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.LogoutLabel.Name = "LogoutLabel";
             this.LogoutLabel.Click += new System.EventHandler(this.LogoutLabel_Click);
-            // 
-            // QualificationButton
-            // 
-            resources.ApplyResources(this.QualificationButton, "QualificationButton");
-            this.QualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.QualificationButton.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.QualificationButton.Name = "QualificationButton";
-            this.QualificationButton.UseVisualStyleBackColor = true;
-            this.QualificationButton.Click += new System.EventHandler(this.SidebarButton_Click);
             // 
             // AuthorityButton
             // 
@@ -380,7 +350,6 @@ namespace InvestigatorWorkstation.Forms
             this.MainTabContainer.Controls.Add(this.CriminalCaseTabPage);
             this.MainTabContainer.Controls.Add(this.EmployeeTabPage);
             this.MainTabContainer.Controls.Add(this.AuthorityTabPage);
-            this.MainTabContainer.Controls.Add(this.QualificationTabPage);
             this.MainTabContainer.Controls.Add(this.CriminalTabPage);
             this.MainTabContainer.Controls.Add(this.RanksAndPositionsTabPage);
             resources.ApplyResources(this.MainTabContainer, "MainTabContainer");
@@ -1062,112 +1031,6 @@ namespace InvestigatorWorkstation.Forms
             resources.ApplyResources(this.AuthorityTittle, "AuthorityTittle");
             this.AuthorityTittle.Name = "AuthorityTittle";
             // 
-            // QualificationTabPage
-            // 
-            this.QualificationTabPage.Controls.Add(this.panel5);
-            this.QualificationTabPage.Controls.Add(this.AddQualificationButton);
-            this.QualificationTabPage.Controls.Add(this.RemoveQualificationButton);
-            this.QualificationTabPage.Controls.Add(this.EditQualificationButton);
-            this.QualificationTabPage.Controls.Add(this.QualificationGridView);
-            this.QualificationTabPage.Controls.Add(this.QualificationLabel);
-            resources.ApplyResources(this.QualificationTabPage, "QualificationTabPage");
-            this.QualificationTabPage.Name = "QualificationTabPage";
-            this.QualificationTabPage.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Name = "panel5";
-            // 
-            // pictureBox6
-            // 
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.TabStop = false;
-            // 
-            // textBox3
-            // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Name = "textBox3";
-            // 
-            // AddQualificationButton
-            // 
-            this.AddQualificationButton.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.AddQualificationButton, "AddQualificationButton");
-            this.AddQualificationButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddQualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddQualificationButton.Name = "AddQualificationButton";
-            this.AddQualificationButton.TabStop = false;
-            // 
-            // RemoveQualificationButton
-            // 
-            resources.ApplyResources(this.RemoveQualificationButton, "RemoveQualificationButton");
-            this.RemoveQualificationButton.BackColor = System.Drawing.Color.Transparent;
-            this.RemoveQualificationButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RemoveQualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RemoveQualificationButton.Name = "RemoveQualificationButton";
-            this.RemoveQualificationButton.TabStop = false;
-            // 
-            // EditQualificationButton
-            // 
-            resources.ApplyResources(this.EditQualificationButton, "EditQualificationButton");
-            this.EditQualificationButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditQualificationButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EditQualificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EditQualificationButton.Name = "EditQualificationButton";
-            this.EditQualificationButton.TabStop = false;
-            // 
-            // QualificationGridView
-            // 
-            this.QualificationGridView.AllowUserToAddRows = false;
-            this.QualificationGridView.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.QualificationGridView, "QualificationGridView");
-            this.QualificationGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.QualificationGridView.BackgroundColor = System.Drawing.Color.White;
-            this.QualificationGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.QualificationGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Number,
-            this.AuthorityName});
-            this.QualificationGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.QualificationGridView.MultiSelect = false;
-            this.QualificationGridView.Name = "QualificationGridView";
-            this.QualificationGridView.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.QualificationGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.QualificationGridView.RowHeadersVisible = false;
-            this.QualificationGridView.RowTemplate.Height = 25;
-            this.QualificationGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.QualificationGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
-            // 
-            // Number
-            // 
-            this.Number.FillWeight = 1F;
-            resources.ApplyResources(this.Number, "Number");
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
-            // 
-            // AuthorityName
-            // 
-            this.AuthorityName.FillWeight = 7F;
-            resources.ApplyResources(this.AuthorityName, "AuthorityName");
-            this.AuthorityName.Name = "AuthorityName";
-            this.AuthorityName.ReadOnly = true;
-            // 
-            // QualificationLabel
-            // 
-            resources.ApplyResources(this.QualificationLabel, "QualificationLabel");
-            this.QualificationLabel.Name = "QualificationLabel";
-            // 
             // CriminalTabPage
             // 
             this.CriminalTabPage.Controls.Add(this.panel6);
@@ -1247,14 +1110,14 @@ namespace InvestigatorWorkstation.Forms
             this.CriminalGridView.MultiSelect = false;
             this.CriminalGridView.Name = "CriminalGridView";
             this.CriminalGridView.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CriminalGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CriminalGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.CriminalGridView.RowHeadersVisible = false;
             this.CriminalGridView.RowTemplate.Height = 25;
             this.CriminalGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1361,14 +1224,14 @@ namespace InvestigatorWorkstation.Forms
             this.RankGridView.MultiSelect = false;
             this.RankGridView.Name = "RankGridView";
             this.RankGridView.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RankGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RankGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.RankGridView.RowHeadersVisible = false;
             this.RankGridView.RowTemplate.Height = 25;
             this.RankGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1417,14 +1280,14 @@ namespace InvestigatorWorkstation.Forms
             this.PositionGridView.MultiSelect = false;
             this.PositionGridView.Name = "PositionGridView";
             this.PositionGridView.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PositionGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PositionGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.PositionGridView.RowHeadersVisible = false;
             this.PositionGridView.RowTemplate.Height = 25;
             this.PositionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1589,15 +1452,6 @@ namespace InvestigatorWorkstation.Forms
             ((System.ComponentModel.ISupportInitialize)(this.RemoveAuthorityButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditAuthorityButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorityGridView)).EndInit();
-            this.QualificationTabPage.ResumeLayout(false);
-            this.QualificationTabPage.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddQualificationButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RemoveQualificationButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditQualificationButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QualificationGridView)).EndInit();
             this.CriminalTabPage.ResumeLayout(false);
             this.CriminalTabPage.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1628,7 +1482,6 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.Button CriminalCaseButton;
         private System.Windows.Forms.Button CalendarButton;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button QualificationButton;
         private System.Windows.Forms.Button AuthorityButton;
         private System.Windows.Forms.Button EmployeeButton;
         private System.Windows.Forms.Label LogoutLabel;
@@ -1664,9 +1517,6 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.TabPage EmployeeTabPage;
         private System.Windows.Forms.DataGridView EmployeeGridView;
         private System.Windows.Forms.Label EmployeeLabel;
-        private System.Windows.Forms.TabPage QualificationTabPage;
-        private System.Windows.Forms.DataGridView QualificationGridView;
-        private System.Windows.Forms.Label QualificationLabel;
         private System.Windows.Forms.Panel CrimeReportSearchPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox CrimeReportSearchTextBox;
@@ -1712,14 +1562,6 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox AddQualificationButton;
-        private System.Windows.Forms.PictureBox RemoveQualificationButton;
-        private System.Windows.Forms.PictureBox EditQualificationButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorityName;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox textBox4;

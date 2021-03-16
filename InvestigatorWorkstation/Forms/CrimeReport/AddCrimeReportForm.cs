@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Services.DTOs.CrimeReport;
-using Services.DTOs.Qualification;
 
 namespace InvestigatorWorkstation.Forms.CrimeReport
 {
@@ -11,7 +10,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
     {
         private CrimeReportDTO _crimeReport { get; set; }
 
-        public AddCrimeReportForm(IEnumerable<QualificationDTO> qualifications)
+        public AddCrimeReportForm(IEnumerable<string> qualifications)
         {
             InitializeComponent();
             QualificationComboBox.DataSource = qualifications;

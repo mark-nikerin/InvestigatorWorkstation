@@ -21,7 +21,7 @@ namespace InvestigatorWorkstation.ViewModels
         [DisplayName("Номер рег. книги")]
         public string RegistrationBookNumber { get; set; }
 
-        [DisplayName("Квалификация")]
+        [DisplayName("Квалификации")]
         public string Qualification { get; set; }
 
         [DisplayName("Кем получено сообщение")]
@@ -35,7 +35,7 @@ namespace InvestigatorWorkstation.ViewModels
             Id = dto.Id,
             RegistrationNumber = dto.RegistrationNumber,
             RegistrationBookNumber = dto.RegistrationBookNumber,
-            Qualification = dto.Qualification.Name,
+            Qualification = dto.Qualification,
             Fable = dto.Fable,
             RegistrationAuthority = dto.RegistrationAuthority,
             Employee = dto.Employee.LastName,

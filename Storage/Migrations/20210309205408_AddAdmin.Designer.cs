@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Storage;
 
 namespace Storage.Migrations
 {
     [DbContext(typeof(WorkstationContext))]
-    partial class WorkstationContextModelSnapshot : ModelSnapshot
+    [Migration("20210309205408_AddAdmin")]
+    partial class AddAdmin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,8 +64,8 @@ namespace Storage.Migrations
                     b.Property<string>("Fable")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Qualification")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("QualificationId")
+                        .HasColumnType("int");
 
                     b.Property<string>("RegistrationAuthority")
                         .HasColumnType("nvarchar(max)");
@@ -80,6 +82,8 @@ namespace Storage.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId");
+
+                    b.HasIndex("QualificationId");
 
                     b.ToTable("CrimeReports");
                 });
@@ -159,12 +163,14 @@ namespace Storage.Migrations
                     b.Property<DateTime>("InitiationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Qualification")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("QualificationId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CriminalCaseAuthorityId");
+
+                    b.HasIndex("QualificationId");
 
                     b.ToTable("CriminalCases");
                 });
@@ -266,8 +272,8 @@ namespace Storage.Migrations
                     b.Property<int?>("CriminalStatusId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Qualification")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("QualificationId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -276,6 +282,8 @@ namespace Storage.Migrations
                     b.HasIndex("CriminalId");
 
                     b.HasIndex("CriminalStatusId");
+
+                    b.HasIndex("QualificationId");
 
                     b.ToTable("CriminalStatusHistories");
                 });
@@ -443,10 +451,12 @@ namespace Storage.Migrations
                     b.Property<DateTime>("InspectionDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Qualification")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("QualificationId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("QualificationId");
 
                     b.ToTable("InspectionMaterials");
                 });
@@ -590,6 +600,21 @@ namespace Storage.Migrations
                     b.ToTable("PreventiveMeasureDecisions");
                 });
 
+            modelBuilder.Entity("Storage.Models.Qualification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Qualifications");
+                });
+
             modelBuilder.Entity("CriminalCriminalCase", b =>
                 {
                     b.HasOne("Storage.Models.CriminalCase", null)
@@ -612,7 +637,14 @@ namespace Storage.Migrations
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("Storage.Models.Qualification", "Qualification")
+                        .WithMany("CrimeReports")
+                        .HasForeignKey("QualificationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("Employee");
+
+                    b.Navigation("Qualification");
                 });
 
             modelBuilder.Entity("Storage.Models.Criminal", b =>
@@ -632,7 +664,14 @@ namespace Storage.Migrations
                         .HasForeignKey("CriminalCaseAuthorityId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("Storage.Models.Qualification", "Qualification")
+                        .WithMany("CriminalCases")
+                        .HasForeignKey("QualificationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("CriminalCaseAuthority");
+
+                    b.Navigation("Qualification");
                 });
 
             modelBuilder.Entity("Storage.Models.CriminalCaseMovement", b =>
@@ -678,11 +717,18 @@ namespace Storage.Migrations
                         .HasForeignKey("CriminalStatusId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("Storage.Models.Qualification", "Qualification")
+                        .WithMany("CriminalStatusHistories")
+                        .HasForeignKey("QualificationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("ComplicityType");
 
                     b.Navigation("Criminal");
 
                     b.Navigation("CriminalStatus");
+
+                    b.Navigation("Qualification");
                 });
 
             modelBuilder.Entity("Storage.Models.Employee.Employee", b =>
@@ -738,6 +784,16 @@ namespace Storage.Migrations
                     b.Navigation("Employee");
 
                     b.Navigation("Rank");
+                });
+
+            modelBuilder.Entity("Storage.Models.InspectionMaterial", b =>
+                {
+                    b.HasOne("Storage.Models.Qualification", "Qualification")
+                        .WithMany("InspectionMaterials")
+                        .HasForeignKey("QualificationId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Qualification");
                 });
 
             modelBuilder.Entity("Storage.Models.InspectionMaterialMovement", b =>
@@ -892,6 +948,17 @@ namespace Storage.Migrations
             modelBuilder.Entity("Storage.Models.PreventiveMeasure.PreventiveMeasure", b =>
                 {
                     b.Navigation("PreventiveMeasureDecisions");
+                });
+
+            modelBuilder.Entity("Storage.Models.Qualification", b =>
+                {
+                    b.Navigation("CrimeReports");
+
+                    b.Navigation("CriminalCases");
+
+                    b.Navigation("CriminalStatusHistories");
+
+                    b.Navigation("InspectionMaterials");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,10 +11,9 @@ namespace Storage.Models
         public string RegistrationNumber { get; set; }
         public string RegistrationBookNumber { get; set; }
         public string Fable { get; set; }
+        public string Qualification { get; set; }
         public int? EmployeeId { get; set; }
-        public int? QualificationId { get; set; }
 
         public virtual Employee.Employee Employee { get; set; }
-        public virtual Qualification Qualification { get; set; }
     }
 }
