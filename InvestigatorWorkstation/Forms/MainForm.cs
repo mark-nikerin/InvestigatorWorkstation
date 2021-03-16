@@ -205,7 +205,7 @@ namespace InvestigatorWorkstation.Forms
 
         #region Authorization
         private void MainForm_Load(object sender, EventArgs e)
-        { 
+        {
 
             if (CurrentUserService.GetCurrentUser() == null)
             {
@@ -221,7 +221,7 @@ namespace InvestigatorWorkstation.Forms
             {
                 UpdateControlsByUserRole(CurrentUserService.IsAdmin());
 
-                UserNameLabel.Text = currentUser.FirstName; 
+                UserNameLabel.Text = $"{currentUser.LastName} {currentUser.FirstName[0]}. {currentUser.MiddleName[0]}.";
                 Show();
             }
         }
@@ -273,9 +273,11 @@ namespace InvestigatorWorkstation.Forms
                     X = EmployeeButton.Location.X,
                     Y = EmployeeButton.Location.Y + (3 * (EmployeeButton.Height - 1))
                 };
+                AddCrimeReportButton.Visible = true;
             }
             else
             {
+                AddCrimeReportButton.Visible = false;
                 EmployeeButton.Hide();
                 AuthorityButton.Location = EmployeeButton.Location;
                 CriminalButton.Location = new Point

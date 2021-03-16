@@ -57,6 +57,8 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.DeleteQualificationPictureBox = new System.Windows.Forms.PictureBox();
             this.AddQualificationPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AssignEmployeeLabel = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.AddCrimeReportTextGreyPanel.SuspendLayout();
             this.QualificatonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -175,7 +177,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // FableLabel
             // 
             this.FableLabel.AutoSize = true;
-            this.FableLabel.Location = new System.Drawing.Point(64, 410);
+            this.FableLabel.Location = new System.Drawing.Point(64, 429);
             this.FableLabel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.FableLabel.Name = "FableLabel";
             this.FableLabel.Size = new System.Drawing.Size(94, 15);
@@ -188,7 +190,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.FableRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FableRichTextBox.DetectUrls = false;
             this.FableRichTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.FableRichTextBox.Location = new System.Drawing.Point(66, 431);
+            this.FableRichTextBox.Location = new System.Drawing.Point(66, 450);
             this.FableRichTextBox.Name = "FableRichTextBox";
             this.FableRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.FableRichTextBox.Size = new System.Drawing.Size(538, 105);
@@ -304,7 +306,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.flowLayoutPanel1.Location = new System.Drawing.Point(66, 277);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(561, 128);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(561, 147);
             this.flowLayoutPanel1.TabIndex = 123;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -333,6 +335,8 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.DeleteQualificationPictureBox.TabIndex = 124;
             this.DeleteQualificationPictureBox.TabStop = false;
             this.DeleteQualificationPictureBox.Click += new System.EventHandler(this.DeleteQualificationPictureBox_Click);
+            this.DeleteQualificationPictureBox.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.DeleteQualificationPictureBox.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // AddQualificationPictureBox
             // 
@@ -349,23 +353,48 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.AddQualificationPictureBox.TabIndex = 125;
             this.AddQualificationPictureBox.TabStop = false;
             this.AddQualificationPictureBox.Click += new System.EventHandler(this.AddQualificationPictureBox_Click);
+            this.AddQualificationPictureBox.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddQualificationPictureBox.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.AddCrimeReportButton);
             this.panel1.Controls.Add(this.CancelAddCrimeReportButton);
-            this.panel1.Location = new System.Drawing.Point(66, 542);
+            this.panel1.Location = new System.Drawing.Point(66, 627);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 58);
             this.panel1.TabIndex = 124;
+            // 
+            // AssignEmployeeLabel
+            // 
+            this.AssignEmployeeLabel.AutoSize = true;
+            this.AssignEmployeeLabel.Location = new System.Drawing.Point(66, 586);
+            this.AssignEmployeeLabel.Margin = new System.Windows.Forms.Padding(3, 28, 10, 0);
+            this.AssignEmployeeLabel.Name = "AssignEmployeeLabel";
+            this.AssignEmployeeLabel.Size = new System.Drawing.Size(136, 15);
+            this.AssignEmployeeLabel.TabIndex = 125;
+            this.AssignEmployeeLabel.Text = "Назначить следователя";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(215, 583);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(386, 23);
+            this.comboBox1.TabIndex = 126;
+            this.comboBox1.ValueMember = "Id";
             // 
             // AddCrimeReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(672, 613);
+            this.ClientSize = new System.Drawing.Size(672, 696);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.AssignEmployeeLabel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.QualificationLabel);
             this.Controls.Add(this.panel1);
@@ -429,5 +458,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         private System.Windows.Forms.Panel QualificationButtonsPanel;
         private System.Windows.Forms.PictureBox DeleteQualificationPictureBox;
         private System.Windows.Forms.PictureBox AddQualificationPictureBox;
+        private System.Windows.Forms.Label AssignEmployeeLabel;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

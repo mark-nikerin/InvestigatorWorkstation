@@ -267,7 +267,7 @@
     <value>6</value>
   </data>
   <data name="AuthorityButton.Text" xml:space="preserve">
-    <value>УФСБ</value>
+    <value>Гос. Органы </value>
   </data>
   <data name="AuthorityButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
     <value>MiddleLeft</value>
@@ -414,10 +414,10 @@
     <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
   </data>
   <data name="UserNameLabel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>67, 45</value>
+    <value>58, 44</value>
   </data>
   <data name="UserNameLabel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>124, 34</value>
+    <value>139, 17</value>
   </data>
   <data name="UserNameLabel.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>11</value>
@@ -459,7 +459,7 @@
     <value>19, 52, 3, 3</value>
   </data>
   <data name="UserAvatar.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>52, 55</value>
+    <value>43, 55</value>
   </data>
   <data name="UserAvatar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -567,7 +567,7 @@
     <value>dataGridView2</value>
   </data>
   <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
     <value>CalendarSplitContainer.Panel1</value>
@@ -1095,7 +1095,7 @@
     <value>CrimeReportGridView</value>
   </data>
   <data name="&gt;&gt;CrimeReportGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CrimeReportGridView.Parent" xml:space="preserve">
     <value>CrimeReportSplitContainer.Panel1</value>
@@ -1679,7 +1679,7 @@
     <value>CriminalCaseGridView</value>
   </data>
   <data name="&gt;&gt;CriminalCaseGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CriminalCaseGridView.Parent" xml:space="preserve">
     <value>CriminalCaseSplitContainer.Panel1</value>
@@ -2115,9 +2115,6 @@
   <data name="EmployeeGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="EmployeeGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
-    <value>50</value>
-  </data>
   <data name="EmployeeGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>27, 112</value>
   </data>
@@ -2134,7 +2131,7 @@
     <value>EmployeeGridView</value>
   </data>
   <data name="&gt;&gt;EmployeeGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;EmployeeGridView.Parent" xml:space="preserve">
     <value>EmployeeTabPage</value>
@@ -2464,7 +2461,7 @@
     <value>AuthorityGridView</value>
   </data>
   <data name="&gt;&gt;AuthorityGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AuthorityGridView.Parent" xml:space="preserve">
     <value>AuthorityTabPage</value>
@@ -2812,7 +2809,7 @@
     <value>CriminalGridView</value>
   </data>
   <data name="&gt;&gt;CriminalGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CriminalGridView.Parent" xml:space="preserve">
     <value>CriminalTabPage</value>
@@ -3023,7 +3020,7 @@
     <value>RankGridView</value>
   </data>
   <data name="&gt;&gt;RankGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RankGridView.Parent" xml:space="preserve">
     <value>RanksAndPositionsTabPage</value>
@@ -3210,7 +3207,7 @@
     <value>PositionGridView</value>
   </data>
   <data name="&gt;&gt;PositionGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>InvestigatorWorkstation.CustomComponents.HoverableDataGridView, InvestigatorWorkstation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;PositionGridView.Parent" xml:space="preserve">
     <value>RanksAndPositionsTabPage</value>

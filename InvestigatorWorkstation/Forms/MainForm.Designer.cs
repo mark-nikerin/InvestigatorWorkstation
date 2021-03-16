@@ -1,4 +1,6 @@
 ﻿
+using InvestigatorWorkstation.CustomComponents;
+
 namespace InvestigatorWorkstation.Forms
 {
     partial class MainForm
@@ -58,7 +60,7 @@ namespace InvestigatorWorkstation.Forms
             this.MainTabContainer = new System.Windows.Forms.TabControl();
             this.CalendarTabPage = new System.Windows.Forms.TabPage();
             this.CalendarSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +82,7 @@ namespace InvestigatorWorkstation.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CrimeReportSearchTextBox = new System.Windows.Forms.TextBox();
             this.CrimeReportLabel = new System.Windows.Forms.Label();
-            this.CrimeReportGridView = new System.Windows.Forms.DataGridView();
+            this.CrimeReportGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -96,7 +98,7 @@ namespace InvestigatorWorkstation.Forms
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.CriminalCaseGridView = new System.Windows.Forms.DataGridView();
+            this.CriminalCaseGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,7 +116,7 @@ namespace InvestigatorWorkstation.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.EmployeeGridView = new System.Windows.Forms.DataGridView();
+            this.EmployeeGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.EmployeeLabel = new System.Windows.Forms.Label();
             this.AuthorityTabPage = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -123,7 +125,7 @@ namespace InvestigatorWorkstation.Forms
             this.AddAuthorityButton = new System.Windows.Forms.PictureBox();
             this.RemoveAuthorityButton = new System.Windows.Forms.PictureBox();
             this.EditAuthorityButton = new System.Windows.Forms.PictureBox();
-            this.AuthorityGridView = new System.Windows.Forms.DataGridView();
+            this.AuthorityGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.AuthorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Адрес = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,7 +138,7 @@ namespace InvestigatorWorkstation.Forms
             this.AddCriminalButton = new System.Windows.Forms.PictureBox();
             this.RemoveCriminalButton = new System.Windows.Forms.PictureBox();
             this.EditCriminalButton = new System.Windows.Forms.PictureBox();
-            this.CriminalGridView = new System.Windows.Forms.DataGridView();
+            this.CriminalGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Citizenship = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -149,12 +151,12 @@ namespace InvestigatorWorkstation.Forms
             this.AddRankPictureButton = new System.Windows.Forms.PictureBox();
             this.DeleteRankPictureButton = new System.Windows.Forms.PictureBox();
             this.EditRankPictureButton = new System.Windows.Forms.PictureBox();
-            this.RankGridView = new System.Windows.Forms.DataGridView();
+            this.RankGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.RankLabel = new System.Windows.Forms.Label();
             this.AddPositionPictureButton = new System.Windows.Forms.PictureBox();
             this.DeletePositionPictureButton = new System.Windows.Forms.PictureBox();
             this.EditPositionPictureButton = new System.Windows.Forms.PictureBox();
-            this.PositionGridView = new System.Windows.Forms.DataGridView();
+            this.PositionGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
             this.PositionLabel = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -502,6 +504,8 @@ namespace InvestigatorWorkstation.Forms
             this.AddCrimeReportButton.Name = "AddCrimeReportButton";
             this.AddCrimeReportButton.TabStop = false;
             this.AddCrimeReportButton.Click += new System.EventHandler(this.AddCrimeReportButton_Click);
+            this.AddCrimeReportButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddCrimeReportButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // label2
             // 
@@ -668,6 +672,8 @@ namespace InvestigatorWorkstation.Forms
             this.AddCriminalCasePictureButton.Name = "AddCriminalCasePictureButton";
             this.AddCriminalCasePictureButton.TabStop = false;
             this.AddCriminalCasePictureButton.Click += new System.EventHandler(this.AddCriminalCaseButton_Click);
+            this.AddCriminalCasePictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddCriminalCasePictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // label6
             // 
@@ -697,6 +703,8 @@ namespace InvestigatorWorkstation.Forms
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // pictureBox4
             // 
@@ -706,6 +714,8 @@ namespace InvestigatorWorkstation.Forms
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // panel3
             // 
@@ -904,7 +914,7 @@ namespace InvestigatorWorkstation.Forms
             this.EmployeeGridView.AllowUserToResizeRows = false;
             resources.ApplyResources(this.EmployeeGridView, "EmployeeGridView");
             this.EmployeeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmployeeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.EmployeeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.EmployeeGridView.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -915,7 +925,8 @@ namespace InvestigatorWorkstation.Forms
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.EmployeeGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.EmployeeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -937,6 +948,7 @@ namespace InvestigatorWorkstation.Forms
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.EmployeeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.EmployeeGridView.RowHeadersVisible = false;
+            this.EmployeeGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.EmployeeGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
@@ -991,6 +1003,8 @@ namespace InvestigatorWorkstation.Forms
             this.AddAuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddAuthorityButton.Name = "AddAuthorityButton";
             this.AddAuthorityButton.TabStop = false;
+            this.AddAuthorityButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddAuthorityButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // RemoveAuthorityButton
             // 
@@ -1000,6 +1014,8 @@ namespace InvestigatorWorkstation.Forms
             this.RemoveAuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RemoveAuthorityButton.Name = "RemoveAuthorityButton";
             this.RemoveAuthorityButton.TabStop = false;
+            this.RemoveAuthorityButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.RemoveAuthorityButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // EditAuthorityButton
             // 
@@ -1009,6 +1025,8 @@ namespace InvestigatorWorkstation.Forms
             this.EditAuthorityButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditAuthorityButton.Name = "EditAuthorityButton";
             this.EditAuthorityButton.TabStop = false;
+            this.EditAuthorityButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.EditAuthorityButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // AuthorityGridView
             // 
@@ -1108,6 +1126,8 @@ namespace InvestigatorWorkstation.Forms
             this.AddCriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddCriminalButton.Name = "AddCriminalButton";
             this.AddCriminalButton.TabStop = false;
+            this.AddCriminalButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddCriminalButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // RemoveCriminalButton
             // 
@@ -1117,6 +1137,8 @@ namespace InvestigatorWorkstation.Forms
             this.RemoveCriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RemoveCriminalButton.Name = "RemoveCriminalButton";
             this.RemoveCriminalButton.TabStop = false;
+            this.RemoveCriminalButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.RemoveCriminalButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // EditCriminalButton
             // 
@@ -1126,6 +1148,8 @@ namespace InvestigatorWorkstation.Forms
             this.EditCriminalButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditCriminalButton.Name = "EditCriminalButton";
             this.EditCriminalButton.TabStop = false;
+            this.EditCriminalButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.EditCriminalButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // CriminalGridView
             // 
@@ -1230,6 +1254,8 @@ namespace InvestigatorWorkstation.Forms
             this.AddRankPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddRankPictureButton.Name = "AddRankPictureButton";
             this.AddRankPictureButton.TabStop = false;
+            this.AddRankPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddRankPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // DeleteRankPictureButton
             // 
@@ -1239,6 +1265,8 @@ namespace InvestigatorWorkstation.Forms
             this.DeleteRankPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteRankPictureButton.Name = "DeleteRankPictureButton";
             this.DeleteRankPictureButton.TabStop = false;
+            this.DeleteRankPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.DeleteRankPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // EditRankPictureButton
             // 
@@ -1248,11 +1276,14 @@ namespace InvestigatorWorkstation.Forms
             this.EditRankPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditRankPictureButton.Name = "EditRankPictureButton";
             this.EditRankPictureButton.TabStop = false;
+            this.EditRankPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.EditRankPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // RankGridView
             // 
             this.RankGridView.AllowUserToAddRows = false;
             this.RankGridView.AllowUserToDeleteRows = false;
+            this.RankGridView.AllowUserToResizeRows = false;
             resources.ApplyResources(this.RankGridView, "RankGridView");
             this.RankGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RankGridView.BackgroundColor = System.Drawing.Color.White;
@@ -1286,6 +1317,8 @@ namespace InvestigatorWorkstation.Forms
             this.AddPositionPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddPositionPictureButton.Name = "AddPositionPictureButton";
             this.AddPositionPictureButton.TabStop = false;
+            this.AddPositionPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.AddPositionPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // DeletePositionPictureButton
             // 
@@ -1295,6 +1328,8 @@ namespace InvestigatorWorkstation.Forms
             this.DeletePositionPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeletePositionPictureButton.Name = "DeletePositionPictureButton";
             this.DeletePositionPictureButton.TabStop = false;
+            this.DeletePositionPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.DeletePositionPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // EditPositionPictureButton
             // 
@@ -1304,11 +1339,14 @@ namespace InvestigatorWorkstation.Forms
             this.EditPositionPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditPositionPictureButton.Name = "EditPositionPictureButton";
             this.EditPositionPictureButton.TabStop = false;
+            this.EditPositionPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
+            this.EditPositionPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
             // PositionGridView
             // 
             this.PositionGridView.AllowUserToAddRows = false;
             this.PositionGridView.AllowUserToDeleteRows = false;
+            this.PositionGridView.AllowUserToResizeRows = false;
             resources.ApplyResources(this.PositionGridView, "PositionGridView");
             this.PositionGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PositionGridView.BackgroundColor = System.Drawing.Color.White;
@@ -1533,7 +1571,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.TabPage CrimeReportTabPage;
         private System.Windows.Forms.SplitContainer CrimeReportSplitContainer;
         private System.Windows.Forms.Label CrimeReportLabel;
-        private System.Windows.Forms.DataGridView CrimeReportGridView;
+        private HoverableDataGridView CrimeReportGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationAuthority;
@@ -1542,7 +1580,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Fabule;
         private System.Windows.Forms.TabPage CriminalCaseTabPage;
         private System.Windows.Forms.SplitContainer CriminalCaseSplitContainer;
-        private System.Windows.Forms.DataGridView CriminalCaseGridView;
+        private HoverableDataGridView CriminalCaseGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1552,7 +1590,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.Label CriminalCaseLabel;
         private System.Windows.Forms.TabPage CalendarTabPage;
         private System.Windows.Forms.TabPage EmployeeTabPage;
-        private System.Windows.Forms.DataGridView EmployeeGridView;
+        private HoverableDataGridView EmployeeGridView;
         private System.Windows.Forms.Label EmployeeLabel;
         private System.Windows.Forms.Panel CrimeReportSearchPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1590,7 +1628,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.TabPage AuthorityTabPage;
         private System.Windows.Forms.TabPage CriminalTabPage;
         private System.Windows.Forms.SplitContainer CalendarSplitContainer;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private HoverableDataGridView dataGridView2;
         private System.Windows.Forms.Label CalendarTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
@@ -1605,7 +1643,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.PictureBox AddCriminalButton;
         private System.Windows.Forms.PictureBox RemoveCriminalButton;
         private System.Windows.Forms.PictureBox EditCriminalButton;
-        private System.Windows.Forms.DataGridView CriminalGridView;
+        private HoverableDataGridView CriminalGridView;
         private System.Windows.Forms.Label CriminalTittle;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -1613,7 +1651,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.PictureBox AddAuthorityButton;
         private System.Windows.Forms.PictureBox RemoveAuthorityButton;
         private System.Windows.Forms.PictureBox EditAuthorityButton;
-        private System.Windows.Forms.DataGridView AuthorityGridView;
+        private HoverableDataGridView AuthorityGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuthorityNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Адрес;
@@ -1633,12 +1671,12 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.PictureBox AddRankPictureButton;
         private System.Windows.Forms.PictureBox DeleteRankPictureButton;
         private System.Windows.Forms.PictureBox EditRankPictureButton;
-        private System.Windows.Forms.DataGridView RankGridView;
+        private HoverableDataGridView RankGridView;
         private System.Windows.Forms.Label RankLabel;
         private System.Windows.Forms.PictureBox AddPositionPictureButton;
         private System.Windows.Forms.PictureBox DeletePositionPictureButton;
         private System.Windows.Forms.PictureBox EditPositionPictureButton;
-        private System.Windows.Forms.DataGridView PositionGridView;
+        private HoverableDataGridView PositionGridView;
         private System.Windows.Forms.Label PositionLabel;
     }
 }

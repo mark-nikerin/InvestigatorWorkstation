@@ -161,5 +161,10 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             flowLayoutPanel1.Controls.RemoveByKey($"QualificationPanel{flowLayoutPanel1.Controls.Count - 1}");
             flowLayoutPanel1.Invalidate();
         }
+
+        private void PictureButtonOnHoverIn(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.WhiteSmoke;
+
+        private void PictureButtonOnHoverOut(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.Transparent;
+
     }
 }
