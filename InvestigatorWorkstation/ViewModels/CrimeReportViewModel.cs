@@ -24,7 +24,7 @@ namespace InvestigatorWorkstation.ViewModels
         [DisplayName("Квалификации")]
         public string Qualification { get; set; }
 
-        [DisplayName("Кем получено сообщение")]
+        [DisplayName("Следователь")]
         public string Employee { get; set; }
 
         [DisplayName("Фабула")]

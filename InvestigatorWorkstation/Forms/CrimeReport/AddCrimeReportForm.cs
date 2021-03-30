@@ -15,6 +15,15 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         public AddCrimeReportForm()
         {
             InitializeComponent();
+            foreach(var control in Controls)
+            {
+                if (control is TextBox || control is DateTimePicker || control is ComboBox)
+                {
+                    var textbox = control as Control;
+                    textbox.KeyUp += ControlPressEnter;
+                    textbox.KeyDown += AvoidBeepOnPressEnter;
+                }
+            }
         }
 
         public CrimeReportDTO GetResult()
@@ -138,6 +147,16 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                 Padding = PointTextBox1.Padding,
                 Location = PointTextBox1.Location
             };
+            var ukrfLabel = new Label()
+            {
+                Name = $"ukrfLabel{qualificationNumber}",
+                Width = ukrfLabel1.Width,
+                Height = ukrfLabel1.Height,
+                Margin = ukrfLabel1.Margin,
+                Padding = ukrfLabel1.Padding,
+                Location = ukrfLabel1.Location,
+                Text = ukrfLabel1.Text
+            };
 
             newQualificationPanel.Controls.AddRange(new Control[]
             {
@@ -146,7 +165,8 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                 partLabel,
                 partTextBox,
                 pointLabel,
-                pointTextBox
+                pointTextBox,
+                ukrfLabel
             });
 
             flowLayoutPanel1.Controls.Add(newQualificationPanel);
@@ -166,5 +186,23 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
 
         private void PictureButtonOnHoverOut(object sender, EventArgs e) => (sender as PictureBox).BackColor = Color.Transparent;
 
+        private void ControlPressEnter(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void AvoidBeepOnPressEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

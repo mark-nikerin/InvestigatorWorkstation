@@ -17,7 +17,7 @@ namespace Services.DTOs.Employee
         public DateTime QualificationUpdateDate { get; set; }
         public DateTime CertificationTerm { get; set; }
         public DateTime JoinServiceDate { get; set; }
-        public int Number { get; set; }
+        public string Number { get; set; }
 
         public PositionWithInfoDTO Position { get; set; }
         public RankWithInfoDTO Rank { get; set; }
@@ -46,7 +46,8 @@ namespace Services.DTOs.Employee
                 ? new RankWithInfoDTO
                 {
                     Id = entity.RankId.GetValueOrDefault(),
-                    Name = entity.Rank?.Name
+                    Name = entity.Rank?.Name,
+                    Term = entity.Rank?.Term ?? 0
                 }
                 : new RankWithInfoDTO
                 {
@@ -55,7 +56,8 @@ namespace Services.DTOs.Employee
                     AppointmentDate = rankHistory.AppointmentDate,
                     OrderDate = rankHistory.OrderDate,
                     OrderNumber = rankHistory.OrderNumber,
-                    Term = rankHistory.RankTerm
+                    Term = entity.Rank?.Term ?? 0,
+                    TermEndDate = rankHistory.AppointmentDate.AddYears(entity.Rank?.Term ?? 0)
                 };
 
             return new EmployeeDTO

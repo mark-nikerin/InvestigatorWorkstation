@@ -59,6 +59,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.panel1 = new System.Windows.Forms.Panel();
             this.AssignEmployeeLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ukrfLabel1 = new System.Windows.Forms.Label();
             this.AddCrimeReportTextGreyPanel.SuspendLayout();
             this.QualificatonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -77,7 +78,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.AddCrimeReportLabel.Name = "AddCrimeReportLabel";
             this.AddCrimeReportLabel.Size = new System.Drawing.Size(654, 20);
             this.AddCrimeReportLabel.TabIndex = 65;
-            this.AddCrimeReportLabel.Text = "Добавление нового сообщения";
+            this.AddCrimeReportLabel.Text = "Регистрация сообщения о преступлении ";
             this.AddCrimeReportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AddCrimeReportTextGreyPanel
@@ -106,7 +107,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.RegistryBookNumberTextBox.Name = "RegistryBookNumberTextBox";
             this.RegistryBookNumberTextBox.PlaceholderText = "Введите номер рег. книги";
             this.RegistryBookNumberTextBox.Size = new System.Drawing.Size(173, 23);
-            this.RegistryBookNumberTextBox.TabIndex = 75;
+            this.RegistryBookNumberTextBox.TabIndex = 2;
             // 
             // RegistryNumberTextBox
             // 
@@ -115,7 +116,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.RegistryNumberTextBox.Name = "RegistryNumberTextBox";
             this.RegistryNumberTextBox.PlaceholderText = "Введите рег. номер";
             this.RegistryNumberTextBox.Size = new System.Drawing.Size(173, 23);
-            this.RegistryNumberTextBox.TabIndex = 73;
+            this.RegistryNumberTextBox.TabIndex = 1;
             // 
             // RegistrationDateLabel
             // 
@@ -137,11 +138,12 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // 
             // RegistrationDatePicker
             // 
-            this.RegistrationDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RegistrationDatePicker.CustomFormat = "dd.MM.yyyy HH:mm";
+            this.RegistrationDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.RegistrationDatePicker.Location = new System.Drawing.Point(474, 136);
             this.RegistrationDatePicker.Name = "RegistrationDatePicker";
             this.RegistrationDatePicker.Size = new System.Drawing.Size(127, 23);
-            this.RegistrationDatePicker.TabIndex = 104;
+            this.RegistrationDatePicker.TabIndex = 3;
             // 
             // RegistrationAuthorityLabel
             // 
@@ -161,7 +163,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.RegisteredAuthorityComboBox.Location = new System.Drawing.Point(66, 208);
             this.RegisteredAuthorityComboBox.Name = "RegisteredAuthorityComboBox";
             this.RegisteredAuthorityComboBox.Size = new System.Drawing.Size(535, 23);
-            this.RegisteredAuthorityComboBox.TabIndex = 109;
+            this.RegisteredAuthorityComboBox.TabIndex = 4;
             this.RegisteredAuthorityComboBox.ValueMember = "Id";
             // 
             // QualificationLabel
@@ -170,9 +172,9 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.QualificationLabel.Location = new System.Drawing.Point(66, 262);
             this.QualificationLabel.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
             this.QualificationLabel.Name = "QualificationLabel";
-            this.QualificationLabel.Size = new System.Drawing.Size(178, 15);
+            this.QualificationLabel.Size = new System.Drawing.Size(88, 15);
             this.QualificationLabel.TabIndex = 110;
-            this.QualificationLabel.Text = "Квалификация по статье УК РФ";
+            this.QualificationLabel.Text = "Квалификация";
             // 
             // FableLabel
             // 
@@ -194,7 +196,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.FableRichTextBox.Name = "FableRichTextBox";
             this.FableRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.FableRichTextBox.Size = new System.Drawing.Size(538, 105);
-            this.FableRichTextBox.TabIndex = 113;
+            this.FableRichTextBox.TabIndex = 10;
             this.FableRichTextBox.Text = "Добавьте описание";
             this.FableRichTextBox.Click += new System.EventHandler(this.FableRichTextBox_OnClick);
             // 
@@ -208,7 +210,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.AddCrimeReportButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
             this.AddCrimeReportButton.Name = "AddCrimeReportButton";
             this.AddCrimeReportButton.Size = new System.Drawing.Size(89, 26);
-            this.AddCrimeReportButton.TabIndex = 115;
+            this.AddCrimeReportButton.TabIndex = 12;
             this.AddCrimeReportButton.Text = "Добавить";
             this.AddCrimeReportButton.UseVisualStyleBackColor = false;
             this.AddCrimeReportButton.Click += new System.EventHandler(this.AddCrimeReportButton_Click);
@@ -225,7 +227,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.CancelAddCrimeReportButton.Margin = new System.Windows.Forms.Padding(3, 40, 3, 40);
             this.CancelAddCrimeReportButton.Name = "CancelAddCrimeReportButton";
             this.CancelAddCrimeReportButton.Size = new System.Drawing.Size(89, 26);
-            this.CancelAddCrimeReportButton.TabIndex = 114;
+            this.CancelAddCrimeReportButton.TabIndex = 13;
             this.CancelAddCrimeReportButton.Text = "Отмена";
             this.CancelAddCrimeReportButton.UseVisualStyleBackColor = false;
             this.CancelAddCrimeReportButton.Click += new System.EventHandler(this.CancelAddCrimeReportButton_Click);
@@ -236,23 +238,29 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.ArticleTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
             this.ArticleTextBox1.Name = "ArticleTextBox1";
             this.ArticleTextBox1.Size = new System.Drawing.Size(95, 23);
-            this.ArticleTextBox1.TabIndex = 116;
+            this.ArticleTextBox1.TabIndex = 7;
+            this.ArticleTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AvoidBeepOnPressEnter);
+            this.ArticleTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ControlPressEnter);
             // 
             // PartTextBox1
             // 
-            this.PartTextBox1.Location = new System.Drawing.Point(219, 4);
+            this.PartTextBox1.Location = new System.Drawing.Point(190, 4);
             this.PartTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
             this.PartTextBox1.Name = "PartTextBox1";
             this.PartTextBox1.Size = new System.Drawing.Size(108, 23);
-            this.PartTextBox1.TabIndex = 117;
+            this.PartTextBox1.TabIndex = 8;
+            this.PartTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AvoidBeepOnPressEnter);
+            this.PartTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ControlPressEnter);
             // 
             // PointTextBox1
             // 
-            this.PointTextBox1.Location = new System.Drawing.Point(404, 4);
+            this.PointTextBox1.Location = new System.Drawing.Point(347, 4);
             this.PointTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
             this.PointTextBox1.Name = "PointTextBox1";
             this.PointTextBox1.Size = new System.Drawing.Size(129, 23);
-            this.PointTextBox1.TabIndex = 118;
+            this.PointTextBox1.TabIndex = 9;
+            this.PointTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AvoidBeepOnPressEnter);
+            this.PointTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ControlPressEnter);
             // 
             // ArticleLabel1
             // 
@@ -267,7 +275,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // PartLabel1
             // 
             this.PartLabel1.AutoSize = true;
-            this.PartLabel1.Location = new System.Drawing.Point(175, 7);
+            this.PartLabel1.Location = new System.Drawing.Point(146, 7);
             this.PartLabel1.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
             this.PartLabel1.Name = "PartLabel1";
             this.PartLabel1.Size = new System.Drawing.Size(38, 15);
@@ -277,7 +285,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // PointLabel1
             // 
             this.PointLabel1.AutoSize = true;
-            this.PointLabel1.Location = new System.Drawing.Point(358, 7);
+            this.PointLabel1.Location = new System.Drawing.Point(301, 7);
             this.PointLabel1.Margin = new System.Windows.Forms.Padding(3, 28, 3, 0);
             this.PointLabel1.Name = "PointLabel1";
             this.PointLabel1.Size = new System.Drawing.Size(40, 15);
@@ -286,6 +294,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // 
             // QualificatonPanel1
             // 
+            this.QualificatonPanel1.Controls.Add(this.ukrfLabel1);
             this.QualificatonPanel1.Controls.Add(this.ArticleLabel1);
             this.QualificatonPanel1.Controls.Add(this.PointLabel1);
             this.QualificatonPanel1.Controls.Add(this.ArticleTextBox1);
@@ -295,7 +304,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.QualificatonPanel1.Location = new System.Drawing.Point(3, 3);
             this.QualificatonPanel1.Name = "QualificatonPanel1";
             this.QualificatonPanel1.Size = new System.Drawing.Size(538, 32);
-            this.QualificatonPanel1.TabIndex = 122;
+            this.QualificatonPanel1.TabIndex = 6;
             // 
             // flowLayoutPanel1
             // 
@@ -307,7 +316,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(561, 147);
-            this.flowLayoutPanel1.TabIndex = 123;
+            this.flowLayoutPanel1.TabIndex = 5;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // QualificationButtonsPanel
@@ -384,8 +393,17 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.comboBox1.Location = new System.Drawing.Point(215, 583);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(386, 23);
-            this.comboBox1.TabIndex = 126;
+            this.comboBox1.TabIndex = 11;
             this.comboBox1.ValueMember = "Id";
+            // 
+            // UKRFLabel
+            // 
+            this.ukrfLabel1.AutoSize = true;
+            this.ukrfLabel1.Location = new System.Drawing.Point(492, 7);
+            this.ukrfLabel1.Name = "UKRFLabel";
+            this.ukrfLabel1.Size = new System.Drawing.Size(40, 15);
+            this.ukrfLabel1.TabIndex = 126;
+            this.ukrfLabel1.Text = "УК РФ";
             // 
             // AddCrimeReportForm
             // 
@@ -460,5 +478,6 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         private System.Windows.Forms.PictureBox AddQualificationPictureBox;
         private System.Windows.Forms.Label AssignEmployeeLabel;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label ukrfLabel1;
     }
 }

@@ -55,7 +55,6 @@ namespace Services.Services.Employee
                 OrderDate = employeeDTO.Rank.OrderDate,
                 AppointmentDate = employeeDTO.Rank.AppointmentDate,
                 OrderNumber = employeeDTO.Number,
-                RankTerm = employeeDTO.Rank.Term,
                 Employee = employee,
                 Rank = rank
             };
@@ -95,6 +94,7 @@ namespace Services.Services.Employee
                 .AsNoTracking()
                 .Include(x => x.Rank)
                 .Include(x => x.Position)
+                .Where(x => x.Login != "admin")
                 .Select(x => (EmployeeDTO)x)
                 .ToListAsync();
         }
@@ -153,7 +153,6 @@ namespace Services.Services.Employee
                     OrderDate = employeeDTO.Rank.OrderDate,
                     AppointmentDate = employeeDTO.Rank.AppointmentDate,
                     OrderNumber = employeeDTO.Number,
-                    RankTerm = employeeDTO.Rank.Term,
                     Rank = rank,
                     RankId = rank.Id
             };

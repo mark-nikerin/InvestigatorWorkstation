@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Storage;
 
 namespace Storage.Migrations
 {
     [DbContext(typeof(WorkstationContext))]
-    partial class WorkstationContextModelSnapshot : ModelSnapshot
+    [Migration("20210330194629_ChangeNumberTypeToString")]
+    partial class ChangeNumberTypeToString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -391,6 +393,9 @@ namespace Storage.Migrations
                     b.Property<int>("RankId")
                         .HasColumnType("int");
 
+                    b.Property<int>("RankTerm")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId");
@@ -424,9 +429,6 @@ namespace Storage.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Term")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

@@ -29,7 +29,6 @@ namespace InvestigatorWorkstation.Forms.Employee
         /// </summary>
         private void InitializeComponent()
         {
-            this.RankTermNumeric = new System.Windows.Forms.NumericUpDown();
             this.PositionComboBox = new System.Windows.Forms.ComboBox();
             this.RankComboBox = new System.Windows.Forms.ComboBox();
             this.CertificationTermDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -77,15 +76,8 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.login = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.IsAdminCheckBox = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).BeginInit();
+            this.RankTermTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // RankTermNumeric
-            // 
-            this.RankTermNumeric.Location = new System.Drawing.Point(578, 363);
-            this.RankTermNumeric.Name = "RankTermNumeric";
-            this.RankTermNumeric.Size = new System.Drawing.Size(102, 23);
-            this.RankTermNumeric.TabIndex = 110;
             // 
             // PositionComboBox
             // 
@@ -94,7 +86,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PositionComboBox.Location = new System.Drawing.Point(466, 147);
             this.PositionComboBox.Name = "PositionComboBox";
             this.PositionComboBox.Size = new System.Drawing.Size(326, 23);
-            this.PositionComboBox.TabIndex = 109;
+            this.PositionComboBox.TabIndex = 13;
             this.PositionComboBox.ValueMember = "Id";
             // 
             // RankComboBox
@@ -105,8 +97,9 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.RankComboBox.Location = new System.Drawing.Point(466, 314);
             this.RankComboBox.Name = "RankComboBox";
             this.RankComboBox.Size = new System.Drawing.Size(200, 23);
-            this.RankComboBox.TabIndex = 108;
+            this.RankComboBox.TabIndex = 17;
             this.RankComboBox.ValueMember = "Id";
+            this.RankComboBox.SelectedIndexChanged += new System.EventHandler(this.RankComboBox_SelectedIndexChanged);
             // 
             // CertificationTermDateTimePicker
             // 
@@ -114,7 +107,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.CertificationTermDateTimePicker.Location = new System.Drawing.Point(246, 259);
             this.CertificationTermDateTimePicker.Name = "CertificationTermDateTimePicker";
             this.CertificationTermDateTimePicker.Size = new System.Drawing.Size(118, 23);
-            this.CertificationTermDateTimePicker.TabIndex = 107;
+            this.CertificationTermDateTimePicker.TabIndex = 8;
             // 
             // QualificationUpdateDateTimePicker
             // 
@@ -122,7 +115,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.QualificationUpdateDateTimePicker.Location = new System.Drawing.Point(38, 259);
             this.QualificationUpdateDateTimePicker.Name = "QualificationUpdateDateTimePicker";
             this.QualificationUpdateDateTimePicker.Size = new System.Drawing.Size(200, 23);
-            this.QualificationUpdateDateTimePicker.TabIndex = 106;
+            this.QualificationUpdateDateTimePicker.TabIndex = 7;
             // 
             // JoinServiceDateTimePicker
             // 
@@ -130,7 +123,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.JoinServiceDateTimePicker.Location = new System.Drawing.Point(38, 314);
             this.JoinServiceDateTimePicker.Name = "JoinServiceDateTimePicker";
             this.JoinServiceDateTimePicker.Size = new System.Drawing.Size(155, 23);
-            this.JoinServiceDateTimePicker.TabIndex = 105;
+            this.JoinServiceDateTimePicker.TabIndex = 9;
             // 
             // RankOrderDateTimePicker
             // 
@@ -138,7 +131,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.RankOrderDateTimePicker.Location = new System.Drawing.Point(466, 363);
             this.RankOrderDateTimePicker.Name = "RankOrderDateTimePicker";
             this.RankOrderDateTimePicker.Size = new System.Drawing.Size(102, 23);
-            this.RankOrderDateTimePicker.TabIndex = 104;
+            this.RankOrderDateTimePicker.TabIndex = 19;
             // 
             // RankAppointmentDateTimePicker
             // 
@@ -146,7 +139,8 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.RankAppointmentDateTimePicker.Location = new System.Drawing.Point(674, 314);
             this.RankAppointmentDateTimePicker.Name = "RankAppointmentDateTimePicker";
             this.RankAppointmentDateTimePicker.Size = new System.Drawing.Size(118, 23);
-            this.RankAppointmentDateTimePicker.TabIndex = 103;
+            this.RankAppointmentDateTimePicker.TabIndex = 18;
+            this.RankAppointmentDateTimePicker.ValueChanged += new System.EventHandler(this.RankAppointmentDateTimePicker_ValueChanged);
             // 
             // PositionAppointmentDateTimePicker
             // 
@@ -154,7 +148,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PositionAppointmentDateTimePicker.Location = new System.Drawing.Point(578, 201);
             this.PositionAppointmentDateTimePicker.Name = "PositionAppointmentDateTimePicker";
             this.PositionAppointmentDateTimePicker.Size = new System.Drawing.Size(102, 23);
-            this.PositionAppointmentDateTimePicker.TabIndex = 102;
+            this.PositionAppointmentDateTimePicker.TabIndex = 15;
             // 
             // PositionOrderDateTimePicker
             // 
@@ -162,7 +156,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PositionOrderDateTimePicker.Location = new System.Drawing.Point(466, 201);
             this.PositionOrderDateTimePicker.Name = "PositionOrderDateTimePicker";
             this.PositionOrderDateTimePicker.Size = new System.Drawing.Size(102, 23);
-            this.PositionOrderDateTimePicker.TabIndex = 101;
+            this.PositionOrderDateTimePicker.TabIndex = 14;
             // 
             // ContractDateTimePicker
             // 
@@ -170,7 +164,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.ContractDateTimePicker.Location = new System.Drawing.Point(150, 201);
             this.ContractDateTimePicker.Name = "ContractDateTimePicker";
             this.ContractDateTimePicker.Size = new System.Drawing.Size(102, 23);
-            this.ContractDateTimePicker.TabIndex = 100;
+            this.ContractDateTimePicker.TabIndex = 5;
             // 
             // BirthDateTimePicker
             // 
@@ -179,7 +173,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.BirthDateTimePicker.Location = new System.Drawing.Point(38, 201);
             this.BirthDateTimePicker.Name = "BirthDateTimePicker";
             this.BirthDateTimePicker.Size = new System.Drawing.Size(102, 23);
-            this.BirthDateTimePicker.TabIndex = 99;
+            this.BirthDateTimePicker.TabIndex = 4;
             // 
             // password
             // 
@@ -205,7 +199,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PlaceholderText = "Введите пароль";
             this.PasswordTextBox.Size = new System.Drawing.Size(154, 23);
-            this.PasswordTextBox.TabIndex = 96;
+            this.PasswordTextBox.TabIndex = 11;
             // 
             // LoginTextBox
             // 
@@ -213,7 +207,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.PlaceholderText = "Введите логин";
             this.LoginTextBox.Size = new System.Drawing.Size(164, 23);
-            this.LoginTextBox.TabIndex = 95;
+            this.LoginTextBox.TabIndex = 10;
             // 
             // label21
             // 
@@ -259,7 +253,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.RankOrderNumberTextBox.Name = "RankOrderNumberTextBox";
             this.RankOrderNumberTextBox.PlaceholderText = "Введите номер";
             this.RankOrderNumberTextBox.Size = new System.Drawing.Size(102, 23);
-            this.RankOrderNumberTextBox.TabIndex = 90;
+            this.RankOrderNumberTextBox.TabIndex = 21;
             // 
             // label16
             // 
@@ -327,7 +321,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PositionOrderNumberTextBox.Name = "PositionOrderNumberTextBox";
             this.PositionOrderNumberTextBox.PlaceholderText = "Введите номер";
             this.PositionOrderNumberTextBox.Size = new System.Drawing.Size(102, 23);
-            this.PositionOrderNumberTextBox.TabIndex = 83;
+            this.PositionOrderNumberTextBox.TabIndex = 16;
             // 
             // label11
             // 
@@ -389,7 +383,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.PersonalNumberTextBox.Name = "PersonalNumberTextBox";
             this.PersonalNumberTextBox.PlaceholderText = "Введите номер";
             this.PersonalNumberTextBox.Size = new System.Drawing.Size(102, 23);
-            this.PersonalNumberTextBox.TabIndex = 76;
+            this.PersonalNumberTextBox.TabIndex = 6;
             // 
             // label5
             // 
@@ -433,7 +427,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.MiddleNameTextBox.Name = "MiddleNameTextBox";
             this.MiddleNameTextBox.PlaceholderText = "Иванович";
             this.MiddleNameTextBox.Size = new System.Drawing.Size(102, 23);
-            this.MiddleNameTextBox.TabIndex = 71;
+            this.MiddleNameTextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -450,7 +444,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.PlaceholderText = "Иван";
             this.FirstNameTextBox.Size = new System.Drawing.Size(102, 23);
-            this.FirstNameTextBox.TabIndex = 69;
+            this.FirstNameTextBox.TabIndex = 2;
             // 
             // AddEmployeeLabel
             // 
@@ -472,7 +466,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.AddEmployeeButton.Location = new System.Drawing.Point(433, 520);
             this.AddEmployeeButton.Name = "AddEmployeeButton";
             this.AddEmployeeButton.Size = new System.Drawing.Size(89, 26);
-            this.AddEmployeeButton.TabIndex = 68;
+            this.AddEmployeeButton.TabIndex = 22;
             this.AddEmployeeButton.Text = "Добавить";
             this.AddEmployeeButton.UseVisualStyleBackColor = false;
             this.AddEmployeeButton.Click += new System.EventHandler(this.AddEmployeeButton_Click);
@@ -487,7 +481,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.CancelAddEmployeeButton.Location = new System.Drawing.Point(275, 520);
             this.CancelAddEmployeeButton.Name = "CancelAddEmployeeButton";
             this.CancelAddEmployeeButton.Size = new System.Drawing.Size(89, 26);
-            this.CancelAddEmployeeButton.TabIndex = 67;
+            this.CancelAddEmployeeButton.TabIndex = 23;
             this.CancelAddEmployeeButton.Text = "Отмена";
             this.CancelAddEmployeeButton.UseVisualStyleBackColor = false;
             this.CancelAddEmployeeButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -507,7 +501,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.PlaceholderText = "Иванов";
             this.LastNameTextBox.Size = new System.Drawing.Size(102, 23);
-            this.LastNameTextBox.TabIndex = 65;
+            this.LastNameTextBox.TabIndex = 1;
             // 
             // IsAdminCheckBox
             // 
@@ -519,9 +513,20 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.IsAdminCheckBox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.IsAdminCheckBox.Name = "IsAdminCheckBox";
             this.IsAdminCheckBox.Size = new System.Drawing.Size(164, 21);
-            this.IsAdminCheckBox.TabIndex = 111;
+            this.IsAdminCheckBox.TabIndex = 12;
             this.IsAdminCheckBox.Text = "Права администратора";
             this.IsAdminCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // RankTermTextBox
+            // 
+            this.RankTermTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.RankTermTextBox.Location = new System.Drawing.Point(578, 363);
+            this.RankTermTextBox.Name = "RankTermTextBox";
+            this.RankTermTextBox.PlaceholderText = "Срок звания";
+            this.RankTermTextBox.ReadOnly = true;
+            this.RankTermTextBox.Size = new System.Drawing.Size(102, 23);
+            this.RankTermTextBox.TabIndex = 20;
+            this.RankTermTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddEmployeeForm
             // 
@@ -529,8 +534,8 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(827, 570);
+            this.Controls.Add(this.RankTermTextBox);
             this.Controls.Add(this.IsAdminCheckBox);
-            this.Controls.Add(this.RankTermNumeric);
             this.Controls.Add(this.PositionComboBox);
             this.Controls.Add(this.RankComboBox);
             this.Controls.Add(this.CertificationTermDateTimePicker);
@@ -584,15 +589,12 @@ namespace InvestigatorWorkstation.Forms.Employee
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown RankTermNumeric;
         private System.Windows.Forms.ComboBox PositionComboBox;
         private System.Windows.Forms.ComboBox RankComboBox;
         private System.Windows.Forms.DateTimePicker CertificationTermDateTimePicker;
@@ -640,5 +642,6 @@ namespace InvestigatorWorkstation.Forms.Employee
         private System.Windows.Forms.Label login;
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.CheckBox IsAdminCheckBox;
+        private System.Windows.Forms.TextBox RankTermTextBox;
     }
 }

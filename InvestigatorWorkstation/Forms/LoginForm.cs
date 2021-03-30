@@ -12,14 +12,11 @@
         {
             _authService = authService;
             InitializeComponent();
-        }
-
-        //private void RegistrationButton_Click(object sender, EventArgs e)
-        //{
-        //    Enabled = false;
-        //    _registerForm.ShowDialog();
-        //    Enabled = true;
-        //}
+            LoginTextBox.KeyUp += ControlPressEnter;
+            LoginTextBox.KeyDown += AvoidBeepOnPressEnter;
+            PasswordTextBox.KeyUp += ControlPressEnter;
+            PasswordTextBox.KeyDown += AvoidBeepOnPressEnter;
+        } 
 
         private async void LogInButton_Click(object sender, EventArgs e)
         {
@@ -31,6 +28,24 @@
             catch (ArgumentException)
             {
                 MessageBox.Show("Введён неправильный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        } 
+
+        private void ControlPressEnter(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SendKeys.Send("{TAB}");
+            }
+        }
+        private void AvoidBeepOnPressEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
             }
         }
     }

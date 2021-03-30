@@ -34,7 +34,7 @@
         public DateTime JoinServiceDate { get; set; }
 
         [DisplayName("Личный номер")]
-        public int Number { get; set; }
+        public string Number { get; set; }
 
         [DisplayName("Должность")]
         public string Position { get; set; }

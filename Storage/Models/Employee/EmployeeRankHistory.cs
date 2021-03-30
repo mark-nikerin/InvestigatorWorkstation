@@ -8,8 +8,7 @@ namespace Storage.Models.Employee
         public int Id { get; set; }
         public DateTime AppointmentDate { get; set; }
         public DateTime OrderDate { get; set; }
-        public int OrderNumber { get; set; }
-        public int RankTerm { get; set; }
+        public string OrderNumber { get; set; }
 
         public int RankId { get; set; }
         public int EmployeeId { get; set; }

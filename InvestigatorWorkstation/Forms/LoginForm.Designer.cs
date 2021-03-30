@@ -65,7 +65,7 @@ namespace InvestigatorWorkstation.Forms
             this.LogInButton.Location = new System.Drawing.Point(74, 204);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.Size = new System.Drawing.Size(126, 26);
-            this.LogInButton.TabIndex = 7;
+            this.LogInButton.TabIndex = 3;
             this.LogInButton.Text = "Войти";
             this.LogInButton.UseVisualStyleBackColor = false;
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
@@ -94,8 +94,7 @@ namespace InvestigatorWorkstation.Forms
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PlaceholderText = "Введите пароль";
             this.PasswordTextBox.Size = new System.Drawing.Size(191, 23);
-            this.PasswordTextBox.TabIndex = 3;
-            this.PasswordTextBox.TabStop = false;
+            this.PasswordTextBox.TabIndex = 2;
             this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // LoginTextBox
@@ -104,8 +103,7 @@ namespace InvestigatorWorkstation.Forms
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.PlaceholderText = "Введите логин";
             this.LoginTextBox.Size = new System.Drawing.Size(191, 23);
-            this.LoginTextBox.TabIndex = 2;
-            this.LoginTextBox.TabStop = false;
+            this.LoginTextBox.TabIndex = 1;
             // 
             // LoginTextGreyPanel
             // 
@@ -149,6 +147,7 @@ namespace InvestigatorWorkstation.Forms
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АРМ Следователя - Вход";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlPressEnter);
             this.WhitePanel.ResumeLayout(false);
             this.WhitePanel.PerformLayout();
             this.LoginTextGreyPanel.ResumeLayout(false);

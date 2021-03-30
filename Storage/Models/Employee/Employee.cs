@@ -19,7 +19,7 @@ namespace Storage.Models.Employee
         public DateTime QualificationUpdateDate { get; set; }
         public DateTime CertificationTerm { get; set; }
         public DateTime JoinServiceDate { get; set; }
-        public int Number { get; set; }
+        public string Number { get; set; }
         public int? RankId { get; set; }
         public int? PositionId { get; set; }
 
