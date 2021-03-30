@@ -37,7 +37,7 @@ namespace InvestigatorWorkstation.Forms.Employee
             RankOrderDateTimePicker.Value = employeeDTO.Rank.OrderDate;
             RankAppointmentDateTimePicker.Value = employeeDTO.Rank.AppointmentDate;
             RankOrderNumberTextBox.Text = employeeDTO.Rank.OrderNumber;
-            RankTermTextBox.Text = employeeDTO.Rank.TermEndDate.ToString();
+            RankTermTextBox.Text = employeeDTO.Rank.TermEndDate.ToShortDateString();
 
             LoginTextBox.Text = employeeDTO.Login;
             PasswordTextBox.Text = employeeDTO.Password;

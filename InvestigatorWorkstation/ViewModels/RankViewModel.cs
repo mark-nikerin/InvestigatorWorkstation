@@ -5,7 +5,7 @@ namespace InvestigatorWorkstation.ViewModels
 {
     public class RankViewModel
     {
-        [DisplayName("№")]
+        [Browsable(false)]
         public int Id { get; set; }
 
         [DisplayName("Звание")]
