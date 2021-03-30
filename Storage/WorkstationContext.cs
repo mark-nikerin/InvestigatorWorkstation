@@ -52,6 +52,7 @@ namespace Storage
         public virtual DbSet<PreventiveMeasureDecision> PreventiveMeasureDecisions { get; set; } = null!;
         #endregion
         public virtual DbSet<CrimeReport> CrimeReports { get; set; } = null!;
+        public virtual DbSet<Authority> Authorities { get; set; } = null!;
          
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {

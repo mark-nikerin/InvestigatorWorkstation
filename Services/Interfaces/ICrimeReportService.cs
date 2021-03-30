@@ -8,8 +8,8 @@ namespace Services.Interfaces.CrimeReport
     {
         Task<CrimeReportDTO> GetCrimeReport(int id);
         Task<ICollection<CrimeReportDTO>> GetCrimeReports();
-        Task AddCrimeReport(CrimeReportDTO employee);
-        Task UpdateCrimeReport(int id, CrimeReportDTO employee);
+        Task AddCrimeReport(CrimeReportDTO dto);
+        Task UpdateCrimeReport(int id, CrimeReportDTO dto);
         Task RemoveCrimeReport(int id);
     }
 }

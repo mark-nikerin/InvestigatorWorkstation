@@ -69,7 +69,7 @@ namespace Services.Services.CrimeReport
             }
         }
 
-        public async Task UpdateCrimeReport(int id, CrimeReportDTO employee)
+        public async Task UpdateCrimeReport(int id, CrimeReportDTO dto)
         {
             throw new NotImplementedException();
         }

@@ -126,10 +126,6 @@ namespace InvestigatorWorkstation.Forms
             this.RemoveAuthorityButton = new System.Windows.Forms.PictureBox();
             this.EditAuthorityButton = new System.Windows.Forms.PictureBox();
             this.AuthorityGridView = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
-            this.AuthorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Адрес = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AuthorityTittle = new System.Windows.Forms.Label();
             this.CriminalTabPage = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -1035,11 +1031,6 @@ namespace InvestigatorWorkstation.Forms
             this.AuthorityGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AuthorityGridView.BackgroundColor = System.Drawing.Color.White;
             this.AuthorityGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AuthorityGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AuthorityNumber,
-            this.dataGridViewTextBoxColumn19,
-            this.Адрес,
-            this.PhoneNumber});
             this.AuthorityGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AuthorityGridView.MultiSelect = false;
             this.AuthorityGridView.Name = "AuthorityGridView";
@@ -1055,30 +1046,6 @@ namespace InvestigatorWorkstation.Forms
             this.AuthorityGridView.RowHeadersVisible = false;
             this.AuthorityGridView.RowTemplate.Height = 25;
             this.AuthorityGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // AuthorityNumber
-            // 
-            resources.ApplyResources(this.AuthorityNumber, "AuthorityNumber");
-            this.AuthorityNumber.Name = "AuthorityNumber";
-            this.AuthorityNumber.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // Адрес
-            // 
-            resources.ApplyResources(this.Адрес, "Адрес");
-            this.Адрес.Name = "Адрес";
-            this.Адрес.ReadOnly = true;
-            // 
-            // PhoneNumber
-            // 
-            resources.ApplyResources(this.PhoneNumber, "PhoneNumber");
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
             // 
             // AuthorityTittle
             // 
@@ -1651,10 +1618,6 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.PictureBox RemoveAuthorityButton;
         private System.Windows.Forms.PictureBox EditAuthorityButton;
         private HoverableDataGridView AuthorityGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorityNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Адрес;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.Label AuthorityTittle;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;

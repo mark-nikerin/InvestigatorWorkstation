@@ -2421,30 +2421,6 @@
   <data name="AuthorityGridView.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
     <value>50</value>
   </data>
-  <metadata name="AuthorityNumber.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="AuthorityNumber.HeaderText" xml:space="preserve">
-    <value>№ органа</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn19.HeaderText" xml:space="preserve">
-    <value>Название</value>
-  </data>
-  <metadata name="Адрес.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="Адрес.HeaderText" xml:space="preserve">
-    <value>Address</value>
-  </data>
-  <metadata name="PhoneNumber.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="PhoneNumber.HeaderText" xml:space="preserve">
-    <value>Телефон</value>
-  </data>
   <data name="AuthorityGridView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>21, 121</value>
   </data>
@@ -3579,30 +3555,6 @@
     <value>dataGridViewTextBoxColumn6</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AuthorityNumber.Name" xml:space="preserve">
-    <value>AuthorityNumber</value>
-  </data>
-  <data name="&gt;&gt;AuthorityNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn19.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn19</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Адрес.Name" xml:space="preserve">
-    <value>Адрес</value>
-  </data>
-  <data name="&gt;&gt;Адрес.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumber.Name" xml:space="preserve">
-    <value>PhoneNumber</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FullName.Name" xml:space="preserve">

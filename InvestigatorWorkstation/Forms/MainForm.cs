@@ -23,6 +23,7 @@ namespace InvestigatorWorkstation.Forms
         private readonly IEmployeePositionService _employeePositionService;
         private readonly IEmployeeRankService _employeeRankService;
         private readonly ICrimeReportService _crimeReportService;
+        private readonly IAuthorityService _authorityService;
 
         private static IDictionary<string, (DataGridViewColumn, ListSortDirection)> _gridViewSortings = 
             new Dictionary<string, (DataGridViewColumn, ListSortDirection)>();
@@ -33,7 +34,8 @@ namespace InvestigatorWorkstation.Forms
             IEmployeeService employeeService,
             IEmployeePositionService employeePositionService,
             IEmployeeRankService employeeRankService,
-            ICrimeReportService crimeReportService)
+            ICrimeReportService crimeReportService, 
+            IAuthorityService authorityService)
         {
             _loginForm = loginForm;
             _authService = authService;
@@ -41,6 +43,7 @@ namespace InvestigatorWorkstation.Forms
             _employeePositionService = employeePositionService;
             _employeeRankService = employeeRankService;
             _crimeReportService = crimeReportService;
+            _authorityService = authorityService;
 
             InitializeComponent();
             SetActiveButton(CrimeReportButton);
@@ -90,9 +93,18 @@ namespace InvestigatorWorkstation.Forms
                         break;
                     }
                 case "AuthorityButton":
-                    SetActiveButton(AuthorityButton);
-                    MainTabContainer.SelectedIndex = 4;
-                    break;
+                    {
+                        SetActiveButton(AuthorityButton);
+                        MainTabContainer.SelectedIndex = 4;
+
+                        var authorities = await _authorityService.GetAuthorities();
+                        AuthorityGridView.DataSource = new SortableBindingList<AuthorityViewModel>(authorities
+                            .Select(x => (AuthorityViewModel)x)
+                            .ToList());
+
+                        SortGridView(AuthorityGridView);
+                        break;
+                    }
                 case "CriminalButton":
                     SetActiveButton(CriminalButton);
                     MainTabContainer.SelectedIndex = 5;
