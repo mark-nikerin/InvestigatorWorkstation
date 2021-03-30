@@ -7,7 +7,6 @@ using Services.Interfaces.CrimeReport;
 using Services.Interfaces.Employee;
 using Services.Services;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -51,7 +50,7 @@ namespace InvestigatorWorkstation.Forms
 
         #region Helpers
 
-        private void SidebarButton_Click(object sender, EventArgs e)
+        private async void SidebarButton_Click(object sender, EventArgs e)
         {
             MainTabContainer.SelectedTab.Hide();
             switch ((sender as Button)?.Name)
@@ -61,17 +60,35 @@ namespace InvestigatorWorkstation.Forms
                     MainTabContainer.SelectedIndex = 0;
                     break;
                 case "CrimeReportButton":
-                    SetActiveButton(CrimeReportButton);
-                    MainTabContainer.SelectedIndex = 1;
-                    break;
+                    {
+                        SetActiveButton(CrimeReportButton);
+                        MainTabContainer.SelectedIndex = 1;
+
+                        var crimeReports = await _crimeReportService.GetCrimeReports();
+                        CrimeReportGridView.DataSource = new SortableBindingList<CrimeReportViewModel>(crimeReports
+                            .Select(x => (CrimeReportViewModel)x)
+                            .ToList());
+
+                        SortGridView(CrimeReportGridView);
+                        break;
+                    }
                 case "CriminalCaseButton":
                     SetActiveButton(CriminalCaseButton);
                     MainTabContainer.SelectedIndex = 2;
                     break;
                 case "EmployeeButton":
-                    SetActiveButton(EmployeeButton);
-                    MainTabContainer.SelectedIndex = 3;
-                    break;
+                    {
+                        SetActiveButton(EmployeeButton);
+                        MainTabContainer.SelectedIndex = 3;
+
+                        var employees = await _employeeService.GetEmployees();
+                        EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
+                            .Select(x => (EmployeeViewModel)x)
+                            .ToList());
+
+                        SortGridView(EmployeeGridView);
+                        break;
+                    }
                 case "AuthorityButton":
                     SetActiveButton(AuthorityButton);
                     MainTabContainer.SelectedIndex = 4;
@@ -81,10 +98,28 @@ namespace InvestigatorWorkstation.Forms
                     MainTabContainer.SelectedIndex = 5;
                     break;
                 case "RanksAndPositionsButton":
-                    SetActiveButton(RanksAndPositionsButton);
-                    MainTabContainer.SelectedIndex = 6;
-                    break;
+                    {
+                        SetActiveButton(RanksAndPositionsButton);
+                        MainTabContainer.SelectedIndex = 6;
+
+                        var ranks = await _employeeRankService.GetRanks();
+                        RankGridView.DataSource = new SortableBindingList<RankViewModel>(ranks
+                            .Select(x => (RankViewModel)x)
+                            .ToList());
+
+                        SortGridView(RankGridView);
+
+                        var positions = await _employeePositionService.GetPositions();
+                        PositionGridView.DataSource = new SortableBindingList<PositionViewModel>(positions
+                            .Select(x => (PositionViewModel)x)
+                            .ToList());
+
+                        SortGridView(PositionGridView);
+                        break;
+                    }
             }
+
+            MainTabContainer.SelectedTab.Show();
         }
 
         private void SetActiveButton(Button button)
@@ -100,63 +135,6 @@ namespace InvestigatorWorkstation.Forms
 
             button.BackColor = Color.FromArgb(230, 239, 255);
             button.Font = new Font("Segoe UI", 12.0F, FontStyle.Bold);
-        }
-
-        private async void MainTabContainer_SelectedTabChanged(object sender, EventArgs e)
-        {
-            switch (MainTabContainer.SelectedTab.Name)
-            {
-                case "EmployeeTabPage":
-                    {
-                        var employees = await _employeeService.GetEmployees();
-                        EmployeeGridView.DataSource = new SortableBindingList<EmployeeViewModel>(employees
-                            .Select(x => (EmployeeViewModel)x)
-                            .ToList());
-
-                        SortGridView(EmployeeGridView);
-
-                        break;
-                    }
-                case "CriminalCaseTabPage":
-                    {
-                        break;
-                    }
-                case "CrimeReportTabPage":
-                    {
-                        var crimeReports = await _crimeReportService.GetCrimeReports();
-                        CrimeReportGridView.DataSource = new SortableBindingList<CrimeReportViewModel>(crimeReports
-                            .Select(x => (CrimeReportViewModel)x)
-                            .ToList());
-
-                        SortGridView(CrimeReportGridView);
-
-                        break;
-                    }
-                case "CalendarTabPage":
-                    {
-                        break;
-                    }
-                case "RanksAndPositionsTabPage":
-                    {
-                        var ranks = await _employeeRankService.GetRanks();
-                        RankGridView.DataSource = new SortableBindingList<RankViewModel>(ranks
-                            .Select(x => (RankViewModel)x)
-                            .ToList());
-
-                        SortGridView(RankGridView);
-
-                        var positions = await _employeePositionService.GetPositions();
-                        PositionGridView.DataSource = new SortableBindingList<PositionViewModel>(positions
-                            .Select(x => (PositionViewModel)x)
-                            .ToList());
-
-                        SortGridView(PositionGridView);
-
-                        break;
-                    }
-            }
-
-            MainTabContainer.SelectedTab.Show();
         }
 
         private void DataGridView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e) => e.PaintParts &= ~DataGridViewPaintParts.Focus;

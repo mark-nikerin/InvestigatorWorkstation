@@ -362,7 +362,6 @@ namespace InvestigatorWorkstation.Forms
             resources.ApplyResources(this.MainTabContainer, "MainTabContainer");
             this.MainTabContainer.Name = "MainTabContainer";
             this.MainTabContainer.SelectedIndex = 0;
-            this.MainTabContainer.SelectedIndexChanged += new System.EventHandler(this.MainTabContainer_SelectedTabChanged);
             // 
             // CalendarTabPage
             // 
