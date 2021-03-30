@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Services.DTOs;
 using Services.DTOs.CrimeReport;
+using Services.DTOs.Employee;
 
 namespace InvestigatorWorkstation.Forms.CrimeReport
 {
@@ -12,7 +15,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
 
         private const string QualificationStringPattern = "Статья {0} Часть {1} Пункт {2};";
 
-        public AddCrimeReportForm()
+        public AddCrimeReportForm(IEnumerable<AuthorityDTO> authorities, IEnumerable<EmployeeDTO> employees)
         {
             InitializeComponent();
             foreach(var control in Controls)
@@ -24,6 +27,9 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                     textbox.KeyDown += AvoidBeepOnPressEnter;
                 }
             }
+
+            RegisteredAuthorityComboBox.DataSource = authorities;
+            EmployeeComboBox.DataSource = employees;
         }
 
         public CrimeReportDTO GetResult()
@@ -58,8 +64,16 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                 RegistrationBookNumber = RegistryBookNumberTextBox.Text,
                 RegistrationDate = RegistrationDatePicker.Value,
                 Fable = FableRichTextBox.Text, 
-                Qualification = qualificationStringBuilder.ToString()
-                // TODO добавить квалификации и органы УФСБ
+                Qualification = qualificationStringBuilder.ToString(),
+                Employee = new EmployeeDTO
+                {
+                    Id = (int)EmployeeComboBox.SelectedValue
+                },
+                Authority = new AuthorityDTO
+                {
+                    Id = (int)RegisteredAuthorityComboBox.SelectedValue,
+                    Title = RegisteredAuthorityComboBox.SelectedText
+                }
             };
             DialogResult = DialogResult.OK;
         }

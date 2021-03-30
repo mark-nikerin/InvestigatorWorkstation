@@ -12,6 +12,7 @@ namespace Services.DTOs.Employee
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
+        public string FullName { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime ContractDate { get; set; }
         public DateTime QualificationUpdateDate { get; set; }
@@ -68,6 +69,7 @@ namespace Services.DTOs.Employee
                 IsAdmin = entity.IsAdmin,
                 FirstName = entity.FirstName,
                 MiddleName = entity.MiddleName,
+                FullName = $"{entity.LastName} {entity.FirstName[0]}. {entity.MiddleName[0]}.",
                 LastName = entity.LastName,
                 BirthDate = entity.BirthDate,
                 ContractDate = entity.ContractDate,

@@ -37,7 +37,7 @@ namespace InvestigatorWorkstation.ViewModels
             RegistrationBookNumber = dto.RegistrationBookNumber,
             Qualification = dto.Qualification,
             Fable = dto.Fable,
-            RegistrationAuthority = dto.RegistrationAuthority,
+           // RegistrationAuthority = dto.Authority.Title,
             Employee = $"{dto.Employee.LastName} {dto.Employee.FirstName[0]}. {dto.Employee.MiddleName[0]}.",
             RegistrationDate = dto.RegistrationDate
         };

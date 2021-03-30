@@ -355,7 +355,10 @@ namespace InvestigatorWorkstation.Forms
 
         private async void AddCrimeReportButton_Click(object sender, EventArgs e)
         {
-            using var addCrimeReportForm = new AddCrimeReportForm();
+            var authorities = await _authorityService.GetAuthorities();
+            var employees = await _employeeService.GetEmployees();
+
+            using var addCrimeReportForm = new AddCrimeReportForm(authorities, employees);
 
             var dialogResult = addCrimeReportForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
@@ -381,6 +384,41 @@ namespace InvestigatorWorkstation.Forms
 
             CrimeReportGridView.DataSource = new SortableBindingList<CrimeReportViewModel>(crimeReports
                 .Select(x => (CrimeReportViewModel)x)
+                .ToList());
+        }
+
+        #endregion
+
+        #region AuthorityTab
+
+        private async void AddAuthorityButton_Click(object sender, EventArgs e)
+        {
+            using var addAuthorityForm = new AddAuthorityForm();
+
+            var dialogResult = addAuthorityForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                await _authorityService.AddAuthority(addAuthorityForm.GetResult());
+
+                var authorities = await _authorityService.GetAuthorities();
+
+                AuthorityGridView.DataSource = new SortableBindingList<AuthorityViewModel>(authorities
+                    .Select(x => (AuthorityViewModel)x)
+                    .ToList());
+
+                SortGridView(AuthorityGridView);
+            }
+        }
+
+        private async void RemoveAuthorityButton_Click(object sender, EventArgs e)
+        {
+            var selectedAuthorityViewModel = (AuthorityViewModel)AuthorityGridView.SelectedRows[0].DataBoundItem;
+            await _authorityService.RemoveAuthority(selectedAuthorityViewModel.Id);
+
+            var authorities = await _authorityService.GetAuthorities();
+
+            AuthorityGridView.DataSource = new SortableBindingList<AuthorityViewModel>(authorities
+                .Select(x => (AuthorityViewModel)x)
                 .ToList());
         }
 

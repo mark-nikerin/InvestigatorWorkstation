@@ -8,6 +8,7 @@ using Services;
 using Services.Interfaces;
 using Services.Interfaces.CrimeReport;
 using Services.Interfaces.Employee;
+using Services.Services;
 using Services.Services.CrimeReport;
 using Services.Services.Employee;
 using Storage;
@@ -42,7 +43,8 @@ namespace InvestigatorWorkstation
                         .AddScoped<IAuthService, AuthService>()
                         .AddScoped<IEmployeePositionService, EmployeePositionService>()
                         .AddScoped<IEmployeeRankService, EmployeeRankService>()
-                        .AddScoped<ICrimeReportService, CrimeReportService>();
+                        .AddScoped<ICrimeReportService, CrimeReportService>()
+                        .AddScoped<IAuthorityService, AuthorityService>();
                 }).Build();
 
             using (var serviceScope = host.Services.CreateScope())

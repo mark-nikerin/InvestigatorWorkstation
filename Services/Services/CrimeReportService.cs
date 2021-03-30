@@ -26,7 +26,7 @@ namespace Services.Services.CrimeReport
             {
                 EmployeeId = currentUser.Id,
                 Fable = dto.Fable,
-                RegistrationAuthority = dto.RegistrationAuthority,
+               // RegistrationAuthority = dto.Authority,
                 RegistrationBookNumber = dto.RegistrationBookNumber,
                 RegistrationNumber = dto.RegistrationNumber,
                 RegistrationDate = dto.RegistrationDate,

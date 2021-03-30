@@ -52,14 +52,14 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.PartLabel1 = new System.Windows.Forms.Label();
             this.PointLabel1 = new System.Windows.Forms.Label();
             this.QualificatonPanel1 = new System.Windows.Forms.Panel();
+            this.ukrfLabel1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.QualificationButtonsPanel = new System.Windows.Forms.Panel();
             this.DeleteQualificationPictureBox = new System.Windows.Forms.PictureBox();
             this.AddQualificationPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AssignEmployeeLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ukrfLabel1 = new System.Windows.Forms.Label();
+            this.EmployeeComboBox = new System.Windows.Forms.ComboBox();
             this.AddCrimeReportTextGreyPanel.SuspendLayout();
             this.QualificatonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -157,7 +157,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             // 
             // RegisteredAuthorityComboBox
             // 
-            this.RegisteredAuthorityComboBox.DisplayMember = "Name";
+            this.RegisteredAuthorityComboBox.DisplayMember = "Title";
             this.RegisteredAuthorityComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.RegisteredAuthorityComboBox.FormattingEnabled = true;
             this.RegisteredAuthorityComboBox.Location = new System.Drawing.Point(66, 208);
@@ -306,6 +306,15 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.QualificatonPanel1.Size = new System.Drawing.Size(538, 32);
             this.QualificatonPanel1.TabIndex = 6;
             // 
+            // ukrfLabel1
+            // 
+            this.ukrfLabel1.AutoSize = true;
+            this.ukrfLabel1.Location = new System.Drawing.Point(492, 7);
+            this.ukrfLabel1.Name = "ukrfLabel1";
+            this.ukrfLabel1.Size = new System.Drawing.Size(40, 15);
+            this.ukrfLabel1.TabIndex = 126;
+            this.ukrfLabel1.Text = "УК РФ";
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -385,25 +394,16 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.AssignEmployeeLabel.TabIndex = 125;
             this.AssignEmployeeLabel.Text = "Назначить следователя";
             // 
-            // comboBox1
+            // EmployeeComboBox
             // 
-            this.comboBox1.DisplayMember = "Name";
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(215, 583);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(386, 23);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.ValueMember = "Id";
-            // 
-            // UKRFLabel
-            // 
-            this.ukrfLabel1.AutoSize = true;
-            this.ukrfLabel1.Location = new System.Drawing.Point(492, 7);
-            this.ukrfLabel1.Name = "UKRFLabel";
-            this.ukrfLabel1.Size = new System.Drawing.Size(40, 15);
-            this.ukrfLabel1.TabIndex = 126;
-            this.ukrfLabel1.Text = "УК РФ";
+            this.EmployeeComboBox.DisplayMember = "FullName";
+            this.EmployeeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.EmployeeComboBox.FormattingEnabled = true;
+            this.EmployeeComboBox.Location = new System.Drawing.Point(215, 583);
+            this.EmployeeComboBox.Name = "EmployeeComboBox";
+            this.EmployeeComboBox.Size = new System.Drawing.Size(386, 23);
+            this.EmployeeComboBox.TabIndex = 11;
+            this.EmployeeComboBox.ValueMember = "Id";
             // 
             // AddCrimeReportForm
             // 
@@ -411,7 +411,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(672, 696);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.EmployeeComboBox);
             this.Controls.Add(this.AssignEmployeeLabel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.QualificationLabel);
@@ -477,7 +477,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
         private System.Windows.Forms.PictureBox DeleteQualificationPictureBox;
         private System.Windows.Forms.PictureBox AddQualificationPictureBox;
         private System.Windows.Forms.Label AssignEmployeeLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox EmployeeComboBox;
         private System.Windows.Forms.Label ukrfLabel1;
     }
 }
