@@ -428,5 +428,64 @@ namespace InvestigatorWorkstation.Forms
         {
 
         }
+
+        #region Ranks
+
+        private async void AddRankPictureButton_Click(object sender, EventArgs e)
+        {
+            using var addRankForm = new RankForm();
+
+            var dialogResult = addRankForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                await _employeeRankService.AddRank(addRankForm.GetResult());
+
+                var ranks = await _employeeRankService.GetRanks();
+
+                RankGridView.DataSource = new SortableBindingList<RankViewModel>(ranks
+                    .Select(x => (RankViewModel)x)
+                    .ToList());
+
+                SortGridView(RankGridView);
+            }
+        }
+
+        private async void DeleteRankPictureButton_Click(object sender, EventArgs e)
+        {
+            var selectedRankViewModel = (RankViewModel)RankGridView.SelectedRows[0].DataBoundItem;
+            await _employeeRankService.RemoveRank(selectedRankViewModel.Id);
+
+            var ranks = await _employeeRankService.GetRanks();
+
+            RankGridView.DataSource = new SortableBindingList<RankViewModel>(ranks
+                .Select(x => (RankViewModel)x)
+                .ToList());
+        }
+
+        private async void EditRankPictureButton_Click(object sender, EventArgs e)
+        {
+            var selectedRankViewModel = (RankViewModel)RankGridView.SelectedRows[0].DataBoundItem;
+            var selectedRankDTO = await _employeeRankService.GetRank(selectedRankViewModel.Id);
+
+            using var editRankForm = new RankForm(selectedRankDTO);
+
+            var dialogResult = editRankForm.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                await _employeeRankService.UpdateRank(selectedRankDTO.Id, editRankForm.GetResult());
+
+                var ranks = await _employeeRankService.GetRanks();
+
+                RankGridView.DataSource = new SortableBindingList<RankViewModel>(ranks
+                    .Select(x => (RankViewModel)x)
+                    .ToList());
+
+                SortGridView(RankGridView);
+            }
+        }
+
+        #endregion
+
     }
 }

@@ -1222,6 +1222,7 @@ namespace InvestigatorWorkstation.Forms
             this.AddRankPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddRankPictureButton.Name = "AddRankPictureButton";
             this.AddRankPictureButton.TabStop = false;
+            this.AddRankPictureButton.Click += new System.EventHandler(this.AddRankPictureButton_Click);
             this.AddRankPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.AddRankPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
@@ -1233,6 +1234,7 @@ namespace InvestigatorWorkstation.Forms
             this.DeleteRankPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteRankPictureButton.Name = "DeleteRankPictureButton";
             this.DeleteRankPictureButton.TabStop = false;
+            this.DeleteRankPictureButton.Click += new System.EventHandler(this.DeleteRankPictureButton_Click);
             this.DeleteRankPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.DeleteRankPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
@@ -1244,6 +1246,7 @@ namespace InvestigatorWorkstation.Forms
             this.EditRankPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditRankPictureButton.Name = "EditRankPictureButton";
             this.EditRankPictureButton.TabStop = false;
+            this.EditRankPictureButton.Click += new System.EventHandler(this.EditRankPictureButton_Click);
             this.EditRankPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.EditRankPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 

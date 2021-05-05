@@ -67,7 +67,8 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                 Qualification = qualificationStringBuilder.ToString(),
                 Employee = new EmployeeDTO
                 {
-                    Id = (int)EmployeeComboBox.SelectedValue
+                    Id = (int)EmployeeComboBox.SelectedValue,
+                    FullName = EmployeeComboBox.SelectedText
                 },
                 Authority = new AuthorityDTO
                 {
