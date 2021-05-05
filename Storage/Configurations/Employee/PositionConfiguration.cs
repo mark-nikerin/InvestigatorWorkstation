@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Storage.Models.Employee;
+using Storage.Models;
 
 namespace Storage.Configurations.Employee
 {

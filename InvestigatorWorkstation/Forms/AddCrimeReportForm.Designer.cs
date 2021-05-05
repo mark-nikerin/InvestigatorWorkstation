@@ -125,7 +125,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
             this.RegistrationDateLabel.Name = "RegistrationDateLabel";
             this.RegistrationDateLabel.Size = new System.Drawing.Size(105, 15);
             this.RegistrationDateLabel.TabIndex = 78;
-            this.RegistrationDateLabel.Text = "Дата регистрации";
+            this.RegistrationDateLabel.Text = "Дата и время регистрации";
             // 
             // RegistryNumberLabel
             // 

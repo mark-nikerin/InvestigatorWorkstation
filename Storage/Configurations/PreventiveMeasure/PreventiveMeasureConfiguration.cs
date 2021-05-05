@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Storage.Models.PreventiveMeasure;
+    using Storage.Models;
 
     public class PreventiveMeasureConfiguration : IEntityTypeConfiguration<PreventiveMeasure>
     {

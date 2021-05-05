@@ -12,6 +12,11 @@ namespace Services.DTOs
 
         public static explicit operator AuthorityDTO(Authority entity)
         {
+            if (entity is null)
+            {
+                return null;
+            }
+
             return new AuthorityDTO
             {
                 Id = entity.Id,

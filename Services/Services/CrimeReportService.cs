@@ -20,13 +20,11 @@ namespace Services.Services.CrimeReport
 
         public async Task AddCrimeReport(CrimeReportDTO dto)
         {
-            var currentUser = CurrentUserService.GetCurrentUser();
-
             var crimeReport = new Storage.Models.CrimeReport
             {
-                EmployeeId = currentUser.Id,
+                EmployeeId = dto.Employee.Id,
                 Fable = dto.Fable,
-               // RegistrationAuthority = dto.Authority,
+                AuthorityId = dto.Authority.Id,
                 RegistrationBookNumber = dto.RegistrationBookNumber,
                 RegistrationNumber = dto.RegistrationNumber,
                 RegistrationDate = dto.RegistrationDate,
@@ -42,6 +40,10 @@ namespace Services.Services.CrimeReport
             return await _db.CrimeReports
                .AsNoTracking()
                .Include(x => x.Employee)
+                    .ThenInclude(x => x.PositionHistories)
+               .Include(x => x.Employee)
+                    .ThenInclude(x => x.RankHistories)
+               .Include(x => x.Authority)
                .Where(x => x.Id == id)
                .Select(x => (CrimeReportDTO)x)
                .SingleOrDefaultAsync();
@@ -52,6 +54,10 @@ namespace Services.Services.CrimeReport
             return await _db.CrimeReports
                 .AsNoTracking()
                 .Include(x => x.Employee)
+                    .ThenInclude(x => x.PositionHistories)
+                .Include(x => x.Employee)
+                .ThenInclude(x => x.RankHistories)
+                .Include(x => x.Authority)
                 .Select(x => (CrimeReportDTO)x)
                 .ToListAsync();
         }

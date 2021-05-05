@@ -1,7 +1,7 @@
 ﻿using Storage.Interfaces;
 using System.Collections.Generic;
 
-namespace Storage.Models.PreventiveMeasure
+namespace Storage.Models
 {
     public class PreventiveMeasure : IEntity
     {

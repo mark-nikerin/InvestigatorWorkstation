@@ -12,11 +12,11 @@ namespace InvestigatorWorkstation.ViewModels
         [DisplayName("Рег. номер")]
         public string RegistrationNumber { get; set; }
 
-        [DisplayName("Дата регистрации")]
+        [DisplayName("Дата и время регистрации")]
         public DateTime RegistrationDate { get; set; }
 
         [DisplayName("Орган регистрации")]
-        public string RegistrationAuthority { get; set; }
+        public string Authority { get; set; }
 
         [DisplayName("Номер рег. книги")]
         public string RegistrationBookNumber { get; set; }
@@ -37,8 +37,8 @@ namespace InvestigatorWorkstation.ViewModels
             RegistrationBookNumber = dto.RegistrationBookNumber,
             Qualification = dto.Qualification,
             Fable = dto.Fable,
-           // RegistrationAuthority = dto.Authority.Title,
-            Employee = $"{dto.Employee.LastName} {dto.Employee.FirstName[0]}. {dto.Employee.MiddleName[0]}.",
+            Authority = dto.Authority.Title,
+            Employee = $"{dto.Employee?.LastName} {dto.Employee?.FirstName[0]}. {dto.Employee?.MiddleName[0]}.",
             RegistrationDate = dto.RegistrationDate
         };
     }

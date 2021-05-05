@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Storage;
 using System;
-using Storage.Models.Employee;
+using Storage.Models;
 
 namespace Services.Services.Employee
 {
@@ -32,7 +32,7 @@ namespace Services.Services.Employee
             if (position == null)
                 throw new ArgumentException();
 
-            var employee = new Storage.Models.Employee.Employee
+            var employee = new Storage.Models.Employee
             {
                 FirstName = employeeDTO.FirstName,
                 MiddleName = employeeDTO.MiddleName,

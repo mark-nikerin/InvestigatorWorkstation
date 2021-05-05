@@ -2,9 +2,9 @@
 { 
     public static class CurrentUserService
     {
-        private static Storage.Models.Employee.Employee _currentUser;
+        private static Storage.Models.Employee _currentUser;
 
-        public static Storage.Models.Employee.Employee GetCurrentUser()
+        public static Storage.Models.Employee GetCurrentUser()
         {
             return _currentUser;
         }
@@ -14,11 +14,11 @@
             return _currentUser?.IsAdmin ?? false;
         }
 
-        public static void SetCurrentUser(Storage.Models.Employee.Employee user)
+        public static void SetCurrentUser(Storage.Models.Employee user)
         {
             _currentUser = user == null
                 ? null
-                : new Storage.Models.Employee.Employee
+                : new Storage.Models.Employee
                 {
                     Id = user.Id,
                     FirstName = user.FirstName,

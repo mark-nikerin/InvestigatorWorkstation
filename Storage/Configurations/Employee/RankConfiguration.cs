@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Storage.Models;
-using Storage.Models.Employee;
 
-namespace Storage.Configurations.Employee
+namespace Storage.Configurations
 {
     public class RankConfiguration : IEntityTypeConfiguration<Rank>
     {

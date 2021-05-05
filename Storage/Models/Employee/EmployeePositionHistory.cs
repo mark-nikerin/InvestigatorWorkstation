@@ -1,7 +1,7 @@
 ﻿using Storage.Interfaces;
 using System; 
 
-namespace Storage.Models.Employee
+namespace Storage.Models
 {
     public class EmployeePositionHistory : IEntity
     {

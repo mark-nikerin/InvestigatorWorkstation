@@ -1,7 +1,7 @@
 ﻿namespace Services.DTOs.Employee
 { 
 
-    using Storage.Models.Employee;
+    using Storage.Models;
 
     public class RankDTO
     {
@@ -11,6 +11,11 @@
 
         public static explicit operator RankDTO(Rank entity)
         {
+            if (entity is null)
+            {
+                return null;
+            }
+
             return new RankDTO
             {
                 Id = entity.Id,

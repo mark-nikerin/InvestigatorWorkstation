@@ -12,6 +12,11 @@
                 .WithMany(x => x.CrimeReports)
                 .HasForeignKey(x => x.EmployeeId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasOne(x => x.Authority)
+                .WithMany(x => x.CrimeReports)
+                .HasForeignKey(x => x.AuthorityId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

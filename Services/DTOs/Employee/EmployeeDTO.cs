@@ -23,8 +23,13 @@ namespace Services.DTOs.Employee
         public PositionWithInfoDTO Position { get; set; }
         public RankWithInfoDTO Rank { get; set; }
 
-        public static explicit operator EmployeeDTO(Storage.Models.Employee.Employee entity)
+        public static explicit operator EmployeeDTO(Storage.Models.Employee entity)
         {
+            if (entity is null)
+            {
+                return null;
+            }
+
             var positionHistory = entity.PositionHistories.FirstOrDefault(x => x.PositionId == entity.PositionId);
             var rankHistory = entity.RankHistories.FirstOrDefault(x => x.RankId == entity.RankId);
 

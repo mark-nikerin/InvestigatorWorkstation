@@ -1,4 +1,5 @@
-﻿using Storage.Interfaces;
+﻿using System.Collections.Generic;
+using Storage.Interfaces;
 
 namespace Storage.Models
 {
@@ -9,5 +10,7 @@ namespace Storage.Models
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
         public string Subdivision { get; set; }
+
+        public virtual ICollection<CrimeReport> CrimeReports { get; set; } = new HashSet<CrimeReport>();
     }
 }

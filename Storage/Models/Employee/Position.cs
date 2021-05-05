@@ -1,7 +1,7 @@
 ﻿using Storage.Interfaces;
 using System.Collections.Generic;
 
-namespace Storage.Models.Employee
+namespace Storage.Models
 {
     public class Position : IEntity
     {

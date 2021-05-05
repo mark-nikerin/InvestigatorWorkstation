@@ -42,23 +42,20 @@
         [DisplayName("Звание")]
         public string Rank { get; set; }
 
-        public static explicit operator EmployeeViewModel(EmployeeDTO dto)
+        public static explicit operator EmployeeViewModel(EmployeeDTO dto) => new EmployeeViewModel
         {
-            return new EmployeeViewModel
-            {
-                Id = dto.Id,
-                Login = dto.Login,
-                IsAdmin = dto.IsAdmin,
-                FullName = $"{dto.LastName} {dto.FirstName?[0]}.{dto.MiddleName?[0]}",
-                BirthDate = dto.BirthDate,
-                ContractDate = dto.ContractDate,
-                QualificationUpdateDate = dto.QualificationUpdateDate,
-                CertificationTerm = dto.CertificationTerm,
-                JoinServiceDate = dto.JoinServiceDate,
-                Number = dto.Number,
-                Position = dto.Position.Name,
-                Rank = dto.Rank.Name
-            };
-        }
+            Id = dto.Id,
+            Login = dto.Login,
+            IsAdmin = dto.IsAdmin,
+            FullName = $"{dto.LastName} {dto.FirstName?[0]}.{dto.MiddleName?[0]}",
+            BirthDate = dto.BirthDate,
+            ContractDate = dto.ContractDate,
+            QualificationUpdateDate = dto.QualificationUpdateDate,
+            CertificationTerm = dto.CertificationTerm,
+            JoinServiceDate = dto.JoinServiceDate,
+            Number = dto.Number,
+            Position = dto.Position.Name,
+            Rank = dto.Rank.Name
+        };
     }
 }

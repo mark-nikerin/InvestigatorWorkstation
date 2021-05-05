@@ -31,6 +31,7 @@ namespace InvestigatorWorkstation.Forms.Employee
         {
             _employee = new EmployeeDTO
             {
+                Number = PersonalNumberTextBox.Text,
                 FirstName = FirstNameTextBox.Text,
                 MiddleName = MiddleNameTextBox.Text,
                 LastName = LastNameTextBox.Text,

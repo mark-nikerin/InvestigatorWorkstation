@@ -1,8 +1,7 @@
 ﻿using Storage.Interfaces;
-using Storage.Models;
 using System;
 
-namespace Storage.Models.PreventiveMeasure
+namespace Storage.Models
 {
     public class PreventiveMeasureDecision : IEntity
     {
@@ -12,7 +11,7 @@ namespace Storage.Models.PreventiveMeasure
         public int? PreventiveMeasureId { get; set; }
         public int CriminalId { get; set; }
 
-        public virtual Employee.Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
         public virtual PreventiveMeasure PreventiveMeasure { get; set; }
         public virtual Criminal Criminal { get; set; }
     }

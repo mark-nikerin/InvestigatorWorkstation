@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Storage.Configurations.Employee
 {
-    public class EmployeeConfiguration : IEntityTypeConfiguration<Models.Employee.Employee>
+    public class EmployeeConfiguration : IEntityTypeConfiguration<Models.Employee>
     {
-        public void Configure(EntityTypeBuilder<Models.Employee.Employee> builder)
+        public void Configure(EntityTypeBuilder<Models.Employee> builder)
         {
             builder.HasOne(x => x.Position)
                 .WithMany(x => x.Employees)

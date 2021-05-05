@@ -6,8 +6,6 @@ using Storage.Configurations.CriminalCase;
 using Storage.Configurations.Employee;
 using Storage.Configurations.InspectionMaterial;
 using Storage.Configurations.PreventiveMeasure;
-using Storage.Models.Employee;
-using Storage.Models.PreventiveMeasure;
 
 namespace Storage
 {
