@@ -32,7 +32,6 @@ namespace Services.Services.Employee
 
         public async Task AddRank(RankDTO rankDTO)
         {
-
             if (await _db.Ranks.AnyAsync(x => x.Name == rankDTO.Name))
                 throw new ArgumentException();
 

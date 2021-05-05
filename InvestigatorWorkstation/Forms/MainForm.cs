@@ -487,5 +487,62 @@ namespace InvestigatorWorkstation.Forms
 
         #endregion
 
+        #region Positions
+
+        private async void AddPositionPictureButton_Click(object sender, EventArgs e)
+        {
+            using var addPositionForm = new PositionForm();
+
+            var dialogResult = addPositionForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                await _employeePositionService.AddPosition(addPositionForm.GetResult());
+
+                var positions = await _employeePositionService.GetPositions();
+
+                PositionGridView.DataSource = new SortableBindingList<PositionViewModel>(positions
+                    .Select(x => (PositionViewModel)x)
+                    .ToList());
+
+                SortGridView(PositionGridView);
+            }
+        }
+
+        private async void EditPositionPictureButton_Click(object sender, EventArgs e)
+        {
+            var selectedPositionViewModel = (PositionViewModel)PositionGridView.SelectedRows[0].DataBoundItem;
+            var selectedPositionDTO = await _employeePositionService.GetPosition(selectedPositionViewModel.Id);
+
+            using var editPositionForm = new PositionForm(selectedPositionDTO);
+
+            var dialogResult = editPositionForm.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                await _employeePositionService.UpdatePosition(selectedPositionDTO.Id, editPositionForm.GetResult());
+
+                var positions = await _employeePositionService.GetPositions();
+
+                PositionGridView.DataSource = new SortableBindingList<PositionViewModel>(positions
+                    .Select(x => (PositionViewModel)x)
+                    .ToList());
+
+                SortGridView(PositionGridView);
+            }
+        }
+
+        private async void DeletePositionPictureButton_Click(object sender, EventArgs e)
+        {
+            var selectedPositionViewModel = (PositionViewModel)PositionGridView.SelectedRows[0].DataBoundItem;
+            await _employeePositionService.RemovePosition(selectedPositionViewModel.Id);
+
+            var positions = await _employeePositionService.GetPositions();
+
+            PositionGridView.DataSource = new SortableBindingList<PositionViewModel>(positions
+                .Select(x => (PositionViewModel)x)
+                .ToList());
+        }
+
+        #endregion
     }
 }

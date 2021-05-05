@@ -10,15 +10,16 @@ namespace InvestigatorWorkstation.Forms
         public RankForm(RankDTO rank = null)
         {
             InitializeComponent();
-            _rank = rank;
+            _rank = rank; 
 
-            RankLabel.Text = rank == null
-                ? "Добавление звания"
-                : "Изменение звания";
+            if (rank != null)
+            {
+                RankLabel.Text = "Изменение звания";
+                RankOkButton.Text = "Изменить";
 
-            RankOkButton.Text = rank == null
-                ? "Добавить"
-                : "Изменить";
+                RankTermNumeric.Value = rank.Term;
+                RankTitleTextBox.Text = rank.Name;
+            }
         }
 
         public RankDTO GetResult()

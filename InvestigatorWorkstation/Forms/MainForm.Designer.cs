@@ -1288,6 +1288,7 @@ namespace InvestigatorWorkstation.Forms
             this.AddPositionPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddPositionPictureButton.Name = "AddPositionPictureButton";
             this.AddPositionPictureButton.TabStop = false;
+            this.AddPositionPictureButton.Click += new System.EventHandler(this.AddPositionPictureButton_Click);
             this.AddPositionPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.AddPositionPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
@@ -1299,6 +1300,7 @@ namespace InvestigatorWorkstation.Forms
             this.DeletePositionPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeletePositionPictureButton.Name = "DeletePositionPictureButton";
             this.DeletePositionPictureButton.TabStop = false;
+            this.DeletePositionPictureButton.Click += new System.EventHandler(this.DeletePositionPictureButton_Click);
             this.DeletePositionPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.DeletePositionPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
@@ -1310,6 +1312,7 @@ namespace InvestigatorWorkstation.Forms
             this.EditPositionPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditPositionPictureButton.Name = "EditPositionPictureButton";
             this.EditPositionPictureButton.TabStop = false;
+            this.EditPositionPictureButton.Click += new System.EventHandler(this.EditPositionPictureButton_Click);
             this.EditPositionPictureButton.MouseEnter += new System.EventHandler(this.PictureButtonOnHoverIn);
             this.EditPositionPictureButton.MouseLeave += new System.EventHandler(this.PictureButtonOnHoverOut);
             // 
