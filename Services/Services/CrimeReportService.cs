@@ -28,6 +28,7 @@ namespace Services.Services.CrimeReport
                 RegistrationBookNumber = dto.RegistrationBookNumber,
                 RegistrationNumber = dto.RegistrationNumber,
                 RegistrationDate = dto.RegistrationDate,
+                DueDate = dto.RegistrationDate.AddDays(3),
                 Qualification = dto.Qualification
             };
 

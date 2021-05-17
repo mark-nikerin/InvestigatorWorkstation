@@ -7,6 +7,7 @@ namespace Storage.Models
     {
         public int Id { get; set; }
         public DateTime RegistrationDate { get; set; } 
+        public DateTime DueDate { get; set; } 
         public string RegistrationNumber { get; set; }
         public string RegistrationBookNumber { get; set; }
         public string Fable { get; set; }

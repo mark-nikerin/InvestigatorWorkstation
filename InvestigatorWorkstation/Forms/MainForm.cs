@@ -49,6 +49,7 @@ namespace InvestigatorWorkstation.Forms
             SetActiveButton(CrimeReportButton);
             MainTabContainer.ItemSize = new Size(0, 1);
             MainTabContainer.SizeMode = TabSizeMode.Fixed;
+            SetDates(DateTime.Now);
         }
 
         #region Helpers
@@ -60,6 +61,7 @@ namespace InvestigatorWorkstation.Forms
             {
                 case "CalendarButton":
                     SetActiveButton(CalendarButton);
+                    SetDates(DateTime.Now);
                     MainTabContainer.SelectedIndex = 0;
                     break;
                 case "CrimeReportButton":
@@ -358,7 +360,7 @@ namespace InvestigatorWorkstation.Forms
             var authorities = await _authorityService.GetAuthorities();
             var employees = await _employeeService.GetEmployees();
 
-            using var addCrimeReportForm = new AddCrimeReportForm(authorities, employees);
+            using var addCrimeReportForm = new AddCrimeReportForm(authorities.ToList(), employees);
 
             var dialogResult = addCrimeReportForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
@@ -423,11 +425,6 @@ namespace InvestigatorWorkstation.Forms
         }
 
         #endregion
-
-        private void AddCriminalCaseButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
         #region Ranks
 
@@ -544,5 +541,36 @@ namespace InvestigatorWorkstation.Forms
         }
 
         #endregion
+
+
+        #region Calendar
+
+        public void SetDates(DateTime startDate)
+        {
+            var date = startDate;
+            for (var i = 0; i < 5; i++)
+            {
+                var dayTitle = (Label) CalendarSplitContainer.Panel1.Controls[$"labelDay{i}"];
+                dayTitle.Text = date.ToString("ddd, dd MMMM ");
+
+                dayTitle.Font = date.ToString("dd MM yyyy").Equals(DateTime.Now.ToString("dd MM yyyy"))
+                        ? new Font(dayTitle.Font, FontStyle.Bold)
+                        : new Font(dayTitle.Font, FontStyle.Regular);
+
+                date = date.AddDays(1);
+                dayTitle.Refresh();
+            }
+        }
+
+        #endregion
+        private void AddCriminalCaseButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            SetDates(e.Start);
+        }
     }
 }

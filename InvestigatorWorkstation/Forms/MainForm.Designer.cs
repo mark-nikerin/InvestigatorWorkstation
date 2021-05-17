@@ -45,7 +45,6 @@ namespace InvestigatorWorkstation.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.RanksAndPositionsButton = new System.Windows.Forms.Button();
             this.CriminalButton = new System.Windows.Forms.Button();
@@ -60,13 +59,20 @@ namespace InvestigatorWorkstation.Forms
             this.MainTabContainer = new System.Windows.Forms.TabControl();
             this.CalendarTabPage = new System.Windows.Forms.TabPage();
             this.CalendarSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.dataGridView2 = new InvestigatorWorkstation.CustomComponents.HoverableDataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelDay4 = new System.Windows.Forms.Label();
+            this.labelDay3 = new System.Windows.Forms.Label();
+            this.labelDay2 = new System.Windows.Forms.Label();
+            this.labelDay1 = new System.Windows.Forms.Label();
+            this.labelDay0 = new System.Windows.Forms.Label();
+            this.FlowPanelDay4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.FlowPanelDay3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanelDay2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanelDay1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanelDay0 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.CalendarTitle = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.CrimeReportTabPage = new System.Windows.Forms.TabPage();
@@ -180,7 +186,8 @@ namespace InvestigatorWorkstation.Forms
             this.CalendarSplitContainer.Panel1.SuspendLayout();
             this.CalendarSplitContainer.Panel2.SuspendLayout();
             this.CalendarSplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.FlowPanelDay4.SuspendLayout();
+            this.FlowPanelDay0.SuspendLayout();
             this.CrimeReportTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportSplitContainer)).BeginInit();
             this.CrimeReportSplitContainer.Panel1.SuspendLayout();
@@ -375,7 +382,16 @@ namespace InvestigatorWorkstation.Forms
             // CalendarSplitContainer.Panel1
             // 
             this.CalendarSplitContainer.Panel1.BackColor = System.Drawing.Color.White;
-            this.CalendarSplitContainer.Panel1.Controls.Add(this.dataGridView2);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.labelDay4);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.labelDay3);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.labelDay2);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.labelDay1);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.labelDay0);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.FlowPanelDay4);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.FlowPanelDay3);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.FlowPanelDay2);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.FlowPanelDay1);
+            this.CalendarSplitContainer.Panel1.Controls.Add(this.FlowPanelDay0);
             this.CalendarSplitContainer.Panel1.Controls.Add(this.CalendarTitle);
             // 
             // CalendarSplitContainer.Panel2
@@ -383,69 +399,88 @@ namespace InvestigatorWorkstation.Forms
             this.CalendarSplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.CalendarSplitContainer.Panel2.Controls.Add(this.monthCalendar1);
             // 
-            // dataGridView2
+            // labelDay4
             // 
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18});
-            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            resources.ApplyResources(this.labelDay4, "labelDay4");
+            this.labelDay4.Name = "labelDay4";
             // 
-            // dataGridViewTextBoxColumn13
+            // labelDay3
             // 
-            this.dataGridViewTextBoxColumn13.FillWeight = 79.05688F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            resources.ApplyResources(this.labelDay3, "labelDay3");
+            this.labelDay3.Name = "labelDay3";
             // 
-            // dataGridViewTextBoxColumn14
+            // labelDay2
             // 
-            this.dataGridViewTextBoxColumn14.FillWeight = 104.1887F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            resources.ApplyResources(this.labelDay2, "labelDay2");
+            this.labelDay2.Name = "labelDay2";
             // 
-            // dataGridViewTextBoxColumn15
+            // labelDay1
             // 
-            this.dataGridViewTextBoxColumn15.FillWeight = 104.1887F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            resources.ApplyResources(this.labelDay1, "labelDay1");
+            this.labelDay1.Name = "labelDay1";
             // 
-            // dataGridViewTextBoxColumn16
+            // labelDay0
             // 
-            this.dataGridViewTextBoxColumn16.FillWeight = 104.1887F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            resources.ApplyResources(this.labelDay0, "labelDay0");
+            this.labelDay0.Name = "labelDay0";
             // 
-            // dataGridViewTextBoxColumn17
+            // FlowPanelDay4
             // 
-            this.dataGridViewTextBoxColumn17.FillWeight = 104.1887F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            resources.ApplyResources(this.FlowPanelDay4, "FlowPanelDay4");
+            this.FlowPanelDay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FlowPanelDay4.Controls.Add(this.panel8);
+            this.FlowPanelDay4.Controls.Add(this.panel10);
+            this.FlowPanelDay4.Name = "FlowPanelDay4";
             // 
-            // dataGridViewTextBoxColumn18
+            // panel8
             // 
-            this.dataGridViewTextBoxColumn18.FillWeight = 104.1887F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.panel8.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.panel10, "panel10");
+            this.panel10.Name = "panel10";
+            // 
+            // FlowPanelDay3
+            // 
+            resources.ApplyResources(this.FlowPanelDay3, "FlowPanelDay3");
+            this.FlowPanelDay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FlowPanelDay3.Name = "FlowPanelDay3";
+            // 
+            // FlowPanelDay2
+            // 
+            resources.ApplyResources(this.FlowPanelDay2, "FlowPanelDay2");
+            this.FlowPanelDay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FlowPanelDay2.Name = "FlowPanelDay2";
+            // 
+            // FlowPanelDay1
+            // 
+            resources.ApplyResources(this.FlowPanelDay1, "FlowPanelDay1");
+            this.FlowPanelDay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FlowPanelDay1.Name = "FlowPanelDay1";
+            // 
+            // FlowPanelDay0
+            // 
+            this.FlowPanelDay0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FlowPanelDay0.Controls.Add(this.panel5);
+            this.FlowPanelDay0.Controls.Add(this.panel9);
+            resources.ApplyResources(this.FlowPanelDay0, "FlowPanelDay0");
+            this.FlowPanelDay0.Name = "FlowPanelDay0";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Maroon;
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
             // 
             // CalendarTitle
             // 
@@ -458,6 +493,7 @@ namespace InvestigatorWorkstation.Forms
             resources.ApplyResources(this.monthCalendar1, "monthCalendar1");
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.ShowToday = false;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // CrimeReportTabPage
             // 
@@ -580,30 +616,30 @@ namespace InvestigatorWorkstation.Forms
             this.CrimeReportGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CrimeReportGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CrimeReportGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CrimeReportGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CrimeReportGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.CrimeReportGridView.MultiSelect = false;
             this.CrimeReportGridView.Name = "CrimeReportGridView";
             this.CrimeReportGridView.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CrimeReportGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CrimeReportGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.CrimeReportGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CrimeReportGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CrimeReportGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.CrimeReportGridView.RowTemplate.Height = 25;
             this.CrimeReportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CrimeReportGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_ColumnHeaderMouseClick);
@@ -752,19 +788,19 @@ namespace InvestigatorWorkstation.Forms
             this.CriminalCaseGridView.MultiSelect = false;
             this.CriminalCaseGridView.Name = "CriminalCaseGridView";
             this.CriminalCaseGridView.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CriminalCaseGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CriminalCaseGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.CriminalCaseGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CriminalCaseGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CriminalCaseGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.CriminalCaseGridView.RowTemplate.Height = 25;
             this.CriminalCaseGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CriminalCaseGridView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DataGridView_RowPrePaint);
@@ -912,41 +948,41 @@ namespace InvestigatorWorkstation.Forms
             this.EmployeeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.EmployeeGridView.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.EmployeeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EmployeeGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.DefaultCellStyle = dataGridViewCellStyle7;
             this.EmployeeGridView.MultiSelect = false;
             this.EmployeeGridView.Name = "EmployeeGridView";
             this.EmployeeGridView.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.EmployeeGridView.RowHeadersVisible = false;
             this.EmployeeGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGridView.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.EmployeeGridView.RowTemplate.Height = 25;
             this.EmployeeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeGridView.TabStop = false;
@@ -1037,14 +1073,14 @@ namespace InvestigatorWorkstation.Forms
             this.AuthorityGridView.MultiSelect = false;
             this.AuthorityGridView.Name = "AuthorityGridView";
             this.AuthorityGridView.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AuthorityGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AuthorityGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.AuthorityGridView.RowHeadersVisible = false;
             this.AuthorityGridView.RowTemplate.Height = 25;
             this.AuthorityGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1139,14 +1175,14 @@ namespace InvestigatorWorkstation.Forms
             this.CriminalGridView.MultiSelect = false;
             this.CriminalGridView.Name = "CriminalGridView";
             this.CriminalGridView.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CriminalGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CriminalGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.CriminalGridView.RowHeadersVisible = false;
             this.CriminalGridView.RowTemplate.Height = 25;
             this.CriminalGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1263,14 +1299,14 @@ namespace InvestigatorWorkstation.Forms
             this.RankGridView.MultiSelect = false;
             this.RankGridView.Name = "RankGridView";
             this.RankGridView.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RankGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RankGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.RankGridView.RowHeadersVisible = false;
             this.RankGridView.RowTemplate.Height = 25;
             this.RankGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1329,14 +1365,14 @@ namespace InvestigatorWorkstation.Forms
             this.PositionGridView.MultiSelect = false;
             this.PositionGridView.Name = "PositionGridView";
             this.PositionGridView.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PositionGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PositionGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.PositionGridView.RowHeadersVisible = false;
             this.PositionGridView.RowTemplate.Height = 25;
             this.PositionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1454,7 +1490,8 @@ namespace InvestigatorWorkstation.Forms
             this.CalendarSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CalendarSplitContainer)).EndInit();
             this.CalendarSplitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.FlowPanelDay4.ResumeLayout(false);
+            this.FlowPanelDay0.ResumeLayout(false);
             this.CrimeReportTabPage.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.PerformLayout();
@@ -1602,14 +1639,7 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.TabPage AuthorityTabPage;
         private System.Windows.Forms.TabPage CriminalTabPage;
         private System.Windows.Forms.SplitContainer CalendarSplitContainer;
-        private HoverableDataGridView dataGridView2;
         private System.Windows.Forms.Label CalendarTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -1648,5 +1678,25 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.PictureBox EditPositionPictureButton;
         private HoverableDataGridView PositionGridView;
         private System.Windows.Forms.Label PositionLabel;
+        private System.Windows.Forms.Label labelDay1;
+        private System.Windows.Forms.Label labelDay0;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanelDay4;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanelDay3;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanelDay2;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanelDay1;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanelDay0;
+        private System.Windows.Forms.Label labelDay4;
+        private System.Windows.Forms.Label labelDay3;
+        private System.Windows.Forms.Label labelDay2;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label a;
+        private System.Windows.Forms.Label Day0;
+        private System.Windows.Forms.Label el;
+        private System.Windows.Forms.Label b;
+        private System.Windows.Forms.Label elDay0;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel9;
     }
 }

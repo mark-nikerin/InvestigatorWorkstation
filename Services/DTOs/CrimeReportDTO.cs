@@ -7,6 +7,7 @@ namespace Services.DTOs.CrimeReport
     {
         public int Id { get; set; }
         public DateTime RegistrationDate { get; set; } 
+        public DateTime DueDate { get; set; }
         public string RegistrationNumber { get; set; }
         public string RegistrationBookNumber { get; set; }
         public string Fable { get; set; }
@@ -25,6 +26,7 @@ namespace Services.DTOs.CrimeReport
             {
                 Id = entity.Id,
                 RegistrationDate = entity.RegistrationDate,
+                DueDate = entity.DueDate,
                 RegistrationBookNumber = entity.RegistrationBookNumber,
                 RegistrationNumber = entity.RegistrationNumber,
                 Fable = entity.Fable,

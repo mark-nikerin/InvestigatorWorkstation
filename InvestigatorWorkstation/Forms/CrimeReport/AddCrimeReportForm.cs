@@ -15,7 +15,7 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
 
         private const string QualificationStringPattern = "Статья {0} Часть {1} Пункт {2};";
 
-        public AddCrimeReportForm(IEnumerable<AuthorityDTO> authorities, IEnumerable<EmployeeDTO> employees)
+        public AddCrimeReportForm(IList<AuthorityDTO> authorities, IEnumerable<EmployeeDTO> employees)
         {
             InitializeComponent();
             foreach(var control in Controls)
@@ -26,6 +26,11 @@ namespace InvestigatorWorkstation.Forms.CrimeReport
                     textbox.KeyUp += ControlPressEnter;
                     textbox.KeyDown += AvoidBeepOnPressEnter;
                 }
+            }
+
+            for (var i = 0; i < authorities.Count; i++)
+            {
+                authorities[i].Title += $", {authorities[i].Subdivision}";
             }
 
             RegisteredAuthorityComboBox.DataSource = authorities;
