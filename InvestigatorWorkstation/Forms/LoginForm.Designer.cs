@@ -144,6 +144,8 @@ namespace InvestigatorWorkstation.Forms
             this.Controls.Add(this.ProgramNameLabel);
             this.Controls.Add(this.WhitePanel);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АРМ Следователя - Вход";

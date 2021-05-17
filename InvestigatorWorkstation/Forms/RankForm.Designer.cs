@@ -145,6 +145,7 @@ namespace InvestigatorWorkstation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(504, 238);
             this.Controls.Add(this.RankTermNumeric);
             this.Controls.Add(this.RankTextGreyPanel);
@@ -152,9 +153,14 @@ namespace InvestigatorWorkstation.Forms
             this.Controls.Add(this.RankTermLabel);
             this.Controls.Add(this.RankTitleLabel);
             this.Controls.Add(this.RankTitleTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RankForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RankForm";
             this.RankTextGreyPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RankTermNumeric)).EndInit();

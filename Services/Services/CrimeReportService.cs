@@ -20,6 +20,14 @@ namespace Services.Services.CrimeReport
 
         public async Task AddCrimeReport(CrimeReportDTO dto)
         {
+            var dueDate = dto.RegistrationDate.AddDays(3);
+
+            if (dueDate.DayOfWeek == DayOfWeek.Saturday)
+                dueDate = dueDate.AddDays(2);
+
+            if (dueDate.DayOfWeek == DayOfWeek.Sunday)
+                dueDate = dueDate.AddDays(1);
+
             var crimeReport = new Storage.Models.CrimeReport
             {
                 EmployeeId = dto.Employee.Id,
@@ -28,7 +36,7 @@ namespace Services.Services.CrimeReport
                 RegistrationBookNumber = dto.RegistrationBookNumber,
                 RegistrationNumber = dto.RegistrationNumber,
                 RegistrationDate = dto.RegistrationDate,
-                DueDate = dto.RegistrationDate.AddDays(3),
+                DueDate = dueDate,
                 Qualification = dto.Qualification
             };
 
@@ -52,15 +60,21 @@ namespace Services.Services.CrimeReport
 
         public async Task<ICollection<CrimeReportDTO>> GetCrimeReports()
         {
-            return await _db.CrimeReports
+            var currentUser = CurrentUserService.GetCurrentUser();
+
+            var baseQuery = _db.CrimeReports
                 .AsNoTracking()
                 .Include(x => x.Employee)
                     .ThenInclude(x => x.PositionHistories)
                 .Include(x => x.Employee)
                 .ThenInclude(x => x.RankHistories)
-                .Include(x => x.Authority)
-                .Select(x => (CrimeReportDTO)x)
-                .ToListAsync();
+                .Include(x => x.Authority);
+
+            var query = currentUser.IsAdmin
+                ? baseQuery
+                : baseQuery.Where(x => x.EmployeeId == currentUser.Id);
+           
+            return await query.Select(x => (CrimeReportDTO)x).ToListAsync();
         }
 
         public async Task RemoveCrimeReport(int id)

@@ -67,7 +67,7 @@ namespace InvestigatorWorkstation.Forms
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.PositionOkButton);
             this.panel1.Controls.Add(this.PositionCancelButton);
-            this.panel1.Location = new System.Drawing.Point(12, 161);
+            this.panel1.Location = new System.Drawing.Point(20, 161);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 58);
             this.panel1.TabIndex = 135;
@@ -126,14 +126,22 @@ namespace InvestigatorWorkstation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(390, 238);
             this.Controls.Add(this.PositionTextGreyPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PositionTitleLabel);
             this.Controls.Add(this.PositionTitleTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(406, 277);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(406, 277);
             this.Name = "PositionForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PositionForm";
             this.PositionTextGreyPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

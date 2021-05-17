@@ -65,14 +65,10 @@ namespace InvestigatorWorkstation.Forms
             this.labelDay1 = new System.Windows.Forms.Label();
             this.labelDay0 = new System.Windows.Forms.Label();
             this.FlowPanelDay4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.FlowPanelDay3 = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanelDay2 = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanelDay1 = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanelDay0 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.CalendarTitle = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.CrimeReportTabPage = new System.Windows.Forms.TabPage();
@@ -186,8 +182,6 @@ namespace InvestigatorWorkstation.Forms
             this.CalendarSplitContainer.Panel1.SuspendLayout();
             this.CalendarSplitContainer.Panel2.SuspendLayout();
             this.CalendarSplitContainer.SuspendLayout();
-            this.FlowPanelDay4.SuspendLayout();
-            this.FlowPanelDay0.SuspendLayout();
             this.CrimeReportTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CrimeReportSplitContainer)).BeginInit();
             this.CrimeReportSplitContainer.Panel1.SuspendLayout();
@@ -426,61 +420,33 @@ namespace InvestigatorWorkstation.Forms
             // 
             // FlowPanelDay4
             // 
-            resources.ApplyResources(this.FlowPanelDay4, "FlowPanelDay4");
             this.FlowPanelDay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FlowPanelDay4.Controls.Add(this.panel8);
-            this.FlowPanelDay4.Controls.Add(this.panel10);
+            resources.ApplyResources(this.FlowPanelDay4, "FlowPanelDay4");
             this.FlowPanelDay4.Name = "FlowPanelDay4";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.LightGray;
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.LightGray;
-            resources.ApplyResources(this.panel10, "panel10");
-            this.panel10.Name = "panel10";
             // 
             // FlowPanelDay3
             // 
-            resources.ApplyResources(this.FlowPanelDay3, "FlowPanelDay3");
             this.FlowPanelDay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.FlowPanelDay3, "FlowPanelDay3");
             this.FlowPanelDay3.Name = "FlowPanelDay3";
             // 
             // FlowPanelDay2
             // 
-            resources.ApplyResources(this.FlowPanelDay2, "FlowPanelDay2");
             this.FlowPanelDay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.FlowPanelDay2, "FlowPanelDay2");
             this.FlowPanelDay2.Name = "FlowPanelDay2";
             // 
             // FlowPanelDay1
             // 
-            resources.ApplyResources(this.FlowPanelDay1, "FlowPanelDay1");
             this.FlowPanelDay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.FlowPanelDay1, "FlowPanelDay1");
             this.FlowPanelDay1.Name = "FlowPanelDay1";
             // 
             // FlowPanelDay0
             // 
             this.FlowPanelDay0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FlowPanelDay0.Controls.Add(this.panel5);
-            this.FlowPanelDay0.Controls.Add(this.panel9);
             resources.ApplyResources(this.FlowPanelDay0, "FlowPanelDay0");
             this.FlowPanelDay0.Name = "FlowPanelDay0";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Maroon;
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.LightGray;
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
             // 
             // CalendarTitle
             // 
@@ -1477,6 +1443,7 @@ namespace InvestigatorWorkstation.Forms
             this.Controls.Add(this.MainSplitContainer);
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_ResizeEnd);
             this.MainSplitContainer.Panel1.ResumeLayout(false);
             this.MainSplitContainer.Panel1.PerformLayout();
             this.MainSplitContainer.Panel2.ResumeLayout(false);
@@ -1490,8 +1457,6 @@ namespace InvestigatorWorkstation.Forms
             this.CalendarSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CalendarSplitContainer)).EndInit();
             this.CalendarSplitContainer.ResumeLayout(false);
-            this.FlowPanelDay4.ResumeLayout(false);
-            this.FlowPanelDay0.ResumeLayout(false);
             this.CrimeReportTabPage.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.ResumeLayout(false);
             this.CrimeReportSplitContainer.Panel1.PerformLayout();
@@ -1694,9 +1659,5 @@ namespace InvestigatorWorkstation.Forms
         private System.Windows.Forms.Label el;
         private System.Windows.Forms.Label b;
         private System.Windows.Forms.Label elDay0;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel9;
     }
 }

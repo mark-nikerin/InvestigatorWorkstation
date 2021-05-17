@@ -2,6 +2,7 @@ using InvestigatorWorkstation.Forms.CrimeReport;
 using InvestigatorWorkstation.Forms.Employee;
 using InvestigatorWorkstation.ViewModels;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using Services.DTOs.CrimeReport;
 using Services.Interfaces;
 using Services.Interfaces.CrimeReport;
 using Services.Interfaces.Employee;
@@ -11,6 +12,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InvestigatorWorkstation.Forms
@@ -24,6 +26,8 @@ namespace InvestigatorWorkstation.Forms
         private readonly IEmployeeRankService _employeeRankService;
         private readonly ICrimeReportService _crimeReportService;
         private readonly IAuthorityService _authorityService;
+        private double baseCalendarColumnProportion;
+        private List<string> currentCalendarDays = new List<string>();
 
         private static IDictionary<string, (DataGridViewColumn, ListSortDirection)> _gridViewSortings = 
             new Dictionary<string, (DataGridViewColumn, ListSortDirection)>();
@@ -50,6 +54,7 @@ namespace InvestigatorWorkstation.Forms
             MainTabContainer.ItemSize = new Size(0, 1);
             MainTabContainer.SizeMode = TabSizeMode.Fixed;
             SetDates(DateTime.Now);
+            baseCalendarColumnProportion = (double) CalendarSplitContainer.Panel1.Width / CalendarSplitContainer.Panel1.Controls["FlowPanelDay0"].Width;
         }
 
         #region Helpers
@@ -60,10 +65,14 @@ namespace InvestigatorWorkstation.Forms
             switch ((sender as Button)?.Name)
             {
                 case "CalendarButton":
-                    SetActiveButton(CalendarButton);
-                    SetDates(DateTime.Now);
-                    MainTabContainer.SelectedIndex = 0;
-                    break;
+                    {
+                        SetActiveButton(CalendarButton);
+                        MainTabContainer.SelectedIndex = 0;
+
+                        await UpdateCalendar();
+
+                        break;
+                    }
                 case "CrimeReportButton":
                     {
                         SetActiveButton(CrimeReportButton);
@@ -542,14 +551,16 @@ namespace InvestigatorWorkstation.Forms
 
         #endregion
 
-
         #region Calendar
 
-        public void SetDates(DateTime startDate)
+        private void SetDates(DateTime? startDate = null)
         {
-            var date = startDate;
+            currentCalendarDays = new List<string>();
+            var date = startDate ?? DateTime.Now;
             for (var i = 0; i < 5; i++)
             {
+                currentCalendarDays.Add(date.ToString("dd MM yyyy"));
+
                 var dayTitle = (Label) CalendarSplitContainer.Panel1.Controls[$"labelDay{i}"];
                 dayTitle.Text = date.ToString("ddd, dd MMMM ");
 
@@ -562,15 +573,113 @@ namespace InvestigatorWorkstation.Forms
             }
         }
 
+        private async void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        { 
+            await UpdateCalendar(e.Start);
+        }
+
+        private void MainForm_ResizeEnd(object sender, EventArgs e)
+        {
+            if (MainTabContainer.SelectedIndex != 0)
+                return;
+
+            var calendarColumnWidth = CalendarSplitContainer.Panel1.Controls["FlowPanelDay0"].Width;
+            var calendarColumnNewWidth = (int)(CalendarSplitContainer.Panel1.Width / baseCalendarColumnProportion);
+            var diff = calendarColumnNewWidth - calendarColumnWidth;
+
+            for (var i = 0; i < 5; i++)
+            {
+                var column = (FlowLayoutPanel)CalendarSplitContainer.Panel1.Controls[$"FlowPanelDay{i}"];
+                var dayTitle = (Label)CalendarSplitContainer.Panel1.Controls[$"labelDay{i}"];
+
+                foreach (Panel item in column.Controls)
+                {
+                    item.Width = calendarColumnNewWidth;
+                }
+
+                column.Width = calendarColumnNewWidth;
+                dayTitle.Width = calendarColumnNewWidth;
+
+                if (i == 0) continue;
+
+                column.Location = new Point { X = column.Location.X + i * diff, Y = column.Location.Y };
+                dayTitle.Location = new Point { X = dayTitle.Location.X + i * diff, Y = dayTitle.Location.Y };
+            }
+        }
+
+        private Panel CreateCalendarTaskPanel(CrimeReportDTO model, bool withNames = false)
+        {
+            var panel = new Panel();
+
+            var registryNumberLabel = new Label();
+            registryNumberLabel.AutoSize = true;
+            registryNumberLabel.Text = $"Рег. Номер {model.RegistrationNumber}";
+
+            panel.Controls.Add(registryNumberLabel);
+
+            if (withNames)
+            {
+                var assigneeLabel = new Label();
+                assigneeLabel.AutoSize = true;
+                assigneeLabel.Text = $"{model.Employee.FullName}";
+                panel.Controls.Add(assigneeLabel);
+                assigneeLabel.Location = new Point { X = registryNumberLabel.Location.X, Y = registryNumberLabel.Location.Y + 20 };
+                assigneeLabel.Refresh();
+            }
+
+            var diff = model.DueDate.Subtract(DateTime.Now);
+            panel.BackColor = diff.Days switch
+            {
+                var x when (x >= 0 && x < 2) => Color.Red,
+                var x when (x >= 2 && x < 4) => Color.Orange,
+                var x when (x >= 4 && x < 6) => Color.Yellow,
+                var x when (x >= 6) => Color.LightBlue,
+                var x when (x < 0) => Color.LightGray,
+                _ => Color.LightGray
+            };
+
+            panel.Width = CalendarSplitContainer.Panel1.Controls["FlowPanelDay0"].Width;
+
+            return panel;
+        }
+
+        private async Task UpdateCalendar(DateTime? startDate = null)
+        {
+            SetDates(startDate);
+
+            var crimeReports = await _crimeReportService.GetCrimeReports();
+
+            var withNames = CurrentUserService.IsAdmin();
+
+            for (var i = 0; i < 5; i++)
+            {
+                var column = (FlowLayoutPanel)CalendarSplitContainer.Panel1.Controls[$"FlowPanelDay{i}"];
+                column.Controls.Clear();
+            }
+
+            foreach (var crimeReport in crimeReports)
+            {
+                var currentCalendarDay = currentCalendarDays.FirstOrDefault(x => x.Equals(crimeReport.DueDate.ToString("dd MM yyyy")));
+
+                if (string.IsNullOrEmpty(currentCalendarDay))
+                    continue;
+
+                var calendarPanelTask = CreateCalendarTaskPanel(crimeReport, withNames);
+
+                var index = currentCalendarDays.IndexOf(currentCalendarDay);
+
+                var calendarColumn = (FlowLayoutPanel)CalendarSplitContainer.Panel1.Controls[$"FlowPanelDay{index}"];
+
+                calendarColumn.Controls.Add(calendarPanelTask);
+            }
+        }
+
         #endregion
+
         private void AddCriminalCaseButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            SetDates(e.Start);
-        }
     }
 }

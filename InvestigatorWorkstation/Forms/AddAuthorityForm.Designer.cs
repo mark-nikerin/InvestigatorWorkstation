@@ -188,6 +188,7 @@ namespace InvestigatorWorkstation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(672, 348);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.AuthorityAddressTextBox);
@@ -199,9 +200,15 @@ namespace InvestigatorWorkstation.Forms
             this.Controls.Add(this.AuthorityTitleLabel);
             this.Controls.Add(this.AuthorityTitleTextBox);
             this.Controls.Add(this.AddAuthorityTextGreyPanel);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(688, 387);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(688, 387);
             this.Name = "AddAuthorityForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddAuthorityForm";
             this.AddAuthorityTextGreyPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
